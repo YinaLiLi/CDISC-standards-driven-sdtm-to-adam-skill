@@ -1,0 +1,6 @@
+# ADaM validation plan template.
+validation_plan:
+  dataset: null
+  standards_references: []
+  checks: []
+  acceptance_criteria: []

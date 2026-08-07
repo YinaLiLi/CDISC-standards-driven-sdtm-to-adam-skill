@@ -1,0 +1,38 @@
+schema_version: 1
+standard:
+  id: adam-msg-example-submission
+  title: ADaM MSG Example Submission Package
+  role: validation_reference
+  version: "1.0"
+  release_date: null
+  official_url: null
+  package_url: https://www.cdisc.org/system/files/members/standard/foundational/ADaM-MSG-Example-Submission-Package_1.zip
+  local_path: null
+  local_root: ../../docs/standards/ADaM/examples/ADaM_MSG_Example_Submission
+  original_filename: ADaM-MSG-Example-Submission-Package_1.zip
+  sha256: null
+  sha256_status: NOT_APPLICABLE
+  verification_status: PARTIALLY_VERIFIED
+  indexed: false
+  verified: false
+  enabled: true
+  members:
+    - datasets/adadas.xpt
+    - datasets/adae.xpt
+    - datasets/adcibc.xpt
+    - datasets/adlbc.xpt
+    - datasets/adlbcpv.xpt
+    - datasets/adlbh.xpt
+    - datasets/adlbhpv.xpt
+    - datasets/adlbhy.xpt
+    - datasets/adnpix.xpt
+    - datasets/adsl.xpt
+    - datasets/adtte.xpt
+    - datasets/advs.xpt
+    - datasets/adrg.pdf
+    - datasets/complex-algorithms-example.pdf
+    - datasets/define.xml
+    - datasets/define.xml_default.html
+    - datasets/define.xml_prefixes.html
+    - datasets/define2-1-0.xsl
+    - programs/adsl-sas.txt

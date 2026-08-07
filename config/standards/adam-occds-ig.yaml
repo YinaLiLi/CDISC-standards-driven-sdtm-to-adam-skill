@@ -1,0 +1,18 @@
+schema_version: 1
+standard:
+  id: adam-occds
+  title: ADaM OCCDS Implementation Guide
+  role: primary_standard
+  version: "1.1"
+  release_date: null
+  official_url: https://www.cdisc.org/system/files/members/standard/foundational/ADaM_OCCDS_Implementation_Guide%20v1.1.pdf
+  package_url: null
+  local_path: ../../docs/standards/ADaM/standards/ADaM_OCCDS_Implementation_Guide v1.1.pdf
+  local_root: null
+  original_filename: ADaM_OCCDS_Implementation_Guide v1.1.pdf
+  sha256: e5e510c491cad804236f89cc1bada6cca0f4b2f31c7dc84022d4197886fa8a1c
+  sha256_status: PRESENT
+  verification_status: VERIFIED
+  indexed: false
+  verified: true
+  enabled: true

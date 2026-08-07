@@ -1,0 +1,6 @@
+# ADaM derivation plan template.
+derivation_plan:
+  dataset: null
+  standards_references: []
+  assumptions: []
+  derivations: []

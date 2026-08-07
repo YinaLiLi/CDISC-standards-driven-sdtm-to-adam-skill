@@ -1,0 +1,18 @@
+schema_version: 1
+standard:
+  id: adam-important-considerations
+  title: Important Considerations When Using ADaM
+  role: primary_standard
+  version: "2.1"
+  release_date: null
+  official_url: https://www.cdisc.org/system/files/members/standard/foundational/adam/ADaM_v2.1.zip
+  package_url: null
+  local_path: ../../docs/standards/ADaM/standards/Important Considerations When Using ADaM v2.1.pdf
+  local_root: null
+  original_filename: Important Considerations When Using ADaM v2.1.pdf
+  sha256: 62eef6898d5fffbc66a08c1043822147e63c8ee437d46c601bce18c71fa315a4
+  sha256_status: PRESENT
+  verification_status: VERIFIED
+  indexed: false
+  verified: true
+  enabled: true

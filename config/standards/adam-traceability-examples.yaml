@@ -1,0 +1,18 @@
+schema_version: 1
+standard:
+  id: adam-traceability-examples
+  title: ADaM Examples of Traceability
+  role: validation_reference
+  version: "1.0"
+  release_date: null
+  official_url: https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf
+  package_url: null
+  local_path: ../../docs/standards/ADaM/examples/ADaM_Traceability_Examples_v1.0.pdf
+  local_root: null
+  original_filename: ADaM_Traceability_Examples_v1.0.pdf
+  sha256: 3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3
+  sha256_status: PRESENT
+  verification_status: VERIFIED
+  indexed: false
+  verified: true
+  enabled: true

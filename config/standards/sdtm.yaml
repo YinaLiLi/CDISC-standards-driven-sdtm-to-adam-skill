@@ -1,0 +1,18 @@
+schema_version: 1
+standard:
+  id: sdtm-model
+  title: Study Data Tabulation Model
+  role: upstream_reference
+  version: null
+  release_date: null
+  official_url: null
+  package_url: null
+  local_path: null
+  local_root: null
+  original_filename: null
+  sha256: null
+  sha256_status: NOT_APPLICABLE
+  verification_status: UNVERIFIED
+  indexed: false
+  verified: false
+  enabled: true

@@ -1,0 +1,18 @@
+[project]
+name = "standards-driven-sdtm-to-adam-pipeline"
+version = "1.0.0"
+description = "Version 1 standards-driven SDTM-to-ADaM pipeline for supported ADaM outputs."
+requires-python = ">=3.11"
+dependencies = [
+  "pypdf>=4.0",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

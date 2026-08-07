@@ -1,0 +1,7 @@
+# ADaM dataset specification planning template.
+dataset:
+  name: null
+  class: null
+  purpose: null
+  source_sdtm_domains: []
+  variables: []

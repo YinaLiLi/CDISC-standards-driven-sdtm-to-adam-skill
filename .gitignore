@@ -1,0 +1,18 @@
+# Python and test caches.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local CDISC standards and reference assets are licensed source materials.
+# Keep manifests in Git; keep downloaded/extracted source files local unless
+# redistributability is explicitly confirmed.
+docs/standards/ADaM/**/*.pdf
+docs/standards/ADaM/**/*.xls
+docs/standards/ADaM/**/*.xlsx
+docs/standards/ADaM/**/*.xpt
+docs/standards/ADaM/**/*.xml
+docs/standards/ADaM/**/*.html
+docs/standards/ADaM/**/*.xsl
+docs/standards/ADaM/**/*.zip
+docs/standards/ADaM/**/*.sas
+docs/standards/ADaM/**/*.txt

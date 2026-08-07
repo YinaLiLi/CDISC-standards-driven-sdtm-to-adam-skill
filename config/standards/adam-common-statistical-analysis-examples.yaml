@@ -1,0 +1,18 @@
+schema_version: 1
+standard:
+  id: adam-common-statistical-analysis-examples
+  title: Common Statistical Analysis Examples
+  role: validation_reference
+  version: null
+  release_date: null
+  official_url: https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf
+  package_url: null
+  local_path: ../../docs/standards/ADaM/examples/adam_examples_final.pdf
+  local_root: null
+  original_filename: adam_examples_final.pdf
+  sha256: 7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb
+  sha256_status: PRESENT
+  verification_status: PARTIALLY_VERIFIED
+  indexed: false
+  verified: false
+  enabled: true

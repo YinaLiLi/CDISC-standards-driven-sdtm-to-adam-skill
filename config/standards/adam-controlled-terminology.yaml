@@ -1,0 +1,18 @@
+schema_version: 1
+standard:
+  id: adam-ct
+  title: ADaM Controlled Terminology
+  role: primary_standard
+  version: null
+  release_date: "2026-03-27"
+  official_url: https://www.cdisc.org/standards/terminology
+  package_url: null
+  local_path: ../../docs/standards/ADaM/standards/ADaM Terminology_07112026.xls
+  local_root: null
+  original_filename: ADaM Terminology_07112026.xls
+  sha256: 2c936902297c4d9992f139ea7adb0ed4d889400518f427c46eed584854643586
+  sha256_status: PRESENT
+  verification_status: VERIFIED
+  indexed: false
+  verified: true
+  enabled: true

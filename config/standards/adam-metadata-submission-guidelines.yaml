@@ -1,0 +1,18 @@
+schema_version: 1
+standard:
+  id: adam-msg
+  title: ADaM Metadata Submission Guidelines
+  role: primary_standard
+  version: "1.0"
+  release_date: null
+  official_url: https://www.cdisc.org/system/files/members/standard/foundational/ADaM-MSG_v1.0.pdf
+  package_url: null
+  local_path: ../../docs/standards/ADaM/standards/ADaM-MSG_v1.0.pdf
+  local_root: null
+  original_filename: ADaM-MSG_v1.0.pdf
+  sha256: dbcaa21e459f034d7ed9413ff2e3f9c2d3de49ea4c83e259c937b6fa77fd7e19
+  sha256_status: PRESENT
+  verification_status: VERIFIED
+  indexed: false
+  verified: true
+  enabled: true

@@ -1,0 +1,18 @@
+schema_version: 1
+standard:
+  id: adam-conformance-rules
+  title: ADaM Conformance Rules
+  role: primary_standard
+  version: "5.0"
+  release_date: null
+  official_url: https://www.cdisc.org/system/files/members/standard/foundational/ADaM%20Conformance%20Rules%20v5.0.xlsx
+  package_url: null
+  local_path: ../../docs/standards/ADaM/standards/ADaM Conformance Rules v5.0.xlsx
+  local_root: null
+  original_filename: ADaM Conformance Rules v5.0.xlsx
+  sha256: 80ea5a772cf0ab26cb9b1a3e6d2e7e9c074cd12d5aa72c4801862c4e5f2c71b3
+  sha256_status: PRESENT
+  verification_status: PARTIALLY_VERIFIED
+  indexed: false
+  verified: false
+  enabled: true

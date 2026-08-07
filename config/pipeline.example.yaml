@@ -1,0 +1,24 @@
+# Illustrative v1 pipeline input shape.
+# The current runtime API accepts these values directly through V1Pipeline.run(...);
+# this file is documentation, not an automatic config loader.
+pipeline:
+  registry_dir: config/standards
+  task_intents:
+    - Create ADSL subject-level analysis dataset
+    - Derive treatment-emergent adverse event variables for ADAE
+    - Plan ADLB laboratory analysis
+    - Identify ADTTE time-to-event evidence
+  research_objectives:
+    - Evaluate adverse events, laboratory values, and time-to-event outcomes.
+  supported_sdtm_inputs:
+    - DM
+    - AE
+    - LB
+    - DS
+    - EX
+    - SV
+  supported_adam_outputs:
+    - ADSL
+    - ADAE
+    - ADLB
+    - ADTTE
