@@ -4,6 +4,20 @@ Reusable Codex Skill for deriving supported ADaM datasets from existing SDTM usi
 
 This repository packages **CDISC SDTM to ADaM**, a CDISC Standards-Driven SDTM-to-ADaM Codex Skill. It is designed for teams that already have SDTM datasets and need governed, evidence-backed derivation of supported ADaM outputs.
 
+## Repository Layout
+
+| Path | Purpose |
+|---|---|
+| `skills/standards-driven-sdtm-adam/` | Primary Codex Skill package and user-facing metadata. |
+| `.claude/skills/cdisc-sdtm-to-adam/` | Claude Code compatibility entrypoint for the same Skill workflow. |
+| `src/standards_driven_sdtm_adam/` | Python implementation behind the Skill. |
+| `config/standards/` | Standards manifests used by runtime discovery and evidence handling. |
+| `docs/` | Architecture, standards, validation, evidence, reporting, and usage documentation. |
+| `docs/assets/` | README and documentation images. |
+| `templates/specs/` | Reusable specification and traceability templates. |
+| `tests/` | Unit, integration, and fixture coverage for the pipeline. |
+| `devtools/` | Maintainer utilities that are not part of the normal user workflow. |
+
 ## Quick Start
 
 The Skill is displayed to users as **CDISC SDTM to ADaM**.
