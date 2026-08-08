@@ -38,7 +38,7 @@ def test_docs_do_not_present_developer_setup_as_runtime_workflow():
         _doc_text(path)
         for path in (
             "README.md",
-            "docs/architecture.md",
+            "docs/architecture/overview.md",
             "skills/standards-driven-sdtm-adam/SKILL.md",
         )
     )

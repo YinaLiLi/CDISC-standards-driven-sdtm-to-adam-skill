@@ -5,10 +5,10 @@ description: Canonical shared CDISC SDTM to ADaM Skill definition for deriving s
 
 # CDISC Standards-Driven SDTM-to-ADaM
 
-This is the canonical shared Skill definition. Keep agent-specific discovery metadata and invocation syntax in thin adapters:
+This root file is the canonical shared Skill definition. Keep agent-specific discovery metadata and invocation syntax in thin adapters:
 
-- Codex adapter: `../../skills/standards-driven-sdtm-adam/SKILL.md`
-- Claude Code adapter: `../../.claude/skills/cdisc-sdtm-to-adam/SKILL.md`
+- Codex adapter: `skills/standards-driven-sdtm-adam/SKILL.md`
+- Claude Code adapter: `.claude/skills/cdisc-sdtm-to-adam/SKILL.md`
 
 Do not duplicate this runtime workflow in agent adapters unless an agent format technically requires it.
 
@@ -92,4 +92,4 @@ Preserve provenance from source evidence to specification, execution, validation
 
 ## Resources
 
-- `references/standards-index.md`: Version 1 standards scope notes.
+- `docs/standards/standards-index.md`: Version 1 standards scope notes.

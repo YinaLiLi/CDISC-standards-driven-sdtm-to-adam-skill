@@ -1,6 +1,6 @@
 ---
 name: cdisc-sdtm-to-adam
-description: Claude Code adapter for the CDISC SDTM to ADaM Skill. Use when the user asks to create ADSL, ADAE, ADLB, or ADTTE from existing SDTM datasets, asks whether an ADaM objective is feasible, or asks for a standards-driven SDTM-to-ADaM derivation workflow in this repository. Delegates shared runtime instructions to skill/standards-driven-sdtm-to-adam/SKILL.md.
+description: Claude Code adapter for the CDISC SDTM to ADaM Skill. Use when the user asks to create ADSL, ADAE, ADLB, or ADTTE from existing SDTM datasets, asks whether an ADaM objective is feasible, or asks for a standards-driven SDTM-to-ADaM derivation workflow in this repository. Delegates shared runtime instructions to the repository-root SKILL.md.
 ---
 
 # CDISC SDTM to ADaM Claude Code Adapter
@@ -31,13 +31,13 @@ run independent validation, and return the traceability report.
 Load and follow the canonical shared Skill definition at:
 
 ```text
-../../../skill/standards-driven-sdtm-to-adam/SKILL.md
+../../../SKILL.md
 ```
 
 Use the canonical standards scope reference at:
 
 ```text
-../../../skill/standards-driven-sdtm-to-adam/references/standards-index.md
+../../../docs/standards/standards-index.md
 ```
 
 Do not maintain duplicate runtime, derivation, validation, standards, evidence, or reporting instructions here.
