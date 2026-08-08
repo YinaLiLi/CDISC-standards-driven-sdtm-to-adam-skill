@@ -8,8 +8,9 @@ This repository packages **CDISC SDTM to ADaM**, a CDISC Standards-Driven SDTM-t
 
 | Path | Purpose |
 |---|---|
-| `skills/standards-driven-sdtm-adam/` | Primary Codex Skill package and user-facing metadata. |
-| `.claude/skills/cdisc-sdtm-to-adam/` | Claude Code compatibility entrypoint for the same Skill workflow. |
+| `skill/standards-driven-sdtm-to-adam/` | Canonical shared Skill definition and standards scope reference. |
+| `skills/standards-driven-sdtm-adam/` | Thin Codex adapter and Codex-specific user-facing metadata. |
+| `.claude/skills/cdisc-sdtm-to-adam/` | Thin Claude Code adapter for the same canonical Skill. |
 | `src/standards_driven_sdtm_adam/` | Python implementation behind the Skill. |
 | `config/standards/` | Standards manifests used by runtime discovery and evidence handling. |
 | `docs/` | Architecture, standards, validation, evidence, reporting, and usage documentation. |
@@ -37,9 +38,9 @@ build the derivation plan, derive the datasets,
 run independent validation, and return the traceability report.
 ```
 
-The package identifier remains `standards-driven-sdtm-adam` for filesystem and installation compatibility. The user-facing name comes from `skills/standards-driven-sdtm-adam/agents/openai.yaml`.
+This repository uses one canonical Skill at `skill/standards-driven-sdtm-to-adam/` with thin Codex and Claude Code adapters. The Codex package identifier remains `standards-driven-sdtm-adam` for filesystem and installation compatibility. The user-facing name comes from `skills/standards-driven-sdtm-adam/agents/openai.yaml`.
 
-Claude Code compatibility is provided as an additional project skill at `.claude/skills/cdisc-sdtm-to-adam/SKILL.md`. It does not replace the Codex Skill; in Claude Code, invoke it with:
+Claude Code compatibility is provided as an additional adapter at `.claude/skills/cdisc-sdtm-to-adam/SKILL.md`. It points to the same canonical Skill definition; in Claude Code, invoke it with:
 
 ```text
 /cdisc-sdtm-to-adam
@@ -86,7 +87,7 @@ Licensed CDISC source documents are not bundled in GitHub. Runtime discovery use
 | Upstream SDTM | SDTM Model, SDTM Implementation Guide | Interpretation of existing SDTM structure and variable semantics. |
 | Validation references | ADaM Examples, ADaM MSG Example Submission, ADaM Traceability Examples | Regression support, structural comparison, implementation comparison, and validation support. |
 
-Normal Skill use does not require users to perform standards intake, choose standards versions, select filenames, calculate checksums, or verify document identity. Those are maintainer responsibilities.
+Runtime users do not perform standards intake, choose standards versions, select filenames, calculate checksums, or verify document identity. Those are maintainer responsibilities.
 
 ## What You Get
 
