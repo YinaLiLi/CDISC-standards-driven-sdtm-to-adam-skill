@@ -1,9 +1,9 @@
 ---
 name: standards-driven-sdtm-adam
-description: Use for Version 1 standards-driven workflows that derive supported ADaM outputs from existing SDTM datasets using configured CDISC standards, explicit specifications, independent validation, traceability, and deterministic reports.
+description: Use for CDISC SDTM to ADaM workflows that derive supported ADaM outputs from existing SDTM datasets using configured CDISC standards, explicit specifications, independent validation, traceability, and deterministic reports.
 ---
 
-# Standards-Driven SDTM-to-ADaM Pipeline
+# CDISC Standards-Driven SDTM-to-ADaM
 
 ## Runtime Boundary
 

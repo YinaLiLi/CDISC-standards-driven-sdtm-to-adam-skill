@@ -1,3 +1,3 @@
-display_name: Standards-Driven SDTM-to-ADaM Pipeline
-short_description: Plan standards-driven SDTM-to-ADaM pipelines.
-default_prompt: Use this skill to run or maintain the Version 1 standards-driven SDTM-to-ADaM workflow with standards manifests, explicit specifications, independent validation, traceability, and deterministic reports.
+display_name: CDISC SDTM to ADaM
+short_description: Derive supported ADaM datasets from existing SDTM with CDISC standards.
+default_prompt: Use the "CDISC SDTM to ADaM" skill to derive supported ADaM datasets from existing SDTM using CDISC standards, explicit specifications, independent validation, traceability, and deterministic reports.
