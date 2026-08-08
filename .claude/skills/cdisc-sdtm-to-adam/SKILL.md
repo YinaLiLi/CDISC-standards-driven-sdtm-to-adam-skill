@@ -5,7 +5,7 @@ description: CDISC SDTM to ADaM workflow skill for deriving supported ADaM datas
 
 # CDISC SDTM to ADaM
 
-This is the Claude Code version of the CDISC Standards-Driven SDTM-to-ADaM Skill.
+This is the Claude Code compatibility entrypoint for the same CDISC Standards-Driven SDTM-to-ADaM Skill. It does not replace the Codex Skill in `skills/standards-driven-sdtm-adam`; it gives Claude Code the same workflow boundary and invocation behavior through `.claude/skills/cdisc-sdtm-to-adam/SKILL.md`.
 
 Invoke directly in Claude Code with:
 

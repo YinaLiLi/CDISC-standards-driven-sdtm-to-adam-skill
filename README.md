@@ -25,6 +25,12 @@ run independent validation, and return the traceability report.
 
 The package identifier remains `standards-driven-sdtm-adam` for filesystem and installation compatibility. The user-facing name comes from `skills/standards-driven-sdtm-adam/agents/openai.yaml`.
 
+Claude Code compatibility is provided as an additional project skill at `.claude/skills/cdisc-sdtm-to-adam/SKILL.md`. It does not replace the Codex Skill; in Claude Code, invoke it with:
+
+```text
+/cdisc-sdtm-to-adam
+```
+
 ## Workflow
 
 ![CDISC SDTM to ADaM workflow](docs/assets/readme-workflow.png)
