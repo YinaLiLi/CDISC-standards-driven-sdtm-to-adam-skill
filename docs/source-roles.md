@@ -1,7 +1,5 @@
 # Source Roles
 
-Milestone 10.5 finalizes source roles for standards intake.
-
 Standards intake and source identity verification are Developer Standards Setup tasks. Runtime users load an already configured registry and do not perform role assignment, SHA256 checks, or document identity inspection during normal workflow.
 
 ## primary_standard
@@ -16,9 +14,9 @@ May participate in:
 
 ## upstream_reference
 
-May participate only where appropriate for upstream SDTM interpretation and source-preserving preprocessing.
+May participate only where appropriate for upstream SDTM interpretation, source-preserving preprocessing, and upstream traceability.
 
-SDTM and SDTMIG references do not imply support for Raw-to-SDTM mapping, SDTM conformance transformation, or SDTM certification.
+`SDTM_v2.0.pdf` and `SDTMIG v3.4.pdf` are upstream references. They support interpretation of existing SDTM input datasets and SDTM domain/variable semantics. They do not participate as primary ADaM normative evidence, produce `STANDARD_REQUIRED` ADaM evidence, perform Raw-to-SDTM mapping, perform SDTM mapping, or perform SDTM conformance transformation.
 
 ## validation_reference
 

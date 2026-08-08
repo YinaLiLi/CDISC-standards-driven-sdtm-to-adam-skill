@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections.abc import Callable, Iterable, Mapping
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
 
 from standards_driven_sdtm_adam.derivation import (
     AdamDerivationEngine,
@@ -29,7 +30,13 @@ from standards_driven_sdtm_adam.reporting import (
     render_json,
     render_markdown,
 )
-from standards_driven_sdtm_adam.standards import StandardsRegistry
+from standards_driven_sdtm_adam.standards import (
+    StandardsRegistry,
+    acquire_required_standards,
+    manual_setup_lines,
+    plan_required_standards_for_tasks,
+)
+from standards_driven_sdtm_adam.standards.errors import StandardsRegistryError
 from standards_driven_sdtm_adam.traceability import (
     DecisionEvidenceRequest,
     EvidenceResolutionResult,
@@ -74,6 +81,7 @@ class V1Pipeline:
         requested_preprocessing_operations: Iterable[str] = (),
         requested_variables: Iterable[str] = (),
         evidence_resolution_requests: Iterable[DecisionEvidenceRequest] = (),
+        standards_acquisition_downloader: Any | None = None,
         adam_specification_transform: Callable[
             [AdamDerivationSpecification], AdamDerivationSpecification
         ]
@@ -83,6 +91,21 @@ class V1Pipeline:
 
         registry = StandardsRegistry.load(registry_dir, validate_integrity=False)
         task_intents = tuple(task_intents)
+        if standards_acquisition_downloader is not None:
+            plan = plan_required_standards_for_tasks(
+                registry,
+                task_intents=task_intents,
+            )
+            acquisition = acquire_required_standards(
+                plan.registry,
+                standards_acquisition_downloader,
+            )
+            if acquisition.manual_setup_required:
+                details = " ".join(manual_setup_lines(acquisition))
+                raise StandardsRegistryError(
+                    f"Required CDISC standards are unavailable after acquisition. {details}"
+                )
+
         study_decisions = tuple(study_decisions)
 
         discovery_engine = StandardsDiscoveryEngine(registry)

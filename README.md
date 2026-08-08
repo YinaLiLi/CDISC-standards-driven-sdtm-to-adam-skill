@@ -14,6 +14,7 @@ Reusable Codex Skill and Python pipeline for deriving selected ADaM datasets fro
 | `SV` | `ADTTE` |
 
 Existing SDTM is required. Raw -> SDTM mapping and SDTM conformance transformation are outside this Skill.
+Exploratory analysis, statistical analysis, machine learning, dashboards, AI summaries, Define-XML generation, and regulatory certification are outside Version 1 scope.
 
 ## How It Works
 
@@ -32,7 +33,40 @@ Specification is always generated before implementation.
 
 ## Standards
 
-Standards are registered through `config/standards`. Local licensed CDISC source files are not committed, portable paths such as `${CDISC_HOME}` are supported, and official filenames are preserved.
+CDISC source documents are not bundled with this Skill because some standards are subject to licensing and access restrictions. On first use, the Skill checks required local standards.
+
+When required CDISC standards are missing, the Skill opens the official CDISC sign-in flow. After the user signs in with their cdiscID, the Skill automatically locates, downloads, validates, and stores the required standards. If automated access is unavailable, the Skill identifies the exact official CDISC source and expected document so the user does not need to search for it manually.
+
+Programmatic first-run preflight:
+
+```python
+from standards_driven_sdtm_adam.standards import first_user_preflight, manual_setup_lines
+
+result = first_user_preflight(
+    "config/standards",
+    task_intents=("Create ADSL subject-level analysis dataset",),
+)
+if result.manual_setup_required:
+    print("\n".join(manual_setup_lines(result)))
+```
+
+Manual setup remains available when a source is not retrievable through the supported authorization flow. In that case, the Skill identifies the exact official source and expected filename.
+
+Version 1 uses these primary ADaM standards:
+
+- ADaM Model
+- Important Considerations When Using ADaM
+- ADaM Implementation Guide
+- ADaM OCCDS Implementation Guide
+- ADaM BDS Time-to-Event Guide
+- ADaM Metadata Submission Guidelines
+- ADaM Controlled Terminology
+- ADaM Conformance Rules
+
+Version 1 also uses these upstream references:
+
+- SDTM Model
+- SDTM Implementation Guide
 
 See [Standards Registry](docs/standards-registry.md) for registry details.
 

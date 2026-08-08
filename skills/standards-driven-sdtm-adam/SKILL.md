@@ -49,12 +49,12 @@ Specification is required before implementation. Do not execute preprocessing or
 Runtime users provide:
 
 - configured standards manifests
-- local standard files where manifests point
 - existing SDTM datasets
 - research objectives
 - study decisions when required for study-specific derivations
+- CDISC authentication when required for authorized standards acquisition
 
-Runtime users do not perform standards intake, SHA256 recomputation, release confirmation, or document identity verification during normal workflow.
+Runtime users do not perform standards intake, search CDISC for standards, choose versions, choose filenames, choose storage locations, recompute SHA256, confirm releases, or verify document identity during normal workflow.
 
 ## Developer Standards Setup
 
@@ -86,4 +86,3 @@ Preserve provenance from source evidence to specification, execution, validation
 ## Resources
 
 - `references/standards-index.md`: Version 1 standards scope notes.
-- `assets/`: Reserved for reusable non-context assets.

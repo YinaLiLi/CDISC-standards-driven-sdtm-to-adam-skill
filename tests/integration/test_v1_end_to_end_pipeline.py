@@ -2,6 +2,7 @@ import json
 from dataclasses import replace
 from pathlib import Path
 
+from standards_driven_sdtm_adam.standards import DownloadReceipt
 from standards_driven_sdtm_adam.derivation import AdamVariableSpecification
 from standards_driven_sdtm_adam.pipeline import V1Pipeline
 from standards_driven_sdtm_adam.traceability import DecisionEvidenceRequest
@@ -227,7 +228,7 @@ def _run(tmp_path: Path, **overrides):
     return V1Pipeline().run(**args)
 
 
-def test_v1_pipeline_happy_path_flows_through_all_milestone_boundaries(tmp_path):
+def test_v1_pipeline_happy_path_flows_through_all_runtime_boundaries(tmp_path):
     result = _run(tmp_path)
 
     assert {run.task_intent for run in result.discovery_runs} == set(TASK_INTENTS)
@@ -406,6 +407,30 @@ def test_unresolved_required_evidence_is_reported_without_fabricated_citation(tm
     assert missing.citations == ()
     assert missing.unresolved_evidence_references == ("adamig:missing",)
     assert "adamig:missing" in result.markdown_report
+
+
+def test_v1_pipeline_proceeds_after_successful_standards_acquisition(tmp_path):
+    registry_dir = _registry_dir(tmp_path)
+    missing_source = registry_dir / "docs" / "adamig.txt"
+    missing_source.unlink()
+
+    class AuthorizedFixtureDownloader:
+        def download(self, manifest, destination: Path) -> DownloadReceipt:
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(
+                "# ADSL\n[page 11]\nADSL must support subject-level analysis with one record per subject.\n",
+                encoding="utf-8",
+            )
+            return DownloadReceipt(path=destination, authorized=True, message="fixture download")
+
+    result = _run(
+        tmp_path,
+        registry_dir=registry_dir,
+        standards_acquisition_downloader=AuthorizedFixtureDownloader(),
+    )
+
+    assert result.report.overall_status == "PASS"
+    assert missing_source.exists()
 
 
 def test_invalid_derivation_dependency_blocks_dependent_variable_in_integration(tmp_path):

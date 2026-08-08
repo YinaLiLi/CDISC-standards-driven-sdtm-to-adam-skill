@@ -20,4 +20,4 @@ Evidence resolution produces:
 - unresolved evidence references
 - excluded evidence references
 
-Reports consume those resolved M11 outputs directly and do not re-resolve evidence.
+Reports consume those resolved outputs directly and do not re-resolve evidence.

@@ -1,6 +1,6 @@
 # Evidence Resolution and Citation Engine
 
-Milestone 11 adds the runtime layer that resolves evidence references into citation records for downstream reporting.
+The evidence resolution layer resolves evidence references into citation records for downstream reporting.
 
 ## Responsibility
 
@@ -39,4 +39,4 @@ The public API is exposed from `standards_driven_sdtm_adam.traceability`:
 - `ResolvedEvidenceItem`
 - `EvidenceResolutionResult`
 
-M12 reporting should consume these citation records rather than re-resolving standard evidence.
+Reporting should consume these citation records rather than re-resolving standard evidence.

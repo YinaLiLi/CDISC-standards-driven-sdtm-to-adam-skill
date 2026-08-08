@@ -4,12 +4,12 @@ Milestone 12 adds a thin presentation layer for existing v1 pipeline outputs.
 
 ## Responsibility
 
-Reporting consumes supplied objects from earlier milestones:
+Reporting consumes supplied objects from earlier workflow stages:
 
 - preprocessing specifications
 - ADaM derivation specifications
 - independent validation results
-- Milestone 11 evidence resolution results
+- evidence resolution results
 
 The reporting layer builds a stable report representation and renders it for readers. It does not perform standards discovery, rule extraction, decision classification, derivation, validation, or evidence resolution.
 
@@ -29,11 +29,11 @@ The v1 report includes:
 
 - preprocessing/specification summary
 - ADaM derivation/specification summary for ADSL, ADAE, ADLB, and ADTTE
-- validation status, counts, warnings, and failures from M10 validation results
-- traceability and evidence summary from M11 resolution results
+- validation status, counts, warnings, and failures from validation results
+- traceability and evidence summary from evidence resolution results
 - unresolved and excluded evidence references
 
-Normative citations and validation/supporting citations remain distinguishable through the M11 `citation_purpose` and `source_role` fields.
+Normative citations and validation/supporting citations remain distinguishable through the `citation_purpose` and `source_role` fields.
 
 ## Status
 

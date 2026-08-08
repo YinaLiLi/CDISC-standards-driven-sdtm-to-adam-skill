@@ -5,7 +5,7 @@ standard:
   role: primary_standard
   version: "5.0"
   release_date: null
-  official_url: https://www.cdisc.org/system/files/members/standard/foundational/ADaM%20Conformance%20Rules%20v5.0.xlsx
+  official_url: https://www.cdisc.org/standards/foundational/adam/adam-conformance-rules-v5-0
   package_url: null
   local_path: ../../docs/standards/ADaM/standards/ADaM Conformance Rules v5.0.xlsx
   local_root: null

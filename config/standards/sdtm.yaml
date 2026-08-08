@@ -3,13 +3,13 @@ standard:
   id: sdtm-model
   title: Study Data Tabulation Model
   role: upstream_reference
-  version: null
-  release_date: null
-  official_url: null
+  version: "2.0"
+  release_date: "2021-11-29"
+  official_url: https://www.cdisc.org/system/files/members/standard/foundational/SDTM_v2.0.pdf
   package_url: null
-  local_path: null
+  local_path: ../../docs/standards/ADaM/standards/SDTM_v2.0.pdf
   local_root: null
-  original_filename: null
+  original_filename: SDTM_v2.0.pdf
   sha256: null
   sha256_status: NOT_APPLICABLE
   verification_status: UNVERIFIED

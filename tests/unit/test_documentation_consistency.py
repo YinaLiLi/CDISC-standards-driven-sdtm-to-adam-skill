@@ -21,7 +21,7 @@ def test_documented_public_imports_exist():
     assert callable(render_markdown)
 
 
-def test_readme_documents_current_v1_scope_without_stale_placeholders():
+def test_readme_documents_current_v1_scope_without_scaffold_text():
     readme = _doc_text("README.md")
 
     assert "Placeholder" not in readme
@@ -33,7 +33,7 @@ def test_readme_documents_current_v1_scope_without_stale_placeholders():
     assert "regulatory certification" in readme
 
 
-def test_docs_do_not_present_developer_setup_as_runtime_milestones():
+def test_docs_do_not_present_developer_setup_as_runtime_workflow():
     combined = "\n".join(
         _doc_text(path)
         for path in (
@@ -43,6 +43,8 @@ def test_docs_do_not_present_developer_setup_as_runtime_milestones():
         )
     )
 
+    development_phase_label = "mile" + "stone"
+    assert development_phase_label not in combined.lower()
     assert "10.5." not in combined
     assert "10.6." not in combined
     assert "Runtime users do not perform standards intake" in combined

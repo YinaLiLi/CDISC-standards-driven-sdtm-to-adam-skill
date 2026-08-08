@@ -5,11 +5,11 @@ standard:
   role: primary_standard
   version: null
   release_date: "2026-03-27"
-  official_url: https://www.cdisc.org/standards/terminology
+  official_url: https://evs.nci.nih.gov/ftp1/CDISC/ADaM/ADaM%20Terminology.xls
   package_url: null
-  local_path: ../../docs/standards/ADaM/standards/ADaM Terminology_07112026.xls
+  local_path: ../../docs/standards/ADaM/standards/ADaM Terminology.xls
   local_root: null
-  original_filename: ADaM Terminology_07112026.xls
+  original_filename: ADaM Terminology.xls
   sha256: 2c936902297c4d9992f139ea7adb0ed4d889400518f427c46eed584854643586
   sha256_status: PRESENT
   verification_status: VERIFIED

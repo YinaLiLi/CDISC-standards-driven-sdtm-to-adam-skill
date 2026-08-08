@@ -3,13 +3,13 @@ standard:
   id: sdtmig
   title: SDTM Implementation Guide
   role: upstream_reference
-  version: null
-  release_date: null
-  official_url: null
+  version: "3.4"
+  release_date: "2021-11-29"
+  official_url: https://www.cdisc.org/standards/foundational/sdtmig/sdtmig-v3-4
   package_url: null
-  local_path: null
+  local_path: ../../docs/standards/ADaM/standards/SDTMIG v3.4.pdf
   local_root: null
-  original_filename: null
+  original_filename: SDTMIG v3.4.pdf
   sha256: null
   sha256_status: NOT_APPLICABLE
   verification_status: UNVERIFIED

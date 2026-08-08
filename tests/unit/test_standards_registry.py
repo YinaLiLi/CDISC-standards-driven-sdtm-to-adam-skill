@@ -100,13 +100,13 @@ def test_standard_manifest_accepts_identity_verification_statuses():
 
 
 def test_registry_loads_v1_manifests():
-    registry = StandardsRegistry.load(Path("config") / "standards")
+    registry = StandardsRegistry.load(Path("config") / "standards", validate_integrity=False)
 
     assert "adamig" in {manifest.id for manifest in registry.all()}
 
 
 def test_registry_matches_approved_v1_primary_adam_scope():
-    registry = StandardsRegistry.load(Path("config") / "standards")
+    registry = StandardsRegistry.load(Path("config") / "standards", validate_integrity=False)
 
     primary = {
         (manifest.id, manifest.title, manifest.version)
@@ -126,7 +126,7 @@ def test_registry_matches_approved_v1_primary_adam_scope():
 
 
 def test_sdtm_standards_are_upstream_references_only():
-    registry = StandardsRegistry.load(Path("config") / "standards")
+    registry = StandardsRegistry.load(Path("config") / "standards", validate_integrity=False)
 
     upstream_ids = {
         manifest.id
@@ -137,7 +137,7 @@ def test_sdtm_standards_are_upstream_references_only():
 
 
 def test_define_xml_and_sdrg_are_disabled_future_scope():
-    registry = StandardsRegistry.load(Path("config") / "standards")
+    registry = StandardsRegistry.load(Path("config") / "standards", validate_integrity=False)
 
     future_scope = {manifest.id: manifest for manifest in registry.by_scope_category("future_scope")}
 

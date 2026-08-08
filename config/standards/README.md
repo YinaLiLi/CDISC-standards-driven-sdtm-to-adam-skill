@@ -45,13 +45,15 @@ Never mark a source `VERIFIED` from filename alone. Do not mark a source `MISMAT
 Allowed `role` values:
 
 - `primary_standard`: official standards eligible for standards discovery, evidence extraction, citation, specification, and validation against official standards.
-- `upstream_reference`: upstream SDTM references used only for appropriate SDTM source interpretation and source-preserving preprocessing.
+- `upstream_reference`: upstream SDTM references used only for appropriate SDTM source interpretation, SDTM domain/variable semantics, source-preserving preprocessing, and upstream traceability.
 - `validation_reference`: examples or reference packages used only by validation/reference workflows.
 - `future_scope`: disabled entries that are not supported in the current version.
 
 `validation_reference` materials must not participate in primary rule discovery, produce `STANDARD_REQUIRED` evidence, override a primary standard, or introduce mandatory derivation logic.
 
 `future_scope` materials must not participate in Version 1 runtime rule or evidence processing.
+
+`SDTM_v2.0.pdf` and `SDTMIG v3.4.pdf` are upstream references only. They do not participate as primary ADaM normative evidence, produce `STANDARD_REQUIRED` ADaM evidence, perform Raw-to-SDTM mapping, perform SDTM mapping, or perform SDTM conformance transformation.
 
 Local paths must be portable and must not require machine-specific absolute paths. Prefer `${CDISC_HOME}` or repository-relative paths. CDISC source files are referenced by manifest IDs and original filenames; do not rename, flatten, or normalize source filenames.
 

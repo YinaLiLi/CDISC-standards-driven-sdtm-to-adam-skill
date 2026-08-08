@@ -96,4 +96,4 @@ ADaM Derivation answers:
 
 > Create analysis-ready variables and datasets.
 
-This milestone does not execute preprocessing, derive ADaM datasets, run statistical analysis, or generate final reports.
+This layer does not execute preprocessing, derive ADaM datasets, run statistical analysis, or generate final reports.

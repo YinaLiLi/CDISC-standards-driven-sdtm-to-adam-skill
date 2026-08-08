@@ -26,7 +26,7 @@ Unsupported, unsafe, or absent operations are rejected or skipped with execution
 - `neutral_whitespace_normalization`
 - `technical_datatype_normalization`
 
-Only operations represented by approved Milestone 6 specifications are executable.
+Only operations represented by approved preprocessing specifications are executable.
 
 ## Source Preservation
 
@@ -82,4 +82,4 @@ ADaM Derivation Specification answers:
 
 > What analysis datasets and variables must be derived?
 
-This milestone does not implement ADaM derivation, statistical analysis, dashboards, final reports, or regulatory certification.
+This layer does not implement ADaM derivation, statistical analysis, dashboards, final reports, or regulatory certification.

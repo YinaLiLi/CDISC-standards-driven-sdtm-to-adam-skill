@@ -5,11 +5,13 @@ standard:
   role: primary_standard
   version: "2.1"
   release_date: null
-  official_url: https://www.cdisc.org/system/files/members/standard/foundational/adam/ADaM_v2.1.zip
-  package_url: null
+  official_url: https://www.cdisc.org/standards/foundational/adam/adam-v2-1
+  package_url: https://www.cdisc.org/system/files/members/standard/foundational/adam/ADaM_v2.1.zip
   local_path: ../../docs/standards/ADaM/standards/analysis_data_model_v2.1.pdf
   local_root: null
   original_filename: analysis_data_model_v2.1.pdf
+  members:
+    - analysis_data_model_v2.1.pdf
   sha256: 6edd1f0b5af67fd7806d646247e446c63c8e8112f6d3d70aff4270bd8969527a
   sha256_status: PRESENT
   verification_status: VERIFIED

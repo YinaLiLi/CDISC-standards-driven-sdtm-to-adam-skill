@@ -10,4 +10,4 @@ Version 1 uses exactly these decision classifications:
 - `EXAMPLE_ADAPTED`: Adapted from example or validation-reference material; examples are not mandatory rules.
 - `UNSUPPORTED`: Not supported for Version 1 implementation.
 
-Do not add classifications without an explicit future milestone. Classification occurs before implementation, and implementation must not be used to backfill or invent classification rationale.
+Do not add classifications without an explicit scope change. Classification occurs before implementation, and implementation must not be used to backfill or invent classification rationale.

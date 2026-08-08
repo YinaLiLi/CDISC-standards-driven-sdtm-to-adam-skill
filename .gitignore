@@ -3,9 +3,37 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 
+# Build and packaging outputs.
+build/
+dist/
+*.egg-info/
+
+# Local environments, secrets, and auth/session state.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.token
+.auth/
+.playwright/
+playwright/.auth/
+storage-state*.json
+browser-state/
+
+# Local logs and temporary run outputs.
+*.log
+*.part
+tmp/
+temp/
+
 # Local CDISC standards and reference assets are licensed source materials.
 # Keep manifests in Git; keep downloaded/extracted source files local unless
 # redistributability is explicitly confirmed.
+docs/standards/ADaM/standards/
+docs/standards/ADaM/examples/
+docs/standards/ADaM/standards_test/
+docs/standards/ADaM/**/full_run*/
 docs/standards/ADaM/**/*.pdf
 docs/standards/ADaM/**/*.xls
 docs/standards/ADaM/**/*.xlsx
