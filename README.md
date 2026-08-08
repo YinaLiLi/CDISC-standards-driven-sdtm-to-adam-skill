@@ -27,31 +27,7 @@ The package identifier remains `standards-driven-sdtm-adam` for filesystem and i
 
 ## Workflow
 
-```mermaid
-flowchart LR
-    A[Existing SDTM<br/>DM · AE · LB · DS · EX · SV]
-    B[ADaM Objective<br/>What you want to derive]
-    S[CDISC Standards<br/>ADaM · SDTM · Terminology · Conformance]
-
-    F{Feasibility Check<br/>Supported by available SDTM and standards?}
-    N[Refine Objective<br/>or provide additional data]
-    P[Build Derivation Plan<br/>Rules · Sources · Transformations · Evidence]
-    D[Derive ADaM<br/>ADSL · ADAE · ADLB · ADTTE]
-    V[Independent Validation<br/>Separate checks]
-    R[Trace & Report<br/>Evidence · Citations · Markdown · JSON]
-
-    A --> F
-    B --> F
-    S --> F
-
-    F -- No --> N
-    N --> F
-    F -- Yes --> P
-
-    P --> D
-    D --> V
-    V --> R
-```
+![CDISC SDTM to ADaM workflow](docs/assets/readme-workflow.png)
 
 | Stage | What it means |
 |---|---|
