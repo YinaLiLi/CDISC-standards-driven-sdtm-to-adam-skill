@@ -1,85 +1,75 @@
 # Standards-Driven SDTM-to-ADaM Pipeline
 
-Reusable Codex Skill and Python pipeline for deriving selected ADaM datasets from existing SDTM inputs. It uses configured standards, generated specifications, independent validation, traceable evidence, and deterministic reporting to keep each derivation auditable.
+Turn existing SDTM datasets into supported ADaM outputs using CDISC standards, explicit derivation specifications, independent validation, and traceable evidence. Provide your SDTM data and ADaM objective; the Skill handles standards discovery, derivation planning, execution, validation, and reporting.
 
-## Supported Scope
-
-| Input SDTM | Output ADaM |
-| --- | --- |
-| `DM` | `ADSL` |
-| `AE` | `ADAE` |
-| `LB` | `ADLB` |
-| `DS` | `ADTTE` |
-| `EX` | `ADTTE` |
-| `SV` | `ADTTE` |
-
-Existing SDTM is required. Raw -> SDTM mapping and SDTM conformance transformation are outside this Skill.
-Exploratory analysis, statistical analysis, machine learning, dashboards, AI summaries, Define-XML generation, and regulatory certification are outside Version 1 scope.
-
-## How It Works
-
-```text
-Standards Discovery
-  -> Rule Extraction
-  -> Feasibility Assessment
-  -> Specification
-  -> Implementation
-  -> Independent Validation
-  -> Evidence Resolution
-  -> Reporting
+```mermaid
+flowchart LR
+    A[Existing SDTM] --> B[Find CDISC Standards]
+    B --> C[Generate Specification]
+    C --> D[Derive ADaM]
+    D --> E[Independent Validation]
+    E --> F[Trace and Cite]
+    F --> G[ADaM and Report]
 ```
 
-Specification is always generated before implementation.
+## At a Glance
+
+| Question | Answer |
+|---|---|
+| What do I provide? | Existing SDTM datasets and an ADaM objective. |
+| What does the Skill do? | Finds standards, creates a specification, derives ADaM, validates independently, and reports traceability. |
+| What needs my interaction? | CDISC sign-in only when protected standards are missing locally. |
+| What is reused later? | Cached standards and prepared reference assets. |
+
+## Inputs & Outputs
+
+| Existing SDTM input | Supported ADaM output |
+|---|---|
+| DM | ADSL |
+| AE | ADAE |
+| LB | ADLB |
+| DS / EX / SV | ADTTE |
+
+Existing SDTM is required; Raw-to-SDTM mapping and SDTM conformance transformation are not part of this Skill.
 
 ## Standards
 
-CDISC source documents are not bundled with this Skill because some standards are subject to licensing and access restrictions. On first use, the Skill checks required local standards.
+Licensed CDISC source documents are not bundled in GitHub. The Skill determines required sources, reuses cached copies, and uses normal CDISC/cdiscID authentication only when protected sources are missing.
 
-When required CDISC standards are missing, the Skill opens the official CDISC sign-in flow. After the user signs in with their cdiscID, the Skill automatically locates, downloads, validates, and stores the required standards. If automated access is unavailable, the Skill identifies the exact official CDISC source and expected document so the user does not need to search for it manually.
+After you sign in once, the same authenticated browser session locates, retrieves, validates, and stores required standards and reference assets for reuse.
 
-Programmatic first-run preflight:
-
-```python
-from standards_driven_sdtm_adam.standards import first_user_preflight, manual_setup_lines
-
-result = first_user_preflight(
-    "config/standards",
-    task_intents=("Create ADSL subject-level analysis dataset",),
-)
-if result.manual_setup_required:
-    print("\n".join(manual_setup_lines(result)))
+```mermaid
+flowchart LR
+    A[Run Skill] --> B{Standards available?}
+    B -->|Yes| C[Continue automatically]
+    B -->|No| D[Sign in to CDISC once]
+    D --> E[Skill retrieves and validates]
+    E --> C
 ```
 
-Manual setup remains available when a source is not retrievable through the supported authorization flow. In that case, the Skill identifies the exact official source and expected filename.
+| Group | Sources | Purpose |
+|---|---|---|
+| Primary ADaM | ADaM Model, ADaMIG, OCCDS IG, BDS TTE, Important Considerations, Metadata Submission Guidelines, Controlled Terminology, Conformance Rules | ADaM derivation rules, terminology, validation |
+| Upstream SDTM | SDTM Model, SDTMIG | Interpret existing SDTM structure and variable semantics |
+| Validation references | ADaM Examples, ADaM MSG Example Submission, ADaM Traceability Examples | Regression, structural comparison, validation and traceability support |
 
-Version 1 uses these primary ADaM standards:
+No API key is required in the normal user flow.
 
-- ADaM Model
-- Important Considerations When Using ADaM
-- ADaM Implementation Guide
-- ADaM OCCDS Implementation Guide
-- ADaM BDS Time-to-Event Guide
-- ADaM Metadata Submission Guidelines
-- ADaM Controlled Terminology
-- ADaM Conformance Rules
+## What You Get
 
-Version 1 also uses these upstream references:
-
-- SDTM Model
-- SDTM Implementation Guide
-
-See [Standards Registry](docs/standards-registry.md) for registry details.
+| Output | Description |
+|---|---|
+| ADaM datasets | Supported `ADSL`, `ADAE`, `ADLB`, and `ADTTE` outputs. |
+| Specifications | Explicit preprocessing and derivation plans generated before implementation. |
+| Validation results | Independent checks of structure, logic, and traceability. |
+| Evidence and citations | Links from specifications and decisions back to standards evidence. |
+| Reports | Deterministic Markdown and JSON summaries. |
 
 ## Quick Start
 
-Install and run the test suite:
-
 ```powershell
-python -m pip install -e ".[test]"
-python -m pytest
+python -m pip install -e .
 ```
-
-Minimal pipeline usage:
 
 ```python
 from standards_driven_sdtm_adam.pipeline import V1Pipeline
@@ -97,20 +87,14 @@ print(result.markdown_report)
 
 See [Usage Examples](docs/usage-examples.md) for a complete runnable example.
 
-## Outputs
-
-- ADaM datasets and specifications
-- independent validation results
-- traceable evidence and citations
-- deterministic Markdown and JSON reports
-
 ## Documentation
 
-- [Architecture](docs/architecture.md)
-- [Standards Registry](docs/standards-registry.md)
-- [Source Roles](docs/source-roles.md)
-- [Usage Examples](docs/usage-examples.md)
-- [Evidence Resolution](docs/evidence-resolution.md)
-- [Reporting](docs/reporting.md)
+| Topic | Link |
+|---|---|
+| Architecture | [docs/architecture.md](docs/architecture.md) |
+| Standards setup | [docs/standards-registry.md](docs/standards-registry.md) |
+| Usage examples | [docs/usage-examples.md](docs/usage-examples.md) |
+| Evidence resolution | [docs/evidence-resolution.md](docs/evidence-resolution.md) |
+| Reporting | [docs/reporting.md](docs/reporting.md) |
 
 Release history: [Release Notes](docs/release-notes-v1.0.0.md) and [CHANGELOG](CHANGELOG.md).
