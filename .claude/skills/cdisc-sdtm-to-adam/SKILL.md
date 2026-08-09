@@ -26,7 +26,7 @@ Available SDTM: DM, DS, SV, AE, EX, LB.
 First check feasibility, show the derivation plan, and wait for confirmation before running the transfer.
 ```
 
-Do not present examples where the objective is a dataset name, specification task, or derivation command such as `derive ADSL`, `build ADaM specs`, or `derive ADLB`.
+Do not present examples where the objective is a dataset name, specification task, source-domain transformation, or derivation command.
 
 Load and follow the canonical shared Skill definition at:
 

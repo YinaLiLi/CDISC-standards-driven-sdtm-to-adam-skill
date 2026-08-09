@@ -1,15 +1,15 @@
 ---
 name: cdisc-sdtm-to-adam
-description: Canonical CDISC SDTM to ADaM Codex Skill definition. Use for CDISC Feasibility Checker, CDISC SDTM to ADaM Transfer, or full CDISC SDTM to ADaM workflows when a user provides existing SDTM datasets and a concrete clinical or analysis objective, such as why subjects discontinue a trial, treatment-emergent adverse events, lab change from baseline, or exposure duration. User-facing examples must use clinical or analysis questions as objectives, not dataset names, specs, or commands such as derive ADSL, build ADaM specs, or derive ADLB. Checks feasibility, builds explicit specifications, derives supported ADaM outputs, validates independently, and returns traceable reports. Claude Code adapter delegates here instead of duplicating runtime instructions.
+description: Canonical CDISC SDTM to ADaM Codex Skill definition. Use for CDISC Feasibility Checker, CDISC SDTM to ADaM Transfer, or full CDISC SDTM to ADaM workflows when a user provides existing SDTM datasets and a concrete clinical or analysis objective, such as why subjects discontinue a trial, treatment-emergent adverse events, lab change from baseline, or exposure duration. User-facing examples must use clinical or analysis questions as objectives, not ADaM dataset names, specification tasks, source-domain transformation tasks, or pipeline commands. Checks feasibility, builds explicit specifications, derives supported ADaM outputs, validates independently, and returns traceable reports. Claude Code adapter delegates here instead of duplicating runtime instructions.
 metadata:
-  version: 1.2.5
+  version: 1.2.6
 ---
 
 # CDISC Standards-Driven SDTM-to-ADaM
 
 ## Overview
 
-Version: 1.2.5
+Version: 1.2.6
 
 CDISC SDTM to ADaM is a CDISC standards-driven Skill for checking whether a concrete clinical or analysis objective is feasible from existing SDTM data, then deriving supported ADaM outputs only after the objective and derivation plan are confirmed.
 
@@ -32,7 +32,7 @@ Available SDTM: DM, LB, SV, EX.
 First check feasibility, then show the derivation plan. Wait for confirmation before running the transfer.
 ```
 
-Objective means the concrete clinical or analysis question, not the dataset name. For example, use `When and why do subjects discontinue the trial?` instead of `Create ADSL`.
+Objective means the concrete clinical or analysis question, not the dataset name, specification task, or pipeline command.
 
 Never present installation examples as dataset derivation, specification-building, or source-domain transformation tasks. Those are implementation tasks, not user objectives.
 
@@ -76,7 +76,7 @@ Use one of these modes:
    Available SDTM: DM, LB, SV, EX.
    First check feasibility, then show the derivation plan. Wait for confirmation before running the transfer.
 
-Objective means the concrete clinical or analysis question, not the dataset name. For example, use "When and why do subjects discontinue the trial?" instead of "Create ADSL."
+Objective means the concrete clinical or analysis question, not the dataset name, specification task, or pipeline command.
 
 Do not summarize these examples as deriving a named ADaM dataset, building ADaM specs, or running a derivation command. The visible examples must keep the `Objective:` clinical question.
 ```
@@ -101,11 +101,7 @@ Good objectives:
 - How do key lab values change from baseline over scheduled visits?
 - What is each subject's treatment exposure duration, and who discontinued treatment early?
 
-Avoid treating these as user objectives:
-
-- Derive ADSL.
-- Create ADAE.
-- Run the pipeline.
+Do not treat ADaM dataset names, specification-building requests, source-domain transformation tasks, or pipeline commands as user objectives.
 
 Map the user's objective to the supported SDTM inputs, required variables, feasible ADaM outputs, missing data, assumptions, and traceability needs.
 

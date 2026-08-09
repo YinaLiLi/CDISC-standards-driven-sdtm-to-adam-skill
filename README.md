@@ -26,9 +26,9 @@ An objective is the question the user wants to answer, not the dataset name to p
 
 | Good objective | Avoid as the user objective |
 |---|---|
-| When and why do subjects discontinue the trial? | Create ADSL. |
-| Which subjects experienced treatment-emergent adverse events, and how severe were they? | Derive ADAE. |
-| How do key lab values change from baseline over scheduled visits? | Run the pipeline. |
+| When and why do subjects discontinue the trial? | A dataset name. |
+| Which subjects experienced treatment-emergent adverse events, and how severe were they? | A specification task. |
+| How do key lab values change from baseline over scheduled visits? | A pipeline command. |
 
 ## Supported Scope
 
@@ -64,7 +64,7 @@ Specification is required before implementation. Unsupported objectives should b
 
 After installation, invoke one of the CDISC modes below.
 
-Use a clinical or analysis question as the `Objective`. Do not use dataset names or implementation tasks such as `derive ADSL`, `build ADaM specs`, or `derive ADLB` as user-facing examples.
+Use a clinical or analysis question as the `Objective`. Do not use dataset names, specification tasks, source-domain transformations, or pipeline commands as user-facing examples.
 
 ### CDISC Feasibility Checker
 

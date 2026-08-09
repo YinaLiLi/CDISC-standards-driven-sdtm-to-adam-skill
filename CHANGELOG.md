@@ -1,11 +1,18 @@
 # Changelog
 
+## 1.2.6 - Remove Technical Anti-Examples
+
+### Changed
+
+- Removed exact technical anti-example phrases from user-facing Skill guidance so installation summaries do not accidentally copy them as usable prompts.
+- Kept the rule that examples must use concrete clinical or analysis questions as objectives, not dataset names, specification tasks, source-domain transformations, or pipeline commands.
+
 ## 1.2.5 - Clinical Objective Usage Examples
 
 ### Changed
 
 - Strengthened installation and usage examples so they use concrete clinical or analysis objectives instead of dataset names, ADaM specification tasks, or derivation commands.
-- Added explicit negative examples to prevent install summaries from presenting `derive ADSL`, `build ADaM specs`, or `derive ADLB` as user objectives.
+- Added explicit negative guidance to prevent install summaries from presenting technical implementation tasks as user objectives.
 
 ## 1.2.4 - Remove Redundant Codex Adapter
 
