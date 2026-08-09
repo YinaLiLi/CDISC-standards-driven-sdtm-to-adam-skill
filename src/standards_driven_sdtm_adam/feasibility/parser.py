@@ -60,8 +60,35 @@ class ResearchObjectiveParser:
             normalized,
             ("baseline", "change from baseline", "from baseline"),
         )
+        temporal_window_required = _mentions_any(
+            normalized,
+            ("precede", "pre-event", "before adverse", "prior to adverse"),
+        )
+        monitoring_profile_required = _mentions_any(
+            normalized,
+            (
+                "monitoring",
+                "risk stratification",
+                "risk profile",
+                "highest risk",
+                "high risk",
+            ),
+        )
 
-        if _mentions_any(normalized, ("adverse event", "adverse events", "adae", "treatment-emergent", "treatment emergent", "sae", "serious adverse")):
+        if _mentions_any(
+            normalized,
+            (
+                "adverse event",
+                "adverse events",
+                "adverse-event",
+                "adverse-events",
+                "adae",
+                "treatment-emergent",
+                "treatment emergent",
+                "sae",
+                "serious adverse",
+            ),
+        ):
             required_domains.add("AE")
         if _mentions_any(normalized, ("laboratory", "laboratory values", "lab ", "adlb", "abnormal laboratory", "abnormal lab")):
             required_domains.add("LB")
@@ -71,6 +98,8 @@ class ResearchObjectiveParser:
             required_domains.add("EX")
         if _mentions_any(normalized, ("visit", "scheduled visit", "sv ")):
             required_domains.add("SV")
+        if monitoring_profile_required:
+            required_domains.update(("AE", "DS", "EX", "LB"))
         if predictive_model_required and required_domains == {"DM"}:
             required_domains.update(("AE", "LB"))
 
@@ -105,6 +134,8 @@ class ResearchObjectiveParser:
             temporal_required=temporal_required,
             abnormality_required=abnormality_required,
             baseline_required=baseline_required,
+            temporal_window_required=temporal_window_required,
+            monitoring_profile_required=monitoring_profile_required,
             predictive_model_required=predictive_model_required,
         )
 

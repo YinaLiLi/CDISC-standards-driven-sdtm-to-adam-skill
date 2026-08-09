@@ -16,6 +16,15 @@ MIN_ANALYZABLE_SUBJECTS = 5
 MIN_ANALYZABLE_RECORDS = 5
 MIN_PREDICTIVE_OUTCOME_SUBJECTS = 20
 
+LIMITATION_TEMPORAL_WINDOW = (
+    "Requires an explicit analysis window and handling rules for partial or missing dates."
+)
+LIMITATION_SPARSE_BASELINE_FLAG = "LB.LBBLFL has too many missing values."
+LIMITATION_MONITORING_PROFILE_RULES = (
+    "Requires clear rules for combining adverse events, lab results, treatment exposure, "
+    "and discontinuation signals."
+)
+
 
 class FeasibilityAssessor:
     """Assess whether available SDTM data can support research objectives."""
@@ -274,7 +283,7 @@ def _data_sufficiency_blockers(
 
     if requirement.predictive_model_required:
         blockers.append(
-            "Predictive machine learning is outside Version 1 feasibility scope; only descriptive or rule-based summaries can be assessed."
+            "The requested predictive analysis does not have a validated supervised outcome label in the provided SDTM data."
         )
         outcome_subjects = _predictive_outcome_subject_count(requirement, snapshot)
         if outcome_subjects is not None and outcome_subjects < MIN_PREDICTIVE_OUTCOME_SUBJECTS:
@@ -299,9 +308,13 @@ def _data_sufficiency_limitations(
         if lbbfl_record_count is not None:
             record_count = snapshot.record_count("LB")
             if record_count and lbbfl_record_count / record_count < 0.5:
-                limitations.append(
-                    "LB.LBBLFL is sparsely populated, so baseline-derived interpretations are limited."
-                )
+                limitations.append(LIMITATION_SPARSE_BASELINE_FLAG)
+
+    if requirement.temporal_window_required:
+        limitations.append(LIMITATION_TEMPORAL_WINDOW)
+
+    if requirement.monitoring_profile_required:
+        limitations.append(LIMITATION_MONITORING_PROFILE_RULES)
 
     return limitations
 

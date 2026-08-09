@@ -49,7 +49,9 @@ Hard blockers prevent reasonable source-data support. Limitations constrain down
 
 Sparse data can be a hard blocker even when required domains and variables exist. Version 1 requires at least five usable records and five subjects for each non-DM domain required by an objective, and at least five overlapping subjects for cross-domain objectives. Objectives that require laboratory abnormality assessment need either `LB.LBNRIND` or laboratory reference range variables. Objectives that require laboratory change from baseline need enough `LB.LBBLFL == "Y"` baseline subjects and post-baseline records for those subjects.
 
-Predictive machine learning is unsupported in Version 1 feasibility results. Predictive objectives are returned as `UNSUPPORTED`; when an apparent outcome can be counted, sparse outcome-positive subject counts are reported as blockers rather than converted into descriptive or rule-based support.
+Predictive objectives are returned as `UNSUPPORTED` when the provided data do not satisfy the requested analysis need. When an apparent outcome can be counted, sparse outcome-positive subject counts are reported as blockers rather than converted into descriptive or rule-based support.
+
+Monitoring-risk or risk-stratification objectives are treated as exploratory rule-based profile objectives when the required source domains are sufficient. They are `PARTIALLY_FEASIBLE`, not fully supported, until the user provides an explicit rule for combining adverse event, laboratory, exposure, and discontinuation signals.
 
 ## Output Fields
 

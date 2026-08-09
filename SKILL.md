@@ -117,6 +117,36 @@ Support these user-facing modes:
 
 Default to the complete guided workflow when the user invokes `CDISC SDTM to ADaM` without choosing a mode.
 
+## Feasibility Response Format
+
+When responding to `CDISC Feasibility Checker` or the feasibility-first step of `CDISC SDTM to ADaM`, use this structure:
+
+1. State whether ADaM transfer has or has not been run.
+2. Provide a `Feasibility Summary` Markdown table with exactly these columns:
+
+| Objective | Feasibility | Primary ADaM Outputs | Key Limitation |
+|---|---|---|---|
+
+Use `-` in `Key Limitation` when there is no current limitation. Do not leave the cell blank. Do not mark an objective fully supported when sparse data, missing required decision rules, missing temporal windows, missing baseline rules, or explicitly requested predictive analysis limitations prevent full support.
+
+3. Provide a `Recommended ADaM Derivation Plan` Markdown table with exactly these columns:
+
+| Output | Role | Source Data | Derive | Constraint / Note |
+|---|---|---|---|---|
+
+Do not render this derivation plan as numbered prose with nested bullet lists. Put each ADaM output or analysis-ready view in one row. Include enough detail in the `Derive` and `Constraint / Note` cells for a user to understand the planned derivations, retained limitations, and unsupported behavior.
+
+4. Provide a `Decisions Needed Before Transfer` Markdown table when study-specific decisions are still required, with columns:
+
+| Decision | Recommended Default |
+|---|---|
+
+5. Include concise explanatory text before or after the tables when needed. Do not output only the tables if the feasibility result needs interpretation.
+
+Keep the feasibility response clean and scoped to the current request. Do not include parser/debug details, internal reasoning, ad hoc diagnostic count tables, prior-chat context, or explanations of why the runtime classified a phrase in a certain way unless the user explicitly asks for diagnostics or validation evidence. If a count is needed to justify a limitation, include it only inside the relevant `Key Limitation` or `Constraint / Note` cell, not as a separate supplemental section.
+
+Do not introduce downstream analysis types that the objective did not ask for. For example, do not mention machine learning, predictive modeling, train/test evaluation, or supervised labels in a monitoring-risk objective unless the user's objective explicitly asks for prediction, modeling, or machine learning. If the user does explicitly ask for predictive analysis, assess whether the provided data satisfy that analysis need; explain data blockers such as no validated target label or too few outcome-positive subjects, without framing the result around whether this Skill implementation supports model training.
+
 Example prompts:
 
 ```text

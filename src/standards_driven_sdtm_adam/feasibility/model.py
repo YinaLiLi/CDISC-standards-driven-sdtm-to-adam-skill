@@ -19,6 +19,8 @@ class FeasibilityRequirement:
     temporal_required: bool = False
     abnormality_required: bool = False
     baseline_required: bool = False
+    temporal_window_required: bool = False
+    monitoring_profile_required: bool = False
     predictive_model_required: bool = False
 
 
