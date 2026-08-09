@@ -294,13 +294,16 @@ def _dependency_order(
     remaining = list(specs)
     ordered: list[AdamVariableSpecification] = []
     completed: set[str] = set()
+    remaining_names = _qualified_names(remaining)
     while remaining:
         progressed = False
         for spec in tuple(remaining):
-            if all(dependency in completed or dependency not in _qualified_names(remaining) for dependency in spec.dependencies):
+            if all(dependency in completed or dependency not in remaining_names for dependency in spec.dependencies):
                 ordered.append(spec)
-                completed.add(f"{spec.dataset}.{spec.variable}")
+                qualified = f"{spec.dataset}.{spec.variable}"
+                completed.add(qualified)
                 remaining.remove(spec)
+                remaining_names.remove(qualified)
                 progressed = True
         if not progressed:
             ordered.extend(remaining)

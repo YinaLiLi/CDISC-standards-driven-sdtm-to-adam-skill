@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections import Counter
 from collections.abc import Iterable, Mapping
 from datetime import date
 
@@ -100,7 +101,8 @@ class AdamValidationEngine:
 
         adsl = adam.get("ADSL", ())
         subjects = [_value(record.get("USUBJID")) for record in adsl if _present(record.get("USUBJID"))]
-        duplicate_subjects = tuple(sorted(subject for subject in set(subjects) if subjects.count(subject) > 1))
+        subject_counts = Counter(subjects)
+        duplicate_subjects = tuple(sorted(subject for subject, count in subject_counts.items() if count > 1))
         add(
             category="STRUCTURAL",
             dataset="ADSL",

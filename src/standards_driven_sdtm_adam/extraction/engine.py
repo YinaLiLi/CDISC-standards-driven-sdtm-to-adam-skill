@@ -45,6 +45,9 @@ class RuleExtractionEngine:
         """Extract relevant evidence from locally available discovered standards."""
 
         discovery_run = self.discovery.discover(task_intent)
+        search_terms = _search_terms(task_intent)
+        search_context = _search_context(search_terms)
+        normalized_task = _normalize(task_intent)
         records: list[EvidenceRecord] = []
 
         for discovered in discovery_run.results:
@@ -55,7 +58,7 @@ class RuleExtractionEngine:
                 records.append(
                     self._status_record(
                         manifest,
-                        task_intent,
+                        search_context,
                         source_path=None,
                         extraction_status="STANDARD_FILE_UNAVAILABLE",
                     )
@@ -66,7 +69,7 @@ class RuleExtractionEngine:
                 records.append(
                     self._status_record(
                         manifest,
-                        task_intent,
+                        search_context,
                         source_path=source_path,
                         extraction_status="STANDARD_FILE_UNAVAILABLE",
                     )
@@ -79,16 +82,16 @@ class RuleExtractionEngine:
                 records.append(
                     self._status_record(
                         manifest,
-                        task_intent,
+                        search_context,
                         source_path=source_path,
                         extraction_status="TEXT_EXTRACTION_FAILED",
                     )
                 )
                 continue
 
-            matches = _matching_blocks(blocks, task_intent)
+            matches = _matching_blocks(blocks, search_terms)
             for match_index, block in enumerate(matches[:MAX_RECORDS_PER_STANDARD], start=1):
-                status = "AMBIGUOUS_EVIDENCE" if _is_ambiguous(block.text, task_intent) else "EXTRACTED"
+                status = "AMBIGUOUS_EVIDENCE" if _is_ambiguous(block.text, normalized_task) else "EXTRACTED"
                 records.append(
                     EvidenceRecord(
                         evidence_id=f"{manifest.id}:{match_index}",
@@ -101,7 +104,7 @@ class RuleExtractionEngine:
                         short_quote=_short_quote(block.text),
                         source_local_path=str(source_path),
                         official_url=manifest.official_url,
-                        search_context=_search_context(task_intent),
+                        search_context=search_context,
                         extraction_status=status,
                     )
                 )
@@ -115,7 +118,7 @@ class RuleExtractionEngine:
     def _status_record(
         self,
         manifest,
-        task_intent: str,
+        search_context: str,
         *,
         source_path: Path | None,
         extraction_status: str,
@@ -131,13 +134,12 @@ class RuleExtractionEngine:
             short_quote=None,
             source_local_path=str(source_path) if source_path is not None else manifest.local_path,
             official_url=manifest.official_url,
-            search_context=_search_context(task_intent),
+            search_context=search_context,
             extraction_status=extraction_status,
         )
 
 
-def _matching_blocks(blocks: list[TextBlock], task_intent: str) -> list[TextBlock]:
-    terms = _search_terms(task_intent)
+def _matching_blocks(blocks: list[TextBlock], terms: tuple[str, ...]) -> list[TextBlock]:
     scored: list[tuple[int, int, TextBlock]] = []
     for index, block in enumerate(blocks):
         normalized = _normalize(block.text)
@@ -183,16 +185,15 @@ def _short_quote(text: str) -> str:
     return normalized[: MAX_QUOTE_LENGTH - 3].rstrip() + "..."
 
 
-def _is_ambiguous(text: str, task_intent: str) -> bool:
+def _is_ambiguous(text: str, normalized_task: str) -> bool:
     normalized_text = _normalize(text)
-    normalized_task = _normalize(task_intent)
     if _classify_evidence(text) in {"RULE", "GUIDANCE", "DEFINITION", "EXAMPLE"}:
         return False
     return not any(dataset in normalized_text and dataset in normalized_task for dataset in ("adsl", "adae", "adlb", "adtte"))
 
 
-def _search_context(task_intent: str) -> str:
-    return "metadata_search:" + ", ".join(_search_terms(task_intent))
+def _search_context(terms: tuple[str, ...]) -> str:
+    return "metadata_search:" + ", ".join(terms)
 
 
 def _normalize(value: str) -> str:

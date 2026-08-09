@@ -17,10 +17,15 @@ class SDTMDataSnapshot:
 
     def __init__(self, datasets: RecordsByDomain) -> None:
         self._records = _normalize_datasets(datasets)
+        self._domains = tuple(sorted(self._records))
+        self._variables_by_domain = {
+            domain: tuple(sorted({variable for record in records for variable in record}))
+            for domain, records in self._records.items()
+        }
 
     @property
     def domains(self) -> tuple[str, ...]:
-        return tuple(sorted(self._records))
+        return self._domains
 
     def has_domain(self, domain: str) -> bool:
         return domain.upper() in self._records
@@ -29,10 +34,7 @@ class SDTMDataSnapshot:
         return self._records.get(domain.upper(), ())
 
     def variables(self, domain: str) -> tuple[str, ...]:
-        variables: set[str] = set()
-        for record in self.records(domain):
-            variables.update(record)
-        return tuple(sorted(variables))
+        return self._variables_by_domain.get(domain.upper(), ())
 
     def has_variable(self, domain: str, variable: str) -> bool:
         return variable in self.variables(domain)

@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-from copy import deepcopy
 from dataclasses import dataclass
 from datetime import date
 from decimal import Decimal, InvalidOperation
@@ -64,7 +63,7 @@ class PreprocessingExecutionEngine:
     ) -> PreprocessingExecutionResult:
         snapshot = SDTMDataSnapshot(sdtm_datasets)
         processed = {
-            domain: tuple(deepcopy(record) for record in snapshot.records(domain))
+            domain: tuple(dict(record) for record in snapshot.records(domain))
             for domain in snapshot.domains
         }
         specs = _coerce_specs(specification)
