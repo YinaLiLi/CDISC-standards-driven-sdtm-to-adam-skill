@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0 - Skill Invocation Guidance
+
+### Changed
+
+- Reframed the user objective as a concrete clinical or analysis question rather than an ADaM dataset name.
+- Added user-facing modes for `CDISC Feasibility Checker`, `CDISC SDTM to ADaM Transfer`, and the complete `CDISC SDTM to ADaM` guided workflow.
+- Updated Codex and Claude Code Skill adapter metadata and examples to use CDISC-prefixed invocation names.
+- Added post-install quick-start examples that show feasibility-first usage before transfer.
+
 ## 1.0.0 - Version 1 Release
 
 ### Added

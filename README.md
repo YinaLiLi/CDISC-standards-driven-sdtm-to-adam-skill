@@ -1,6 +1,6 @@
 # CDISC Standards-Driven SDTM-to-ADaM
 
-Reusable Skill for deriving supported ADaM datasets from existing SDTM using CDISC standards, feasibility checks, explicit specifications, independent validation, and traceable evidence.
+Reusable Skill for answering concrete clinical or analysis objectives from existing SDTM by checking CDISC feasibility, deriving supported ADaM outputs, validating independently, and returning traceable evidence.
 
 This repository packages **CDISC SDTM to ADaM** as one canonical Skill with Codex and Claude Code adapters.
 
@@ -14,14 +14,22 @@ This repository packages **CDISC SDTM to ADaM** as one canonical Skill with Code
 
 | Stage | What it means |
 |---|---|
-| Feasibility Check | Confirm the requested ADaM can be supported by available SDTM and standards. |
+| Feasibility Check | Confirm the requested clinical or analysis objective can be supported by available SDTM and standards. |
 | Build Derivation Plan | Define source variables, derivation rules, transformations, and supporting evidence before execution. |
 | Independent Validation | Validate the derived result separately from derivation. |
 | Trace & Report | Link decisions back to evidence and produce the final report. |
 
 ## What The Skill Does
 
-Provide existing SDTM datasets and the ADaM objective. The Skill checks feasibility first, builds an explicit derivation plan when supported, derives the ADaM outputs, validates them independently, and returns traceability with deterministic reports.
+Provide existing SDTM datasets and a concrete clinical or analysis objective. The Skill checks feasibility first, maps the objective to supported ADaM outputs when possible, builds an explicit derivation plan, derives the outputs after confirmation, validates them independently, and returns traceability with deterministic reports.
+
+An objective is the question the user wants to answer, not the dataset name to produce.
+
+| Good objective | Avoid as the user objective |
+|---|---|
+| When and why do subjects discontinue the trial? | Create ADSL. |
+| Which subjects experienced treatment-emergent adverse events, and how severe were they? | Derive ADAE. |
+| How do key lab values change from baseline over scheduled visits? | Run the pipeline. |
 
 ## Supported Scope
 
@@ -55,21 +63,57 @@ Specification is required before implementation. Unsupported objectives should b
 
 ## Quick Start
 
+After installation, invoke one of the CDISC modes below.
+
+### CDISC Feasibility Checker
+
+Use this mode to decide whether an objective is supportable before deriving anything.
+
+```text
+Use CDISC Feasibility Checker.
+
+Objective: When and why do subjects discontinue the trial?
+Available SDTM: DM, DS, SV, AE, EX, LB.
+
+Check whether this objective is feasible with the available SDTM data. Identify required domains, missing variables, assumptions, and the ADaM outputs needed.
+```
+
+### CDISC SDTM to ADaM Transfer
+
+Use this mode only after the objective and derivation plan are confirmed.
+
+```text
+Use CDISC SDTM to ADaM Transfer.
+
+Objective: When and why do subjects discontinue the trial?
+
+Use the confirmed feasibility result and derivation plan to derive the supported ADaM outputs, validate them independently, and generate the traceability report.
+```
+
+### CDISC SDTM to ADaM
+
+Use this mode for the complete guided workflow: feasibility first, then confirmation, then transfer.
+
+```text
+Use CDISC SDTM to ADaM.
+
+Objective: How do key lab values change from baseline over scheduled visits?
+Available SDTM: DM, LB, SV, EX.
+
+First check feasibility, then show the derivation plan. Wait for confirmation before running the transfer.
+```
+
 ### Codex
 
 The Codex Skill is displayed as **CDISC SDTM to ADaM**.
 
 ```text
-Use the "CDISC SDTM to ADaM" skill.
+Use CDISC SDTM to ADaM.
 
-I have attached my SDTM datasets.
+Objective: Which subjects experienced treatment-emergent adverse events, and how severe were they?
+Available SDTM: DM, AE, EX.
 
-Goal:
-Create ADSL and ADAE.
-
-Check feasibility first. If the objective is supported,
-build the derivation plan, derive the datasets,
-run independent validation, and return the traceability report.
+First check feasibility, then show the derivation plan before transfer.
 ```
 
 ### Claude Code
@@ -80,7 +124,7 @@ Invoke the Claude Code adapter with:
 /cdisc-sdtm-to-adam
 ```
 
-Then provide the same SDTM datasets and ADaM objective.
+Then provide the same SDTM datasets and clinical or analysis objective.
 
 ## Outputs
 

@@ -2,6 +2,36 @@
 
 These examples use the implemented public APIs. They assume local standards manifests are configured under `config/standards` and local standard files are available where the manifests point.
 
+## Skill Invocation Examples
+
+Use a concrete clinical or analysis question as the objective. Do not require the user to know the ADaM dataset name before feasibility is checked.
+
+```text
+Use CDISC Feasibility Checker.
+
+Objective: When and why do subjects discontinue the trial?
+Available SDTM: DM, DS, SV, AE, EX, LB.
+
+Check whether this objective is feasible with the available SDTM data. Identify required domains, missing variables, assumptions, and the ADaM outputs needed.
+```
+
+```text
+Use CDISC SDTM to ADaM.
+
+Objective: Which subjects experienced treatment-emergent adverse events, and how severe were they?
+Available SDTM: DM, AE, EX.
+
+First check feasibility, then show the derivation plan before transfer.
+```
+
+```text
+Use CDISC SDTM to ADaM Transfer.
+
+Objective: How do key lab values change from baseline over scheduled visits?
+
+Use the confirmed feasibility result and derivation plan to derive the supported ADaM outputs, validate them independently, and generate the traceability report.
+```
+
 ## Registry And Discovery
 
 ```python

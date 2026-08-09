@@ -1,6 +1,6 @@
 ---
 name: standards-driven-sdtm-to-adam
-description: Canonical shared CDISC SDTM to ADaM Skill definition for deriving supported ADaM outputs from existing SDTM datasets using configured CDISC standards, feasibility assessment, explicit specifications, independent validation, traceability, and deterministic reports. Agent-specific Codex and Claude Code adapters should delegate here instead of duplicating runtime instructions.
+description: Canonical shared CDISC SDTM to ADaM Skill definition. Use for CDISC Feasibility Checker, CDISC SDTM to ADaM Transfer, or full CDISC SDTM to ADaM workflows when a user provides existing SDTM datasets and a concrete clinical or analysis objective, such as why subjects discontinue a trial, treatment-emergent adverse events, lab change from baseline, or exposure duration. Checks feasibility, builds explicit specifications, derives supported ADaM outputs, validates independently, and returns traceable reports. Agent-specific Codex and Claude Code adapters should delegate here instead of duplicating runtime instructions.
 ---
 
 # CDISC Standards-Driven SDTM-to-ADaM
@@ -20,6 +20,65 @@ Use this skill only for existing SDTM inputs. Version 1 supports:
 - ADaM outputs: `ADSL`, `ADAE`, `ADLB`, `ADTTE`
 
 Do not add Raw-to-SDTM mapping, SDTM conformance transformation, statistical analysis, machine learning, dashboards, AI summaries, Define-XML generation, or regulatory certification unless a later task explicitly changes scope.
+
+## User Objective
+
+Treat the objective as the concrete clinical or analysis question the user wants to answer, not as the ADaM dataset name to produce.
+
+Good objectives:
+
+- When and why do subjects discontinue the trial?
+- Which subjects experienced treatment-emergent adverse events, and how severe were they?
+- How do key lab values change from baseline over scheduled visits?
+- What is each subject's treatment exposure duration, and who discontinued treatment early?
+
+Avoid treating these as user objectives:
+
+- Derive ADSL.
+- Create ADAE.
+- Run the pipeline.
+
+Map the user's objective to the supported SDTM inputs, required variables, feasible ADaM outputs, missing data, assumptions, and traceability needs.
+
+## Invocation Modes
+
+Support these user-facing modes:
+
+| Mode | Use when | Required behavior |
+|---|---|---|
+| CDISC Feasibility Checker | The user asks whether a clinical or analysis objective is answerable from existing SDTM. | Inspect available SDTM domains and variables, return feasibility, missing inputs, blockers, limitations, required ADaM outputs, and next steps. Do not derive ADaM datasets. |
+| CDISC SDTM to ADaM Transfer | The user has a confirmed objective and derivation plan and asks to execute the SDTM-to-ADaM transfer. | Derive supported ADaM outputs from approved specifications, run independent validation, resolve evidence, and produce traceability reports. |
+| CDISC SDTM to ADaM | The user wants the complete guided workflow. | Run feasibility first, show the derivation plan, wait for user confirmation, then run transfer, validation, evidence resolution, and reporting. |
+
+Default to the complete guided workflow when the user invokes `CDISC SDTM to ADaM` without choosing a mode.
+
+Example prompts:
+
+```text
+Use CDISC Feasibility Checker.
+
+Objective: When and why do subjects discontinue the trial?
+Available SDTM: DM, DS, SV, AE, EX, LB.
+
+Check whether this objective is feasible with the available SDTM data. Identify required domains, missing variables, assumptions, and the ADaM outputs needed.
+```
+
+```text
+Use CDISC SDTM to ADaM.
+
+Objective: How do key lab values change from baseline over scheduled visits?
+Available SDTM: DM, LB, SV, EX.
+
+First check feasibility, then show the derivation plan. Wait for confirmation before running the transfer.
+```
+
+```text
+Use CDISC SDTM to ADaM Transfer.
+
+Objective: When and why do subjects discontinue the trial?
+
+Use the confirmed feasibility result and derivation plan to derive the supported ADaM outputs, validate them independently, and generate the traceability report.
+```
 
 ## Runtime Workflow
 

@@ -1,6 +1,6 @@
 ---
 name: cdisc-sdtm-to-adam
-description: Claude Code adapter for the CDISC SDTM to ADaM Skill. Use when the user asks to create ADSL, ADAE, ADLB, or ADTTE from existing SDTM datasets, asks whether an ADaM objective is feasible, or asks for a standards-driven SDTM-to-ADaM derivation workflow in this repository. Delegates shared runtime instructions to the repository-root SKILL.md.
+description: Claude Code adapter for the CDISC SDTM to ADaM Skill. Use when the user asks for CDISC Feasibility Checker, CDISC SDTM to ADaM Transfer, or a full CDISC SDTM to ADaM workflow from existing SDTM datasets and a concrete clinical or analysis objective, such as trial discontinuation, treatment-emergent adverse events, lab change from baseline, or exposure duration. Delegates shared runtime instructions to the repository-root SKILL.md.
 ---
 
 # CDISC SDTM to ADaM Claude Code Adapter
@@ -16,16 +16,12 @@ Invoke directly in Claude Code with:
 Or ask naturally, for example:
 
 ```text
-Use the CDISC SDTM to ADaM skill.
+Use CDISC SDTM to ADaM.
 
-I have attached my SDTM datasets.
+Objective: When and why do subjects discontinue the trial?
+Available SDTM: DM, DS, SV, AE, EX, LB.
 
-Goal:
-Create ADSL and ADAE.
-
-Check feasibility first. If the objective is supported,
-build the derivation plan, derive the datasets,
-run independent validation, and return the traceability report.
+First check feasibility, show the derivation plan, and wait for confirmation before running the transfer.
 ```
 
 Load and follow the canonical shared Skill definition at:

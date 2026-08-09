@@ -1,3 +1,3 @@
 display_name: CDISC SDTM to ADaM
-short_description: Derive supported ADaM datasets from existing SDTM with CDISC standards.
-default_prompt: Use the "CDISC SDTM to ADaM" skill to derive supported ADaM datasets from existing SDTM using CDISC standards, explicit specifications, independent validation, traceability, and deterministic reports.
+short_description: Check CDISC feasibility and transfer existing SDTM into supported ADaM outputs.
+default_prompt: "Use CDISC SDTM to ADaM. Objective: When and why do subjects discontinue the trial? Available SDTM: DM, DS, SV, AE, EX, LB. First check feasibility, show the derivation plan, and wait for confirmation before running the transfer."
