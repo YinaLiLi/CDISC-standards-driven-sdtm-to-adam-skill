@@ -7,6 +7,8 @@ description: Codex adapter for the CDISC SDTM to ADaM Skill. Use when the user a
 
 This is the Codex-compatible entrypoint only.
 
+After installing or reinstalling this Skill, output the canonical usage guide from `../../SKILL.md` section `Post-Install Output`.
+
 Load and follow the canonical shared Skill definition at:
 
 ```text

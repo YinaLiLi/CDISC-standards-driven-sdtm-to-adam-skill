@@ -7,6 +7,8 @@ description: Claude Code adapter for the CDISC SDTM to ADaM Skill. Use when the 
 
 This is the Claude Code-compatible entrypoint only. It does not replace the Codex adapter in `skills/cdisc-sdtm-to-adam`.
 
+After installing or reinstalling this Skill, output the canonical usage guide from `../../../SKILL.md` section `Post-Install Output`.
+
 Invoke directly in Claude Code with:
 
 ```text

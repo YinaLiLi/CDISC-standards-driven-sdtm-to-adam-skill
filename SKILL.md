@@ -12,6 +12,43 @@ This root file is the canonical shared Skill definition. Keep agent-specific dis
 
 Do not duplicate this runtime workflow in agent adapters unless an agent format technically requires it.
 
+## Post-Install Output
+
+After installing or reinstalling this Skill, output this usage guide to the user:
+
+```text
+CDISC SDTM to ADaM is installed.
+
+Use one of these modes:
+
+1. CDISC Feasibility Checker
+   Checks whether a concrete clinical or analysis objective is feasible with the available SDTM data. It does not derive ADaM datasets.
+
+   Example:
+   Use CDISC Feasibility Checker.
+   Objective: When and why do subjects discontinue the trial?
+   Available SDTM: DM, DS, SV, AE, EX, LB.
+
+2. CDISC SDTM to ADaM Transfer
+   Runs the confirmed SDTM-to-ADaM transfer after feasibility and the derivation plan are approved.
+
+   Example:
+   Use CDISC SDTM to ADaM Transfer.
+   Objective: When and why do subjects discontinue the trial?
+   Use the confirmed feasibility result and derivation plan to derive the supported ADaM outputs, validate them, and generate the traceability report.
+
+3. CDISC SDTM to ADaM
+   Runs the guided full workflow: feasibility first, derivation plan, user confirmation, transfer, validation, and traceability report.
+
+   Example:
+   Use CDISC SDTM to ADaM.
+   Objective: How do key lab values change from baseline over scheduled visits?
+   Available SDTM: DM, LB, SV, EX.
+   First check feasibility, then show the derivation plan. Wait for confirmation before running the transfer.
+
+Objective means the concrete clinical or analysis question, not the dataset name. For example, use "When and why do subjects discontinue the trial?" instead of "Create ADSL."
+```
+
 ## Runtime Boundary
 
 Use this skill only for existing SDTM inputs. Version 1 supports:

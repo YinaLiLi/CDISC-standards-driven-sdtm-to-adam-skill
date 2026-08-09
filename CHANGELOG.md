@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.1 - Post-Install Usage Output
+
+### Changed
+
+- Added canonical post-install usage output to `SKILL.md` so installation flows can display the supported modes and example prompts after install.
+- Updated Codex and Claude Code adapters to point installers to the canonical post-install output instead of relying only on README guidance.
+
 ## 1.2.0 - Skill Invocation Guidance
 
 ### Changed
