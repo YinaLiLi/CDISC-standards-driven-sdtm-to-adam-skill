@@ -7,7 +7,7 @@ description: Canonical shared CDISC SDTM to ADaM Skill definition. Use for CDISC
 
 This root file is the canonical shared Skill definition. Keep agent-specific discovery metadata and invocation syntax in thin adapters:
 
-- Codex adapter: `skills/standards-driven-sdtm-adam/SKILL.md`
+- Codex adapter: `skills/cdisc-sdtm-to-adam/SKILL.md`
 - Claude Code adapter: `.claude/skills/cdisc-sdtm-to-adam/SKILL.md`
 
 Do not duplicate this runtime workflow in agent adapters unless an agent format technically requires it.

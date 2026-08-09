@@ -1,5 +1,5 @@
 ---
-name: standards-driven-sdtm-adam
+name: cdisc-sdtm-to-adam
 description: Codex adapter for the CDISC SDTM to ADaM Skill. Use when the user asks for CDISC Feasibility Checker, CDISC SDTM to ADaM Transfer, or a full CDISC SDTM to ADaM workflow from existing SDTM datasets and a concrete clinical or analysis objective, such as trial discontinuation, treatment-emergent adverse events, lab change from baseline, or exposure duration. Delegates shared runtime instructions to the repository-root SKILL.md.
 ---
 

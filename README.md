@@ -5,7 +5,7 @@ Reusable Skill for answering concrete clinical or analysis objectives from exist
 This repository packages **CDISC SDTM to ADaM** as one canonical Skill with Codex and Claude Code adapters.
 
 - Canonical Skill: [SKILL.md](SKILL.md)
-- Codex adapter: [skills/standards-driven-sdtm-adam/](skills/standards-driven-sdtm-adam/)
+- Codex adapter: [skills/cdisc-sdtm-to-adam/](skills/cdisc-sdtm-to-adam/)
 - Claude Code adapter: [.claude/skills/cdisc-sdtm-to-adam/](.claude/skills/cdisc-sdtm-to-adam/)
 
 ## Workflow
