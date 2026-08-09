@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.4 - Remove Redundant Codex Adapter
+
+### Changed
+
+- Removed the nested Codex adapter under `skills/cdisc-sdtm-to-adam/` because the repository-root `SKILL.md` is already the canonical Codex Skill.
+- Updated README, canonical Skill text, Claude Code adapter text, and documentation consistency checks to describe only the Claude Code adapter.
+
 ## 1.2.3 - Canonical Skill Name Alignment
 
 ### Changed

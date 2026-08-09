@@ -1,3 +1,0 @@
-display_name: CDISC SDTM to ADaM
-short_description: Check CDISC feasibility and transfer existing SDTM into supported ADaM outputs.
-default_prompt: "Use CDISC SDTM to ADaM. Objective: When and why do subjects discontinue the trial? Available SDTM: DM, DS, SV, AE, EX, LB. First check feasibility, show the derivation plan, and wait for confirmation before running the transfer."

@@ -1,15 +1,15 @@
 ---
 name: cdisc-sdtm-to-adam
-description: Canonical shared CDISC SDTM to ADaM Skill definition. Use for CDISC Feasibility Checker, CDISC SDTM to ADaM Transfer, or full CDISC SDTM to ADaM workflows when a user provides existing SDTM datasets and a concrete clinical or analysis objective, such as why subjects discontinue a trial, treatment-emergent adverse events, lab change from baseline, or exposure duration. Checks feasibility, builds explicit specifications, derives supported ADaM outputs, validates independently, and returns traceable reports. Agent-specific Codex and Claude Code adapters should delegate here instead of duplicating runtime instructions.
+description: Canonical CDISC SDTM to ADaM Codex Skill definition. Use for CDISC Feasibility Checker, CDISC SDTM to ADaM Transfer, or full CDISC SDTM to ADaM workflows when a user provides existing SDTM datasets and a concrete clinical or analysis objective, such as why subjects discontinue a trial, treatment-emergent adverse events, lab change from baseline, or exposure duration. Checks feasibility, builds explicit specifications, derives supported ADaM outputs, validates independently, and returns traceable reports. Claude Code adapter delegates here instead of duplicating runtime instructions.
 metadata:
-  version: 1.2.3
+  version: 1.2.4
 ---
 
 # CDISC Standards-Driven SDTM-to-ADaM
 
 ## Overview
 
-Version: 1.2.3
+Version: 1.2.4
 
 CDISC SDTM to ADaM is a CDISC standards-driven Skill for checking whether a concrete clinical or analysis objective is feasible from existing SDTM data, then deriving supported ADaM outputs only after the objective and derivation plan are confirmed.
 
@@ -37,12 +37,11 @@ First check feasibility, then show the derivation plan. Wait for confirmation be
 
 Objective means the concrete clinical or analysis question, not the dataset name. For example, use `When and why do subjects discontinue the trial?` instead of `Create ADSL`.
 
-This root file is the canonical shared Skill definition. Keep agent-specific discovery metadata and invocation syntax in thin adapters:
+This root file is the canonical Codex Skill definition and the shared source of truth for other agent integrations. Keep non-Codex discovery metadata and invocation syntax in thin adapters:
 
-- Codex adapter: `skills/cdisc-sdtm-to-adam/SKILL.md`
 - Claude Code adapter: `.claude/skills/cdisc-sdtm-to-adam/SKILL.md`
 
-Do not duplicate this runtime workflow in agent adapters unless an agent format technically requires it.
+Do not duplicate this runtime workflow in non-Codex adapters unless an agent format technically requires it.
 
 ## Post-Install Output
 

@@ -2,10 +2,9 @@
 
 Reusable Skill for answering concrete clinical or analysis objectives from existing SDTM by checking CDISC feasibility, deriving supported ADaM outputs, validating independently, and returning traceable evidence.
 
-This repository packages **CDISC SDTM to ADaM** as one canonical Skill with Codex and Claude Code adapters.
+This repository packages **CDISC SDTM to ADaM** as one canonical Codex Skill with a thin Claude Code adapter.
 
-- Canonical Skill: [SKILL.md](SKILL.md)
-- Codex adapter: [skills/cdisc-sdtm-to-adam/](skills/cdisc-sdtm-to-adam/)
+- Codex / canonical Skill: [SKILL.md](SKILL.md)
 - Claude Code adapter: [.claude/skills/cdisc-sdtm-to-adam/](.claude/skills/cdisc-sdtm-to-adam/)
 
 ## Workflow
