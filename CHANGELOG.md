@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.7 - Remove Remaining Technical Summary Phrase
+
+### Changed
+
+- Removed the remaining technical summary phrase from the post-install guidance so generated installation examples are less likely to use specification work as the visible objective.
+
 ## 1.2.6 - Remove Technical Anti-Examples
 
 ### Changed
