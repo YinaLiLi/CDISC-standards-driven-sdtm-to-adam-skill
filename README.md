@@ -64,6 +64,8 @@ Specification is required before implementation. Unsupported objectives should b
 
 After installation, invoke one of the CDISC modes below.
 
+Use a clinical or analysis question as the `Objective`. Do not use dataset names or implementation tasks such as `derive ADSL`, `build ADaM specs`, or `derive ADLB` as user-facing examples.
+
 ### CDISC Feasibility Checker
 
 Use this mode to decide whether an objective is supportable before deriving anything.

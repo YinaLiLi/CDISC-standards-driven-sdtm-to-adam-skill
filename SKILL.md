@@ -1,34 +1,31 @@
 ---
 name: cdisc-sdtm-to-adam
-description: Canonical CDISC SDTM to ADaM Codex Skill definition. Use for CDISC Feasibility Checker, CDISC SDTM to ADaM Transfer, or full CDISC SDTM to ADaM workflows when a user provides existing SDTM datasets and a concrete clinical or analysis objective, such as why subjects discontinue a trial, treatment-emergent adverse events, lab change from baseline, or exposure duration. Checks feasibility, builds explicit specifications, derives supported ADaM outputs, validates independently, and returns traceable reports. Claude Code adapter delegates here instead of duplicating runtime instructions.
+description: Canonical CDISC SDTM to ADaM Codex Skill definition. Use for CDISC Feasibility Checker, CDISC SDTM to ADaM Transfer, or full CDISC SDTM to ADaM workflows when a user provides existing SDTM datasets and a concrete clinical or analysis objective, such as why subjects discontinue a trial, treatment-emergent adverse events, lab change from baseline, or exposure duration. User-facing examples must use clinical or analysis questions as objectives, not dataset names, specs, or commands such as derive ADSL, build ADaM specs, or derive ADLB. Checks feasibility, builds explicit specifications, derives supported ADaM outputs, validates independently, and returns traceable reports. Claude Code adapter delegates here instead of duplicating runtime instructions.
 metadata:
-  version: 1.2.4
+  version: 1.2.5
 ---
 
 # CDISC Standards-Driven SDTM-to-ADaM
 
 ## Overview
 
-Version: 1.2.4
+Version: 1.2.5
 
 CDISC SDTM to ADaM is a CDISC standards-driven Skill for checking whether a concrete clinical or analysis objective is feasible from existing SDTM data, then deriving supported ADaM outputs only after the objective and derivation plan are confirmed.
 
 ## Usage Examples
 
-After installing or reinstalling this Skill, tell the user it will be available on the next turn or in a new session, then show these usage examples:
+After installing or reinstalling this Skill, tell the user it will be available on the next turn or in a new session, then show these usage examples exactly as clinical or analysis objectives:
 
 ```text
-CDISC Feasibility Checker:
 Use CDISC Feasibility Checker.
 Objective: When and why do subjects discontinue the trial?
 Available SDTM: DM, DS, SV, AE, EX, LB.
 
-CDISC SDTM to ADaM Transfer:
 Use CDISC SDTM to ADaM Transfer.
 Objective: When and why do subjects discontinue the trial?
 Use the confirmed feasibility result and derivation plan to derive the supported ADaM outputs, validate them, and generate the traceability report.
 
-CDISC SDTM to ADaM:
 Use CDISC SDTM to ADaM.
 Objective: How do key lab values change from baseline over scheduled visits?
 Available SDTM: DM, LB, SV, EX.
@@ -36,6 +33,8 @@ First check feasibility, then show the derivation plan. Wait for confirmation be
 ```
 
 Objective means the concrete clinical or analysis question, not the dataset name. For example, use `When and why do subjects discontinue the trial?` instead of `Create ADSL`.
+
+Never present installation examples as dataset derivation, specification-building, or source-domain transformation tasks. Those are implementation tasks, not user objectives.
 
 This root file is the canonical Codex Skill definition and the shared source of truth for other agent integrations. Keep non-Codex discovery metadata and invocation syntax in thin adapters:
 
@@ -78,6 +77,8 @@ Use one of these modes:
    First check feasibility, then show the derivation plan. Wait for confirmation before running the transfer.
 
 Objective means the concrete clinical or analysis question, not the dataset name. For example, use "When and why do subjects discontinue the trial?" instead of "Create ADSL."
+
+Do not summarize these examples as deriving a named ADaM dataset, building ADaM specs, or running a derivation command. The visible examples must keep the `Objective:` clinical question.
 ```
 
 ## Runtime Boundary

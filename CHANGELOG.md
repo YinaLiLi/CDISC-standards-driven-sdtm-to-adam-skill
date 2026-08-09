@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.5 - Clinical Objective Usage Examples
+
+### Changed
+
+- Strengthened installation and usage examples so they use concrete clinical or analysis objectives instead of dataset names, ADaM specification tasks, or derivation commands.
+- Added explicit negative examples to prevent install summaries from presenting `derive ADSL`, `build ADaM specs`, or `derive ADLB` as user objectives.
+
 ## 1.2.4 - Remove Redundant Codex Adapter
 
 ### Changed

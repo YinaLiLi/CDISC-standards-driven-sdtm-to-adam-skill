@@ -1,6 +1,6 @@
 [project]
 name = "standards-driven-sdtm-to-adam-pipeline"
-version = "1.2.4"
+version = "1.2.5"
 description = "CDISC standards-driven SDTM-to-ADaM Skill for feasibility checks and supported ADaM transfer."
 requires-python = ">=3.11"
 dependencies = [
