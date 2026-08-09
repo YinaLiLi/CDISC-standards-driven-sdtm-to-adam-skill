@@ -26,6 +26,7 @@ browser-state/
 *.part
 tmp/
 temp/
+HANDOFF.md
 
 # Local CDISC standards and reference assets are licensed source materials.
 # Keep manifests in Git; keep downloaded/extracted source files local unless
