@@ -1,15 +1,15 @@
 ---
-name: standards-driven-sdtm-to-adam
+name: cdisc-sdtm-to-adam
 description: Canonical shared CDISC SDTM to ADaM Skill definition. Use for CDISC Feasibility Checker, CDISC SDTM to ADaM Transfer, or full CDISC SDTM to ADaM workflows when a user provides existing SDTM datasets and a concrete clinical or analysis objective, such as why subjects discontinue a trial, treatment-emergent adverse events, lab change from baseline, or exposure duration. Checks feasibility, builds explicit specifications, derives supported ADaM outputs, validates independently, and returns traceable reports. Agent-specific Codex and Claude Code adapters should delegate here instead of duplicating runtime instructions.
 metadata:
-  version: 1.2.2
+  version: 1.2.3
 ---
 
 # CDISC Standards-Driven SDTM-to-ADaM
 
 ## Overview
 
-Version: 1.2.2
+Version: 1.2.3
 
 CDISC SDTM to ADaM is a CDISC standards-driven Skill for checking whether a concrete clinical or analysis objective is feasible from existing SDTM data, then deriving supported ADaM outputs only after the objective and derivation plan are confirmed.
 

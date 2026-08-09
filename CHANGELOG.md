@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.3 - Canonical Skill Name Alignment
+
+### Changed
+
+- Renamed the canonical root Skill frontmatter from `standards-driven-sdtm-to-adam` to `cdisc-sdtm-to-adam` so root repository installs report the same Skill name as the Codex and Claude Code adapters.
+
 ## 1.2.2 - Installer-Friendly Skill Summary
 
 ### Changed
