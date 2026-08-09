@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.2 - Installer-Friendly Skill Summary
+
+### Changed
+
+- Added a Skill metadata version and top-level `Overview` / `Usage Examples` sections to make installer summaries easier to extract.
+- Moved the CDISC mode examples near the top of `SKILL.md` so install responses can show usage without relying on README content.
+
 ## 1.2.1 - Post-Install Usage Output
 
 ### Changed

@@ -1,9 +1,41 @@
 ---
 name: standards-driven-sdtm-to-adam
 description: Canonical shared CDISC SDTM to ADaM Skill definition. Use for CDISC Feasibility Checker, CDISC SDTM to ADaM Transfer, or full CDISC SDTM to ADaM workflows when a user provides existing SDTM datasets and a concrete clinical or analysis objective, such as why subjects discontinue a trial, treatment-emergent adverse events, lab change from baseline, or exposure duration. Checks feasibility, builds explicit specifications, derives supported ADaM outputs, validates independently, and returns traceable reports. Agent-specific Codex and Claude Code adapters should delegate here instead of duplicating runtime instructions.
+metadata:
+  version: 1.2.2
 ---
 
 # CDISC Standards-Driven SDTM-to-ADaM
+
+## Overview
+
+Version: 1.2.2
+
+CDISC SDTM to ADaM is a CDISC standards-driven Skill for checking whether a concrete clinical or analysis objective is feasible from existing SDTM data, then deriving supported ADaM outputs only after the objective and derivation plan are confirmed.
+
+## Usage Examples
+
+After installing or reinstalling this Skill, tell the user it will be available on the next turn or in a new session, then show these usage examples:
+
+```text
+CDISC Feasibility Checker:
+Use CDISC Feasibility Checker.
+Objective: When and why do subjects discontinue the trial?
+Available SDTM: DM, DS, SV, AE, EX, LB.
+
+CDISC SDTM to ADaM Transfer:
+Use CDISC SDTM to ADaM Transfer.
+Objective: When and why do subjects discontinue the trial?
+Use the confirmed feasibility result and derivation plan to derive the supported ADaM outputs, validate them, and generate the traceability report.
+
+CDISC SDTM to ADaM:
+Use CDISC SDTM to ADaM.
+Objective: How do key lab values change from baseline over scheduled visits?
+Available SDTM: DM, LB, SV, EX.
+First check feasibility, then show the derivation plan. Wait for confirmation before running the transfer.
+```
+
+Objective means the concrete clinical or analysis question, not the dataset name. For example, use `When and why do subjects discontinue the trial?` instead of `Create ADSL`.
 
 This root file is the canonical shared Skill definition. Keep agent-specific discovery metadata and invocation syntax in thin adapters:
 
@@ -14,7 +46,7 @@ Do not duplicate this runtime workflow in agent adapters unless an agent format 
 
 ## Post-Install Output
 
-After installing or reinstalling this Skill, output this usage guide to the user:
+After installing or reinstalling this Skill, output this usage guide to the user. If the installing agent summarizes instead of copying this block, preserve the same three modes and examples:
 
 ```text
 CDISC SDTM to ADaM is installed.
