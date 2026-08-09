@@ -17,6 +17,9 @@ class FeasibilityRequirement:
     required_domains: tuple[str, ...]
     required_variables: dict[str, tuple[str, ...]]
     temporal_required: bool = False
+    abnormality_required: bool = False
+    baseline_required: bool = False
+    predictive_model_required: bool = False
 
 
 @dataclass(frozen=True)

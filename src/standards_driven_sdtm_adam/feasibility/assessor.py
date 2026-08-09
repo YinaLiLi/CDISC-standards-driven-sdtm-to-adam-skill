@@ -12,6 +12,11 @@ from standards_driven_sdtm_adam.feasibility.model import (
 from standards_driven_sdtm_adam.feasibility.parser import ResearchObjectiveParser
 
 
+MIN_ANALYZABLE_SUBJECTS = 5
+MIN_ANALYZABLE_RECORDS = 5
+MIN_PREDICTIVE_OUTCOME_SUBJECTS = 20
+
+
 class FeasibilityAssessor:
     """Assess whether available SDTM data can support research objectives."""
 
@@ -85,7 +90,12 @@ class FeasibilityAssessor:
         elif subject_coverage.get("overlap_subject_count") is not None and len(available_domains) > 1:
             min_subjects = subject_coverage.get("minimum_domain_subject_count") or 0
             overlap = subject_coverage.get("overlap_subject_count") or 0
-            if min_subjects and overlap < min_subjects:
+            if 0 < overlap < MIN_ANALYZABLE_SUBJECTS:
+                blocking_issues.append(
+                    "Required domains have fewer than "
+                    f"{MIN_ANALYZABLE_SUBJECTS} overlapping analyzable subjects."
+                )
+            elif min_subjects and overlap < min_subjects:
                 limitations.append("Only a subset of subjects overlap across required domains.")
 
         date_coverage = _date_coverage(requirement, snapshot)
@@ -102,6 +112,9 @@ class FeasibilityAssessor:
                     + ", ".join(missing_temporal)
                     + "."
                 )
+
+        blocking_issues.extend(_data_sufficiency_blockers(requirement, snapshot))
+        limitations.extend(_data_sufficiency_limitations(requirement, snapshot))
 
         status = _status(blocking_issues, limitations)
 
@@ -133,7 +146,7 @@ class FeasibilityAssessor:
                     support_score=_domain_score(snapshot, ("DM",)),
                 )
             )
-        if _domains_overlap(snapshot, ("DM", "AE")):
+        if _domains_overlap(snapshot, ("DM", "AE"), min_subjects=MIN_ANALYZABLE_SUBJECTS):
             candidates.append(
                 SupportedResearchObjective(
                     objective_text="Assess adverse event data availability linked to subjects.",
@@ -142,7 +155,7 @@ class FeasibilityAssessor:
                     support_score=_domain_score(snapshot, ("DM", "AE")),
                 )
             )
-        if _domains_overlap(snapshot, ("DM", "LB")):
+        if _domains_overlap(snapshot, ("DM", "LB"), min_subjects=MIN_ANALYZABLE_SUBJECTS):
             candidates.append(
                 SupportedResearchObjective(
                     objective_text="Assess laboratory result data availability linked to subjects.",
@@ -151,7 +164,7 @@ class FeasibilityAssessor:
                     support_score=_domain_score(snapshot, ("DM", "LB")),
                 )
             )
-        if _domains_overlap(snapshot, ("DM", "EX")):
+        if _domains_overlap(snapshot, ("DM", "EX"), min_subjects=MIN_ANALYZABLE_SUBJECTS):
             candidates.append(
                 SupportedResearchObjective(
                     objective_text="Assess treatment exposure data availability linked to subjects.",
@@ -160,7 +173,7 @@ class FeasibilityAssessor:
                     support_score=_domain_score(snapshot, ("DM", "EX")),
                 )
             )
-        if _domains_overlap(snapshot, ("DM", "DS")):
+        if _domains_overlap(snapshot, ("DM", "DS"), min_subjects=MIN_ANALYZABLE_SUBJECTS):
             candidates.append(
                 SupportedResearchObjective(
                     objective_text="Assess disposition data availability linked to subjects.",
@@ -169,7 +182,7 @@ class FeasibilityAssessor:
                     support_score=_domain_score(snapshot, ("DM", "DS")),
                 )
             )
-        if _domains_overlap(snapshot, ("DM", "SV")):
+        if _domains_overlap(snapshot, ("DM", "SV"), min_subjects=MIN_ANALYZABLE_SUBJECTS):
             candidates.append(
                 SupportedResearchObjective(
                     objective_text="Assess subject visit data availability linked to subjects.",
@@ -212,6 +225,87 @@ def _date_coverage(requirement: FeasibilityRequirement, snapshot: SDTMDataSnapsh
     return {"temporal_required": requirement.temporal_required, "variables": variables}
 
 
+def _data_sufficiency_blockers(
+    requirement: FeasibilityRequirement,
+    snapshot: SDTMDataSnapshot,
+) -> list[str]:
+    blockers: list[str] = []
+
+    for domain in requirement.required_domains:
+        if domain == "DM" or not snapshot.has_domain(domain):
+            continue
+        record_count = snapshot.record_count(domain)
+        subject_count = len(snapshot.subject_ids(domain))
+        if 0 < record_count < MIN_ANALYZABLE_RECORDS:
+            blockers.append(
+                f"Required SDTM domain {domain} has only {record_count} usable records; "
+                f"at least {MIN_ANALYZABLE_RECORDS} are required for feasibility."
+            )
+        if 0 < subject_count < MIN_ANALYZABLE_SUBJECTS:
+            blockers.append(
+                f"Required SDTM domain {domain} has only {subject_count} subjects with usable records; "
+                f"at least {MIN_ANALYZABLE_SUBJECTS} are required for feasibility."
+            )
+
+    if requirement.abnormality_required and snapshot.has_domain("LB"):
+        if not _has_lab_abnormality_source(snapshot):
+            blockers.append(
+                "LB lacks an abnormality indicator or reference range variables needed to identify abnormal laboratory results."
+            )
+
+    if requirement.baseline_required and snapshot.has_domain("LB"):
+        baseline_counts = _baseline_counts(snapshot)
+        baseline_subjects = baseline_counts["baseline_subject_count"]
+        post_baseline_subjects = baseline_counts["post_baseline_subject_count"]
+        if baseline_counts["lbbfl_record_count"] is None:
+            blockers.append("LB.LBBLFL is required to evaluate laboratory change from baseline.")
+        elif baseline_subjects < MIN_ANALYZABLE_SUBJECTS:
+            blockers.append(
+                "LB has only "
+                f"{baseline_subjects} subjects with baseline-flagged records; at least "
+                f"{MIN_ANALYZABLE_SUBJECTS} are required for change-from-baseline feasibility."
+            )
+        elif post_baseline_subjects < MIN_ANALYZABLE_SUBJECTS:
+            blockers.append(
+                "LB has only "
+                f"{post_baseline_subjects} baseline subjects with post-baseline records; at least "
+                f"{MIN_ANALYZABLE_SUBJECTS} are required for change-from-baseline feasibility."
+            )
+
+    if requirement.predictive_model_required:
+        blockers.append(
+            "Predictive machine learning is outside Version 1 feasibility scope; only descriptive or rule-based summaries can be assessed."
+        )
+        outcome_subjects = _predictive_outcome_subject_count(requirement, snapshot)
+        if outcome_subjects is not None and outcome_subjects < MIN_PREDICTIVE_OUTCOME_SUBJECTS:
+            blockers.append(
+                "The requested predictive endpoint has only "
+                f"{outcome_subjects} outcome-positive subjects; at least "
+                f"{MIN_PREDICTIVE_OUTCOME_SUBJECTS} are required before predictive feasibility can be considered."
+            )
+
+    return blockers
+
+
+def _data_sufficiency_limitations(
+    requirement: FeasibilityRequirement,
+    snapshot: SDTMDataSnapshot,
+) -> list[str]:
+    limitations: list[str] = []
+
+    if requirement.baseline_required and snapshot.has_domain("LB"):
+        baseline_counts = _baseline_counts(snapshot)
+        lbbfl_record_count = baseline_counts["lbbfl_record_count"]
+        if lbbfl_record_count is not None:
+            record_count = snapshot.record_count("LB")
+            if record_count and lbbfl_record_count / record_count < 0.5:
+                limitations.append(
+                    "LB.LBBLFL is sparsely populated, so baseline-derived interpretations are limited."
+                )
+
+    return limitations
+
+
 def _status(blocking_issues: list[str], limitations: list[str]) -> str:
     if blocking_issues:
         return "UNSUPPORTED"
@@ -224,11 +318,16 @@ def _domain_supported(snapshot: SDTMDataSnapshot, domain: str) -> bool:
     return snapshot.has_domain(domain) and snapshot.record_count(domain) > 0 and bool(snapshot.subject_ids(domain))
 
 
-def _domains_overlap(snapshot: SDTMDataSnapshot, domains: tuple[str, ...]) -> bool:
+def _domains_overlap(
+    snapshot: SDTMDataSnapshot,
+    domains: tuple[str, ...],
+    *,
+    min_subjects: int = 1,
+) -> bool:
     if not all(_domain_supported(snapshot, domain) for domain in domains):
         return False
     subject_sets = [snapshot.subject_ids(domain) for domain in domains]
-    return bool(set.intersection(*subject_sets))
+    return len(set.intersection(*subject_sets)) >= min_subjects
 
 
 def _domain_score(snapshot: SDTMDataSnapshot, domains: tuple[str, ...]) -> int:
@@ -241,3 +340,66 @@ def _domain_score(snapshot: SDTMDataSnapshot, domains: tuple[str, ...]) -> int:
         if snapshot.has_variable(domain, variable)
     )
     return records + subjects + date_counts
+
+
+def _has_lab_abnormality_source(snapshot: SDTMDataSnapshot) -> bool:
+    return snapshot.has_variable("LB", "LBNRIND") or (
+        snapshot.has_variable("LB", "LBSTNRLO") and snapshot.has_variable("LB", "LBSTNRHI")
+    )
+
+
+def _baseline_counts(snapshot: SDTMDataSnapshot) -> dict[str, int | None]:
+    if not snapshot.has_variable("LB", "LBBLFL"):
+        return {
+            "lbbfl_record_count": None,
+            "baseline_subject_count": 0,
+            "post_baseline_subject_count": 0,
+        }
+
+    baseline_subjects = {
+        str(record.get("USUBJID")).strip()
+        for record in snapshot.records("LB")
+        if _is_yes(record.get("LBBLFL")) and _present(record.get("USUBJID"))
+    }
+    post_baseline_subjects = {
+        str(record.get("USUBJID")).strip()
+        for record in snapshot.records("LB")
+        if str(record.get("USUBJID")).strip() in baseline_subjects
+        and not _is_yes(record.get("LBBLFL"))
+        and _present(record.get("USUBJID"))
+    }
+    return {
+        "lbbfl_record_count": snapshot.non_missing_count("LB", "LBBLFL"),
+        "baseline_subject_count": len(baseline_subjects),
+        "post_baseline_subject_count": len(post_baseline_subjects),
+    }
+
+
+def _predictive_outcome_subject_count(
+    requirement: FeasibilityRequirement,
+    snapshot: SDTMDataSnapshot,
+) -> int | None:
+    objective = requirement.objective_text.lower()
+    if not snapshot.has_domain("AE"):
+        return None
+    if ("serious" in objective or "sae" in objective) and snapshot.has_variable("AE", "AESER"):
+        return len(
+            {
+                str(record.get("USUBJID")).strip()
+                for record in snapshot.records("AE")
+                if _is_yes(record.get("AESER")) and _present(record.get("USUBJID"))
+            }
+        )
+    return len(snapshot.subject_ids("AE"))
+
+
+def _present(value: object) -> bool:
+    if value is None:
+        return False
+    if isinstance(value, str) and not value.strip():
+        return False
+    return True
+
+
+def _is_yes(value: object) -> bool:
+    return str(value).strip().upper() == "Y"

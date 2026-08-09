@@ -38,9 +38,32 @@ class ResearchObjectiveParser:
         normalized = _normalize(objective_text)
         required_domains = set(["DM"])
 
-        if _mentions_any(normalized, ("adverse event", "adverse events", "adae", "treatment-emergent", "treatment emergent")):
+        predictive_model_required = _mentions_any(
+            normalized,
+            (
+                "machine learning",
+                "predictive model",
+                "predictive modeling",
+                "predict ",
+                "prediction",
+                "risk model",
+                "supervised",
+                "classifier",
+                "train a model",
+            ),
+        )
+        abnormality_required = _mentions_any(
+            normalized,
+            ("abnormal laboratory", "abnormal lab", "lab abnormal", "laboratory abnormal"),
+        )
+        baseline_required = _mentions_any(
+            normalized,
+            ("baseline", "change from baseline", "from baseline"),
+        )
+
+        if _mentions_any(normalized, ("adverse event", "adverse events", "adae", "treatment-emergent", "treatment emergent", "sae", "serious adverse")):
             required_domains.add("AE")
-        if _mentions_any(normalized, ("laboratory", "laboratory values", "lab ", "adlb", "abnormal laboratory")):
+        if _mentions_any(normalized, ("laboratory", "laboratory values", "lab ", "adlb", "abnormal laboratory", "abnormal lab")):
             required_domains.add("LB")
         if _mentions_any(normalized, ("disposition", "discontinue", "completion", "withdrawal", "ds ")):
             required_domains.add("DS")
@@ -48,6 +71,8 @@ class ResearchObjectiveParser:
             required_domains.add("EX")
         if _mentions_any(normalized, ("visit", "scheduled visit", "sv ")):
             required_domains.add("SV")
+        if predictive_model_required and required_domains == {"DM"}:
+            required_domains.update(("AE", "LB"))
 
         temporal_required = _mentions_any(
             normalized,
@@ -62,6 +87,8 @@ class ResearchObjectiveParser:
                 "time to event",
                 "treatment-emergent",
                 "treatment emergent",
+                "preceding",
+                "baseline",
             ),
         )
 
@@ -76,6 +103,9 @@ class ResearchObjectiveParser:
             required_domains=tuple(sorted(required_domains)),
             required_variables=required_variables,
             temporal_required=temporal_required,
+            abnormality_required=abnormality_required,
+            baseline_required=baseline_required,
+            predictive_model_required=predictive_model_required,
         )
 
 

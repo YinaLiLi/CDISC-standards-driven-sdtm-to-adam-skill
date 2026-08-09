@@ -32,6 +32,7 @@ The assessor may inspect:
 - `USUBJID` overlap across required domains
 - Relevant date coverage
 - Missingness relevant to the objective
+- Objective-specific sufficiency signals such as outcome-positive subjects, abnormality evidence, and baseline flags
 - Basic source-data availability needed for downstream derivation
 
 It does not modify SDTM data.
@@ -45,6 +46,10 @@ Each objective receives exactly one status:
 - `UNSUPPORTED`
 
 Hard blockers prevent reasonable source-data support. Limitations constrain downstream interpretation but do not necessarily prevent the objective from being supported.
+
+Sparse data can be a hard blocker even when required domains and variables exist. Version 1 requires at least five usable records and five subjects for each non-DM domain required by an objective, and at least five overlapping subjects for cross-domain objectives. Objectives that require laboratory abnormality assessment need either `LB.LBNRIND` or laboratory reference range variables. Objectives that require laboratory change from baseline need enough `LB.LBBLFL == "Y"` baseline subjects and post-baseline records for those subjects.
+
+Predictive machine learning is unsupported in Version 1 feasibility results. Predictive objectives are returned as `UNSUPPORTED`; when an apparent outcome can be counted, sparse outcome-positive subject counts are reported as blockers rather than converted into descriptive or rule-based support.
 
 ## Output Fields
 
@@ -69,6 +74,8 @@ Each result includes:
 After evaluating user-provided objectives, the assessor returns up to five `Supported Research Objectives` that are genuinely supported by the available data.
 
 Ranking is based on source-data support signals such as domain availability, subject overlap, record availability, and temporal coverage. It does not recommend statistical models, hypothesis tests, machine learning, dashboards, or reports.
+
+Sparse domains are not listed as supported research objectives merely because one record overlaps with `DM`.
 
 ## Boundary
 
