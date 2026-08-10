@@ -1,0 +1,112 @@
+{
+  "shards": [
+    {
+      "candidate_count": 7,
+      "content_hash": "b677c347367633fa06254e48c0f6918e244ebe933766e8f4fcab911693b5b077",
+      "file_path": "knowledge/v1/rule_catalog/adam-bds-tte.json",
+      "resolved_count": 7,
+      "standard_id": "adam-bds-tte",
+      "standard_version": "1.0",
+      "unresolved_count": 0
+    },
+    {
+      "candidate_count": 35,
+      "content_hash": "b8cd44f2c9b013314fd86220689fafb53d8c833c4072b16e2af6ec6f91d7886c",
+      "file_path": "knowledge/v1/rule_catalog/adam-common-statistical-analysis-examples.json",
+      "resolved_count": 35,
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_version": null,
+      "unresolved_count": 0
+    },
+    {
+      "candidate_count": 930,
+      "content_hash": "3ca364b983b4e1877f693bb8a8e26d192216a113f552b25de7b67b0a6dbe868f",
+      "file_path": "knowledge/v1/rule_catalog/adam-conformance-rules.json",
+      "resolved_count": 930,
+      "standard_id": "adam-conformance-rules",
+      "standard_version": "5.0",
+      "unresolved_count": 0
+    },
+    {
+      "candidate_count": 3,
+      "content_hash": "921651db80510ae862e9a2bbbbc01faa0338723f69bc3cd40d92fe434cf428e7",
+      "file_path": "knowledge/v1/rule_catalog/adam-ct.json",
+      "resolved_count": 3,
+      "standard_id": "adam-ct",
+      "standard_version": null,
+      "unresolved_count": 0
+    },
+    {
+      "candidate_count": 1,
+      "content_hash": "8540c76fee1e679b983335e0b32a970621edaf2cc7cf861b91951a41ce4a8b9a",
+      "file_path": "knowledge/v1/rule_catalog/adam-important-considerations.json",
+      "resolved_count": 1,
+      "standard_id": "adam-important-considerations",
+      "standard_version": "2.1",
+      "unresolved_count": 0
+    },
+    {
+      "candidate_count": 10,
+      "content_hash": "400bb90dbe2ab21e2468574180cc59ba4b96b30ca903c4c9c5e4dee3c90a5a0d",
+      "file_path": "knowledge/v1/rule_catalog/adam-model.json",
+      "resolved_count": 10,
+      "standard_id": "adam-model",
+      "standard_version": "2.1",
+      "unresolved_count": 0
+    },
+    {
+      "candidate_count": 2,
+      "content_hash": "f8329293801271364e7c1fe544acfcbfbf22ce6da9f9e85f5a98fa54104a92e5",
+      "file_path": "knowledge/v1/rule_catalog/adam-msg.json",
+      "resolved_count": 2,
+      "standard_id": "adam-msg",
+      "standard_version": "1.0",
+      "unresolved_count": 0
+    },
+    {
+      "candidate_count": 32,
+      "content_hash": "5a74dbc824f4e8ccffa87457ccb78d3329183d48ad698ccc7f7c6247300f524a",
+      "file_path": "knowledge/v1/rule_catalog/adam-occds.json",
+      "resolved_count": 32,
+      "standard_id": "adam-occds",
+      "standard_version": "1.1",
+      "unresolved_count": 0
+    },
+    {
+      "candidate_count": 16,
+      "content_hash": "54f2981d90922f286730c9545908f631e7239cb9829828d5610d1f620ca98355",
+      "file_path": "knowledge/v1/rule_catalog/adam-traceability-examples.json",
+      "resolved_count": 16,
+      "standard_id": "adam-traceability-examples",
+      "standard_version": "1.0",
+      "unresolved_count": 0
+    },
+    {
+      "candidate_count": 45,
+      "content_hash": "3755eebb2b59358d9b6d6ec287cc75dcbe158fb48e59a24131b44d014fad1b5f",
+      "file_path": "knowledge/v1/rule_catalog/adamig.json",
+      "resolved_count": 45,
+      "standard_id": "adamig",
+      "standard_version": "1.3",
+      "unresolved_count": 0
+    },
+    {
+      "candidate_count": 98,
+      "content_hash": "d44eab52617fe5ac21e7852620ce06c785abd1744bf25ff1dec5bc1126436853",
+      "file_path": "knowledge/v1/rule_catalog/sdtm-model.json",
+      "resolved_count": 98,
+      "standard_id": "sdtm-model",
+      "standard_version": "2.0",
+      "unresolved_count": 0
+    },
+    {
+      "candidate_count": 284,
+      "content_hash": "7c8015f54a62a6c34bf0b61bb5ce2f0251e92c9900eef143c5731fa2503002ea",
+      "file_path": "knowledge/v1/rule_catalog/sdtmig.json",
+      "resolved_count": 284,
+      "standard_id": "sdtmig",
+      "standard_version": "3.4",
+      "unresolved_count": 0
+    }
+  ]
+}

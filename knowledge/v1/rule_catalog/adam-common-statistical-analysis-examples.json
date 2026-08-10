@@ -1,0 +1,3288 @@
+{
+  "rules": [
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 49,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 49 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADSL HEIGHTBL..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 49 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADSL HEIGHTBL Height at Baseline (cm) integer 8 The last available of VS.VSSTRESN for VS.VSTESTCD=\u201cHEIGHT\u201d before or on the first dose date (ADSL.TRTSDT) ADSL WEIGHTBL Weight at Baseline (kg) float 8 The last available of VS.VSSTRESN for VS.VSTESTCD=\u201cWEIGHT\u201d before or on the first dose date (ADSL.TRTSDT) ADSL AGE Age integer 8 DM.AGE ADSL AGEU Age Units text $4 Years DM.AGEU ADSL SEXN Sex (N) integer 1 1= Male, 2= Female Numeric value of DM.SEX ADSL SEX Sex text $1 M, F DM.SEX ADSL RACE Race text $40 AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, BLACK OR AFRICAN AMERICAN, NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER, WHITE DM.RACE ADSL COUNTRY Country text $10 USA DM.COUNTRY ADSL SAFFL Safety Population Flag text $2 N, Y All treated subjects will be included in the safety set. ADSL FASFL Full Analysis Set Population Flag text $2 N, Y All subjects with baseline data and any evaluable post-dosing data for the first co-primary endpoint will be included in the full analysis set.",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.TRTSDT"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 49 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Co...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [
+        "All rights reserved Page 49 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADSL HEIGHTBL Height at Baseline (cm) integer 8 The last available of VS.VSSTRESN for VS.VSTESTCD=\u201cHEIGHT\u201d before or on the first dose date (ADSL...."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [
+        "DM.AGE",
+        "DM.AGEU",
+        "DM.COUNTRY",
+        "DM.RACE",
+        "DM.SEX"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:12ba230bb1837a7a",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "TRTSDT"
+        ],
+        "variables": [
+          "TRTSDT"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "TRTSDT"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADLB",
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 67,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADLBHY *ALL* STUDYID Study Identifier text $10 ADSL.STUDYID ADLBHY *ALL* USUBJID Unique Subject Identifier text $10 ADSL.USUBJID ADLBHY *ALL* SAFFL Safety Populat..."
+      },
+      "exact_source_excerpt": "Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADLBHY *ALL* STUDYID Study Identifier text $10 ADSL.STUDYID ADLBHY *ALL* USUBJID Unique Subject Identifier text $10 ADSL.USUBJID ADLBHY *ALL* SAFFL Safety Population Flag text $1 Y , N ADSL.SAFFL ADLBHY *ALL* TRTP Planned Treatment text $10 Drug XYZ, Placebo ADSL.TRT01P ADLBHY *ALL* TRTPN Planned Treatment Number integer 1.0 1=Drug XYZ, 0=Placebo ADSL.TRT01PN ADLBHY *ALL* AVISIT Analysis Visit text $40 BASELINE, WEEK 2, WEEK 4 ADLB.AVISIT ADLBHY *ALL* AVISITN Analysis Visit (N) integer 1.0 1=BASELINE, 2=WEEK 2, 3=WEEK 4 ADLB.AVISITN",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADLB",
+        "ADLB.AVISIT",
+        "ADLB.AVISITN",
+        "ADLB.SAFFL",
+        "ADLB.STUDYID",
+        "ADLB.TRT01P",
+        "ADLB.TRT01PN",
+        "ADLB.USUBJID",
+        "ADSL",
+        "ADSL.AVISIT",
+        "ADSL.AVISITN",
+        "ADSL.SAFFL",
+        "ADSL.STUDYID",
+        "ADSL.TRT01P",
+        "ADSL.TRT01PN",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADLBHY",
+        "ALL",
+        "STUDYID",
+        "ADSL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADLBHY *ALL* STUDYID Study Identifier text $10 ADSL.STUDYID ADLBHY *ALL* USUBJID Unique Subject Identi...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:158f3c0169150d9c",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADLB",
+          "ADSL"
+        ],
+        "datasets": [
+          "ADLB",
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "AVISIT",
+          "AVISITN",
+          "SAFFL",
+          "STUDYID",
+          "TRT01P",
+          "TRT01PN",
+          "USUBJID"
+        ],
+        "variables": [
+          "AVISIT",
+          "AVISITN",
+          "SAFFL",
+          "STUDYID",
+          "TRT01P",
+          "TRT01PN",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "AVISIT",
+        "AVISITN",
+        "SAFFL",
+        "STUDYID",
+        "TRT01P",
+        "TRT01PN",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 70 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADLBHY *ALL* ABLFL Baseline Record Flag text $1 Y \u201cY\u201d if record contains the baseline value, i.e., if ADLBHY .AVISITN=1; blank otherwise ADLBHY *DEFAULT* CRIT1 Analysis Criterion 1 text $100 Blank if ADLBHY .PARAMTYP=\u201dDERIVED\u201d ADLBHY BIL CRIT1 Analysis Criterion 1 text $100 BIL(AVAL)>1.5*ULN \u201dBIL(AVAL)>1.5*ULN\u201d when ADLBHY .PARAMCD=\u201dBIL\u201d ADLBHY ALT CRIT1 Analysis Criterion 1 text $100 ALT(AVAL)>1.5*ULN \u201dALT(AVAL)>1.5*ULN\u201d when ADLBHY .PARAMCD=\u201dALT\u201d ADLBHY AST CRIT1 Analysis Criterion 1 text $100 AST(AVAL)>1.5*ULN \u201dAST(AVAL)>1.5*ULN\u201d when ADLBHY .PARAMCD=\u201dAST\u201d ADLBHY *DEFAULT* CRIT1FL Criterion 1 Evaluation Result Flag text $1 Blank if ADLBHY .PARAMTYP=\u201dDERIVED\u201d ADLBHY BIL CRIT1FL Criterion 1 Evaluation Result Flag text $1 Y , N \u201cY\u201d if ADLBHY .AVAL>1.5*ADLBHY .ANRHIN, \u201cN\u201d otherwise ADLBHY ALT CRIT1FL Criterion 1 Evaluation Result Flag text $1 Y , N \u201cY\u201d if ADLBHY .AVAL>1.5*ADLBHY .ANRHIN, \u201cN\u201d otherwise ADLBHY AST CRIT1FL Criterion 1 Evaluation Result Flag text $1 Y , N \u201cY\u201d if ADLBHY .AVAL>1.5*ADLBHY .ANRHIN, \u201cN\u201d otherwise ADLBHY *ALL* CRIT1FN Criterion 1 Evaluation Result Flag (N) integer 1.0 1=Y , 0=N From ADLBHY .CRIT1FL ADLBHY *DEFAULT* SHIFT1 Shift 1 text $20 Blank if ADLBHY .PARAMTYP=\u201dDERIVED\u201d or if ADLBHY .ABLFL=\u201cY\u201d"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 70,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 70 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms S..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 70 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADLBHY *ALL* ABLFL Baseline Record Flag text $1 Y \u201cY\u201d if record contains the baseline value, i.e., if ADLBHY .AVISITN=1; blank otherwise ADLBHY *DEFAULT* CRIT1 Analysis Criterion 1 text $100 Blank if ADLBHY .PARAMTYP=\u201dDERIVED\u201d ADLBHY BIL CRIT1 Analysis Criterion 1 text $100 BIL(AVAL)>1.5*ULN \u201dBIL(AVAL)>1.5*ULN\u201d when ADLBHY .PARAMCD=\u201dBIL\u201d ADLBHY ALT CRIT1 Analysis Criterion 1 text $100 ALT(AVAL)>1.5*ULN \u201dALT(AVAL)>1.5*ULN\u201d when ADLBHY .PARAMCD=\u201dALT\u201d ADLBHY AST CRIT1 Analysis Criterion 1 text $100 AST(AVAL)>1.5*ULN \u201dAST(AVAL)>1.5*ULN\u201d when ADLBHY .PARAMCD=\u201dAST\u201d ADLBHY *DEFAULT* CRIT1FL Criterion 1 Evaluation Result Flag text $1 Blank if ADLBHY .PARAMTYP=\u201dDERIVED\u201d ADLBHY BIL CRIT1FL Criterion 1 Evaluation Result Flag text $1 Y , N \u201cY\u201d if ADLBHY .AVAL>1.5*ADLBHY .ANRHIN, \u201cN\u201d otherwise ADLBHY ALT CRIT1FL Criterion 1 Evaluation Result Flag text $1 Y , N \u201cY\u201d if ADLBHY .AVAL>1.5*ADLBHY .ANRHIN, \u201cN\u201d otherwise ADLBHY AST CRIT1FL Criterion 1 Evaluation Result Flag text $1 Y , N \u201cY\u201d if ADLBHY .AVAL>1.5*ADLBHY .ANRHIN, \u201cN\u201d otherwise ADLBHY *ALL* CRIT1FN Criterion 1 Evaluation Result Flag (N) integer 1.0 1=Y , 0=N From ADLBHY .CRIT1FL ADLBHY *DEFAULT* SHIFT1 Shift 1 text $20 Blank if ADLBHY .PARAMTYP=\u201dDERIVED\u201d or if ADLBHY .ABLFL=\u201cY\u201d",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADLBHY",
+        "ALL",
+        "ABLFL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 70 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Labe...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:18c5f9634100309c",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ABLFL",
+          "ADLBHY",
+          "ALL",
+          "ALT",
+          "ANRHIN",
+          "AST",
+          "AVAL",
+          "AVISITN",
+          "BIL",
+          "CRIT1",
+          "CRIT1FL",
+          "CRIT1FN",
+          "DEFAULT",
+          "DERIVED",
+          "FINAL",
+          "PARAMCD",
+          "PARAMTYP",
+          "SHIFT1",
+          "ULN"
+        ],
+        "variables": [
+          "ABLFL",
+          "ADLBHY",
+          "ALL",
+          "ALT",
+          "ANRHIN",
+          "AST",
+          "AVAL",
+          "AVISITN",
+          "BIL",
+          "CRIT1",
+          "CRIT1FL",
+          "CRIT1FN",
+          "DEFAULT",
+          "DERIVED",
+          "FINAL",
+          "PARAMCD",
+          "PARAMTYP",
+          "SHIFT1",
+          "ULN"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ABLFL",
+        "ADLBHY",
+        "ALL",
+        "ALT",
+        "ANRHIN",
+        "AST",
+        "AVAL",
+        "AVISITN",
+        "BIL",
+        "CRIT1",
+        "CRIT1FL",
+        "CRIT1FN",
+        "DEFAULT",
+        "DERIVED",
+        "FINAL",
+        "PARAMCD",
+        "PARAMTYP",
+        "SHIFT1",
+        "ULN"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 69 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADLBHY HYS2FL AVALC Analysis Value (C) text $7 Y , N Considering the ADLBHY records for which ADLBHY .USUBJID and ADLBHY .AVISIT match those for this record, set AVALC to \u201cY\u201d if at least one of the records with ADLBHY .PARAMCD in (\u201cALT\u201d,\u201dAST\u201d) have CRIT1FL=\u201cY\u201d and if the record with ADLBHY .PARAMCD=\u201cBIL\u201d has CRIT1FL=\u201cY\u201d, set AVALC to \u201cN\u201d otherwise ADLBHY *DEFAULT* BASE Baseline Value float 7.3 ADLB.BASE ADLBHY HYS1FL BASE Baseline Value float 1, 0 1, 0 ADLBHY .BASEC from record where ADLBHY .USUBJID and ADLBHY .AVISIT match those for this record and ADLBHY .ABLFL=\u201cY\u201d.",
+        "ADLBHY HYS2FL BASE Baseline Value float 1.0 1, 0 ADLBHY .BASEC from record where ADLBHY .USUBJID and ADLBHY .AVISIT match those for this record and ADLBHY .ABLFL=\u201cY\u201d.",
+        "ADLBHY *ALL* BASEC Baseline Value(C) text $7 ADLBHY .AVALC from record where ADLBHY .USUBJID and ADLBHY .AVISIT match those for this record and ADLBHY .ABLFL=\u201cY\u201d ADLBHY *DEFAULT* ANRHIN Analysis Normal Range Upper Limit (N) float 7.3 ADLB.ANRHIN ADLBHY HYS1FL ANRHIN Analysis Normal Range Upper Limit (N) float Not populated for records with PARAMCD=\u201dHYS1FL\u201d ADLBHY HYS2FL ANRHIN Analysis Normal Range Upper Limit (N) float Not populated for records with PARAMCD=\u201dHYS2FL\u201d"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADLB"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 69,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 69 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms S..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 69 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADLBHY HYS2FL AVALC Analysis Value (C) text $7 Y , N Considering the ADLBHY records for which ADLBHY .USUBJID and ADLBHY .AVISIT match those for this record, set AVALC to \u201cY\u201d if at least one of the records with ADLBHY .PARAMCD in (\u201cALT\u201d,\u201dAST\u201d) have CRIT1FL=\u201cY\u201d and if the record with ADLBHY .PARAMCD=\u201cBIL\u201d has CRIT1FL=\u201cY\u201d, set AVALC to \u201cN\u201d otherwise ADLBHY *DEFAULT* BASE Baseline Value float 7.3 ADLB.BASE ADLBHY HYS1FL BASE Baseline Value float 1, 0 1, 0 ADLBHY .BASEC from record where ADLBHY .USUBJID and ADLBHY .AVISIT match those for this record and ADLBHY .ABLFL=\u201cY\u201d. ADLBHY HYS2FL BASE Baseline Value float 1.0 1, 0 ADLBHY .BASEC from record where ADLBHY .USUBJID and ADLBHY .AVISIT match those for this record and ADLBHY .ABLFL=\u201cY\u201d. ADLBHY *ALL* BASEC Baseline Value(C) text $7 ADLBHY .AVALC from record where ADLBHY .USUBJID and ADLBHY .AVISIT match those for this record and ADLBHY .ABLFL=\u201cY\u201d ADLBHY *DEFAULT* ANRHIN Analysis Normal Range Upper Limit (N) float 7.3 ADLB.ANRHIN ADLBHY HYS1FL ANRHIN Analysis Normal Range Upper Limit (N) float Not populated for records with PARAMCD=\u201dHYS1FL\u201d ADLBHY HYS2FL ANRHIN Analysis Normal Range Upper Limit (N) float Not populated for records with PARAMCD=\u201dHYS2FL\u201d",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADLB",
+        "ADLB.ANRHIN",
+        "ADLB.BASE"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADLBHY",
+        "HYS2FL",
+        "AVALC"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 69 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Labe...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:21c7608d289de23c",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADLB"
+        ],
+        "datasets": [
+          "ADLB"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ANRHIN",
+          "BASE"
+        ],
+        "variables": [
+          "ANRHIN",
+          "BASE"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ANRHIN",
+        "BASE"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 10 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD *ALL* RACE Race text $50 BLACK OR AFRICAN AMERICAN, AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER, WHITE ADSL.RACE ADBMD *ALL* ITTFL Intent-To-Treat Population Flag text $1 Y , N ADSL.ITTFL ADBMD BMDLS AVAL Analysis Value float 8.1 AVAL = XX.XXSTRESN or an imputed value if XX.XXSTRESN is missing, apply the LOCF algorithm, i.e.",
+        "If the previous timepoint is baseline, leave AVAL missing ADBMD BMDLS BASE Baseline Value float 8.1 BASE=ADBMD.AVAL where ADBMD.ABLFL=\u201cY\u201d ADBMD *ALL* CHG Change from Baseline float 8.1 CHG=ADBMD.AVAL - ADBMD.BASE for post-baseline visits ADBMD *ALL* PCHG Percent Change from Baseline float 8.2 PCHG=((ADBMD.AVAL - ADBMD.BASE)/ADBMD.BASE)*100 for post-baseline visits ADBMD BMDLS CRIT1 Analysis Criterion 1 text $50 >3% change from baseline Populated with \u201d>3% change from baseline\u201d when ADBMD.PARAMCD = \u201cBMDLS\u201d and ADBMD.PCHG>3 ADBMD BMDLS CRIT1FL Criterion 1 Evaluation Result Flag text $1 Y Set to \u201cY\u201d when ADBMD.CRIT1 is populated ADBMD BMDLS ABLFL Baseline Record Flag text $1 Y Set to \u201cY\u201d when the record is the last record prior to first dose of study medication (ADBMD.ADT \u2264 ADBMD.TRTSDT)"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 10,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 10 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD *ALL* RACE Race text $50 BLA..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 10 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD *ALL* RACE Race text $50 BLACK OR AFRICAN AMERICAN, AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER, WHITE ADSL.RACE ADBMD *ALL* ITTFL Intent-To-Treat Population Flag text $1 Y , N ADSL.ITTFL ADBMD BMDLS AVAL Analysis Value float 8.1 AVAL = XX.XXSTRESN or an imputed value if XX.XXSTRESN is missing, apply the LOCF algorithm, i.e. set AVAL equal to the value for the previous post-baseline time point (AVISIT). If the previous timepoint is baseline, leave AVAL missing ADBMD BMDLS BASE Baseline Value float 8.1 BASE=ADBMD.AVAL where ADBMD.ABLFL=\u201cY\u201d ADBMD *ALL* CHG Change from Baseline float 8.1 CHG=ADBMD.AVAL - ADBMD.BASE for post-baseline visits ADBMD *ALL* PCHG Percent Change from Baseline float 8.2 PCHG=((ADBMD.AVAL - ADBMD.BASE)/ADBMD.BASE)*100 for post-baseline visits ADBMD BMDLS CRIT1 Analysis Criterion 1 text $50 >3% change from baseline Populated with \u201d>3% change from baseline\u201d when ADBMD.PARAMCD = \u201cBMDLS\u201d and ADBMD.PCHG>3 ADBMD BMDLS CRIT1FL Criterion 1 Evaluation Result Flag text $1 Y Set to \u201cY\u201d when ADBMD.CRIT1 is populated ADBMD BMDLS ABLFL Baseline Record Flag text $1 Y Set to \u201cY\u201d when the record is the last record prior to first dose of study medication (ADBMD.ADT \u2264 ADBMD.TRTSDT)",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.ITTFL",
+        "ADSL.RACE"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADBMD",
+        "ALL",
+        "RACE",
+        "BLACK",
+        "OR",
+        "AFRICAN",
+        "AMERICAN",
+        "INDIAN",
+        "ALASKA",
+        "NATIVE",
+        "ASIAN",
+        "HAWAIIAN",
+        "OTHER",
+        "PACIFIC",
+        "ISLANDER",
+        "WHITE",
+        "ADSL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 10 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [
+        "All rights reserved Page 10 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD *ALL* RACE Race text $50 BLACK OR AFRICAN AMERICAN, AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER, WHITE ADSL.RACE ADBMD *A..."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:258001f2bdf12945",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ITTFL",
+          "RACE"
+        ],
+        "variables": [
+          "ITTFL",
+          "RACE"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ITTFL",
+        "RACE"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 12 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD BMDLS ANL01FL Analysis Record Flag 01 text $1 Y Populate with \u201cY\u201d to identify the record selected to be analyzed for the specific value of AVISIT (already populated based on the analysis window algorithm defined in SAP X.X) within the specified subject when ADBMD.PARAMCD=\u201dBMDLS\u201d."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 12,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 12 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD BMDLS ANL01FL Analysis Recor..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 12 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD BMDLS ANL01FL Analysis Record Flag 01 text $1 Y Populate with \u201cY\u201d to identify the record selected to be analyzed for the specific value of AVISIT (already populated based on the analysis window algorithm defined in SAP X.X) within the specified subject when ADBMD.PARAMCD=\u201dBMDLS\u201d. If there are multiple records for the same subject within the parameter that have the same value of AVISIT, use the record that is closest to ADBMD.AWTARGET. If there are multiple records that are also the same distance from the target, then use the record with the \u201cworst\u201d result (smallest percent change). Sort by unique subject identifier (ADBMD.USUBJID), parameter (ADBMD.PARAMCD), analysis visit (ADBMD.AVISITN), difference from target (ADBMD.AWTDIFF), and value of percent change (ADBMD.PCHG) and set ANL01FL=\u201dY\u201d for the first result",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADBMD",
+        "BMDLS",
+        "ANL01FL",
+        "AVISIT",
+        "SAP"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 12 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:323477c4d275229b",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADBMD",
+          "ANCOV",
+          "ANL01FL",
+          "AVISIT",
+          "AVISITN",
+          "AWTARGET",
+          "AWTDIFF",
+          "BMDLS",
+          "FINAL",
+          "PARAMCD",
+          "PCHG",
+          "SAP",
+          "USUBJID"
+        ],
+        "variables": [
+          "ADBMD",
+          "ANCOV",
+          "ANL01FL",
+          "AVISIT",
+          "AVISITN",
+          "AWTARGET",
+          "AWTDIFF",
+          "BMDLS",
+          "FINAL",
+          "PARAMCD",
+          "PCHG",
+          "SAP",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADBMD",
+        "ANCOV",
+        "ANL01FL",
+        "AVISIT",
+        "AVISITN",
+        "AWTARGET",
+        "AWTDIFF",
+        "BMDLS",
+        "FINAL",
+        "PARAMCD",
+        "PCHG",
+        "SAP",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 52,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 52 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Der..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 52 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEV *ALL* ATPT Analysis Timepoint text $40 1 hour pre-dose, 30 minutes pre-dose, 10 minutes pre-dose, Pre-dose average, 30 minutes post-dose, 1 hour post-dose, 2 hours post-dose, 3 hours post-dose, 4 hours post-dose, 6 hours post-dose, 8 hours post-dose, 10 hours post-dose, 11 hours 50 minutes post-dose, 12 hours 30 minutes post-dose, 13 hours post-dose, 14 hours post-dose, 22 hours post-dose, 23 hours post-dose, 23 hours 50 minutes post-dose XX.XXTPT or the timepoint for the imputed AVAL",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADFEV",
+        "ALL",
+        "ATPT",
+        "XX"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 52 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:440c4449b7ba56b7",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADFEV",
+          "ALL",
+          "ATPT",
+          "AVAL",
+          "FINAL",
+          "XXTPT"
+        ],
+        "variables": [
+          "ADFEV",
+          "ALL",
+          "ATPT",
+          "AVAL",
+          "FINAL",
+          "XXTPT"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADFEV",
+        "ALL",
+        "ATPT",
+        "AVAL",
+        "FINAL",
+        "XXTPT"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 44,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "adfev.xpt One record per subject per basetype per period per parameter per analysis time point STUDYID, USUBJID, BASETYPE, APERIOD, PARAMN, AVISIT, ATPTN BDS adfev.sas ADFEVAUC Forced expired volume AUC analysis data- for the AUC (0-12 hours) and -the AUC (12-24 hours) adfevauc.xpt One record per subject per basetype per period per parameter STUDYID, USUBJID, BASETYPE, APERIOD, PARAMN BDS adfevauc.sas"
+      },
+      "exact_source_excerpt": "adfev.xpt One record per subject per basetype per period per parameter per analysis time point STUDYID, USUBJID, BASETYPE, APERIOD, PARAMN, AVISIT, ATPTN BDS adfev.sas ADFEVAUC Forced expired volume AUC analysis data- for the AUC (0-12 hours) and -the AUC (12-24 hours) adfevauc.xpt One record per subject per basetype per period per parameter STUDYID, USUBJID, BASETYPE, APERIOD, PARAMN BDS adfevauc.sas",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": "One record per subject per basetype per period per parameter per analysis time point STUDYID, USUBJID, BASETYPE, APERIOD, PARAMN, AVISIT, ATPTN BDS adfev",
+      "keys": [],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "adfev.xpt One record per subject per basetype per period per parameter per analysis time point STUDYID, USUBJID, BASETYPE, APERIOD, PARAMN, AVISIT, ATPTN BDS adfev.sas ADFEVAUC Forced expired volume AUC analysis data- for the AUC (0-12 hours) and -the AUC (12-24 hours) adfevauc.xpt One record per subject per basetype per period per parameter STUDYID, USUB...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:4688a44d4cd82642",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "variable_requirement",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [
+          "BASIC_DATA_STRUCTURE",
+          "SUBJECT_LEVEL_ANALYSIS_DATASET"
+        ],
+        "variable_scope": [
+          "ADFEVAUC",
+          "APERIOD",
+          "ATPTN",
+          "AUC",
+          "AVISIT",
+          "BASETYPE",
+          "PARAMN",
+          "STUDYID",
+          "USUBJID"
+        ],
+        "variables": [
+          "ADFEVAUC",
+          "APERIOD",
+          "ATPTN",
+          "AUC",
+          "AVISIT",
+          "BASETYPE",
+          "PARAMN",
+          "STUDYID",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [
+        "BASIC_DATA_STRUCTURE",
+        "SUBJECT_LEVEL_ANALYSIS_DATASET"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADFEVAUC",
+        "APERIOD",
+        "ATPTN",
+        "AUC",
+        "AVISIT",
+        "BASETYPE",
+        "PARAMN",
+        "STUDYID",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 68 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADLBHY *DEFAULT* PARAM Parameter text $100 Total Bilirubin (umol/L), ALT(U/L), AST(U/L) For records with a corresponding record in ADLB, populate with the value of ADLB.PARAM ADLBHY HYS1FL PARAM Parameter text $100 Elevated Transminase For records created to contain the Hy\u2019s Law Elevated Transminase criteria result, populate with \u201cElevated Transminase\u201d ADLBHY HYS2FL PARAM Parameter text $100 Elevated Transminase and Elevated Bilirubin For records created to contain the Hy\u2019s Law Elevated Transminase and Elevated Bilirubin criteria result, populate with \u201cElevated Transminase and Elevated Bilirubin\u201d ADLBHY PARAMCD PARAMCD Parameter Code text $8 BIL, ALT, AST, HYS1FL, HYS2FL One-to-one correspondence with PARAM For records with a corresponding record in ADLB, ADLBHY .PARAMCD=ADLB.PARAMCD If PARAM=\u201dElevated Transminase\u201d, ADLBHY .PARAMCD=\u201dHYS1FL\u201d If PARAM=\u201dElevated Transminase and Elevated Bilirubin\u201d, ADLBHY .PARAMCD=\u201dHYS2FL\u201d ADLBHY *ALL* PARAMTYP Parameter Type text $7 DERIVED Populated with \u201cDERIVED\u201d for records created to contain the Elevated Transminase or the Elevated Transminase and Elevated Bilirubin, blank otherwise ADLBHY *DEFAULT* AVAL Analysis Value float 7.3 ADLB.AVAL ADLBHY HYS1FL AVAL Analysis Value float 1.0 1, 0 If AVALC=\u201dY\u201d on the record then AVAL=1, If AVALC=\u201dN\u201d on the record then AVAL=0.",
+        "ADLBHY HYS2FL AVAL Analysis Value float 1.0 1, 0 If AVALC=\u201dY\u201d on the record then AVAL=1, If AVALC=\u201dN\u201d on the record then AVAL=0.",
+        "ADLBHY *DEFAULT* AVALC Analysis Value (C) text $7 ADLB.AVALC ADLBHY HYS1FL AVALC Analysis Value (C) text $7 Y , N Considering the ADLBHY records for which ADLBHY .USUBJID and ADLBHY .AVISIT match those for this record, set AVALC to \u201cY\u201d if at least one of the records with ADLBHY .PARAMCD in (\u201cALT\u201d,\u201dAST\u201d) have CRIT1FL=\u201cY\u201d, set AVALC to \u201cN\u201d otherwise"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADLB"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 68,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 68 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms S..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 68 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADLBHY *DEFAULT* PARAM Parameter text $100 Total Bilirubin (umol/L), ALT(U/L), AST(U/L) For records with a corresponding record in ADLB, populate with the value of ADLB.PARAM ADLBHY HYS1FL PARAM Parameter text $100 Elevated Transminase For records created to contain the Hy\u2019s Law Elevated Transminase criteria result, populate with \u201cElevated Transminase\u201d ADLBHY HYS2FL PARAM Parameter text $100 Elevated Transminase and Elevated Bilirubin For records created to contain the Hy\u2019s Law Elevated Transminase and Elevated Bilirubin criteria result, populate with \u201cElevated Transminase and Elevated Bilirubin\u201d ADLBHY PARAMCD PARAMCD Parameter Code text $8 BIL, ALT, AST, HYS1FL, HYS2FL One-to-one correspondence with PARAM For records with a corresponding record in ADLB, ADLBHY .PARAMCD=ADLB.PARAMCD If PARAM=\u201dElevated Transminase\u201d, ADLBHY .PARAMCD=\u201dHYS1FL\u201d If PARAM=\u201dElevated Transminase and Elevated Bilirubin\u201d, ADLBHY .PARAMCD=\u201dHYS2FL\u201d ADLBHY *ALL* PARAMTYP Parameter Type text $7 DERIVED Populated with \u201cDERIVED\u201d for records created to contain the Elevated Transminase or the Elevated Transminase and Elevated Bilirubin, blank otherwise ADLBHY *DEFAULT* AVAL Analysis Value float 7.3 ADLB.AVAL ADLBHY HYS1FL AVAL Analysis Value float 1.0 1, 0 If AVALC=\u201dY\u201d on the record then AVAL=1, If AVALC=\u201dN\u201d on the record then AVAL=0. ADLBHY HYS2FL AVAL Analysis Value float 1.0 1, 0 If AVALC=\u201dY\u201d on the record then AVAL=1, If AVALC=\u201dN\u201d on the record then AVAL=0. ADLBHY *DEFAULT* AVALC Analysis Value (C) text $7 ADLB.AVALC ADLBHY HYS1FL AVALC Analysis Value (C) text $7 Y , N Considering the ADLBHY records for which ADLBHY .USUBJID and ADLBHY .AVISIT match those for this record, set AVALC to \u201cY\u201d if at least one of the records with ADLBHY .PARAMCD in (\u201cALT\u201d,\u201dAST\u201d) have CRIT1FL=\u201cY\u201d, set AVALC to \u201cN\u201d otherwise",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADLB",
+        "ADLB.AVAL",
+        "ADLB.AVALC",
+        "ADLB.PARAM",
+        "ADLB.PARAMCD"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADLBHY",
+        "DEFAULT",
+        "PARAM",
+        "ALT",
+        "AST",
+        "ADLB"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 68 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Labe...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:4701c8e2f0369c49",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADLB"
+        ],
+        "datasets": [
+          "ADLB"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "AVAL",
+          "AVALC",
+          "PARAM",
+          "PARAMCD"
+        ],
+        "variables": [
+          "AVAL",
+          "AVALC",
+          "PARAM",
+          "PARAMCD"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "AVAL",
+        "AVALC",
+        "PARAM",
+        "PARAMCD"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 9 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD *ALL* USUBJID Unique Subject Identifier text $20 ADSL.USUBJID ADBMD *ALL* PARAM Parameter text $32 DXA BMD at Lumbar Spine (g/cm^2) Populated with \u201dDXA BMD at Lumbar Spine (g/cm^2)\u201d for records corresponding to Lumbar Spine Bone Mineral Density (based on XX.XXTEST and XX.XXSTRESU when XX.XXTESTCD=\u201dBMDLS\u201d) ADBMD PARAMCD PARAMCD Parameter Code text $8 BMDLS Populated with \u201dBMDLS\u201d for records corresponding to Lumbar Spine Bone Mineral Density (based on XX.XXTESTCD) ADBMD *ALL* AVISIT Analysis Visit text $11 BASELINE, MONTH 6, MONTH 12, MONTH 18, MONTH 24, MONTH 30, MONTH 36, Refer to Section X.X of the SAP for a detailed description of the windowing and imputation algorithms used to determine the analysis visit based on ADBMD.ADY ADBMD *ALL* AVISITN Analysis Visit (N) integer 3.0 2 = BASELINE, 3 = MONTH 6, 4 = MONTH 12, 5 = MONTH 18, 6 = MONTH 24, 7 = MONTH 30, 8 = MONTH 36 Derived based on ADBMD.AVISIT ADBMD *ALL* STUDYID Study Identifier text $12 ADSL.STUDYID ADBMD *ALL* TRTP Planned Treatment text $15 Drug ABC, Placebo ADSL.TRT01P ADBMD *ALL* SEX Sex text $1 M, F ADSL.SEX ADBMD *ALL* AGE Age integer 3.0 ADSL.AGE"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 9,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 9 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD *ALL* USUBJID Unique Subject..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 9 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD *ALL* USUBJID Unique Subject Identifier text $20 ADSL.USUBJID ADBMD *ALL* PARAM Parameter text $32 DXA BMD at Lumbar Spine (g/cm^2) Populated with \u201dDXA BMD at Lumbar Spine (g/cm^2)\u201d for records corresponding to Lumbar Spine Bone Mineral Density (based on XX.XXTEST and XX.XXSTRESU when XX.XXTESTCD=\u201dBMDLS\u201d) ADBMD PARAMCD PARAMCD Parameter Code text $8 BMDLS Populated with \u201dBMDLS\u201d for records corresponding to Lumbar Spine Bone Mineral Density (based on XX.XXTESTCD) ADBMD *ALL* AVISIT Analysis Visit text $11 BASELINE, MONTH 6, MONTH 12, MONTH 18, MONTH 24, MONTH 30, MONTH 36, Refer to Section X.X of the SAP for a detailed description of the windowing and imputation algorithms used to determine the analysis visit based on ADBMD.ADY ADBMD *ALL* AVISITN Analysis Visit (N) integer 3.0 2 = BASELINE, 3 = MONTH 6, 4 = MONTH 12, 5 = MONTH 18, 6 = MONTH 24, 7 = MONTH 30, 8 = MONTH 36 Derived based on ADBMD.AVISIT ADBMD *ALL* STUDYID Study Identifier text $12 ADSL.STUDYID ADBMD *ALL* TRTP Planned Treatment text $15 Drug ABC, Placebo ADSL.TRT01P ADBMD *ALL* SEX Sex text $1 M, F ADSL.SEX ADBMD *ALL* AGE Age integer 3.0 ADSL.AGE",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.AGE",
+        "ADSL.SEX",
+        "ADSL.STUDYID",
+        "ADSL.TRT01P",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADBMD",
+        "ALL",
+        "USUBJID",
+        "ADSL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 9 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled T...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:48c20663184c1a9d",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "AGE",
+          "SEX",
+          "STUDYID",
+          "TRT01P",
+          "USUBJID"
+        ],
+        "variables": [
+          "AGE",
+          "SEX",
+          "STUDYID",
+          "TRT01P",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "AGE",
+        "SEX",
+        "STUDYID",
+        "TRT01P",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 59,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "This trial includes two efficacy endpoints. The efficacy endpoints are the FEV1 AUC(0-12) response and AUC(12-24) response after 6 weeks of treatment. The FEV1 AUC(0-12) and AUC(12-24) responses are derived using the FEV1 measurements, which are found in the ADFEV dataset. The ADFEV AUC dataset includes the derived FEV1 AUC response endpoints, key variables to perform the analysis along with baseline variables (e...."
+      },
+      "exact_source_excerpt": "This trial includes two efficacy endpoints. The efficacy endpoints are the FEV1 AUC(0-12) response and AUC(12-24) response after 6 weeks of treatment. The FEV1 AUC(0-12) and AUC(12-24) responses are derived using the FEV1 measurements, which are found in the ADFEV dataset. The ADFEV AUC dataset includes the derived FEV1 AUC response endpoints, key variables to perform the analysis along with baseline variables (e.g., SEX, RACE, SMOKDC , SMPKY) for chronic obstructive pulmonary disease (COPD) that can be used for additional analyses. Table 2.7.3.3 is an illustration of the metadata for the ADFEV AUC analysis dataset. Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEVAUC *ALL* STUDYID Study Identifier text $15 ADFEV.STUDYID ADFEVAUC *ALL* USUBJID Unique Subject Identifier text $20 ADFEV.USUBJID ADFEVAUC *ALL* SITEID Study Site Identifier text $10 ADFEV.SITEID ADFEVAUC *ALL* BASETYPE Baseline Type text $40 Study, Period 1, Period 2, Period 3, Period 4 ADFEV.BASETYPE ADFEVAUC FEVAUC12 PARAM Parameter text $60 FEV1 AUC (0-12) [L] \u201dFEV1 AUC (0-12) [L]\u201d for records created to contain the FEV AUC(0-12) hour values ADFEVAUC FEVAUC24 PARAM Parameter text $60 FEV1 AUC (12-24) [L] \u201dFEV1 AUC (12-24) [L]\u201d for records created to contain the FEV AUC(12-24) hour values",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADFEVAUC",
+        "ALL",
+        "STUDYID",
+        "ADFEV"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "This trial includes two efficacy endpoints. The efficacy endpoints are the FEV1 AUC(0-12) response and AUC(12-24) response after 6 weeks of treatment. The FEV1 AUC(0-12) and AUC(12-24) responses are derived using the FEV1 measurements, which are found in the ADFEV dataset. The ADFEV AUC dataset includes the derived FEV1 AUC response endpoints, key variabl...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [
+        "The ADFEV AUC dataset includes the derived FEV1 AUC response endpoints, key variables to perform the analysis along with baseline variables (e.g., SEX, RACE, SMOKDC , SMPKY) for chronic obstructive pulmonary disease (COPD) that can be used for additional analyses."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:4de4b3bbeb61ab7b",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADFEV",
+          "ADFEVAUC",
+          "ALL",
+          "AUC",
+          "BASETYPE",
+          "COPD",
+          "FEV",
+          "FEV1",
+          "FEVAUC12",
+          "FEVAUC24",
+          "PARAM",
+          "RACE",
+          "SEX",
+          "SITEID",
+          "SMOKDC",
+          "SMPKY",
+          "STUDYID",
+          "USUBJID"
+        ],
+        "variables": [
+          "ADFEV",
+          "ADFEVAUC",
+          "ALL",
+          "AUC",
+          "BASETYPE",
+          "COPD",
+          "FEV",
+          "FEV1",
+          "FEVAUC12",
+          "FEVAUC24",
+          "PARAM",
+          "RACE",
+          "SEX",
+          "SITEID",
+          "SMOKDC",
+          "SMPKY",
+          "STUDYID",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADFEV",
+        "ADFEVAUC",
+        "ALL",
+        "AUC",
+        "BASETYPE",
+        "COPD",
+        "FEV",
+        "FEV1",
+        "FEVAUC12",
+        "FEVAUC24",
+        "PARAM",
+        "RACE",
+        "SEX",
+        "SITEID",
+        "SMOKDC",
+        "SMPKY",
+        "STUDYID",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 45,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 45 FINAL December, 2011 2.7.2 Analysis Variable Metadata and Analysis Dataset \u2013 ADSL Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format C..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 45 FINAL December, 2011 2.7.2 Analysis Variable Metadata and Analysis Dataset \u2013 ADSL Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADSL STUDYID Study Identifier text $15 DM.STUDYID ADSL USUBJID Unique Subject Identifier text $15 DM.USUBJID ADSL SITEID Study Site Identifier text $10 DM.SITEID ADSL INVNAM Study Investigator Name text $10 DM.INVNAM ADSL ARM Description of Planned Arm text $60 DrugA/DrugB/DrugC/Placebo, DrugB/DrugC/Placebo/DrugA, DrugC/Placebo/DrugA/DrugB, Placebo/DrugA/DrugB/DrugC DM.ARM ADSL TRT01P Planned Treatment for Period 01 text $60 Drug A, Drug B, Drug C, Placebo Based on the assigned treatment sequence order. This field will be populated with one of four treatments: \u201cDrug A\u201d, \u201cDrug B\u201d, \u201cDrug C\u201d or \u201cPlacebo\u201d, as defined for this subject within this treatment period in SE.ELEMENT ADSL TRT02P Planned Treatment for Period 02 text $60 Drug A, Drug B, Drug C, Placebo Based on the assigned treatment sequence order. This field will be populated with one of four treatments: Drug A, Drug B, Drug C or Placebo, as defined for this subject within this treatment period in SE.ELEMENT",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.ARM",
+        "ADSL.ELEMENT",
+        "ADSL.FINAL",
+        "ADSL.INVNAM",
+        "ADSL.SITEID",
+        "ADSL.STUDYID",
+        "ADSL.TRT01P",
+        "ADSL.TRT02P",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "DM"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 45 FINAL December, 2011 2.7.2 Analysis Variable Metadata and Analysis Dataset \u2013 ADSL Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [
+        "DM.ARM",
+        "DM.INVNAM",
+        "DM.SITEID",
+        "DM.STUDYID",
+        "DM.USUBJID"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:4f9ea1a7f1fd9867",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ARM",
+          "ELEMENT",
+          "FINAL",
+          "INVNAM",
+          "SITEID",
+          "STUDYID",
+          "TRT01P",
+          "TRT02P",
+          "USUBJID"
+        ],
+        "variables": [
+          "ARM",
+          "ELEMENT",
+          "FINAL",
+          "INVNAM",
+          "SITEID",
+          "STUDYID",
+          "TRT01P",
+          "TRT02P",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ARM",
+        "ELEMENT",
+        "FINAL",
+        "INVNAM",
+        "SITEID",
+        "STUDYID",
+        "TRT01P",
+        "TRT02P",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 27,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Table 2.5.1.2 Analysis Variable Metadata for Logistic Regression Analysis Example15 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADPAIN *ALL* STUDYID Study Identifier text $10 ADSL.STUDYID ADPAIN *ALL* USUBJID Unique Subject Identifier text $20 ADSL.USUBJID"
+      },
+      "exact_source_excerpt": "Table 2.5.1.2 Analysis Variable Metadata for Logistic Regression Analysis Example15 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADPAIN *ALL* STUDYID Study Identifier text $10 ADSL.STUDYID ADPAIN *ALL* USUBJID Unique Subject Identifier text $20 ADSL.USUBJID",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.STUDYID",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADPAIN",
+        "ALL",
+        "STUDYID",
+        "ADSL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "Table 2.5.1.2 Analysis Variable Metadata for Logistic Regression Analysis Example15 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADPAIN *ALL* STUDYID Study Identifier text $10 ADSL.STUDYID ADPAIN *ALL* USUBJID Unique Subject Identifier text $20 ADSL.USUBJID",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:587b0bc72b68339d",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "STUDYID",
+          "USUBJID"
+        ],
+        "variables": [
+          "STUDYID",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "STUDYID",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 71 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADLBHY HYS1FL SHIFT1 Shift 1 text $20 Normal to Normal, Normal to Met Criteria, Met Criteria to Normal, Met Criteria to Met Criteria Using values on this record: \u201cNormal to Normal\u201d if ADLBHY .BASEC=\u201cN\u201d and ADLBHY .AVALC=\u201cN\u201d, \u201cNormal to Met Criteria\u201d if ADLBHY .BASEC=\u201cN\u201d and ADLBHY .AVALC=\u201cY\u201d, \u201cMet Criteria to Normal\u201d if ADLBHY .BASEC=\u201cY\u201d and ADLBHY .AVALC=\u201cN\u201d, \u201cMet Criteria to Met Criteria\u201d if ADLBHY .BASEC=\u201cY\u201d and ADLBHY .AVALC=\u201cY\u201d ADLBHY HYS2FL SHIFT1 Shift 1 text $20 Normal to Normal, Normal to Met Criteria, Met Criteria to Normal, Met Criteria to Met Criteria Using values on this record: \u201cNormal to Normal\u201d if ADLBHY .BASEC=\u201cN\u201d and ADLBHY .AVALC=\u201cN\u201d, \u201cNormal to Met Criteria\u201d if ADLBHY .BASEC=\u201cN\u201d and ADLBHY .AVALC=\u201cY\u201d, \u201cMet Criteria to Normal\u201d if ADLBHY .BASEC=\u201cY\u201d and ADLBHY .AVALC=\u201cN\u201d, \u201cMet Criteria to Met Criteria\u201d if ADLBHY .BASEC=\u201cY\u201d and ADLBHY .AVALC=\u201cY\u201d ADLBHY *ALL* SHIFT1N Shift 1 (N) integer 1=Normal to Normal, 2=Normal to Met Criteria, 3=Met Criteria to Normal, 4=Met Criteria to Met Criteria From ADLBHY .SHIFT1"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 71,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 71 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms S..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 71 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADLBHY HYS1FL SHIFT1 Shift 1 text $20 Normal to Normal, Normal to Met Criteria, Met Criteria to Normal, Met Criteria to Met Criteria Using values on this record: \u201cNormal to Normal\u201d if ADLBHY .BASEC=\u201cN\u201d and ADLBHY .AVALC=\u201cN\u201d, \u201cNormal to Met Criteria\u201d if ADLBHY .BASEC=\u201cN\u201d and ADLBHY .AVALC=\u201cY\u201d, \u201cMet Criteria to Normal\u201d if ADLBHY .BASEC=\u201cY\u201d and ADLBHY .AVALC=\u201cN\u201d, \u201cMet Criteria to Met Criteria\u201d if ADLBHY .BASEC=\u201cY\u201d and ADLBHY .AVALC=\u201cY\u201d ADLBHY HYS2FL SHIFT1 Shift 1 text $20 Normal to Normal, Normal to Met Criteria, Met Criteria to Normal, Met Criteria to Met Criteria Using values on this record: \u201cNormal to Normal\u201d if ADLBHY .BASEC=\u201cN\u201d and ADLBHY .AVALC=\u201cN\u201d, \u201cNormal to Met Criteria\u201d if ADLBHY .BASEC=\u201cN\u201d and ADLBHY .AVALC=\u201cY\u201d, \u201cMet Criteria to Normal\u201d if ADLBHY .BASEC=\u201cY\u201d and ADLBHY .AVALC=\u201cN\u201d, \u201cMet Criteria to Met Criteria\u201d if ADLBHY .BASEC=\u201cY\u201d and ADLBHY .AVALC=\u201cY\u201d ADLBHY *ALL* SHIFT1N Shift 1 (N) integer 1=Normal to Normal, 2=Normal to Met Criteria, 3=Met Criteria to Normal, 4=Met Criteria to Met Criteria From ADLBHY .SHIFT1",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADLBHY",
+        "HYS1FL",
+        "SHIFT1"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 71 FINAL December, 2011 Table 2.8.1.2 Analysis Variable Metadata for Categorical Analysis of Subjects Meeting Hy\u2019s Law Criteria Example 32 Dataset Name Parameter Identifier Variable Name Variable Labe...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:6e32a90209bcb6e0",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADLBHY",
+          "ALL",
+          "AVALC",
+          "BASEC",
+          "FINAL",
+          "HYS1FL",
+          "HYS2FL",
+          "SHIFT1",
+          "SHIFT1N"
+        ],
+        "variables": [
+          "ADLBHY",
+          "ALL",
+          "AVALC",
+          "BASEC",
+          "FINAL",
+          "HYS1FL",
+          "HYS2FL",
+          "SHIFT1",
+          "SHIFT1N"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADLBHY",
+        "ALL",
+        "AVALC",
+        "BASEC",
+        "FINAL",
+        "HYS1FL",
+        "HYS2FL",
+        "SHIFT1",
+        "SHIFT1N"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "ADFEV.TRTSDT ADFEVAUC *ALL* ADY Analysis Relative Day integer 3.0 ADFEV.ADY from the record where ADFEV.USUBJID, ADFEV.BASETYPE, and ADFEV.APERIOD match those for this record ADFEVAUC *ALL* FASFL Full Analysis Set Population Flag text $1 N, Y ADFEV.FASFL ADFEVAUC *ALL* SEX Sex text $1 M, F ADSL.SEX"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 61,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 61 FINAL December, 2011 Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source /..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 61 FINAL December, 2011 Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEVAUC *ALL* CHG Change from Baseline float 8.3 CHG=ADFEVAUC.AVAL-ADFEVAUC.BASE, using the values from this record ADFEVAUC *ALL* PCHG Percent Change from Baseline float 8.2 PCHG=((ADFEVAUC.AVAL- ADFEVAUC.BASE)/ADFEVAUC.BASE)*100, using the values from this record ADFEVAUC *ALL* APERIOD Period integer 8 1= Period 1, 2= Period 2, 3= Period 3, 4= Period 4 Numeric version of ADFEVAUC.APERIODC ADFEVAUC *ALL* APERIODC Period (C) text $40 Period 1, Period 2, Period 3, Period 4 ADFEV.APERIODC ADFEVAUC *ALL* TRTP Planned Treatment text $15 Drug A, Drug B, Drug C, Placebo ADFEV.TRTP ADFEVAUC *ALL* TRTSEQP Planned Sequence of Treatments text $60 A-B-C-Placebo, B-C-Placebo-A, C-Placebo-A-B, Placebo-A-B-C ADFEV.TRTSEQP ADFEVAUC *ALL* TRTSDT Date of First Exposure to Treatment integer yymmdd10. ADFEV.TRTSDT ADFEVAUC *ALL* ADY Analysis Relative Day integer 3.0 ADFEV.ADY from the record where ADFEV.USUBJID, ADFEV.BASETYPE, and ADFEV.APERIOD match those for this record ADFEVAUC *ALL* FASFL Full Analysis Set Population Flag text $1 N, Y ADFEV.FASFL ADFEVAUC *ALL* SEX Sex text $1 M, F ADSL.SEX",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.SEX"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADFEVAUC",
+        "ALL",
+        "CHG"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 61 FINAL December, 2011 Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Varia...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:7558fe3ba0a57f74",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "SEX"
+        ],
+        "variables": [
+          "SEX"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "SEX"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 37 FINAL December, 2011 Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADMOOD DPRESS AVAL Analysis Value integer 3.0 Sum of the 15 depression-rejection items (QS.QSSTRESN) where QS.QSTESTCD has values of DPRESS1-DPRESS15 and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing ADMOOD ANGER AVAL Analysis Value integer 3.0 Sum of the 12 anger-hostility items (QS.QSSTRESN) where QS.QSTESTCD has values of ANGER1-ANGER12 and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing ADMOOD VIGOR AVAL Analysis Value integer 3.0 Sum of the 8 vigor-activity items (QS.QSSTRESN) where QS.QSTESTCD has values of VIGOR1-VIGOR8 and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing ADMOOD FATIGUE AVAL Analysis Value integer 3.0 Sum of the 7 fatigue-inertia items (QS.QSSTRESN) where QS.QSTESTCD has values of FATIGUE1-FATIGUE7 and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing ADMOOD CONFUS AVAL Analysis Value integer 3.0 Sum of the 7 confusion-bewilderment items (QS.QSSTRESN) where QS.QSTESTCD has values of CONFUS1-CONFUS7 and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 37,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 37 FINAL December, 2011 Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADMOOD DPRESS AVAL An..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 37 FINAL December, 2011 Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADMOOD DPRESS AVAL Analysis Value integer 3.0 Sum of the 15 depression-rejection items (QS.QSSTRESN) where QS.QSTESTCD has values of DPRESS1-DPRESS15 and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing ADMOOD ANGER AVAL Analysis Value integer 3.0 Sum of the 12 anger-hostility items (QS.QSSTRESN) where QS.QSTESTCD has values of ANGER1-ANGER12 and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing ADMOOD VIGOR AVAL Analysis Value integer 3.0 Sum of the 8 vigor-activity items (QS.QSSTRESN) where QS.QSTESTCD has values of VIGOR1-VIGOR8 and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing ADMOOD FATIGUE AVAL Analysis Value integer 3.0 Sum of the 7 fatigue-inertia items (QS.QSSTRESN) where QS.QSTESTCD has values of FATIGUE1-FATIGUE7 and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing ADMOOD CONFUS AVAL Analysis Value integer 3.0 Sum of the 7 confusion-bewilderment items (QS.QSSTRESN) where QS.QSTESTCD has values of CONFUS1-CONFUS7 and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADMOOD",
+        "DPRESS",
+        "AVAL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 37 FINAL December, 2011 Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:784af72631b48e10",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADMOOD",
+          "ANGER",
+          "ANGER1",
+          "ANGER12",
+          "ANOV",
+          "AVAL",
+          "AVISIT",
+          "CONFUS",
+          "CONFUS1",
+          "CONFUS7",
+          "DPRESS",
+          "DPRESS1",
+          "DPRESS15",
+          "FATIGUE",
+          "FATIGUE1",
+          "FATIGUE7",
+          "FINAL",
+          "QSSTRESN",
+          "QSTESTCD",
+          "USUBJID",
+          "VIGOR",
+          "VIGOR1",
+          "VIGOR8",
+          "VISIT"
+        ],
+        "variables": [
+          "ADMOOD",
+          "ANGER",
+          "ANGER1",
+          "ANGER12",
+          "ANOV",
+          "AVAL",
+          "AVISIT",
+          "CONFUS",
+          "CONFUS1",
+          "CONFUS7",
+          "DPRESS",
+          "DPRESS1",
+          "DPRESS15",
+          "FATIGUE",
+          "FATIGUE1",
+          "FATIGUE7",
+          "FINAL",
+          "QSSTRESN",
+          "QSTESTCD",
+          "USUBJID",
+          "VIGOR",
+          "VIGOR1",
+          "VIGOR8",
+          "VISIT"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADMOOD",
+        "ANGER",
+        "ANGER1",
+        "ANGER12",
+        "ANOV",
+        "AVAL",
+        "AVISIT",
+        "CONFUS",
+        "CONFUS1",
+        "CONFUS7",
+        "DPRESS",
+        "DPRESS1",
+        "DPRESS15",
+        "FATIGUE",
+        "FATIGUE1",
+        "FATIGUE7",
+        "FINAL",
+        "QSSTRESN",
+        "QSTESTCD",
+        "USUBJID",
+        "VIGOR",
+        "VIGOR1",
+        "VIGOR8",
+        "VISIT"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 53,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 53 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Der..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 53 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEV *ALL* ATPTN Analysis Timepoint(N) integer TIME8. -1:00:00, -0:30:00, -0:10:00, 0:00:00, 0:30:00, 1:00:00, 2:00:00, 3:00:00, 4:00:00, 6:00:00, 8:00:00, 10:00:00, 11:50:00, 12:30:00, 13:00:00, 14:00:00, 22:00:00, 23:00:00, 23:50:00 XX.XXTPTNUM or the timepoint number for the imputed AVAL",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADFEV",
+        "ALL",
+        "ATPTN",
+        "TIME8"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 53 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:785330e6302b0830",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADFEV",
+          "ALL",
+          "ATPTN",
+          "AVAL",
+          "FINAL",
+          "TIME8",
+          "XXTPTNUM"
+        ],
+        "variables": [
+          "ADFEV",
+          "ALL",
+          "ATPTN",
+          "AVAL",
+          "FINAL",
+          "TIME8",
+          "XXTPTNUM"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADFEV",
+        "ALL",
+        "ATPTN",
+        "AVAL",
+        "FINAL",
+        "TIME8",
+        "XXTPTNUM"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 55 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEV FEV1 ABLFL Baseline Record Flag text $1 Y If ADFEV.BASETYPE=\u201cStudy\u201d & ADFEV.DTYPE=\u201cAVERAGE\u201d & ADFEV.APERIOD=1 then ABLFL=\u201cY\u201d"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 55,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 55 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Der..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 55 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEV FEV1 ABLFL Baseline Record Flag text $1 Y If ADFEV.BASETYPE=\u201cStudy\u201d & ADFEV.DTYPE=\u201cAVERAGE\u201d & ADFEV.APERIOD=1 then ABLFL=\u201cY\u201d",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADFEV",
+        "FEV1",
+        "ABLFL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 55 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:7aa6b8eec9f5b66d",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ABLFL",
+          "ADFEV",
+          "APERIOD",
+          "AVERAGE",
+          "BASETYPE",
+          "DTYPE",
+          "FEV1",
+          "FINAL"
+        ],
+        "variables": [
+          "ABLFL",
+          "ADFEV",
+          "APERIOD",
+          "AVERAGE",
+          "BASETYPE",
+          "DTYPE",
+          "FEV1",
+          "FINAL"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ABLFL",
+        "ADFEV",
+        "APERIOD",
+        "AVERAGE",
+        "BASETYPE",
+        "DTYPE",
+        "FEV1",
+        "FINAL"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 62,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 62 FINAL December, 2011 Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source /..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 62 FINAL December, 2011 Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEVAUC *ALL* RACE Race text $50 BLACK OR AFRICAN AMERICAN, AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER, WHITE ADSL.RACE ADFEVAUC *ALL* SMOKDC Smoking History text $20 Currently Smokes, Ex-smoker ADSL.SMOKDC ADFEVAUC *ALL* SMPKY Smoking History - Pack Years float 4.1 ADSL.SMPKY",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.RACE",
+        "ADSL.SMOKDC",
+        "ADSL.SMPKY"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADFEVAUC",
+        "ALL",
+        "RACE",
+        "BLACK",
+        "OR",
+        "AFRICAN",
+        "AMERICAN",
+        "INDIAN",
+        "ALASKA",
+        "NATIVE",
+        "ASIAN",
+        "HAWAIIAN",
+        "OTHER",
+        "PACIFIC",
+        "ISLANDER",
+        "WHITE",
+        "ADSL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 62 FINAL December, 2011 Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Varia...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [
+        "All rights reserved Page 62 FINAL December, 2011 Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEVAUC *ALL* RACE Race text $50 BLACK OR AFRICAN AMERICAN, AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, NATIVE HAWAIIAN OR..."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:926de0c4cef91c40",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "RACE",
+          "SMOKDC",
+          "SMPKY"
+        ],
+        "variables": [
+          "RACE",
+          "SMOKDC",
+          "SMPKY"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "RACE",
+        "SMOKDC",
+        "SMPKY"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 64,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "N= FAS (full analysis set) population Based on a mixed effects repeated measures model with terms for site, subject within site, treatment and period Response is defined as change from baseline; Common Baseline Mean (SE) = x.xxx (x.xxx)"
+      },
+      "exact_source_excerpt": "N= FAS (full analysis set) population Based on a mixed effects repeated measures model with terms for site, subject within site, treatment and period Response is defined as change from baseline; Common Baseline Mean (SE) = x.xxx (x.xxx)",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "N= FAS (full analysis set) population Based on a mixed effects repeated measures model with terms for site, subject within site, treatment and period Response is defined as change from baseline; Common Baseline Mean (SE) = x.xxx (x.xxx)",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:9e88981d48eace9d",
+      "rule_type": "DEFINITION",
+      "scope": {
+        "candidate_kind": "prose_requirement",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "FAS"
+        ],
+        "variables": [
+          "FAS"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "DEFINITION",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "FAS"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "(\u201cAVERAGE\u201d) For subjects taking a short-acting beta agonist (SABA) or short-acting anticholinergic (SAMA) as rescue medication, any observations on and for eight hours after the time of the rescue medication will be set to missing and imputed by the least favorable observation at that visit prior to the time of rescue medication administration (\u201cWOCFWV\u201d: Worst observation carried forward within visit) If there are non-missing data before and after the missing data, the missing data will be imputed using linear interpolation taking time of the measurement into account (\u201cINTERPOL\u201d: Linear interpolation) If there are no observed data after the missing data and it is the first visit of a period the missing data will be imputed using last observation carried forward.",
+        "BASE=ADFEV.AVAL where ADFEV.ABLFL=\u201cY\u201d"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 54,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 54 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Der..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 54 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEV *ALL* TRTSEQP Planned Sequence of Treatments text $60 A-B-C-Placebo, B-C-Placebo-A, C-Placebo-A-B, Placebo-A-B-C ADSL.TRTSEQP ADFEV FEV1 AVAL Analysis Value float Best12. FEV1 measurements collected from 1 hour pre-dose to 23 hours 50 minutes post-dose; numeric version of XX.XXSTRESN or an imputed value Imputation methods: Create a new record to contain the average of the two pre-dose values. (\u201cAVERAGE\u201d) For subjects taking a short-acting beta agonist (SABA) or short-acting anticholinergic (SAMA) as rescue medication, any observations on and for eight hours after the time of the rescue medication will be set to missing and imputed by the least favorable observation at that visit prior to the time of rescue medication administration (\u201cWOCFWV\u201d: Worst observation carried forward within visit) If there are non-missing data before and after the missing data, the missing data will be imputed using linear interpolation taking time of the measurement into account (\u201cINTERPOL\u201d: Linear interpolation) If there are no observed data after the missing data and it is the first visit of a period the missing data will be imputed using last observation carried forward. (\u201cLOCF\u201d: Last observation carried forward) ADFEV *ALL* BASE Baseline Value float Best12. BASE=ADFEV.AVAL where ADFEV.ABLFL=\u201cY\u201d",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.TRTSEQP"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADFEV",
+        "ALL",
+        "TRTSEQP",
+        "ADSL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 54 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:ae6f5a0696c48262",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "TRTSEQP"
+        ],
+        "variables": [
+          "TRTSEQP"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "TRTSEQP"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 11 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD BMDLS DTYPE Derivation Type text $4 LOCF Populated with \u201cLOCF\u201d if XX.XXSTRESN is missing, to indicate that on that record ADBMD.AVAL is populated using Last Observation Carried Forward method"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 11,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 11 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD BMDLS DTYPE Derivation Type..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 11 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADBMD BMDLS DTYPE Derivation Type text $4 LOCF Populated with \u201cLOCF\u201d if XX.XXSTRESN is missing, to indicate that on that record ADBMD.AVAL is populated using Last Observation Carried Forward method",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADBMD",
+        "BMDLS",
+        "DTYPE",
+        "LOCF",
+        "XX"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 11 FINAL December, 2011 Table 2.1.1.2 Analysis Variable Metadata for ANCOV A Example3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:b108cb9cb3041a2f",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADBMD",
+          "ANCOV",
+          "AVAL",
+          "BMDLS",
+          "DTYPE",
+          "FINAL",
+          "LOCF",
+          "XXSTRESN"
+        ],
+        "variables": [
+          "ADBMD",
+          "ANCOV",
+          "AVAL",
+          "BMDLS",
+          "DTYPE",
+          "FINAL",
+          "LOCF",
+          "XXSTRESN"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADBMD",
+        "ANCOV",
+        "AVAL",
+        "BMDLS",
+        "DTYPE",
+        "FINAL",
+        "LOCF",
+        "XXSTRESN"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "Numeric time of last exposure to treatment in period 04, from SE.SEENDTC ADSL MHDUR Duration of COPD [years] float 8.1 MH.MHDUR at MH.MHTERM=<Trial Diagnosis> ADSL SMOKDC Smoking History text $20 Currently Smokes, Ex-smoker Currently Smokes if SU.SUTRT=\u201dCIGARETTES\u201d and SU.SUENDTC=\u201c \u201d Ex-Smoker if SU.SUTRT=\u201dCIGARETTES\u201d and SU.SUENDTC is not \u201c \u201c and numeric version of SU.SUENDTC is prior to DM.RFSTDTC ADSL SMYMDC When Stopped Smoking text 8 Date portion of SU.SUENDTC where SU.SUTRT=\u201dCIGARETTES\u201d ADSL SMPKY Smoking History - Pack Years float 4.1 SU.SUDOSE where SU.SUTRT=\u201dCIGARETTES\u201d ADSL ALCCDC Alcohol History text $20 Drink \u2013 no interf., Non-drinker \u201cDrink \u2013 no interf.\u201d if SU.SUTRT=\u201dALCOHOL\u201d and SU.SUENRTPT=\u201cONGOING\u201d \u201cNon-Drinker\u201d if SU.SUTRT=\u201dALCOHOL\u201d and SU.SUOCCUR =\u201dN\u201d"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 48,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 48 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADSL TR03ETM T..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 48 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADSL TR03ETM Time of Last Exposure in Period 03 integer TIME5. Numeric time of last exposure to treatment in period 03, from SE.SEENDTC ADSL TR04SDT Date of First Exposure in Period 04 integer YYMMD D10. Numeric date of first exposure to treatment in period 04, from SE.SESTDTC ADSL TR04STM Time of First Exposure in Period 04 integer TIME5. Numeric time of first exposure to treatment in period 04, from SE.SESTDTC ADSL TR04EDT Date of Last Exposure in Period 04 integer YYMMD D10. Numeric date of last exposure to treatment in period 04, from SE.SEENDTC ADSL TR04ETM Time of Last Exposure in Period 04 integer TIME5. Numeric time of last exposure to treatment in period 04, from SE.SEENDTC ADSL MHDUR Duration of COPD [years] float 8.1 MH.MHDUR at MH.MHTERM=<Trial Diagnosis> ADSL SMOKDC Smoking History text $20 Currently Smokes, Ex-smoker Currently Smokes if SU.SUTRT=\u201dCIGARETTES\u201d and SU.SUENDTC=\u201c \u201d Ex-Smoker if SU.SUTRT=\u201dCIGARETTES\u201d and SU.SUENDTC is not \u201c \u201c and numeric version of SU.SUENDTC is prior to DM.RFSTDTC ADSL SMYMDC When Stopped Smoking text 8 Date portion of SU.SUENDTC where SU.SUTRT=\u201dCIGARETTES\u201d ADSL SMPKY Smoking History - Pack Years float 4.1 SU.SUDOSE where SU.SUTRT=\u201dCIGARETTES\u201d ADSL ALCCDC Alcohol History text $20 Drink \u2013 no interf., Non-drinker \u201cDrink \u2013 no interf.\u201d if SU.SUTRT=\u201dALCOHOL\u201d and SU.SUENRTPT=\u201cONGOING\u201d \u201cNon-Drinker\u201d if SU.SUTRT=\u201dALCOHOL\u201d and SU.SUOCCUR =\u201dN\u201d",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.ALCCDC",
+        "ADSL.ALCOHOL",
+        "ADSL.CIGARETTES",
+        "ADSL.COPD",
+        "ADSL.D10",
+        "ADSL.FINAL",
+        "ADSL.MHDUR",
+        "ADSL.MHTERM",
+        "ADSL.ONGOING",
+        "ADSL.RFSTDTC",
+        "ADSL.SEENDTC",
+        "ADSL.SESTDTC",
+        "ADSL.SMOKDC",
+        "ADSL.SMPKY",
+        "ADSL.SMYMDC",
+        "ADSL.SUDOSE",
+        "ADSL.SUENDTC",
+        "ADSL.SUENRTPT",
+        "ADSL.SUOCCUR",
+        "ADSL.SUTRT",
+        "ADSL.TIME5",
+        "ADSL.TR03ETM",
+        "ADSL.TR04EDT",
+        "ADSL.TR04ETM",
+        "ADSL.TR04SDT",
+        "ADSL.TR04STM",
+        "ADSL.YYMMD"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 48 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Co...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [
+        "DM.RFSTDTC"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:bd66b1282a6f2a78",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ALCCDC",
+          "ALCOHOL",
+          "CIGARETTES",
+          "COPD",
+          "D10",
+          "FINAL",
+          "MHDUR",
+          "MHTERM",
+          "ONGOING",
+          "RFSTDTC",
+          "SEENDTC",
+          "SESTDTC",
+          "SMOKDC",
+          "SMPKY",
+          "SMYMDC",
+          "SUDOSE",
+          "SUENDTC",
+          "SUENRTPT",
+          "SUOCCUR",
+          "SUTRT",
+          "TIME5",
+          "TR03ETM",
+          "TR04EDT",
+          "TR04ETM",
+          "TR04SDT",
+          "TR04STM",
+          "YYMMD"
+        ],
+        "variables": [
+          "ALCCDC",
+          "ALCOHOL",
+          "CIGARETTES",
+          "COPD",
+          "D10",
+          "FINAL",
+          "MHDUR",
+          "MHTERM",
+          "ONGOING",
+          "RFSTDTC",
+          "SEENDTC",
+          "SESTDTC",
+          "SMOKDC",
+          "SMPKY",
+          "SMYMDC",
+          "SUDOSE",
+          "SUENDTC",
+          "SUENRTPT",
+          "SUOCCUR",
+          "SUTRT",
+          "TIME5",
+          "TR03ETM",
+          "TR04EDT",
+          "TR04ETM",
+          "TR04SDT",
+          "TR04STM",
+          "YYMMD"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ALCCDC",
+        "ALCOHOL",
+        "CIGARETTES",
+        "COPD",
+        "D10",
+        "FINAL",
+        "MHDUR",
+        "MHTERM",
+        "ONGOING",
+        "RFSTDTC",
+        "SEENDTC",
+        "SESTDTC",
+        "SMOKDC",
+        "SMPKY",
+        "SMYMDC",
+        "SUDOSE",
+        "SUENDTC",
+        "SUENRTPT",
+        "SUOCCUR",
+        "SUTRT",
+        "TIME5",
+        "TR03ETM",
+        "TR04EDT",
+        "TR04ETM",
+        "TR04SDT",
+        "TR04STM",
+        "YYMMD"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 60 FINAL December, 2011 Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEVAUC PARAMCD PARAMCD Parameter Code text $8 FEVAUC12, FEVAUC24 Populate with the appropriate text, depending on time period covered, for records created to contain the FEV AUCvalues (\u201cFEVAUC12\u201d for the 0-12 hour calculated value and \u201cFEVAUC24\u201d for the 12-24 hour calculated value) ADFEVAUC *ALL* PARAMN Parameter (N) integer 8 23= FEV1 AUC (0-12) [L], 24= FEV1 AUC (12-24) [L] Map ADFEVAUC.PARAM to PARAMN - Numeric version of the PARAM ADFEVAUC *ALL* ATPT Analysis Timepoint text $40 0-12h, 12-24h If ADFEVAUC.PARAMCD=\u201cFEVAUC12\u201d then APTPT = \u201c0-12h\u201d If ADFEVAUC.PARAMCD=\u201cFEVAUC24\u201d then APTPT = \u201c12-24h\u201d ADFEVAUC FEVAUC12 AVAL Analysis Value float 8.3 Using records where ADFEV.USUBJID, ADFEV.BASETYPE, and ADFEV.APERIOD match those for this record and where ADFEV.PARAMCD = \u201cFEV\u201d: If ADFEV.VISIT in (4, 7, 10, 13), then AVAL is the FEV1 AUC (0-12) [L] calculated from zero to 12 hours using the trapezoidal rule divided by the corresponding duration (i.e., 12 h) to give the results in liters.",
+        "ADFEVAUC FEVAUC24 AVAL Analysis Value float 8.3 Using records where ADFEV.USUBJID, ADFEV.BASETYPE, and ADFEV.APERIOD match those for this record and where ADFEV.PARAMCD = \u201cFEV\u201d: If ADFEV.VISIT in (4, 7, 10, 13), then AVAL is the FEV1 AUC (12-24) [L] calculated from 12 to 24 hours using the trapezoidal rule divided by the corresponding duration (i.e., 12 h) to give the results in liters.",
+        "ADFEVAUC *ALL* BASE Baseline Value float 8.2 ADFEVAUC.AVAL from the record where ADFEVAUC.ABLFL=\u201cY\u201d, and where ADFEVAUC.USUBJID, ADFEVAUC.BASETYPE, and ADFEVAUC.APERIOD match those for this record."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 60,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 60 FINAL December, 2011 Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source /..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 60 FINAL December, 2011 Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEVAUC PARAMCD PARAMCD Parameter Code text $8 FEVAUC12, FEVAUC24 Populate with the appropriate text, depending on time period covered, for records created to contain the FEV AUCvalues (\u201cFEVAUC12\u201d for the 0-12 hour calculated value and \u201cFEVAUC24\u201d for the 12-24 hour calculated value) ADFEVAUC *ALL* PARAMN Parameter (N) integer 8 23= FEV1 AUC (0-12) [L], 24= FEV1 AUC (12-24) [L] Map ADFEVAUC.PARAM to PARAMN - Numeric version of the PARAM ADFEVAUC *ALL* ATPT Analysis Timepoint text $40 0-12h, 12-24h If ADFEVAUC.PARAMCD=\u201cFEVAUC12\u201d then APTPT = \u201c0-12h\u201d If ADFEVAUC.PARAMCD=\u201cFEVAUC24\u201d then APTPT = \u201c12-24h\u201d ADFEVAUC FEVAUC12 AVAL Analysis Value float 8.3 Using records where ADFEV.USUBJID, ADFEV.BASETYPE, and ADFEV.APERIOD match those for this record and where ADFEV.PARAMCD = \u201cFEV\u201d: If ADFEV.VISIT in (4, 7, 10, 13), then AVAL is the FEV1 AUC (0-12) [L] calculated from zero to 12 hours using the trapezoidal rule divided by the corresponding duration (i.e., 12 h) to give the results in liters. ADFEVAUC FEVAUC24 AVAL Analysis Value float 8.3 Using records where ADFEV.USUBJID, ADFEV.BASETYPE, and ADFEV.APERIOD match those for this record and where ADFEV.PARAMCD = \u201cFEV\u201d: If ADFEV.VISIT in (4, 7, 10, 13), then AVAL is the FEV1 AUC (12-24) [L] calculated from 12 to 24 hours using the trapezoidal rule divided by the corresponding duration (i.e., 12 h) to give the results in liters. ADFEVAUC *ALL* BASE Baseline Value float 8.2 ADFEVAUC.AVAL from the record where ADFEVAUC.ABLFL=\u201cY\u201d, and where ADFEVAUC.USUBJID, ADFEVAUC.BASETYPE, and ADFEVAUC.APERIOD match those for this record.",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADFEVAUC",
+        "PARAMCD",
+        "FEVAUC12",
+        "FEVAUC24",
+        "FEV",
+        "ALL",
+        "PARAMN",
+        "FEV1",
+        "AUC"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 60 FINAL December, 2011 Table 2.7.3.3 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV AUC 27 Dataset Name Parameter Identifier Variable Name Variable Label Varia...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:d516bbb921758f9b",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ABLFL",
+          "ADFEV",
+          "ADFEVAUC",
+          "ALL",
+          "APERIOD",
+          "APTPT",
+          "ATPT",
+          "AUC",
+          "AVAL",
+          "BASE",
+          "BASETYPE",
+          "FEV",
+          "FEV1",
+          "FEVAUC12",
+          "FEVAUC24",
+          "FINAL",
+          "PARAM",
+          "PARAMCD",
+          "PARAMN",
+          "USUBJID",
+          "VISIT"
+        ],
+        "variables": [
+          "ABLFL",
+          "ADFEV",
+          "ADFEVAUC",
+          "ALL",
+          "APERIOD",
+          "APTPT",
+          "ATPT",
+          "AUC",
+          "AVAL",
+          "BASE",
+          "BASETYPE",
+          "FEV",
+          "FEV1",
+          "FEVAUC12",
+          "FEVAUC24",
+          "FINAL",
+          "PARAM",
+          "PARAMCD",
+          "PARAMN",
+          "USUBJID",
+          "VISIT"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ABLFL",
+        "ADFEV",
+        "ADFEVAUC",
+        "ALL",
+        "APERIOD",
+        "APTPT",
+        "ATPT",
+        "AUC",
+        "AVAL",
+        "BASE",
+        "BASETYPE",
+        "FEV",
+        "FEV1",
+        "FEVAUC12",
+        "FEVAUC24",
+        "FINAL",
+        "PARAM",
+        "PARAMCD",
+        "PARAMN",
+        "USUBJID",
+        "VISIT"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 38 FINAL December, 2011 Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADMOOD TOTAL AVAL Analysis Value integer 3.0 Sum of the tension-anxiety (ANXIETY), depression (DPRESS), anger-hostility (ANGER), fatigue (FATIGUE), and confusion-bewilderment (CONFUS) subscales minus the vigor (VIGOR) subscale and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing ADMOOD *ALL* BASE Baseline Value integer 3.0 BASE=ADMOOD.AVAL where ADMOOD.ABLFL=\u201cY\u201d ADMOOD *ALL* CHG Change from Baseline integer 4.0 CHG=ADMOOD.AVAL-ADMOOD.BASE for post-baseline visits"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 38,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 38 FINAL December, 2011 Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADMOOD TOTAL AVAL Ana..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 38 FINAL December, 2011 Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADMOOD TOTAL AVAL Analysis Value integer 3.0 Sum of the tension-anxiety (ANXIETY), depression (DPRESS), anger-hostility (ANGER), fatigue (FATIGUE), and confusion-bewilderment (CONFUS) subscales minus the vigor (VIGOR) subscale and ADMOOD.USUBJID=QS.USUBJID and ADMOOD.AVISIT=QS.VISIT Set to missing if more than 20% of the assessment items are missing ADMOOD *ALL* BASE Baseline Value integer 3.0 BASE=ADMOOD.AVAL where ADMOOD.ABLFL=\u201cY\u201d ADMOOD *ALL* CHG Change from Baseline integer 4.0 CHG=ADMOOD.AVAL-ADMOOD.BASE for post-baseline visits",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADMOOD",
+        "TOTAL",
+        "AVAL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 38 FINAL December, 2011 Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:d602a2dd9a362e8c",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ABLFL",
+          "ADMOOD",
+          "ALL",
+          "ANGER",
+          "ANOV",
+          "ANXIETY",
+          "AVAL",
+          "AVISIT",
+          "BASE",
+          "CHG",
+          "CONFUS",
+          "DPRESS",
+          "FATIGUE",
+          "FINAL",
+          "TOTAL",
+          "USUBJID",
+          "VIGOR",
+          "VISIT"
+        ],
+        "variables": [
+          "ABLFL",
+          "ADMOOD",
+          "ALL",
+          "ANGER",
+          "ANOV",
+          "ANXIETY",
+          "AVAL",
+          "AVISIT",
+          "BASE",
+          "CHG",
+          "CONFUS",
+          "DPRESS",
+          "FATIGUE",
+          "FINAL",
+          "TOTAL",
+          "USUBJID",
+          "VIGOR",
+          "VISIT"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ABLFL",
+        "ADMOOD",
+        "ALL",
+        "ANGER",
+        "ANOV",
+        "ANXIETY",
+        "AVAL",
+        "AVISIT",
+        "BASE",
+        "CHG",
+        "CONFUS",
+        "DPRESS",
+        "FATIGUE",
+        "FINAL",
+        "TOTAL",
+        "USUBJID",
+        "VIGOR",
+        "VISIT"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 35,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADMOOD *ALL* STUDYID Study Identifier text $6 ADSL.STUDYID ADMOOD *ALL* USUBJID Unique Subject Identifier text $10 ADSL.USUBJID ADMOOD *ALL* TRTP Planned Treatment text $10 Placebo, Drug ZZZ ADSL.TRT01P..."
+      },
+      "exact_source_excerpt": "Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADMOOD *ALL* STUDYID Study Identifier text $6 ADSL.STUDYID ADMOOD *ALL* USUBJID Unique Subject Identifier text $10 ADSL.USUBJID ADMOOD *ALL* TRTP Planned Treatment text $10 Placebo, Drug ZZZ ADSL.TRT01P ADMOOD *ALL* TRTPN Planned Treatment (N) integer 1.0 0 = Placebo, 1 = Drug ZZZ ADSL.TRT01PN ADMOOD *ALL* ITTFL Intent-To- Treat Population Flag text $1 Y , N ADSL.ITTFL",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.ITTFL",
+        "ADSL.STUDYID",
+        "ADSL.TRT01P",
+        "ADSL.TRT01PN",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADMOOD",
+        "ALL",
+        "STUDYID",
+        "ADSL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADMOOD *ALL* STUDYID Study Identifier text $6 ADSL.STUDYID ADMOOD *ALL* USUBJID Unique Subject Identifier text $10 ADSL.USUBJID ADMOOD *ALL* T...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:dd9a74523d34ae29",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ITTFL",
+          "STUDYID",
+          "TRT01P",
+          "TRT01PN",
+          "USUBJID"
+        ],
+        "variables": [
+          "ITTFL",
+          "STUDYID",
+          "TRT01P",
+          "TRT01PN",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ITTFL",
+        "STUDYID",
+        "TRT01P",
+        "TRT01PN",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 50,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEV *ALL* STUDYID Study Identifier text $15 ADSL.STUDYID"
+      },
+      "exact_source_excerpt": "Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEV *ALL* STUDYID Study Identifier text $15 ADSL.STUDYID",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.STUDYID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADFEV",
+        "ALL",
+        "STUDYID",
+        "ADSL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEV *ALL* STUDYID Study Identifier text $15 ADSL.STUDYID",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:deaff079ed838b49",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "STUDYID"
+        ],
+        "variables": [
+          "STUDYID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "STUDYID"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 51,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 51 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Der..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 51 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEV *ALL* USUBJID Unique Subject Identifier text $20 ADSL.USUBJID ADFEV *ALL* SITEID Study Site Identifier text $10 ADSL.SITEID ADFEV *ALL* BASETYPE Baseline Type text $40 Study, Period 1, Period 2, Period 3, Period 4 BASETYPE is \u201cStudy\u201d for records using the study baseline (i.e., the baseline record at treatment period 1) BASETYPE is the appropriate period for records using the period baselines for each treatment period ADFEV *ALL* PARAM Parameter text $60 Forced expired volume in 1 second [L] Populated with \u201dForced expired volume in 1 second [L]\u201d (based on XX.XXTEST) for the records pertaining to this analysis parameter. ADFEV PARAMCD PARAMCD Parameter Code text $8 FEV1 Populated with \u201dFEV1\u201d for records corresponding to FEV1 (based on XX.XXTESTCD) ADFEV FEV1 PARAMN Parameter (N) integer 8 1=FEV1 Map ADFEV.PARAM to PARAMN - Numeric version of the PARAM ADFEV *ALL* AVISIT Analysis Visit text $11 Visit 1, Visit 2, Visit 3, Visit 4, Visit 5, Visit 6, Visit 7, Visit 8, Visit 9, Visit 10, Visit 11, Visit 12, Visit 13, Visit 14 XX.VISIT or the analysis visit for the imputed AVAL",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.SITEID",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADFEV",
+        "ALL",
+        "USUBJID",
+        "ADSL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 51 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:e0a9a893d8047c27",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "SITEID",
+          "USUBJID"
+        ],
+        "variables": [
+          "SITEID",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "SITEID",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 56 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEV *ALL* PLANADY Planned Analysis Relative Day integer 3.0 If ADFEV.BASETYPE=\u201dStudy\u201d then PLANADY=SV.VISITDY"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 56,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 56 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Der..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 56 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADFEV *ALL* PLANADY Planned Analysis Relative Day integer 3.0 If ADFEV.BASETYPE=\u201dStudy\u201d then PLANADY=SV.VISITDY",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADFEV",
+        "ALL",
+        "PLANADY"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 56 FINAL December, 2011 Table 2.7.3.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADFEV 25 Dataset Name Parameter Identifier Variable Name Variable Label Variable...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [
+        "SV.VISITDY"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:e6f2f6ef7509b968",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADFEV",
+          "ALL",
+          "BASETYPE",
+          "FINAL",
+          "PLANADY",
+          "VISITDY"
+        ],
+        "variables": [
+          "ADFEV",
+          "ALL",
+          "BASETYPE",
+          "FINAL",
+          "PLANADY",
+          "VISITDY"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADFEV",
+        "ALL",
+        "BASETYPE",
+        "FINAL",
+        "PLANADY",
+        "VISITDY"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "ADPAIN PARAMCD PARAMCD Parameter Code text $8 SEVERITY Populated with \u201dSeverity\u201d for records corresponding to Pain Severity (based on XX.XXTESTCD) ADPAIN *ALL* ATPT Analysis Timepoint text $20 BASELINE, 30 MIN, 1 HOUR, 90 MIN, 2 HOUR XX.XXTPT or the timepoint for the imputed AVAL ADPAIN *ALL* ATPTN Analysis Timepoint (N) integer 3.0 1=BASELINE, 2=30 MIN, 3=1 HOUR, 4=90 MIN, 5=2 HOUR XX.XXTPTNUM or the timepoint number for the imputed AVAL ADPAIN *ALL* ABLFL Baseline Record Flag text $1 Y \u201cY\u201d when ADPAIN.ATPT=\u201cBASELINE\u201d ADPAIN SEVERITY AVAL Analysis Value integer 1.0 0=No Pain, 1=Mild Pain, 2=Moderate Pain, 3=Severe Pain XX.XXSTRESN when XX.XXTEST=\u201dPain Severity\u201d and XX.XXTPT=ATPT or an imputed value if XX.XXSTRESN is missing, set AVAL equal to the value for the previous post-baseline time point.",
+        "If the previous timepoint is baseline, leave AVAL missing ADPAIN SEVERITY AVALC Analysis Value (C) text $20 No Pain, Mild Pain, Moderate Pain, Severe Pain XX.XXSTRESC when XX.XXTEST=\u201dPain Severity\u201d and XX.XXTPT=ATPT or an imputed value if XX.XXSTRESN is missing, set AVALC equal to the value for the previous post-baseline time point."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 28,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 28 FINAL December, 2011 Table 2.5.1.2 Analysis Variable Metadata for Logistic Regression Analysis Example15 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADPAIN *ALL*..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 28 FINAL December, 2011 Table 2.5.1.2 Analysis Variable Metadata for Logistic Regression Analysis Example15 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADPAIN *ALL* TRTP Planned Treatment text $10 Drug XYZ, Placebo ADSL.TRT01P ADPAIN *ALL* ITTFL Intent-To- Treatment Population Flag text $1 Y , N ADSL.ITTFL ADPAIN *ALL* PARAM Parameter text $32 Pain Severity Populated with \u201cPain Severity\u201d (XX.XXTEST) for the records pertaining to this analysis parameter. ADPAIN PARAMCD PARAMCD Parameter Code text $8 SEVERITY Populated with \u201dSeverity\u201d for records corresponding to Pain Severity (based on XX.XXTESTCD) ADPAIN *ALL* ATPT Analysis Timepoint text $20 BASELINE, 30 MIN, 1 HOUR, 90 MIN, 2 HOUR XX.XXTPT or the timepoint for the imputed AVAL ADPAIN *ALL* ATPTN Analysis Timepoint (N) integer 3.0 1=BASELINE, 2=30 MIN, 3=1 HOUR, 4=90 MIN, 5=2 HOUR XX.XXTPTNUM or the timepoint number for the imputed AVAL ADPAIN *ALL* ABLFL Baseline Record Flag text $1 Y \u201cY\u201d when ADPAIN.ATPT=\u201cBASELINE\u201d ADPAIN SEVERITY AVAL Analysis Value integer 1.0 0=No Pain, 1=Mild Pain, 2=Moderate Pain, 3=Severe Pain XX.XXSTRESN when XX.XXTEST=\u201dPain Severity\u201d and XX.XXTPT=ATPT or an imputed value if XX.XXSTRESN is missing, set AVAL equal to the value for the previous post-baseline time point. If the previous timepoint is baseline, leave AVAL missing ADPAIN SEVERITY AVALC Analysis Value (C) text $20 No Pain, Mild Pain, Moderate Pain, Severe Pain XX.XXSTRESC when XX.XXTEST=\u201dPain Severity\u201d and XX.XXTPT=ATPT or an imputed value if XX.XXSTRESN is missing, set AVALC equal to the value for the previous post-baseline time point. If the previous timepoint is baseline, leave AVALC missing",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.ITTFL",
+        "ADSL.TRT01P"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADPAIN",
+        "ALL",
+        "TRTP",
+        "XYZ",
+        "ADSL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 28 FINAL December, 2011 Table 2.5.1.2 Analysis Variable Metadata for Logistic Regression Analysis Example15 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:eb386e22530dfa30",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ITTFL",
+          "TRT01P"
+        ],
+        "variables": [
+          "ITTFL",
+          "TRT01P"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ITTFL",
+        "TRT01P"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 36,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 36 FINAL December, 2011 Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADMOOD *ALL* PARAM Pa..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 36 FINAL December, 2011 Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADMOOD *ALL* PARAM Parameter text $50 Tension/Anxiety Total Score, Depression/Rejection Total Score, Anger/Hostility Total Score, Vigor/Activity Total Score, Fatigue/Inertia Total Score, Confusion/Bewildermen t Total Score, Total Score For records created to contain the total scores populate with the appropriate total score name.",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADMOOD",
+        "ALL",
+        "PARAM"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 36 FINAL December, 2011 Table 2.6.1.2 Analysis Variable Metadata for Multivariate ANOV A Example20 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:ebfee1266c8654b3",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADMOOD",
+          "ALL",
+          "ANOV",
+          "FINAL",
+          "PARAM"
+        ],
+        "variables": [
+          "ADMOOD",
+          "ALL",
+          "ANOV",
+          "FINAL",
+          "PARAM"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADMOOD",
+        "ALL",
+        "ANOV",
+        "FINAL",
+        "PARAM"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 47,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 47 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADSL TR01SDT D..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 47 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADSL TR01SDT Date of First Exposure in Period 01 integer YYMMD D10. Numeric date of first exposure to treatment in period 01, from SE.SESTDTC ADSL TR01STM Time of First Exposure in Period 01 integer TIME5. Numeric time of first exposure to treatment in period 01, from SE.SESTDTC ADSL TR01EDT Date of Last Exposure in Period 01 integer YYMMD D10. Numeric date of last exposure to treatment in period 01, from SE.SEENDTC ADSL TR01ETM Time of Last Exposure in Period 01 integer TIME5. Numeric time of last exposure to treatment in period 01, from SE.SEENDTC ADSL TR02SDT Date of First Exposure in Period 02 integer YYMMD D10. Numeric date of first exposure to treatment in period 02, from SE.SESTDTC ADSL TR02STM Time of First Exposure in Period 02 integer TIME5. Numeric time of first exposure to treatment in period 02, from SE.SESTDTC ADSL TR02EDT Date of Last Exposure in Period 02 integer YYMMD D 10. Numeric date of last exposure to treatment in period 02, from SE.SEENDTC ADSL TR02ETM Time of Last Exposure in Period 02 integer TIME5. Numeric time of last exposure to treatment in period 02, from SE.SEENDTC ADSL TR03SDT Date of First Exposure in Period 03 integer YYMMD D10. Numeric date of first exposure to treatment in period 03, from SE.SESTDTC ADSL TR03STM Time of First Exposure in Period 03 integer TIME5. Numeric time of first exposure to treatment in period 03, from SE.SESTDTC ADSL TR03EDT Date of Last Exposure in Period 03 integer YYMMD D10. Numeric date of last exposure to treatment in period 03, from SE.SEENDTC",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.D10",
+        "ADSL.FINAL",
+        "ADSL.SEENDTC",
+        "ADSL.SESTDTC",
+        "ADSL.TIME5",
+        "ADSL.TR01EDT",
+        "ADSL.TR01ETM",
+        "ADSL.TR01SDT",
+        "ADSL.TR01STM",
+        "ADSL.TR02EDT",
+        "ADSL.TR02ETM",
+        "ADSL.TR02SDT",
+        "ADSL.TR02STM",
+        "ADSL.TR03EDT",
+        "ADSL.TR03SDT",
+        "ADSL.TR03STM",
+        "ADSL.YYMMD"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 47 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Co...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:f2f84817799f4206",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "D10",
+          "FINAL",
+          "SEENDTC",
+          "SESTDTC",
+          "TIME5",
+          "TR01EDT",
+          "TR01ETM",
+          "TR01SDT",
+          "TR01STM",
+          "TR02EDT",
+          "TR02ETM",
+          "TR02SDT",
+          "TR02STM",
+          "TR03EDT",
+          "TR03SDT",
+          "TR03STM",
+          "YYMMD"
+        ],
+        "variables": [
+          "D10",
+          "FINAL",
+          "SEENDTC",
+          "SESTDTC",
+          "TIME5",
+          "TR01EDT",
+          "TR01ETM",
+          "TR01SDT",
+          "TR01STM",
+          "TR02EDT",
+          "TR02ETM",
+          "TR02SDT",
+          "TR02STM",
+          "TR03EDT",
+          "TR03SDT",
+          "TR03STM",
+          "YYMMD"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "D10",
+        "FINAL",
+        "SEENDTC",
+        "SESTDTC",
+        "TIME5",
+        "TR01EDT",
+        "TR01ETM",
+        "TR01SDT",
+        "TR01STM",
+        "TR02EDT",
+        "TR02ETM",
+        "TR02SDT",
+        "TR02STM",
+        "TR03EDT",
+        "TR03SDT",
+        "TR03STM",
+        "YYMMD"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 29 FINAL December, 2011 Table 2.5.1.2 Analysis Variable Metadata for Logistic Regression Analysis Example15 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADPAIN SEVERITY BASE Baseline Value integer 1.0 0=No Pain, 1=Mild Pain, 2=Moderate Pain, 3=Severe Pain AVAL when ADPAIN.ABLFL=\u201cY\u201d ADPAIN SEVERITY BASEC Baseline Value (C) text $20 No Pain, Mild Pain, Moderate Pain, Severe Pain AVALC when ADPAIN.ABLFL=\u201cY\u201d ADPAIN SEVERITY CRIT1 Analysis Criteria 1 text $50 Pain Relief at 2 hour Populated with \u201dPain Relief at 2 hour\u201d when PARAMCD=\u201dSEVERITY\u201d and ATPT=\u201d2 HOUR\u201d ADPAIN SEVERITY CRIT1FL Criterion 1 Evaluation Result Flag text $1 Y , N Null if CRIT1=\u201d \u201c If CRIT1 not null, then set to \u201cY\u201d or \u201cN\u201d: \u201cY\u201d if ADPAIN.BASE>=2 AND ADPAIN.AVAL<=1 AND ADPAIN.RESCUEFL=\u201d \u201c and ABLFL = \u201c \u201c Else \u201cN\u201d ADPAIN *ALL* AGE Age integer 3.0 ADSL.AGE ADPAIN *ALL* SEX Sex text $1 M, F ADSL.SEX ADPAIN SEVERITY DTYPE Derivation Type text $5 LOCF Populated with \u201cLOCF\u201d when the value of AVAL is imputed using last observation carried forward:"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 29,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 29 FINAL December, 2011 Table 2.5.1.2 Analysis Variable Metadata for Logistic Regression Analysis Example15 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADPAIN SEVER..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 29 FINAL December, 2011 Table 2.5.1.2 Analysis Variable Metadata for Logistic Regression Analysis Example15 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADPAIN SEVERITY BASE Baseline Value integer 1.0 0=No Pain, 1=Mild Pain, 2=Moderate Pain, 3=Severe Pain AVAL when ADPAIN.ABLFL=\u201cY\u201d ADPAIN SEVERITY BASEC Baseline Value (C) text $20 No Pain, Mild Pain, Moderate Pain, Severe Pain AVALC when ADPAIN.ABLFL=\u201cY\u201d ADPAIN SEVERITY CRIT1 Analysis Criteria 1 text $50 Pain Relief at 2 hour Populated with \u201dPain Relief at 2 hour\u201d when PARAMCD=\u201dSEVERITY\u201d and ATPT=\u201d2 HOUR\u201d ADPAIN SEVERITY CRIT1FL Criterion 1 Evaluation Result Flag text $1 Y , N Null if CRIT1=\u201d \u201c If CRIT1 not null, then set to \u201cY\u201d or \u201cN\u201d: \u201cY\u201d if ADPAIN.BASE>=2 AND ADPAIN.AVAL<=1 AND ADPAIN.RESCUEFL=\u201d \u201c and ABLFL = \u201c \u201c Else \u201cN\u201d ADPAIN *ALL* AGE Age integer 3.0 ADSL.AGE ADPAIN *ALL* SEX Sex text $1 M, F ADSL.SEX ADPAIN SEVERITY DTYPE Derivation Type text $5 LOCF Populated with \u201cLOCF\u201d when the value of AVAL is imputed using last observation carried forward:",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.AGE",
+        "ADSL.SEX"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADPAIN",
+        "SEVERITY",
+        "BASE"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 29 FINAL December, 2011 Table 2.5.1.2 Analysis Variable Metadata for Logistic Regression Analysis Example15 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:f619f99942d2f0bf",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "AGE",
+          "SEX"
+        ],
+        "variables": [
+          "AGE",
+          "SEX"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "AGE",
+        "SEX"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "Similarly, if the list of valid values is long, the producer may choose to provide a link to an external codelist, such as a CDISC terminology set.",
+        "Programming statements can be omitted: As illustrated in the ADaM, the \u201cprogramming statements\u201d in the analysis results metadata can be blank, if the information provided in the other metadata elements is sufficient to describe the analysis performed.",
+        "This is illustrated in Example 1 (Section 2.1) where the programming"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 6,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 6 FINAL December, 2011 response variables (also known as dependent variables), supportive variables for complex predictors and/or responses, supportive variables to facilitate traceability. Refer to the ADaMIG for descriptions of issues to be considered in des..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 6 FINAL December, 2011 response variables (also known as dependent variables), supportive variables for complex predictors and/or responses, supportive variables to facilitate traceability. Refer to the ADaMIG for descriptions of issues to be considered in designing and constructing analysis datasets and the associated metadata. Examples of a few of these issues include (but are not limited to): identification of baseline, facilitating subgroup analyses, inclusion of transformed analysis values, deriving composite/compound parameters, identifying imputation of missing values, deriving a new variable (column) vs. a new record, and inclusion of additional records and/or variables for sensitivity analyses and/or future analyses. 1.4 Conventions Used in this Document Throughout this document the terms \u201cproducer\u201d and \u201cconsumer\u201d are used to refer to the originator/sender/owner/sponsor of the data and the user/reviewer/recipient of the data, respectively. These terms are used to simplify the document, and are not intended to imply that these examples only apply to analysis datase ts in the context of electronic submissions to regulatory agencies. There are many decisions to be made by a producer in order to have consistency among the ADaM datasets and associated metadata being developed. Some of the decisions made in developing the examples within this document are highlighted below to provide insight into conventions used in the document, as well as to emphasize some of the decisions to be made by a producer. Parameter identifier: For simplicity, in many examples in this document only one analysis parameter is illustrated. In the analysis variable metadata provided in the examples, the producer elected to use the value of PARAMCD as the parameter identifier for variables that have metadata dependent on the analysis parameter. For variables expected to be consistent across analysis parameters, the parameter identifier of \u201c*ALL*\u201d is used. Whether to make this distinction within analysis variable metadata for an analysis dataset containing only one analysis parameter is a decision to be made by the producer. Codelists/Controlled Terminology in the metadata: All of the examples illustrated in this document repeat the codelist metadata from the source dataset or list the valid values for the variable. It should be noted that how repeated codelists are included is a decision to be made by the producer of the data and is impacted by the choice of stylesheet. For example, the producer may elect to have a separate section of the define file be devoted to codelists, with the analysis variable metadata element providing a link to the appropriate codelist (thus avoiding repeating the list for each analysis variable to which it applies). Similarly, if the list of valid values is long, the producer may choose to provide a link to an external codelist, such as a CDISC terminology set. Result identifier: The \u201cresult identifier\u201d in the analysis results metadata identifies the specific analysis result within a display. As illustrated in Table 2.2.1.2 in this document and in the ADaM, the \u201cresult identifier\u201d can be left blank, indicating that the results being described are in the analysis display identified, not one specif ic portion of the display. To emphasize that the element is intentionally left blank, this document uses a convention of noting \u201c<intentionally left blank>.\u201d This is not meant to imply a requirement or standard for using this convention. Programming statements can be omitted: As illustrated in the ADaM, the \u201cprogramming statements\u201d in the analysis results metadata can be blank, if the information provided in the other metadata elements is sufficient to describe the analysis performed. This is illustrated in Example 1 (Section 2.1) where the programming",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ALL"
+      ],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "It should be noted that how repeated codelists are included is a decision to be made by the producer of the data and is impacted by the choice of stylesheet.",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [
+        "It should be noted that how repeated codelists are included is a decision to be made by the producer of the data and is impacted by the choice of stylesheet.",
+        "For example, the producer may elect to have a separate section of the define file be devoted to codelists, with the analysis variable metadata element providing a link to the appropriate codelist (thus avoiding repeating the list for each analysis variable to which it applies).",
+        "Similarly, if the list of valid values is long, the producer may choose to provide a link to an external codelist, such as a CDISC terminology set.",
+        "As illustrated in Table 2.2.1.2 in this document and in the ADaM, the \u201cresult identifier\u201d can be left blank, indicating that the results being described are in the analysis display identified, not one specif ic portion of the display.",
+        "Programming statements can be omitted: As illustrated in the ADaM, the \u201cprogramming statements\u201d in the analysis results metadata can be blank, if the information provided in the other metadata elements is sufficient to describe the analysis performed."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:f7d7db93b3271811",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ALL",
+          "FINAL",
+          "PARAMCD"
+        ],
+        "variables": [
+          "ALL",
+          "FINAL",
+          "PARAMCD"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ALL",
+        "FINAL",
+        "PARAMCD"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "Numeric date of the following value: DS.DSDTC where DS.DSTERM=\u201dRANDOMIZED\u201d ADSL TRTSDT Date of First Exposure to Treatment integer YYMMD D10."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 46,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 46 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADSL TRT03P Pl..."
+      },
+      "exact_source_excerpt": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 46 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation ADSL TRT03P Planned Treatment for Period 03 text $60 Drug A, Drug B, Drug C, Placebo Based on the assigned treatment sequence order. This field will be populated with one of four treatments: \u201cDrug A\u201d, \u201cDrug B\u201d, \u201cDrug C\u201d or \u201cPlacebo\u201d, as defined for this subject within this treatment period in SE.ELEMENT ADSL TRT04P Planned Treatment for Period 04 text $60 Drug A, Drug B, Drug C, Placebo Based on the assigned treatment sequence order. This field will be populated with one of four treatments: \u201cDrug A\u201d, \u201cDrug B\u201d, \u201cDrug C\u201d or \u201cPlacebo\u201d, as defined for this subject within this treatment period in SE.ELEMENT ADSL TRTSEQP Planned Sequence of Treatments text $60 A-B-C-Placebo, B-C-Placebo-A, C-Placebo-A-B, Placebo-A-B-C, Planned sequence of treatments DM.ARMCD ADSL RANDDT Date of Randomization integer YYMMD D10. Numeric date of the following value: DS.DSDTC where DS.DSTERM=\u201dRANDOMIZED\u201d ADSL TRTSDT Date of First Exposure to Treatment integer YYMMD D10. Numeric date of the following value: DM.RFSTDTC ADSL TRTSTM Time of First Exposure to Treatment integer TIME5. Numeric time of the following value: DM.RFSTDTC ADSL TRTEDT Date of Last Exposure to Treatment integer YYMMD D10. Numeric date of the following value: DM.RFENDTC ADSL TRTETM Time of Last Exposure to Treatment integer TIME5. Numeric time of the following value: DM.RFENDTC",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.ARMCD",
+        "ADSL.D10",
+        "ADSL.DSDTC",
+        "ADSL.DSTERM",
+        "ADSL.ELEMENT",
+        "ADSL.FINAL",
+        "ADSL.RANDDT",
+        "ADSL.RANDOMIZED",
+        "ADSL.RFENDTC",
+        "ADSL.RFSTDTC",
+        "ADSL.TIME5",
+        "ADSL.TRT03P",
+        "ADSL.TRT04P",
+        "ADSL.TRTEDT",
+        "ADSL.TRTETM",
+        "ADSL.TRTSDT",
+        "ADSL.TRTSEQP",
+        "ADSL.TRTSTM",
+        "ADSL.YYMMD"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "adam_examples_final.pdf",
+      "normalized_atomic_requirement": "ADaM Examples in Commonly Used Statistical Analysis Methods Version 1.0 \u00a9 2011 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 46 FINAL December, 2011 Table 2.7.2.1 Analysis Variable Metadata for Repeated Measures Analysis of Crossover Example - ADSL 24 Dataset Name Variable Name Variable Label Variable Type Display Format Co...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/adam/adam_examples_final.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [
+        "DM.ARMCD",
+        "DM.RFENDTC",
+        "DM.RFSTDTC",
+        "DS.DSDTC",
+        "DS.DSTERM"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-common-statistical-analysis-examples:fa2bd2d27a2a6cda",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ARMCD",
+          "D10",
+          "DSDTC",
+          "DSTERM",
+          "ELEMENT",
+          "FINAL",
+          "RANDDT",
+          "RANDOMIZED",
+          "RFENDTC",
+          "RFSTDTC",
+          "TIME5",
+          "TRT03P",
+          "TRT04P",
+          "TRTEDT",
+          "TRTETM",
+          "TRTSDT",
+          "TRTSEQP",
+          "TRTSTM",
+          "YYMMD"
+        ],
+        "variables": [
+          "ARMCD",
+          "D10",
+          "DSDTC",
+          "DSTERM",
+          "ELEMENT",
+          "FINAL",
+          "RANDDT",
+          "RANDOMIZED",
+          "RFENDTC",
+          "RFSTDTC",
+          "TIME5",
+          "TRT03P",
+          "TRT04P",
+          "TRTEDT",
+          "TRTETM",
+          "TRTSDT",
+          "TRTSEQP",
+          "TRTSTM",
+          "YYMMD"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "7e9616c0106547d6dfcc7584f7360ac56a3e9842fa99fb9eb78e8ef78946f0eb",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-common-statistical-analysis-examples",
+      "standard_name": "Common Statistical Analysis Examples",
+      "standard_version": null,
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ARMCD",
+        "D10",
+        "DSDTC",
+        "DSTERM",
+        "ELEMENT",
+        "FINAL",
+        "RANDDT",
+        "RANDOMIZED",
+        "RFENDTC",
+        "RFSTDTC",
+        "TIME5",
+        "TRT03P",
+        "TRT04P",
+        "TRTEDT",
+        "TRTETM",
+        "TRTSDT",
+        "TRTSEQP",
+        "TRTSTM",
+        "YYMMD"
+      ]
+    }
+  ]
+}

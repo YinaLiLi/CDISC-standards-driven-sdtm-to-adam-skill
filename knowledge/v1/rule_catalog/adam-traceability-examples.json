@@ -1,0 +1,1642 @@
+{
+  "rules": [
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 31,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Note: For this data flow, \"Other SDTM or ADaM\" datasets pertain to any dataset that will contain an event that is necessary for the derivation of the various analysis endpoints. This is not an implication that all SDTM or ADaM data need to be incorporated into one dataset; only the ones used for the derivations should be included."
+      },
+      "exact_source_excerpt": "Note: For this data flow, \"Other SDTM or ADaM\" datasets pertain to any dataset that will contain an event that is necessary for the derivation of the various analysis endpoints. This is not an implication that all SDTM or ADaM data need to be incorporated into one dataset; only the ones used for the derivations should be included.",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "This is not an implication that all SDTM or ADaM data need to be incorporated into one dataset; only the ones used for the derivations should be included.",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [
+        "This is not an implication that all SDTM or ADaM data need to be incorporated into one dataset; only the ones used for the derivations should be included."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:04f698f5f3c5fe4b",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "prose_requirement",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [],
+        "variables": []
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": []
+    },
+    {
+      "applicability_conditions": [
+        "For the subject's last infusion, if the adverse event falls within 30 days of the last infusion, associate that Adverse Event with that Infusion.",
+        "IW24HRFL Infusion 24 Hour Window Flag 'Y'='Yes' If the event occurs during or within 24 hours of an infusion then set IW24HRFL=\"Y\".",
+        "[If (INFWSDTM<=ASTDTM<=INFWEDTM) then IW24HRFL=\"Y\"] IARSFL Infusion Associated Reaction Flag 'Y'='Yes' If the event occurs during or within 24 hours of an infusion (INFWEDTM<=ASTDTM<=INFWEDTM) and is considered to be a potential infusion associated reaction then set IARSFL=\"Y\".",
+        "first infusion) or to see if infusion reactions increase in intensity over time.",
+        "The producer may choose to use a custom variable such as INFVISIT when adverse events are to be slotted into analysis visits based on the protocol/SAP that extend beyond infusions.",
+        "Note that the Customized Query 01 Name (CQ01NAM) variable is created using a look-up table (see Section 2.11, Traceability When Using a Look-up Table , for further details).",
+        "Note that Infusion 24 Hour Window Flag (IW24HRFL) is set to Y if the analysis start datetime (includes imputations) of the adverse event occurs during the infusion or up to 24 hours after the end of the infusion (after datetime imputations have taken place if necessary).",
+        "Although ATPT can contain derived analysis time window names, it is not clear if populating ATPTREF=\"START OF INFUSION\" and ATPT=\"FROM START OF INFUSION UNTIL END + 24 HOURS\" on records that met the windowing criteria would be appropriate.",
+        "IARSFL=\"Y\" when IW24HRFL=\"Y\" and CQ01NAM is populated so it is not necessary for record selection."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 26,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 26 2022-05-12 Variable Name Variable Label Codelist Variable Metadata INFWEDTM Infusion Window End Datetime datetime20. EX.EXENDTC of the records used to populate INFWSDTM, converted to numeric + 24 hours AVISIT Analysis Visit 'CYCLE 1 DAY 1' 'CYCLE 1 DAY 8' 'CYCLE 2 DAY 1' 'CYCLE 3 DAY 1' 'CYCLE 4 DAY 1' 'CYCLE 5 DAY 1' 'CYCLE 6..."
+      },
+      "exact_source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 26 2022-05-12 Variable Name Variable Label Codelist Variable Metadata INFWEDTM Infusion Window End Datetime datetime20. EX.EXENDTC of the records used to populate INFWSDTM, converted to numeric + 24 hours AVISIT Analysis Visit 'CYCLE 1 DAY 1' 'CYCLE 1 DAY 8' 'CYCLE 2 DAY 1' 'CYCLE 3 DAY 1' 'CYCLE 4 DAY 1' 'CYCLE 5 DAY 1' 'CYCLE 6 DAY 1' For treatment emergent adverse events, AVISIT is the visit corresponding with the infusion associated with this adverse event. If the start date/time of the adverse event falls on or after the start of infusion X but before the start of the subsequent infusion X+1, then AVISIT is populated with the visit corresponding to Infusion X. For the subject's last infusion, if the adverse event falls within 30 days of the last infusion, associate that Adverse Event with that Infusion. If greater than 30 days, leave variable NULL. INFNUM Infusion Number 1, 2, 3, 4, 5, 6, 7 For treatment emergent adverse events, INFNUM is the Infusion Number (Count of infusions up to and including this infusion) corresponding with the infusion associated with this adverse event. If the start date/time of the adverse event falls on or after the start of infusion X but before the start of the subsequent infusion X+1, then INFNUM is populated with the count of infusions received up to and including Infusion X. IW24HRFL Infusion 24 Hour Window Flag 'Y'='Yes' If the event occurs during or within 24 hours of an infusion then set IW24HRFL=\"Y\". [If (INFWSDTM<=ASTDTM<=INFWEDTM) then IW24HRFL=\"Y\"] IARSFL Infusion Associated Reaction Flag 'Y'='Yes' If the event occurs during or within 24 hours of an infusion (INFWEDTM<=ASTDTM<=INFWEDTM) and is considered to be a potential infusion associated reaction then set IARSFL=\"Y\". [If (IW24HRFL='Y') and CQ01NAM=\"IARS (INFUSION ASSOCIATED REACTIONS)\" then IARSFL=\"Y\"] 2.6.4 Input and Analysis Data 6 Key points to note in this example are: 1. AVISIT is used to associate or relate adverse events with an infusion. This variable may be used to look at adverse events associated with a particular infusion (e.g. first infusion) or to see if infusion reactions increase in intensity over time. The producer may choose to use a custom variable such as INFVISIT when adverse events are to be slotted into analysis visits based on the protocol/SAP that extend beyond infusions. 2. Note that the Customized Query 01 Name (CQ01NAM) variable is created using a look-up table (see Section 2.11, Traceability When Using a Look-up Table , for further details). 3. Note that Infusion 24 Hour Window Flag (IW24HRFL) is set to Y if the analysis start datetime (includes imputations) of the adverse event occurs during the infusion or up to 24 hours after the end of the infusion (after datetime imputations have taken place if necessary). A custom flag was chosen here as options such as CRITy/CRITyFL and ATPT/ATPTN are unclear based on CDISC Notes and current examples in the ADaMIG. The pair of variables CRITy/CRITyFL originally apply to a criterion within a parameter. Although ATPT can contain derived analysis time window names, it is not clear if populating ATPTREF=\"START OF INFUSION\" and ATPT=\"FROM START OF INFUSION UNTIL END + 24 HOURS\" on records that met the windowing criteria would be appropriate. 4. The sponsor defined flag IARSFL (Infusion Associated Reaction Flag) was included to flag records that matched a clinical term and fell within the time interval for an infusion reaction. ANLzzFL was discussed as an option to be used for this flag but was not based on the definition and current examples in the ADaMIG. IARSFL=\"Y\" when IW24HRFL=\"Y\" and CQ01NAM is populated so it is not necessary for record selection. Most likely AOCCzzFL will need to be included to make the data analysis-ready as subjects may have multiple infusion reactions at the different levels of summarization.",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "This variable may be used to look at adverse events associated with a particular infusion (e.g.",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [
+        "This variable may be used to look at adverse events associated with a particular infusion (e.g.",
+        "The producer may choose to use a custom variable such as INFVISIT when adverse events are to be slotted into analysis visits based on the protocol/SAP that extend beyond infusions.",
+        "Although ATPT can contain derived analysis time window names, it is not clear if populating ATPTREF=\"START OF INFUSION\" and ATPT=\"FROM START OF INFUSION UNTIL END + 24 HOURS\" on records that met the windowing criteria would be appropriate.",
+        "Most likely AOCCzzFL will need to be included to make the data analysis-ready as subjects may have multiple infusion reactions at the different levels of summarization."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [
+        "EX.EXENDTC"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:05a5b2aa8d15748d",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ASSOCIATED",
+          "ASTDTM",
+          "ATPT",
+          "ATPTN",
+          "ATPTREF",
+          "AVISIT",
+          "CQ01NAM",
+          "CYCLE",
+          "DAY",
+          "END",
+          "EXENDTC",
+          "FROM",
+          "HOURS",
+          "IARS",
+          "IARSFL",
+          "INFNUM",
+          "INFUSION",
+          "INFVISIT",
+          "INFWEDTM",
+          "INFWSDTM",
+          "IW24HRFL",
+          "NULL",
+          "REACTIONS",
+          "SAP",
+          "START",
+          "UNTIL"
+        ],
+        "variables": [
+          "ASSOCIATED",
+          "ASTDTM",
+          "ATPT",
+          "ATPTN",
+          "ATPTREF",
+          "AVISIT",
+          "CQ01NAM",
+          "CYCLE",
+          "DAY",
+          "END",
+          "EXENDTC",
+          "FROM",
+          "HOURS",
+          "IARS",
+          "IARSFL",
+          "INFNUM",
+          "INFUSION",
+          "INFVISIT",
+          "INFWEDTM",
+          "INFWSDTM",
+          "IW24HRFL",
+          "NULL",
+          "REACTIONS",
+          "SAP",
+          "START",
+          "UNTIL"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ASSOCIATED",
+        "ASTDTM",
+        "ATPT",
+        "ATPTN",
+        "ATPTREF",
+        "AVISIT",
+        "CQ01NAM",
+        "CYCLE",
+        "DAY",
+        "END",
+        "EXENDTC",
+        "FROM",
+        "HOURS",
+        "IARS",
+        "IARSFL",
+        "INFNUM",
+        "INFUSION",
+        "INFVISIT",
+        "INFWEDTM",
+        "INFWSDTM",
+        "IW24HRFL",
+        "NULL",
+        "REACTIONS",
+        "SAP",
+        "START",
+        "UNTIL"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "RS.RSDTC when PARAMCD = \"ASSESSI\" or \"ASSESSC\" DS.DSSTDTC when PARAMCD = \"DISPOSIT\" AE.AESTDTC or MH.MHSTDTC or DV.DVSTDTC or CM.CMSTDTC, or PR.PRSTDTC or some other source data for an event which prevents further assessments when PARAMCD = \"EVENT\".",
+        "ASTDT \u2013 ADSL.RANDDT + 1 PARAM Parameter Char DISPOSITION; ASSESSMENT - INVESTIGATOR; ASSESSMENT - CENTRAL; TREATMENT; EVENT Set using PARAMCD \"DISPOSIT\"=\"DISPOSITION\" \"ASSESSI\"=\"ASSESSMENT - INVESTIGATOR\" \"ASSESSC\"=\"ASSESSMENT - CENTRAL\" \"TRTM\"=\"TREATMENT\" \"EVENT\"=\"EVENT\" PARAMCD Parameter Code Char DISPOSIT; ASSESSI; ASSESSC; TRTM; EVENT If RECIST assessment then PARAMCD = \"ASSESS\" For investigator based tumor response assessments, append \"I\" to the PARAMCD.",
+        "If disposition event then PARAMCD = \"DISPOSIT\" If study treatment then PARAMCD = \"TRTM\" If event that is a protocol violation or prevents further assessments then PARAMCD = \"EVENT\"."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 32,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 32 2022-05-12 2.8.3 Traceability Metadata 8 Table 2.8.3.1. Variable Metadata for ADEVENT ADEVENT Variable Metadata Variable Name Variable Label Type Codelist / Controlled Terms Variable Metadata STUDYID Study Identifier Char xx.STUDYID that corresponds to input dataset used for USUBJID USUBJID Unique Subject Identifier Char xx.USU..."
+      },
+      "exact_source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 32 2022-05-12 2.8.3 Traceability Metadata 8 Table 2.8.3.1. Variable Metadata for ADEVENT ADEVENT Variable Metadata Variable Name Variable Label Type Codelist / Controlled Terms Variable Metadata STUDYID Study Identifier Char xx.STUDYID that corresponds to input dataset used for USUBJID USUBJID Unique Subject Identifier Char xx.USUBJID that corresponds to the input dataset used for the assignment of AVAL Treatment Variablea Treatment Variable Label Char Treatment/Treatment Group that will be used in the analysis. At least one treatment variable needs to be included in the dataset. ASEQ Analysis Sequence Number Num Sequential number for associating a record number in the ADEVENT dataset. A unique number per subject, per parameter, per parameter qualifier, per analysis start date. ASTDT Analysis Start Date Num The date that the event occurred is the corresponding --DTC variable for each PARAMCD converted to numeric date format. RS.RSDTC when PARAMCD = \"ASSESSI\" or \"ASSESSC\" DS.DSSTDTC when PARAMCD = \"DISPOSIT\" AE.AESTDTC or MH.MHSTDTC or DV.DVSTDTC or CM.CMSTDTC, or PR.PRSTDTC or some other source data for an event which prevents further assessments when PARAMCD = \"EVENT\". ASTDY Analysis Start Relative Day Num The number of days from randomization to the date of the reported event. ASTDT \u2013 ADSL.RANDDT + 1 PARAM Parameter Char DISPOSITION; ASSESSMENT - INVESTIGATOR; ASSESSMENT - CENTRAL; TREATMENT; EVENT Set using PARAMCD \"DISPOSIT\"=\"DISPOSITION\" \"ASSESSI\"=\"ASSESSMENT - INVESTIGATOR\" \"ASSESSC\"=\"ASSESSMENT - CENTRAL\" \"TRTM\"=\"TREATMENT\" \"EVENT\"=\"EVENT\" PARAMCD Parameter Code Char DISPOSIT; ASSESSI; ASSESSC; TRTM; EVENT If RECIST assessment then PARAMCD = \"ASSESS\" For investigator based tumor response assessments, append \"I\" to the PARAMCD. For central imaging tumor response assessments, append \"C\" to the PARAMCD. If disposition event then PARAMCD = \"DISPOSIT\" If study treatment then PARAMCD = \"TRTM\" If event that is a protocol violation or prevents further assessments then PARAMCD = \"EVENT\". AVALC Analysis Value (C) Char Reported Assessment associated with the ASTDT. SRCDOM Source Data Char See parameter-level metadata (Table 2.8.3.4) SRCVAR Source Variable Char See parameter-level metadata (Table 2.8.3.4) SRCSEQ Source Sequence Number Num The sequence number --SEQ or ASEQ of the row in the dataset identified in the SRCDOM that relates to the analysis value being derived. ANL01FL Analysis Flag 01 Use in TTE Char Y Identifies whether the event can be used in time-to-event analysis. If assessment is prior to baseline or after a censoring event then they are not included. aVariables are not included in the sample input data (see Section 2.8.4, Input and Analysis Data 8).",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.RANDDT"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 32 2022-05-12 2.8.3 Traceability Metadata 8 Table 2.8.3.1. Variable Metadata for ADEVENT ADEVENT Variable Metadata Variable Name Variable Label Type Codelist / Controlled Terms Variable Metadata STUDYID Study Identifier Char xx.STUDYID that corresponds to input dataset us...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [
+        "ANL01FL Analysis Flag 01 Use in TTE Char Y Identifies whether the event can be used in time-to-event analysis."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [
+        "AE.AESTDTC",
+        "DS.DSSTDTC"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:295164a3a94ad619",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "RANDDT"
+        ],
+        "variables": [
+          "RANDDT"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "RANDDT"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "Set to 1 if value is censored based on rules.",
+        "See parameter-level metadata (Table 2.8.3.4) EVNTDESC Event or Censoring Description Char DOCUMENTED PROGRESSION; DEATH; DISEASE PROGRESSED; CENSORED AT TIME OF LAST ASSESSMENT See parameter-level metadata (Table 2.8.3.4) SRCDOMa Source Data Char ADEVENT SRCDOM = \"ADEVENT\" SRCVARa Source Variable Char ASTDY If PARAMCD = \"DOR\", then SRCVAR is null.",
+        "Otherwise SRCVAR = \"ASTDY\" SRCSEQ Source Sequence Number Num If PARAMCD = \"DOR\", then SRCSEQ is null."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 33,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 33 2022-05-12 Variable Name Variable Label Type Codelist / Controlled Terms Variable Metadata CNSR Censored Num 1; 0 Censoring Value. Set to 1 if value is censored based on rules. See parameter-level metadata (Table 2.8.3.4) EVNTDESC Event or Censoring Description Char DOCUMENTED PROGRESSION; DEATH; DISEASE PROGRESSED; CENSORED AT..."
+      },
+      "exact_source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 33 2022-05-12 Variable Name Variable Label Type Codelist / Controlled Terms Variable Metadata CNSR Censored Num 1; 0 Censoring Value. Set to 1 if value is censored based on rules. See parameter-level metadata (Table 2.8.3.4) EVNTDESC Event or Censoring Description Char DOCUMENTED PROGRESSION; DEATH; DISEASE PROGRESSED; CENSORED AT TIME OF LAST ASSESSMENT See parameter-level metadata (Table 2.8.3.4) SRCDOMa Source Data Char ADEVENT SRCDOM = \"ADEVENT\" SRCVARa Source Variable Char ASTDY If PARAMCD = \"DOR\", then SRCVAR is null. Otherwise SRCVAR = \"ASTDY\" SRCSEQ Source Sequence Number Num If PARAMCD = \"DOR\", then SRCSEQ is null. Otherwise SRCSEQ = ADEVENT.ASEQ aVariables are not included in the sample input data (see Section 2.8.4, Input and Analysis Data 8).",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 33 2022-05-12 Variable Name Variable Label Type Codelist / Controlled Terms Variable Metadata CNSR Censored Num 1; 0 Censoring Value. Set to 1 if value is censored based on rules. See parameter-level metadata (Table 2.8.3.4) EVNTDESC Event or Censoring Description Char DO...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:42354ea4604dd1e1",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADEVENT",
+          "ASEQ",
+          "ASSESSMENT",
+          "ASTDY",
+          "CENSORED",
+          "CNSR",
+          "DEATH",
+          "DISEASE",
+          "DOCUMENTED",
+          "DOR",
+          "EVNTDESC",
+          "LAST",
+          "PARAMCD",
+          "PROGRESSED",
+          "PROGRESSION",
+          "SRCDOM",
+          "SRCSEQ",
+          "SRCVAR",
+          "TIME"
+        ],
+        "variables": [
+          "ADEVENT",
+          "ASEQ",
+          "ASSESSMENT",
+          "ASTDY",
+          "CENSORED",
+          "CNSR",
+          "DEATH",
+          "DISEASE",
+          "DOCUMENTED",
+          "DOR",
+          "EVNTDESC",
+          "LAST",
+          "PARAMCD",
+          "PROGRESSED",
+          "PROGRESSION",
+          "SRCDOM",
+          "SRCSEQ",
+          "SRCVAR",
+          "TIME"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADEVENT",
+        "ASEQ",
+        "ASSESSMENT",
+        "ASTDY",
+        "CENSORED",
+        "CNSR",
+        "DEATH",
+        "DISEASE",
+        "DOCUMENTED",
+        "DOR",
+        "EVNTDESC",
+        "LAST",
+        "PARAMCD",
+        "PROGRESSED",
+        "PROGRESSION",
+        "SRCDOM",
+        "SRCSEQ",
+        "SRCVAR",
+        "TIME"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 11,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "2.2.3 Traceability Metadata 2 Table 2.2.3.1. Dataset Metadata for ADVS ADVS Dataset Metadata Dataset Name Dataset Description Dataset Structure Class of Dataset ADVS Vital Signs Analysis Dataset One record per subject per visit per parameter BASIC DATA STRUCTURE"
+      },
+      "exact_source_excerpt": "2.2.3 Traceability Metadata 2 Table 2.2.3.1. Dataset Metadata for ADVS ADVS Dataset Metadata Dataset Name Dataset Description Dataset Structure Class of Dataset ADVS Vital Signs Analysis Dataset One record per subject per visit per parameter BASIC DATA STRUCTURE",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": "One record per subject per visit per parameter BASIC DATA STRUCTURE",
+      "keys": [],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "Dataset Metadata for ADVS ADVS Dataset Metadata Dataset Name Dataset Description Dataset Structure Class of Dataset ADVS Vital Signs Analysis Dataset One record per subject per visit per parameter BASIC DATA STRUCTURE",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:533d269521f922b0",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "variable_requirement",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [
+          "BASIC_DATA_STRUCTURE",
+          "SUBJECT_LEVEL_ANALYSIS_DATASET"
+        ],
+        "variable_scope": [
+          "ADVS",
+          "BASIC",
+          "DATA",
+          "STRUCTURE"
+        ],
+        "variables": [
+          "ADVS",
+          "BASIC",
+          "DATA",
+          "STRUCTURE"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [
+        "BASIC_DATA_STRUCTURE",
+        "SUBJECT_LEVEL_ANALYSIS_DATASET"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADVS",
+        "BASIC",
+        "DATA",
+        "STRUCTURE"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "Variable-level Metadata for ADAE ADAE Variable Metadata Variable Name Variable Label Codelist Variable Metadata STUDYID Study Identifier 'XYZ' ADSL.STUDYID USUBJID Unique Subject Identifier ADSL.USUBJID AESEQ Sequence Number AE.AESEQ AETERM Reported Term for the Adverse Event AE.AETERM AEDECOD Dictionary-Derived Term MedDRA AE.AEDECOD CQ01NAM Customized Query 01 Name 'IARS (INFUSION ASSOCIATED REACTIONS)' Set to 'IARS (INFUSION ASSOCIATED REACTIONS)' if deemed a potential Infusion Associated Reaction by Sponsor's Clinical Team.",
+        "There are no records with only year populated for the start of the adverse event or records where the start date is completely missing.",
+        "ASTTMF Analysis Start Time Imputation Flag TIMEFL 'H'='Hours Imputed' 'M'='Minutes Imputed' 'S'='Seconds Imputed' If start time of adverse event is completely missing or missing the hour then ASTTMF=\"H\" Else if start time of adverse event has minutes missing then ASTTMF=\"M\" INFWSDTM Infusion Window Start Datetime datetime20."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADAE",
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 25,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "There are multiple approaches to building the OCCDS dataset to be used for this analysis. The approach demonstrated here is to start with the SDTM datasets, create ASTDTM/AENDTM/AVISIT/INFNUM from EX, and use them in combination with a custom query on Adverse Events of Special Interest (AESIs) to derive the events of interest in ADAE. An important feature of this approach is that it does not reference ADEX. This a..."
+      },
+      "exact_source_excerpt": "There are multiple approaches to building the OCCDS dataset to be used for this analysis. The approach demonstrated here is to start with the SDTM datasets, create ASTDTM/AENDTM/AVISIT/INFNUM from EX, and use them in combination with a custom query on Adverse Events of Special Interest (AESIs) to derive the events of interest in ADAE. An important feature of this approach is that it does not reference ADEX. This allows an ADEX to be created downstream from this ADAE dataset and to make use of the identified infusion-associated reactions in its derivations. 2.6.3 Traceability Metadata 6 Table 2.6.3.1. Variable-level Metadata for ADAE ADAE Variable Metadata Variable Name Variable Label Codelist Variable Metadata STUDYID Study Identifier 'XYZ' ADSL.STUDYID USUBJID Unique Subject Identifier ADSL.USUBJID AESEQ Sequence Number AE.AESEQ AETERM Reported Term for the Adverse Event AE.AETERM AEDECOD Dictionary-Derived Term MedDRA AE.AEDECOD CQ01NAM Customized Query 01 Name 'IARS (INFUSION ASSOCIATED REACTIONS)' Set to 'IARS (INFUSION ASSOCIATED REACTIONS)' if deemed a potential Infusion Associated Reaction by Sponsor's Clinical Team. A list of all unique preferred terms (AEDECOD) by system organ class (AEBODSYS) were reviewed by the clinical team. This information is included in a look-up table (LUT) and merged in using AEDECOD. (The LUT not included in this example, please see 2.11 for an example on LUT) AEBODSYS Body System or Organ Class MedDRA AE.AEBODSYS AESTDTC Start Date/Time of Adverse Event ISO8601 AE.AESTDTC AEENDTC End Date/Time of Adverse Event ISO8601 AE.AEENDTC ASTDTM Analysis Start Datetime datetime20. If start date/time of adverse event is present (AESTDTC) then convert to numeric. If start date is present but time is missing and the start date coincides with the start date of an infusion then set the start date of the adverse event to the start date and time of the infusion. If the start date is present and time is missing and start date does not coincide with the start date of the infusion, then set the time to 00:00. If day is missing but at least one infusion occurs within the same month as the event, then set to the earliest date/time of the infusion within that month. If not, assume the first of the month and assume a time of 00:00. There are no records with only year populated for the start of the adverse event or records where the start date is completely missing. ASTTMF Analysis Start Time Imputation Flag TIMEFL 'H'='Hours Imputed' 'M'='Minutes Imputed' 'S'='Seconds Imputed' If start time of adverse event is completely missing or missing the hour then ASTTMF=\"H\" Else if start time of adverse event has minutes missing then ASTTMF=\"M\" INFWSDTM Infusion Window Start Datetime datetime20. For TEAEs, the datetime of the most recent infusion (EX.EXSTDTC on or before ASTDTM), converted to numeric",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADAE",
+        "ADAE.STUDYID",
+        "ADAE.USUBJID",
+        "ADSL",
+        "ADSL.STUDYID",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "XYZ",
+        "ADSL"
+      ],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "There are multiple approaches to building the OCCDS dataset to be used for this analysis. The approach demonstrated here is to start with the SDTM datasets, create ASTDTM/AENDTM/AVISIT/INFNUM from EX, and use them in combination with a custom query on Adverse Events of Special Interest (AESIs) to derive the events of interest in ADAE. An important feature...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [
+        "AE.AEBODSYS",
+        "AE.AEDECOD",
+        "AE.AEENDTC",
+        "AE.AESEQ",
+        "AE.AESTDTC",
+        "AE.AETERM",
+        "EX.EXSTDTC"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:55402c82470b3014",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADAE",
+          "ADSL"
+        ],
+        "datasets": [
+          "ADAE",
+          "ADSL"
+        ],
+        "structure_scope": [
+          "OCCURRENCE_DATA_STRUCTURE"
+        ],
+        "variable_scope": [
+          "STUDYID",
+          "USUBJID"
+        ],
+        "variables": [
+          "STUDYID",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [
+        "OCCURRENCE_DATA_STRUCTURE"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "STUDYID",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "ABLFL=\"Y\" for last non missing assessment obtained before the drug administration (ADT<ADSL.TRTSDT), per usubjid, paramcd AVAL Analysis Value float VS.VSSTRESN and for derived parameter \"Log10(Weight (kg))\" take log10 of VS.VSSTRESN BASE Baseline Value float Derived: AVAL where ABLFL=\"Y\" CHG Change from Baseline float Derived: AVAL-BASE, populate only for post-baseline records"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 11,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Table 2.2.3.2. Variable Metadata for ADVS ADVS Variable Metadata Variable Name Variable Label Type Codelist/ Controlled Terms Source/Derivation/Comment STUDYID Study Identifier text VS.STUDYID USUBJID Unique Subject Identifier text VS.USUBJID TRTA Actual Treatment text ADSL.TRT01A TRTSDT Date of First Exposure to Treatment integer ADSL.TRTSDT PARAM Parameter text VS.VSTEST (VS.VSSTRESU) and create derived paramete..."
+      },
+      "exact_source_excerpt": "Table 2.2.3.2. Variable Metadata for ADVS ADVS Variable Metadata Variable Name Variable Label Type Codelist/ Controlled Terms Source/Derivation/Comment STUDYID Study Identifier text VS.STUDYID USUBJID Unique Subject Identifier text VS.USUBJID TRTA Actual Treatment text ADSL.TRT01A TRTSDT Date of First Exposure to Treatment integer ADSL.TRTSDT PARAM Parameter text VS.VSTEST (VS.VSSTRESU) and create derived parameter \"Log10(Weight (kg))\" based on Weight (kg) parameter PARAMCD Parameter Code text VS.VSTESTCD and \"L10WT\" for derived parameter \"Log10(Weight (kg))\" ADT Analysis Date integer Derived: Numeric representation of VS.VSDTC AVISIT Analysis Visit text propcase(VS.VISIT) AVISITN Analysis Visit (N) integer AVISITN Assigned based on Codelist VSSEQ Sequence Number integer VS.VSSEQ VSSTRESN Numeric Result/Finding in Standard Units integer VS.VSSTRESN ABLFL Baseline Record Flag text [\"Y\" = \"Yes\"] <Y-NULL> Derived: Per SAP, baseline is defined as the last non-missing value before the first dose of study drug. ABLFL=\"Y\" for last non missing assessment obtained before the drug administration (ADT<ADSL.TRTSDT), per usubjid, paramcd AVAL Analysis Value float VS.VSSTRESN and for derived parameter \"Log10(Weight (kg))\" take log10 of VS.VSSTRESN BASE Baseline Value float Derived: AVAL where ABLFL=\"Y\" CHG Change from Baseline float Derived: AVAL-BASE, populate only for post-baseline records",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.TRT01A",
+        "ADSL.TRTSDT"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "VS"
+      ],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "Table 2.2.3.2. Variable Metadata for ADVS ADVS Variable Metadata Variable Name Variable Label Type Codelist/ Controlled Terms Source/Derivation/Comment STUDYID Study Identifier text VS.STUDYID USUBJID Unique Subject Identifier text VS.USUBJID TRTA Actual Treatment text ADSL.TRT01A TRTSDT Date of First Exposure to Treatment integer ADSL.TRTSDT PARAM Parame...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:58f4a6e002b59165",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "TRT01A",
+          "TRTSDT"
+        ],
+        "variables": [
+          "TRT01A",
+          "TRTSDT"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "TRT01A",
+        "TRTSDT"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "PARAMCD Parameter Code Char HOSPADM; DBP; SBP; HYPEREVT Create one record for each PARAMCD even if the subject did not have the event."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 18,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 18 2022-05-12 Variable Name Variable Label Type Codelist/Controlled Terms Variable Metadata Treatment Variablea Treatment Variable Label Char Treatment/Treatment Group that will be used in the analysis. At least one treatment variable needs to be included in the dataset. PARAM Parameter Char Time to First Hospital Admission (day);..."
+      },
+      "exact_source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 18 2022-05-12 Variable Name Variable Label Type Codelist/Controlled Terms Variable Metadata Treatment Variablea Treatment Variable Label Char Treatment/Treatment Group that will be used in the analysis. At least one treatment variable needs to be included in the dataset. PARAM Parameter Char Time to First Hospital Admission (day); Time to First DBP > 90 (day); Time to First SBP > 140 (day); Time to Hypertension Event (day) Time to Hypertension Event parameter is used for the analysis of time to hypertension. The other \u2018Time to\u2019 parameters specified in the codelist are sub-events. PARAMCD Parameter Code Char HOSPADM; DBP; SBP; HYPEREVT Create one record for each PARAMCD even if the subject did not have the event. AVAL Analysis Value Num See parameter-level metadata below",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 18 2022-05-12 Variable Name Variable Label Type Codelist/Controlled Terms Variable Metadata Treatment Variablea Treatment Variable Label Char Treatment/Treatment Group that will be used in the analysis. At least one treatment variable needs to be included in the dataset....",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:75e046e4ee2ca8ac",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "AVAL",
+          "DBP",
+          "HOSPADM",
+          "HYPEREVT",
+          "PARAM",
+          "PARAMCD",
+          "SBP"
+        ],
+        "variables": [
+          "AVAL",
+          "DBP",
+          "HOSPADM",
+          "HYPEREVT",
+          "PARAM",
+          "PARAMCD",
+          "SBP"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "AVAL",
+        "DBP",
+        "HOSPADM",
+        "HYPEREVT",
+        "PARAM",
+        "PARAMCD",
+        "SBP"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 34 2022-05-12 Dataset Variable Name Where Type Derivation/Comment ADTTE AVAL PARAMCD in (\"PFSI\" \"PFSC\") Num ADEVENT.ASTDY when ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD contains \"ASSESS\" and disease progressed, or when censored, use maximum ADEVENT.ASTDY where ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD = \"DISPOSIT\".",
+        "ADTTE AVAL PARAMCD = \"OS\" Num ADEVENT.ASTDY when ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD = \"EVENT\" and ADEVENT.AVALC =\"\u2018DEATH\", or when censored, use maximum ADEVENT.ASTDY where ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD = \"DISPOSIT\".",
+        "ADTTE AVAL PARAMCD = \"DOR\" Num Time from best response (CR or PR) to when disease progressed ADTTE CNSR PARAMCD in (\"PFSI\" \"PFSC\") Num If disease did not progress, then CNSR = 1.",
+        "ADTTE CNSR PARAMCD = \"OS\" Num If subject did not die, then CNSR = 1.",
+        "ADTTE CNSR PARAMCD = \"DOR\" Num If after having best response the disease did not progress, then CNSR = 1.",
+        "ADTTE EVNTDESC PARAMCD in (\"PFSI\" \"PFSC\") Char If CNSR = 0, then EVNTDESC = \"DOCUMENTED PROGRESSION\".",
+        "Otherwise, if CNSR = 1, then EVNTDESC = \"CENSORED AT TIME OF LAST ASSESSMENT\".",
+        "ADTTE EVNTDESC PARAMCD = \"OS\" Char If CNSR = 0, then EVNTDESC = \"DEATH\".",
+        "ADTTE EVNTDESC PARAMCD = \"DOR\" Char If CNSR = 0, then EVNTDESC = \"DISEASE PROGRESSED\"."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADTTE"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 34,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 34 2022-05-12 Dataset Variable Name Where Type Derivation/Comment ADTTE AVAL PARAMCD in (\"PFSI\" \"PFSC\") Num ADEVENT.ASTDY when ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD contains \"ASSESS\" and disease progressed, or when censored, use maximum ADEVENT.ASTDY where ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD = \"DISPOSIT\". Note that the s..."
+      },
+      "exact_source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 34 2022-05-12 Dataset Variable Name Where Type Derivation/Comment ADTTE AVAL PARAMCD in (\"PFSI\" \"PFSC\") Num ADEVENT.ASTDY when ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD contains \"ASSESS\" and disease progressed, or when censored, use maximum ADEVENT.ASTDY where ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD = \"DISPOSIT\". Note that the suffix \"I\" or \"C\" must match between PARAMCD. ADTTE AVAL PARAMCD = \"OS\" Num ADEVENT.ASTDY when ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD = \"EVENT\" and ADEVENT.AVALC =\"\u2018DEATH\", or when censored, use maximum ADEVENT.ASTDY where ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD = \"DISPOSIT\". ADTTE AVAL PARAMCD = \"DOR\" Num Time from best response (CR or PR) to when disease progressed ADTTE CNSR PARAMCD in (\"PFSI\" \"PFSC\") Num If disease did not progress, then CNSR = 1. Otherwise CNSR = 0. ADTTE CNSR PARAMCD = \"OS\" Num If subject did not die, then CNSR = 1. Otherwise CNSR = 0. ADTTE CNSR PARAMCD = \"DOR\" Num If after having best response the disease did not progress, then CNSR = 1. Otherwise CNSR = 0. ADTTE EVNTDESC PARAMCD in (\"PFSI\" \"PFSC\") Char If CNSR = 0, then EVNTDESC = \"DOCUMENTED PROGRESSION\". Otherwise, if CNSR = 1, then EVNTDESC = \"CENSORED AT TIME OF LAST ASSESSMENT\". ADTTE EVNTDESC PARAMCD = \"OS\" Char If CNSR = 0, then EVNTDESC = \"DEATH\". Otherwise, if CNSR = 1, then EVNTDESC = \"CENSORED AT TIME OF LAST ASSESSMENT\". ADTTE EVNTDESC PARAMCD = \"DOR\" Char If CNSR = 0, then EVNTDESC = \"DISEASE PROGRESSED\". Otherwise, if CNSR = 1, then EVNTDESC = \"CENSORED AT TIME OF LAST ASSESSMENT\". 2.8.4 Input and Analysis Data 8 Table 2.8.4.1. SDTM CM Data Row STUDYID USUBJID CMSEQ CMTRT CMSTDTC 1 ABC-123 ABC-123-001 1 TAMOXIFEN 2014-03-31",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADTTE",
+        "ADTTE.ABC",
+        "ADTTE.ADEVENT",
+        "ADTTE.ANL01FL",
+        "ADTTE.ASSESS",
+        "ADTTE.ASSESSMENT",
+        "ADTTE.ASTDY",
+        "ADTTE.AVAL",
+        "ADTTE.AVALC",
+        "ADTTE.CENSORED",
+        "ADTTE.CMSEQ",
+        "ADTTE.CMSTDTC",
+        "ADTTE.CMTRT",
+        "ADTTE.CNSR",
+        "ADTTE.DEATH",
+        "ADTTE.DISEASE",
+        "ADTTE.DISPOSIT",
+        "ADTTE.DOCUMENTED",
+        "ADTTE.DOR",
+        "ADTTE.EVENT",
+        "ADTTE.EVNTDESC",
+        "ADTTE.LAST",
+        "ADTTE.PARAMCD",
+        "ADTTE.PFSC",
+        "ADTTE.PFSI",
+        "ADTTE.PROGRESSED",
+        "ADTTE.PROGRESSION",
+        "ADTTE.STUDYID",
+        "ADTTE.TAMOXIFEN",
+        "ADTTE.TIME",
+        "ADTTE.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "Note that the suffix \"I\" or \"C\" must match between PARAMCD.",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:845e0f47660f4d67",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "variable_requirement",
+        "dataset_scope": [
+          "ADTTE"
+        ],
+        "datasets": [
+          "ADTTE"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ABC",
+          "ADEVENT",
+          "ANL01FL",
+          "ASSESS",
+          "ASSESSMENT",
+          "ASTDY",
+          "AVAL",
+          "AVALC",
+          "CENSORED",
+          "CMSEQ",
+          "CMSTDTC",
+          "CMTRT",
+          "CNSR",
+          "DEATH",
+          "DISEASE",
+          "DISPOSIT",
+          "DOCUMENTED",
+          "DOR",
+          "EVENT",
+          "EVNTDESC",
+          "LAST",
+          "PARAMCD",
+          "PFSC",
+          "PFSI",
+          "PROGRESSED",
+          "PROGRESSION",
+          "STUDYID",
+          "TAMOXIFEN",
+          "TIME",
+          "USUBJID"
+        ],
+        "variables": [
+          "ABC",
+          "ADEVENT",
+          "ANL01FL",
+          "ASSESS",
+          "ASSESSMENT",
+          "ASTDY",
+          "AVAL",
+          "AVALC",
+          "CENSORED",
+          "CMSEQ",
+          "CMSTDTC",
+          "CMTRT",
+          "CNSR",
+          "DEATH",
+          "DISEASE",
+          "DISPOSIT",
+          "DOCUMENTED",
+          "DOR",
+          "EVENT",
+          "EVNTDESC",
+          "LAST",
+          "PARAMCD",
+          "PFSC",
+          "PFSI",
+          "PROGRESSED",
+          "PROGRESSION",
+          "STUDYID",
+          "TAMOXIFEN",
+          "TIME",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": "Note that the suffix \"I\" or \"C\" must match between PARAMCD.",
+      "validation_requirements": [
+        "Note that the suffix \"I\" or \"C\" must match between PARAMCD."
+      ],
+      "variable_scope": [
+        "ABC",
+        "ADEVENT",
+        "ANL01FL",
+        "ASSESS",
+        "ASSESSMENT",
+        "ASTDY",
+        "AVAL",
+        "AVALC",
+        "CENSORED",
+        "CMSEQ",
+        "CMSTDTC",
+        "CMTRT",
+        "CNSR",
+        "DEATH",
+        "DISEASE",
+        "DISPOSIT",
+        "DOCUMENTED",
+        "DOR",
+        "EVENT",
+        "EVNTDESC",
+        "LAST",
+        "PARAMCD",
+        "PFSC",
+        "PFSI",
+        "PROGRESSED",
+        "PROGRESSION",
+        "STUDYID",
+        "TAMOXIFEN",
+        "TIME",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "PARAMCD Parameter Code Char PFSI; PFSC; OS; DOR If progression-free survival, then set to \"PFS\"."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADTTE"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 32,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Table 2.8.3.2. Variable Metadata for ADTTE ADTTE Variable Metadata Variable Name Variable Label Type Codelist / Controlled Terms Variable Metadata STUDYID Study Identifier Char ADEVENT.STUDYID USUBJID Unique Subject Identifier Char ADEVENT.USUBJID Treatment Variablea Treatment Variable Label Char Treatment/Treatment Group that will be used in the analysis. At least one treatment variable needs to be included in th..."
+      },
+      "exact_source_excerpt": "Table 2.8.3.2. Variable Metadata for ADTTE ADTTE Variable Metadata Variable Name Variable Label Type Codelist / Controlled Terms Variable Metadata STUDYID Study Identifier Char ADEVENT.STUDYID USUBJID Unique Subject Identifier Char ADEVENT.USUBJID Treatment Variablea Treatment Variable Label Char Treatment/Treatment Group that will be used in the analysis. At least one treatment variable needs to be included in the dataset. PARAM Parameter Char Progression-free Survival - Investigator; Progression-free Survival - Central; Overall Survival; Duration of Response Set to value in the codelist that corresponds to PARAMCD. PARAMCD Parameter Code Char PFSI; PFSC; OS; DOR If progression-free survival, then set to \"PFS\". For investigator based tumor response assessments, append 'I' to the PARAMCD. For central imaging tumor response assessments, append 'C' to the PARAMCD. If overall survival, then set to \"OS\". If duration of response, then set to \"DOR\". AVAL Analysis Value Num The number of days from the reference start date to the date of the assessment, disposition, or event recorded. See parameter-level metadata below",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADTTE",
+        "ADTTE.ADEVENT",
+        "ADTTE.AVAL",
+        "ADTTE.DOR",
+        "ADTTE.PARAM",
+        "ADTTE.PARAMCD",
+        "ADTTE.PFS",
+        "ADTTE.PFSC",
+        "ADTTE.PFSI",
+        "ADTTE.STUDYID",
+        "ADTTE.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADEVENT"
+      ],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "Table 2.8.3.2. Variable Metadata for ADTTE ADTTE Variable Metadata Variable Name Variable Label Type Codelist / Controlled Terms Variable Metadata STUDYID Study Identifier Char ADEVENT.STUDYID USUBJID Unique Subject Identifier Char ADEVENT.USUBJID Treatment Variablea Treatment Variable Label Char Treatment/Treatment Group that will be used in the analysis...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:a6f2ffcbf90d0654",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADTTE"
+        ],
+        "datasets": [
+          "ADTTE"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADEVENT",
+          "AVAL",
+          "DOR",
+          "PARAM",
+          "PARAMCD",
+          "PFS",
+          "PFSC",
+          "PFSI",
+          "STUDYID",
+          "USUBJID"
+        ],
+        "variables": [
+          "ADEVENT",
+          "AVAL",
+          "DOR",
+          "PARAM",
+          "PARAMCD",
+          "PFS",
+          "PFSC",
+          "PFSI",
+          "STUDYID",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADEVENT",
+        "AVAL",
+        "DOR",
+        "PARAM",
+        "PARAMCD",
+        "PFS",
+        "PFSC",
+        "PFSI",
+        "STUDYID",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "Where PARAMCD in (\"BORI\" \"BORC\") If AVALC = \"CR\" then AVAL = 1 If AVALC = \"PR\" then AVAL = 2 If AVALC = \"SD\" then AVAL = 3 If AVALC = \"PD\" then AVAL = 4 AVALC Analysis Value (C) Char CR; PR; SD; PD Where PARAMCD in (\"BORI\" \"BORC\") ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD contains \"ASSESS\", then set to the best response where ranking from best to worst is \"CR\", \"PR\", \"SD\", \"PD\"."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 33,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Table 2.8.3.3. Variable Metadata for ADRESP ADRESP Variable Metadata Variable Name Variable Label Type Codelist / Controlled Terms Variable Metadata STUDYID Study Identifier Char ADEVENT.STUDYID USUBJID Unique Subject Identifier Char ADEVENT.USUBJID Treatment Variablea Treatment Variable Label Char Treatment/Treatment Group that will be used in the analysis. At least one treatment variable needs to be included in..."
+      },
+      "exact_source_excerpt": "Table 2.8.3.3. Variable Metadata for ADRESP ADRESP Variable Metadata Variable Name Variable Label Type Codelist / Controlled Terms Variable Metadata STUDYID Study Identifier Char ADEVENT.STUDYID USUBJID Unique Subject Identifier Char ADEVENT.USUBJID Treatment Variablea Treatment Variable Label Char Treatment/Treatment Group that will be used in the analysis. At least one treatment variable needs to be included in the dataset. PARAM Parameter Char Best Overall Response - Investigator; Best Overall Response - Central Set based on PARAMCD \"BORI\"=\"Best Overall Response - Investigator\" \"BORC\"=\"Best Overall Response - Central\" PARAMCD Parameter Code Char BORI; BORC For best overall response, set to \"BOR\". For investigator based tumor response assessments, append \"I\" to the PARAMCD. For central imaging tumor response assessments, append ''C\" to the PARAMCD. AVAL Analysis Value Num 1; 2; 3; 4 Numerical ranking of the results. Where PARAMCD in (\"BORI\" \"BORC\") If AVALC = \"CR\" then AVAL = 1 If AVALC = \"PR\" then AVAL = 2 If AVALC = \"SD\" then AVAL = 3 If AVALC = \"PD\" then AVAL = 4 AVALC Analysis Value (C) Char CR; PR; SD; PD Where PARAMCD in (\"BORI\" \"BORC\") ADEVENT.ANL01FL = \"Y\" and ADEVENT.PARAMCD contains \"ASSESS\", then set to the best response where ranking from best to worst is \"CR\", \"PR\", \"SD\", \"PD\". Note that the suffix \"I\" or \"C\" must match between PARAMCD. SRCDOMa Source Data Char ADEVENT SRCDOM = \"ADEVENT\" SRCVARa Source Variable Char AVALC SRCVAR = \"AVALC\" SRCSEQ Source Sequence Number Num ADEVENT.ASEQ aVariables are not included in the sample input data (see Section 2.8.4, Input and Analysis Data 8).",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADEVENT"
+      ],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "Note that the suffix \"I\" or \"C\" must match between PARAMCD.",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:b8600d25540e7df9",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADEVENT",
+          "ADRESP",
+          "ANL01FL",
+          "ASEQ",
+          "ASSESS",
+          "AVAL",
+          "AVALC",
+          "BOR",
+          "BORC",
+          "BORI",
+          "PARAM",
+          "PARAMCD",
+          "SRCDOM",
+          "SRCSEQ",
+          "SRCVAR",
+          "STUDYID",
+          "USUBJID"
+        ],
+        "variables": [
+          "ADEVENT",
+          "ADRESP",
+          "ANL01FL",
+          "ASEQ",
+          "ASSESS",
+          "AVAL",
+          "AVALC",
+          "BOR",
+          "BORC",
+          "BORI",
+          "PARAM",
+          "PARAMCD",
+          "SRCDOM",
+          "SRCSEQ",
+          "SRCVAR",
+          "STUDYID",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": "Note that the suffix \"I\" or \"C\" must match between PARAMCD.",
+      "validation_requirements": [
+        "Note that the suffix \"I\" or \"C\" must match between PARAMCD."
+      ],
+      "variable_scope": [
+        "ADEVENT",
+        "ADRESP",
+        "ANL01FL",
+        "ASEQ",
+        "ASSESS",
+        "AVAL",
+        "AVALC",
+        "BOR",
+        "BORC",
+        "BORI",
+        "PARAM",
+        "PARAMCD",
+        "SRCDOM",
+        "SRCSEQ",
+        "SRCVAR",
+        "STUDYID",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "BASE Baseline Value Derived: For post-baseline records it is value of AVAL for each subject and parameter where ABLFL = Y AVAL Analysis Value See Value-Level Metadata CHG Change from Baseline Derived: AVAL \u2013 BASE.",
+        "ABLFL Baseline Record Flag \"Y\"=\"Yes\" Derived: For each subject and parameter the baseline flag is set to Y for the last record prior to treatment start where DTYPE=\"AVERAGE\" TRTA Actual Treatment Placebo Active 20mg Active 40mg <Actual Treatment> Assigned: Value of ADSL.TRT01A for a particular subject.",
+        "Value-level Metadata for ADEG Parameter Value List - ADEG [AVAL] Variable Where Type Length/Display Format Controlled Terms/ Formats Source/Derivation/Comment AVAL DTYPE='AVERAGE' Float 5.1 DERIVED: Average of the triplicate values collected at each visit for the parameter."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 29,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 29 2022-05-12 2.7.3 Traceability Metadata 7 Table 2.7.3.1. Dataset-level Metadata for ADEG ADEG Dataset Metadata Dataset Dataset Description Data Structure Class of Dataset ADEG Electrocardiogram Analysis Dataset One record per subject, parameter, analysis visit, reference ID, derivation type BASIC DATA STRUCTURE Table 2.7.3.2. Va..."
+      },
+      "exact_source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 29 2022-05-12 2.7.3 Traceability Metadata 7 Table 2.7.3.1. Dataset-level Metadata for ADEG ADEG Dataset Metadata Dataset Dataset Description Data Structure Class of Dataset ADEG Electrocardiogram Analysis Dataset One record per subject, parameter, analysis visit, reference ID, derivation type BASIC DATA STRUCTURE Table 2.7.3.2. Variable Metadata for ADEG ADEG Variable Metadata Variable Name Variable Label Code List/Controlled Terminology Source/Derivation/Comment STUDYID Study Identifier Predecessor: ADSL.STUDYID USUBJID Unique Subject Identifier Predecessor: ADSL.USUBJID EGSEQ Sequence Number Predecessor: EG.EGSEQ Set to missing for derived rows. EGREPNUM Repetition Number Predecessor: EG.EGREPNUM Set to missing for derived rows. PARAM Parameter Derived: Create PARAM value in format \"EGTESTCD (EGSTRESU)\" for example: \"Heart Rate (beats/min)\" \"PR interval (msec)\" \"QRS interval (msec)\" \"QTCB Interval (msec)\" \"QTCF Interval (msec)\" VISIT Visit Name Predecessor: EG.VISIT AVISIT Analysis Visit Derived: Derivation is explained in analysis data reviewer's guide, Section 7.5.2 Analysis Data Reviewer's Guide EGDTC Date/Time of ECG Predecessor: EG.EGDTC Set to missing for derived rows. BASE Baseline Value Derived: For post-baseline records it is value of AVAL for each subject and parameter where ABLFL = Y AVAL Analysis Value See Value-Level Metadata CHG Change from Baseline Derived: AVAL \u2013 BASE. It is populated for all post-baseline records. DTYPE Derivation Type [\"AVERAGE\" = \"Average\"] <Derivation Type> Derived: Value is AVERAGE for created records added for each visit as the average of the triplicate values collected for each parameter. ABLFL Baseline Record Flag \"Y\"=\"Yes\" Derived: For each subject and parameter the baseline flag is set to Y for the last record prior to treatment start where DTYPE=\"AVERAGE\" TRTA Actual Treatment Placebo Active 20mg Active 40mg <Actual Treatment> Assigned: Value of ADSL.TRT01A for a particular subject. Populate for baseline and post-baseline analyzed records SAFFL Safety Population Flag [\"N\"=\"No\", \"Y\"=\"Yes\"] <No Yes Response> Predecessor: ADSL.SAFFL Table 2.7.3.3. Value-level Metadata for ADEG Parameter Value List - ADEG [AVAL] Variable Where Type Length/Display Format Controlled Terms/ Formats Source/Derivation/Comment AVAL DTYPE='AVERAGE' Float 5.1 DERIVED: Average of the triplicate values collected at each visit for the parameter. AVAL DTYPE Not Equal 'AVERAGE' Integer 3 Predecessor: EG.EGSTRESN",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.SAFFL",
+        "ADSL.STUDYID",
+        "ADSL.TRT01A",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": "One record per subject, parameter, analysis visit, reference ID, derivation type BASIC DATA STRUCTURE Table 2",
+      "keys": [],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "Dataset-level Metadata for ADEG ADEG Dataset Metadata Dataset Dataset Description Data Structure Class of Dataset ADEG Electrocardiogram Analysis Dataset One record per subject, parameter, analysis visit, reference ID, derivation type BASIC DATA STRUCTURE Table 2.7.3.2.",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:c9c4ff8d5439d28f",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [
+          "BASIC_DATA_STRUCTURE",
+          "SUBJECT_LEVEL_ANALYSIS_DATASET"
+        ],
+        "variable_scope": [
+          "SAFFL",
+          "STUDYID",
+          "TRT01A",
+          "USUBJID"
+        ],
+        "variables": [
+          "SAFFL",
+          "STUDYID",
+          "TRT01A",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [
+        "BASIC_DATA_STRUCTURE",
+        "SUBJECT_LEVEL_ANALYSIS_DATASET"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "SAFFL",
+        "STUDYID",
+        "TRT01A",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "ADSL.TRTSDTM SRCDOM Source Data Set to \"AE\" if record is from AE dataset.",
+        "Set to \"CE\" if record is from CE dataset.",
+        "SRCSEQ Source Sequence Number Set to AE.AESEQ if record is from AE dataset.",
+        "Set to CE.CESEQ if record is from CE dataset.",
+        "ACAT1 Analysis Category 1 ADVERSE EVENTS LOCAL INFUSION SITE REACTIONS If record is from AE then ACAT1=\"ADVERSE EVENTS\" Else ACAT1=\"LOCAL INFUSION SITE REACTIONS\" UTERM Reported Term AE.AETERM if record is from AE dataset CE.CETERM if record is from CE dataset UDECOD Dictionary-Derived Term MedDRA AE.AEDECOD if record is from AE dataset CE.CEDECOD if record is from CE dataset UBODSYS Body System or Organ Class MedDRA AE.AEBODSYS if record is from AE dataset CE.CEBODSYS if record is from CE dataset USTDTC Start Date/Time of Event ISO8601 AE.AESTDTC if record is from AE dataset CE.CESTDTC if record is from CE dataset UENDTC End Date/Time of Event ISO8601 AE.AEENDTC if record is from AE dataset CE.CEENDTC if record is from CE dataset ASTDT Analysis Start Date yymmdd10.",
+        "ASTDTF Analysis Start Date Imputation Flag DATEF If start date has month missing then ASTDTF=\"M\" Else if start date has day missing then ASTDTF=\"D\" ASTDTM Analysis Start Date/Time datetime20.",
+        "For example: Convert AESTDTC to a numeric datetime variable AREL Analysis Causality If record is from AE then AREL=AE.AEREL converted to proper case Else if record is from CE then AREL=\"Definitely Related\" ARELGR1 Pooled Causality Group 1 Related Not Related If AREL in('Definitely Related' 'Possibly Related' 'Probably Related') then ARELGR1=\"Related\".",
+        "Else if AREL in('Not Related' 'Unlikely Related') then ARELGR1=\"Not Related\".",
+        "UTOXGR Toxicity Grade '1'='Grade 1' '2'='Grade 2' '3'='Grade 3' '4'='Grade 4' '5'='Grade 5' Set to AE.AETOXGR if record is from AE dataset Set to CE.CETOXGR if record is from CE dataset UACN Action Taken with Study Treatment Set to AE.AEACN if record is from AE dataset Set to CE.CEACN if record is from CE dataset CEPRESP Clinical Event Pre- Specified 'Y'='Yes' CE.CEPRESP The Pre-specified Flag is copied in to support ad-hoc analyses involving comparisons between pre-specified and spontaneous events.",
+        "TRTEMFL Treatment Emergent Analysis Flag 'Y'='Yes' For example: Assume TRTEMFL=\"Y\" unless proven that event is not treatment emergent If both the Start Date/Time of the Adverse Event and Treatment are present and populated and Start Date/Time of Adverse Event is prior to Start Date/Time of Treatment (MISSING<ASTDTM<TRTSDTM) then set TRTEMFL to NULL."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 21,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 21 2022-05-12 Table 2.5.3.2. Variable Metadata for ADAECE ADAECE Variable Metadata Variable Namea Variable Label Codelists Variable Metadata STUDYID Study Identifier XYZ ADSL.STUDYID USUBJID Unique Subject Identifier ADSL.USUBJID SAFFL Safety Population Flag 'Y'='Yes' 'N'='No' ADSL.SAFFL TRTA Actual Treatment SOC+SD=Standard of Ca..."
+      },
+      "exact_source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 21 2022-05-12 Table 2.5.3.2. Variable Metadata for ADAECE ADAECE Variable Metadata Variable Namea Variable Label Codelists Variable Metadata STUDYID Study Identifier XYZ ADSL.STUDYID USUBJID Unique Subject Identifier ADSL.USUBJID SAFFL Safety Population Flag 'Y'='Yes' 'N'='No' ADSL.SAFFL TRTA Actual Treatment SOC+SD=Standard of Care + Study Drug SOC=Standard of Care ADSL.TRT01A TRTSDT Date of First Exposure to Treatment yymmdd10. ADSL.TRTSDT TRTSDTM Datetime of First Exposure to Treatment datetime20. ADSL.TRTSDTM SRCDOM Source Data Set to \"AE\" if record is from AE dataset. Set to \"CE\" if record is from CE dataset. SRCSEQ Source Sequence Number Set to AE.AESEQ if record is from AE dataset. Set to CE.CESEQ if record is from CE dataset. ACAT1 Analysis Category 1 ADVERSE EVENTS LOCAL INFUSION SITE REACTIONS If record is from AE then ACAT1=\"ADVERSE EVENTS\" Else ACAT1=\"LOCAL INFUSION SITE REACTIONS\" UTERM Reported Term AE.AETERM if record is from AE dataset CE.CETERM if record is from CE dataset UDECOD Dictionary-Derived Term MedDRA AE.AEDECOD if record is from AE dataset CE.CEDECOD if record is from CE dataset UBODSYS Body System or Organ Class MedDRA AE.AEBODSYS if record is from AE dataset CE.CEBODSYS if record is from CE dataset USTDTC Start Date/Time of Event ISO8601 AE.AESTDTC if record is from AE dataset CE.CESTDTC if record is from CE dataset UENDTC End Date/Time of Event ISO8601 AE.AEENDTC if record is from AE dataset CE.CEENDTC if record is from CE dataset ASTDT Analysis Start Date yymmdd10. For example: Date part of AESTDTC. If full date is present convert to numeric. If Day is missing but year and month correspond with treatment start year and month then set day to the start day of treatment. Otherwise assume the first of the month. If Day and Month are missing but Year corresponds with treatment start year then set month and day to treatment start month and day. Otherwise assume January 1st. If start date is completely missing do not impute. ASTDTF Analysis Start Date Imputation Flag DATEF If start date has month missing then ASTDTF=\"M\" Else if start date has day missing then ASTDTF=\"D\" ASTDTM Analysis Start Date/Time datetime20. For example: Convert AESTDTC to a numeric datetime variable AREL Analysis Causality If record is from AE then AREL=AE.AEREL converted to proper case Else if record is from CE then AREL=\"Definitely Related\" ARELGR1 Pooled Causality Group 1 Related Not Related If AREL in('Definitely Related' 'Possibly Related' 'Probably Related') then ARELGR1=\"Related\". Else if AREL in('Not Related' 'Unlikely Related') then ARELGR1=\"Not Related\". UTOXGR Toxicity Grade '1'='Grade 1' '2'='Grade 2' '3'='Grade 3' '4'='Grade 4' '5'='Grade 5' Set to AE.AETOXGR if record is from AE dataset Set to CE.CETOXGR if record is from CE dataset UACN Action Taken with Study Treatment Set to AE.AEACN if record is from AE dataset Set to CE.CEACN if record is from CE dataset CEPRESP Clinical Event Pre- Specified 'Y'='Yes' CE.CEPRESP The Pre-specified Flag is copied in to support ad-hoc analyses involving comparisons between pre-specified and spontaneous events. TRTEMFL Treatment Emergent Analysis Flag 'Y'='Yes' For example: Assume TRTEMFL=\"Y\" unless proven that event is not treatment emergent If both the Start Date/Time of the Adverse Event and Treatment are present and populated and Start Date/Time of Adverse Event is prior to Start Date/Time of Treatment (MISSING<ASTDTM<TRTSDTM) then set TRTEMFL to NULL. If either the Start Date/Time of the Adverse Event or the Start Date/Time of Treatment is missing and both the Start Date of the Adverse Event and Treatment are present and and populated and Start Date of Adverse Event is prior to Start Date of Treatment (MISSING<ASTDT<TRTSDT) then set TRTEMFL to NULL. If Start Date of Adverse Event is missing but End Date/Time or End Date is present and prior to Start Date/Time or Start Date of Treatment then set TRTEMFL to NULL. aFor the use of variables with a U prefix and SRCDOM/SRCSEQ, see OCCDS v1.1 (https://www.cdisc.org/standards/foundational/adam/).",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.SAFFL",
+        "ADSL.STUDYID",
+        "ADSL.TRT01A",
+        "ADSL.TRTSDT",
+        "ADSL.TRTSDTM",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "XYZ",
+        "ADSL"
+      ],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 21 2022-05-12 Table 2.5.3.2. Variable Metadata for ADAECE ADAECE Variable Metadata Variable Namea Variable Label Codelists Variable Metadata STUDYID Study Identifier XYZ ADSL.STUDYID USUBJID Unique Subject Identifier ADSL.USUBJID SAFFL Safety Population Flag 'Y'='Yes' 'N'...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [
+        "AE.AEACN",
+        "AE.AEBODSYS",
+        "AE.AEDECOD",
+        "AE.AEENDTC",
+        "AE.AEREL",
+        "AE.AESEQ",
+        "AE.AESTDTC",
+        "AE.AETERM",
+        "AE.AETOXGR"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:d8ec656a745de11f",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [
+          "OCCURRENCE_DATA_STRUCTURE"
+        ],
+        "variable_scope": [
+          "SAFFL",
+          "STUDYID",
+          "TRT01A",
+          "TRTSDT",
+          "TRTSDTM",
+          "USUBJID"
+        ],
+        "variables": [
+          "SAFFL",
+          "STUDYID",
+          "TRT01A",
+          "TRTSDT",
+          "TRTSDTM",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [
+        "OCCURRENCE_DATA_STRUCTURE"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "SAFFL",
+        "STUDYID",
+        "TRT01A",
+        "TRTSDT",
+        "TRTSDTM",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 40 2022-05-12 Variable Name Where Condition Variable Metadata PARAMCD in (\"UPPER\" \"LOWER\") Where PARAMCD=\"UPPER\", the sum of the scores for questions 1-3 Where PARAMCD=\"LOWER\", the sum of the scores for questions 4-6 If any scores are missing, do not impute sum ABLFL Set to Y where AVISIT=BASELINE BASE AVAL value from the record where ABLFL=Y, populate for post-baseline records only CHG AVAL-BASE QSSEQ QS.QSSEQ QSCAT QS.QSCAT Table 2.10.3.2."
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 40,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 40 2022-05-12 Variable Name Where Condition Variable Metadata PARAMCD in (\"UPPER\" \"LOWER\") Where PARAMCD=\"UPPER\", the sum of the scores for questions 1-3 Where PARAMCD=\"LOWER\", the sum of the scores for questions 4-6 If any scores are missing, do not impute sum ABLFL Set to Y where AVISIT=BASELINE BASE AVAL value from the record w..."
+      },
+      "exact_source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 40 2022-05-12 Variable Name Where Condition Variable Metadata PARAMCD in (\"UPPER\" \"LOWER\") Where PARAMCD=\"UPPER\", the sum of the scores for questions 1-3 Where PARAMCD=\"LOWER\", the sum of the scores for questions 4-6 If any scores are missing, do not impute sum ABLFL Set to Y where AVISIT=BASELINE BASE AVAL value from the record where ABLFL=Y, populate for post-baseline records only CHG AVAL-BASE QSSEQ QS.QSSEQ QSCAT QS.QSCAT Table 2.10.3.2. Dataset Metadata for ADQST ADQST Dataset Metadata Dataset Description Class Structure Description ADQST Transposed ADQS ADAM OTHER One record per subject This dataset is derived from ADQS by transposing CHG by USUBJID, using the values of PARAMCD as new variable names and the values of PARAM as new variable labels",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": "One record per subject This dataset is derived from ADQS by transposing CHG by USUBJID, using the values of PARAMCD as new variable names and the values of PARAM as new variable labels",
+      "keys": [],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "Dataset Metadata for ADQST ADQST Dataset Metadata Dataset Description Class Structure Description ADQST Transposed ADQS ADAM OTHER One record per subject This dataset is derived from ADQS by transposing CHG by USUBJID, using the values of PARAMCD as new variable names and the values of PARAM as new variable labels",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:ee9fa4fae967929f",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "variable_requirement",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [
+          "SUBJECT_LEVEL_ANALYSIS_DATASET"
+        ],
+        "variable_scope": [
+          "ABLFL",
+          "ADQS",
+          "ADQST",
+          "AVAL",
+          "AVISIT",
+          "BASE",
+          "BASELINE",
+          "CHG",
+          "LOWER",
+          "OTHER",
+          "PARAM",
+          "PARAMCD",
+          "QSCAT",
+          "QSSEQ",
+          "UPPER",
+          "USUBJID"
+        ],
+        "variables": [
+          "ABLFL",
+          "ADQS",
+          "ADQST",
+          "AVAL",
+          "AVISIT",
+          "BASE",
+          "BASELINE",
+          "CHG",
+          "LOWER",
+          "OTHER",
+          "PARAM",
+          "PARAMCD",
+          "QSCAT",
+          "QSSEQ",
+          "UPPER",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [
+        "SUBJECT_LEVEL_ANALYSIS_DATASET"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ABLFL",
+        "ADQS",
+        "ADQST",
+        "AVAL",
+        "AVISIT",
+        "BASE",
+        "BASELINE",
+        "CHG",
+        "LOWER",
+        "OTHER",
+        "PARAM",
+        "PARAMCD",
+        "QSCAT",
+        "QSSEQ",
+        "UPPER",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "2.4.3 Traceability Metadata 4 Although the primary focus of the analysis is the hypertension event, the sub-events (i.e., hospitalization, diastolic blood pressure > 90, systolic blood pressure > 140) are also included to support traceability and to allow for future analysis by sub-event if necessary.",
+        "USUBJID Unique Subject Identifier Char VS.USUBJID if subject had either systolic blood pressure > 140 and/or diastolic blood pressure > 90 HO.USUBJID if subject is hospitalized DS.USUBJID if subject did not have hospitalization or hypertension"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 17,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Note: In the data flow, only the datasets that will be used in the creation of the parameters and analysis value are included. ADSL and/or other ADaM datasets that contain treatment variables and other covariates may also be included as input in the creation of ADHYP. These datasets do not have an effect on the derivation of each parameter and are not included. 2.4.3 Traceability Metadata 4 Although the primary fo..."
+      },
+      "exact_source_excerpt": "Note: In the data flow, only the datasets that will be used in the creation of the parameters and analysis value are included. ADSL and/or other ADaM datasets that contain treatment variables and other covariates may also be included as input in the creation of ADHYP. These datasets do not have an effect on the derivation of each parameter and are not included. 2.4.3 Traceability Metadata 4 Although the primary focus of the analysis is the hypertension event, the sub-events (i.e., hospitalization, diastolic blood pressure > 90, systolic blood pressure > 140) are also included to support traceability and to allow for future analysis by sub-event if necessary. Table 2.4.3.1. Variable Metadata for ADHYP ADHYP Variable Metadata Variable Name Variable Label Type Codelist/Controlled Terms Variable Metadata STUDYIDa Study Identifier Char xx.STUDYID that corresponds to input dataset used for USUBJID. USUBJID Unique Subject Identifier Char VS.USUBJID if subject had either systolic blood pressure > 140 and/or diastolic blood pressure > 90 HO.USUBJID if subject is hospitalized DS.USUBJID if subject did not have hospitalization or hypertension",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.ADHYP",
+        "ADSL.STUDYID",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "VS"
+      ],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "ADSL and/or other ADaM datasets that contain treatment variables and other covariates may also be included as input in the creation of ADHYP.",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [
+        "ADSL and/or other ADaM datasets that contain treatment variables and other covariates may also be included as input in the creation of ADHYP."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [
+        "DS.USUBJID"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:fb930ce800b91e53",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADHYP",
+          "STUDYID",
+          "USUBJID"
+        ],
+        "variables": [
+          "ADHYP",
+          "STUDYID",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADHYP",
+        "STUDYID",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "Variable Metadata for ADTLS ADTLS Variable Metadata Variable Name Variable Label Where Condition Variable Metadata STUDYID Study Identifier ADSL.STUDYID USUBJID Unique Subject Identifier ADSL.USUBJID SRCDOM Source Data Copy records from ADLB where CRIT1FL=\"Y\" and set SRCDOM=\"ADLB\".",
+        "Copy records from ADAE where CQ01NAM is not NULL and set SRCDOM=\"ADAE\".",
+        "SRCSEQ Source Sequence Number ASEQ value from dataset indicated in SRCDOM TRTA Actual Treatment ADSL.TRT01A PARCAT1 Parameter Category 1 SRCDOM IN (\"ADAE\" \"ADLB\") Set to \"TLS Events\" PARAMCD IN (\"LTLS\" \"CTLS\") Set to \"TLS Evaluation\" PARAMCD Parameter Code SRCDOM EQ \"ADLB\" ADLB.PARAMCD SRCDOM EQ \"ADAE\" Set to \"AE\" PARCAT1 EQ \"TLS Evaluation\" Create two records for each subject, with PARAMCD values of \"LTLS\" and \"CTLS\" PARAM Parameter One to one mapping of PARAMCD based on controlled terminology AVALC Analysis Value SRCDOM EQ \"ADLB\" Set to \"Y\" SRCDOM EQ \"ADAE\" ADAE.AEDECOD PARAMCD EQ \"LTLS\" If there are two distinct records with PARAMCD value in (\"URATE\" \"K\" \"PHOS\" \"CACR\") and AWSDTM not NULL and ADTM values 24 hours or less apart, then set AVALC to \"Y\", otherwise \"N\" PARAMCD EQ \"CTLS\" If the subject is evaluated positive for LTLS, then take the date from ADTM.",
+        "If a record with PARAMCD value in (\"AE\" \"CREAT\") with ADTM that falls on the same day of LTLS or day + 1, then set AVALC to \"Y\", otherwise \"N\" ADTM Analysis Datetime SRCDOM EQ \"ADLB\" ADLB.ADTM SRCDOM EQ \"ADAE\" ADAE.ASTDTM PARCAT1 EQ \"TLS Evaluation\" If AVALC=\"Y\", then retain ADTM with the earliest datetime from the records that satisfy the TLS criteria AVISIT Analysis Visit PARCAT1 EQ \"TLS Events\" EX.VISIT, populate from EX record selected by AWSDTM derivation PARCAT1 EQ \"TLS Evaluation\" If AVALC=\"Y\", then retain VISIT value from the same record retained for ADTM AWSDTM Analysis Window Start Date/Time For records where SRCDOM is in (\"ADLB\" \"ADAE\"), if ADTM falls between a cycle interval described by [EX.EXSTDTC-3days, EX.EXENDTC+7days], then use this record to populate EXSDTM, EXEDTM, AWSDTM, AWEDTM, and AVISIT.",
+        "Populate AWSDTM with EXSDTM-3 AWEDTM Analysis Window End Date/Time See AWSDTM, EXEDTM+7 EXSDTM Exposure Start Date/Time See AWSDTM, numeric value of EX.EXSTDTC Note: If event does not fall into a cycle interval, then EXSDTM will remain null EXEDTM Exposure End Date/Time See AWSDTM, numeric value of EX.EXENDTC Note: If event does not fall into a cycle interval, then EXEDTM will remain null"
+      ],
+      "classification": "NON_NORMATIVE",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADAE",
+        "ADLB",
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 46,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 46 2022-05-12 Table 2.12.3.3. Variable Metadata for ADTLS ADTLS Variable Metadata Variable Name Variable Label Where Condition Variable Metadata STUDYID Study Identifier ADSL.STUDYID USUBJID Unique Subject Identifier ADSL.USUBJID SRCDOM Source Data Copy records from ADLB where CRIT1FL=\"Y\" and set SRCDOM=\"ADLB\". Copy records from A..."
+      },
+      "exact_source_excerpt": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 46 2022-05-12 Table 2.12.3.3. Variable Metadata for ADTLS ADTLS Variable Metadata Variable Name Variable Label Where Condition Variable Metadata STUDYID Study Identifier ADSL.STUDYID USUBJID Unique Subject Identifier ADSL.USUBJID SRCDOM Source Data Copy records from ADLB where CRIT1FL=\"Y\" and set SRCDOM=\"ADLB\". Copy records from ADAE where CQ01NAM is not NULL and set SRCDOM=\"ADAE\". SRCSEQ Source Sequence Number ASEQ value from dataset indicated in SRCDOM TRTA Actual Treatment ADSL.TRT01A PARCAT1 Parameter Category 1 SRCDOM IN (\"ADAE\" \"ADLB\") Set to \"TLS Events\" PARAMCD IN (\"LTLS\" \"CTLS\") Set to \"TLS Evaluation\" PARAMCD Parameter Code SRCDOM EQ \"ADLB\" ADLB.PARAMCD SRCDOM EQ \"ADAE\" Set to \"AE\" PARCAT1 EQ \"TLS Evaluation\" Create two records for each subject, with PARAMCD values of \"LTLS\" and \"CTLS\" PARAM Parameter One to one mapping of PARAMCD based on controlled terminology AVALC Analysis Value SRCDOM EQ \"ADLB\" Set to \"Y\" SRCDOM EQ \"ADAE\" ADAE.AEDECOD PARAMCD EQ \"LTLS\" If there are two distinct records with PARAMCD value in (\"URATE\" \"K\" \"PHOS\" \"CACR\") and AWSDTM not NULL and ADTM values 24 hours or less apart, then set AVALC to \"Y\", otherwise \"N\" PARAMCD EQ \"CTLS\" If the subject is evaluated positive for LTLS, then take the date from ADTM. If a record with PARAMCD value in (\"AE\" \"CREAT\") with ADTM that falls on the same day of LTLS or day + 1, then set AVALC to \"Y\", otherwise \"N\" ADTM Analysis Datetime SRCDOM EQ \"ADLB\" ADLB.ADTM SRCDOM EQ \"ADAE\" ADAE.ASTDTM PARCAT1 EQ \"TLS Evaluation\" If AVALC=\"Y\", then retain ADTM with the earliest datetime from the records that satisfy the TLS criteria AVISIT Analysis Visit PARCAT1 EQ \"TLS Events\" EX.VISIT, populate from EX record selected by AWSDTM derivation PARCAT1 EQ \"TLS Evaluation\" If AVALC=\"Y\", then retain VISIT value from the same record retained for ADTM AWSDTM Analysis Window Start Date/Time For records where SRCDOM is in (\"ADLB\" \"ADAE\"), if ADTM falls between a cycle interval described by [EX.EXSTDTC-3days, EX.EXENDTC+7days], then use this record to populate EXSDTM, EXEDTM, AWSDTM, AWEDTM, and AVISIT. Populate AWSDTM with EXSDTM-3 AWEDTM Analysis Window End Date/Time See AWSDTM, EXEDTM+7 EXSDTM Exposure Start Date/Time See AWSDTM, numeric value of EX.EXSTDTC Note: If event does not fall into a cycle interval, then EXSDTM will remain null EXEDTM Exposure End Date/Time See AWSDTM, numeric value of EX.EXENDTC Note: If event does not fall into a cycle interval, then EXEDTM will remain null",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADAE",
+        "ADAE.ADTM",
+        "ADAE.AEDECOD",
+        "ADAE.ASTDTM",
+        "ADAE.PARAMCD",
+        "ADAE.STUDYID",
+        "ADAE.TRT01A",
+        "ADAE.USUBJID",
+        "ADLB",
+        "ADLB.ADTM",
+        "ADLB.AEDECOD",
+        "ADLB.ASTDTM",
+        "ADLB.PARAMCD",
+        "ADLB.STUDYID",
+        "ADLB.TRT01A",
+        "ADLB.USUBJID",
+        "ADSL",
+        "ADSL.ADTM",
+        "ADSL.AEDECOD",
+        "ADSL.ASTDTM",
+        "ADSL.PARAMCD",
+        "ADSL.STUDYID",
+        "ADSL.TRT01A",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADSL"
+      ],
+      "local_relative_source_path": "ADaM_Traceability_Examples_v1.0.pdf",
+      "normalized_atomic_requirement": "\u00a9 2022 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 46 2022-05-12 Table 2.12.3.3. Variable Metadata for ADTLS ADTLS Variable Metadata Variable Name Variable Label Where Condition Variable Metadata STUDYID Study Identifier ADSL.STUDYID USUBJID Unique Subject Identifier ADSL.USUBJID SRCDOM Source Data Copy records from ADLB...",
+      "normative_strength": "NON_NORMATIVE",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM_Traceability_Examples_v1.0.pdf",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": null,
+      "required_inputs": [
+        "EX.EXENDTC",
+        "EX.EXSTDTC",
+        "EX.VISIT"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-traceability-examples:ffb1405776eb7062",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADAE",
+          "ADLB",
+          "ADSL"
+        ],
+        "datasets": [
+          "ADAE",
+          "ADLB",
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADTM",
+          "AEDECOD",
+          "ASTDTM",
+          "PARAMCD",
+          "STUDYID",
+          "TRT01A",
+          "USUBJID"
+        ],
+        "variables": [
+          "ADTM",
+          "AEDECOD",
+          "ASTDTM",
+          "PARAMCD",
+          "STUDYID",
+          "TRT01A",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "3850e931ea8e87ddb85f143950ac8a89237c054ceb29fb59fb94cae6d3bac7a3",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-traceability-examples",
+      "standard_name": "ADaM Examples of Traceability",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADTM",
+        "AEDECOD",
+        "ASTDTM",
+        "PARAMCD",
+        "STUDYID",
+        "TRT01A",
+        "USUBJID"
+      ]
+    }
+  ]
+}

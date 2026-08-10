@@ -1,0 +1,589 @@
+{
+  "rules": [
+    {
+      "applicability_conditions": [
+        "AVISIT Analysis Visit Char * Cond Analysis visit where event or censoring occurred."
+      ],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 8,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Variable Name Variable Label Type Codelist / Controlled Terms Core CDISC Notes STARTDT Time to Event Origin Date for Subject Num Perm The original date of risk for the time-to-event analysis. This is generally the time at which a subject is first at risk for the event of interest evaluation (as defined in the Protocol or Statistical Analysis Plan). For example, this may be the randomization date or the date of fir..."
+      },
+      "exact_source_excerpt": "Variable Name Variable Label Type Codelist / Controlled Terms Core CDISC Notes STARTDT Time to Event Origin Date for Subject Num Perm The original date of risk for the time-to-event analysis. This is generally the time at which a subject is first at risk for the event of interest evaluation (as defined in the Protocol or Statistical Analysis Plan). For example, this may be the randomization date or the date of first study therapy exposure. STARTDTM Time to Event Origin Date/Time Num Perm The date/time associated with STARTDT in numeric format. STARTDTF Origin Date Imputation Flag Char (DATEFL) Cond The level of imputation of the origin date. See General Timing Variable Convention #6 in the ADaM IG [2]. STARTTMF Origin Time Imputation Flag Char (TIMEFL) Cond The level of imputation of the origin time. See General Timing Variable Convention #7 in the ADaM IG [2]. ADT Analysis Date Num Perm Analysis date of event or censoring associated with AVAL in numeric format. ADTM Analysis Date/Time Num Perm Analysis date/time of event or censoring associated with AVAL in numeric format. ADTF Analysis Date Imputation Flag Char (DATEFL) Cond The level of imputation of ADT based on the source SDTM DTC variable. See General Timing Variable Convention #6 in the ADaM IG [2]. ATMF Analysis Time Imputation Flag Char (TIMEFL) Cond The level of imputation of ATM based on the source SDTM DTC variable. See General Timing Variable Convention #7 in the ADaM IG [2]. AVISIT Analysis Visit Char * Cond Analysis visit where event or censoring occurred. AVISIT may contain the visit names as observed (i.e., from SDTM VISIT), derived visit names, or conceptual description (e.g., endpoint). CNSR Censor Num * Cond CNSR is a required variable for a time-to-event analysis dataset, though it is a conditionally required variable with respect to the ADaM BDS. For example, CNSR = 0 for event and CNSR > 0 for censored records. SRCDOM Source Data Char Perm The name of the SDTM domain (or dataset) or analysis dataset that relates to the analysis variable (e.g., AVAL). Allowing SRCDOM to be not only SDTM, but also ADaM dataset will be addressed in the next version of ADaM IG.",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "adam_tte_final_v1.pdf",
+      "normalized_atomic_requirement": "For example, this may be the randomization date or the date of first study therapy exposure.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-basic-data-structure-bds-time-event-tte-analyses-v1-0",
+      "permitted_variations": [
+        "For example, this may be the randomization date or the date of first study therapy exposure.",
+        "AVISIT may contain the visit names as observed (i.e., from SDTM VISIT), derived visit names, or conceptual description (e.g., endpoint)."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "For example, this may be the randomization date or the date of first study therapy exposure.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-bds-tte:1b973c727f08289c",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [
+          "BASIC_DATA_STRUCTURE"
+        ],
+        "variable_scope": [
+          "ADT",
+          "ADTF",
+          "ADTM",
+          "ATM",
+          "ATMF",
+          "AVAL",
+          "AVISIT",
+          "CNSR",
+          "DATEFL",
+          "DTC",
+          "SRCDOM",
+          "STARTDT",
+          "STARTDTF",
+          "STARTDTM",
+          "STARTTMF",
+          "TIMEFL",
+          "VISIT"
+        ],
+        "variables": [
+          "ADT",
+          "ADTF",
+          "ADTM",
+          "ATM",
+          "ATMF",
+          "AVAL",
+          "AVISIT",
+          "CNSR",
+          "DATEFL",
+          "DTC",
+          "SRCDOM",
+          "STARTDT",
+          "STARTDTF",
+          "STARTDTM",
+          "STARTTMF",
+          "TIMEFL",
+          "VISIT"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "1c34a2c43195c525d00b217e4cc7f660b2b729ac615244f584ec7f3cb2d56579",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-bds-tte",
+      "standard_name": "ADaM BDS Time-to-Event Guide",
+      "standard_version": "1.0",
+      "structure_scope": [
+        "BASIC_DATA_STRUCTURE"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADT",
+        "ADTF",
+        "ADTM",
+        "ATM",
+        "ATMF",
+        "AVAL",
+        "AVISIT",
+        "CNSR",
+        "DATEFL",
+        "DTC",
+        "SRCDOM",
+        "STARTDT",
+        "STARTDTF",
+        "STARTDTM",
+        "STARTTMF",
+        "TIMEFL",
+        "VISIT"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "This can be the numeric date version of RFSTDTC if the time origin is the same as the subject reference start date provided in the DM domain."
+      ],
+      "classification": "STANDARD_GUIDED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 10,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "5. Example 1: Single Endpoint with Binary Values for Censoring The first TTE example is for time to death. It incorporates a binary censoring variable that has a value of 0 for subjects who died and a value of 1 for subjects who were censored, either because they were lost to follow-up or completed the study assessment without experiencing the event (death). In this example, STARTDT is used to indicate the time or..."
+      },
+      "exact_source_excerpt": "5. Example 1: Single Endpoint with Binary Values for Censoring The first TTE example is for time to death. It incorporates a binary censoring variable that has a value of 0 for subjects who died and a value of 1 for subjects who were censored, either because they were lost to follow-up or completed the study assessment without experiencing the event (death). In this example, STARTDT is used to indicate the time origin of the time-to-event calculation. This can be the numeric date version of RFSTDTC if the time origin is the same as the subject reference start date provided in the DM domain. The variable EVNTDESC describes either the event of interest or the reason for censoring. This variable should contain text clarifying what the event of interest is or the reasons for censoring for those subjects who did not have the event. These values should be included in the metadata as sponsor-defined controlled terminology. The rationale and use of EVNTDESC will be further explained in Section 7, which presents an example of a time-to-event analysis with a single endpoint and multiple values for censoring.",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "adam_tte_final_v1.pdf",
+      "normalized_atomic_requirement": "This variable should contain text clarifying what the event of interest is or the reasons for censoring for those subjects who did not have the event.",
+      "normative_strength": "GUIDED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-basic-data-structure-bds-time-event-tte-analyses-v1-0",
+      "permitted_variations": [
+        "This can be the numeric date version of RFSTDTC if the time origin is the same as the subject reference start date provided in the DM domain.",
+        "This variable should contain text clarifying what the event of interest is or the reasons for censoring for those subjects who did not have the event.",
+        "These values should be included in the metadata as sponsor-defined controlled terminology."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "This variable should contain text clarifying what the event of interest is or the reasons for censoring for those subjects who did not have the event.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-bds-tte:28f8423c4257c2d6",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "EVNTDESC",
+          "RFSTDTC",
+          "STARTDT",
+          "TTE"
+        ],
+        "variables": [
+          "EVNTDESC",
+          "RFSTDTC",
+          "STARTDT",
+          "TTE"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "1c34a2c43195c525d00b217e4cc7f660b2b729ac615244f584ec7f3cb2d56579",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-bds-tte",
+      "standard_name": "ADaM BDS Time-to-Event Guide",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "EVNTDESC",
+        "RFSTDTC",
+        "STARTDT",
+        "TTE"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 6,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Table 4.2 Time-to-Event Variables Variable Name Variable Label Type Codelist / Controlled Terms Core CDISC Notes STUDYID Study Identifier Char Req Must be identical to the ADSL variable. USUBJID Unique Subject Identifier Char Req Must be identical to the ADSL variable. ASEQ Analysis Sequence Number Num Perm Sequence number given to ensure uniqueness of subject record within the analysis dataset. As long as values..."
+      },
+      "exact_source_excerpt": "Table 4.2 Time-to-Event Variables Variable Name Variable Label Type Codelist / Controlled Terms Core CDISC Notes STUDYID Study Identifier Char Req Must be identical to the ADSL variable. USUBJID Unique Subject Identifier Char Req Must be identical to the ADSL variable. ASEQ Analysis Sequence Number Num Perm Sequence number given to ensure uniqueness of subject record within the analysis dataset. As long as values are unique within a dataset, any valid number can be used for ASEQ. The use of this variable will be addressed in detail in the next version of ADaM IG. TRTP Planned Treatment Char Req TRTP is a record-level identifier that represents the planned treatment attributed to a record for analysis purposes.",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.ASEQ",
+        "ADSL.STUDYID",
+        "ADSL.TRTP",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "ADSL"
+      ],
+      "local_relative_source_path": "adam_tte_final_v1.pdf",
+      "normalized_atomic_requirement": "Table 4.2 Time-to-Event Variables Variable Name Variable Label Type Codelist / Controlled Terms Core CDISC Notes STUDYID Study Identifier Char Req Must be identical to the ADSL variable.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-basic-data-structure-bds-time-event-tte-analyses-v1-0",
+      "permitted_variations": [
+        "As long as values are unique within a dataset, any valid number can be used for ASEQ."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "Table 4.2 Time-to-Event Variables Variable Name Variable Label Type Codelist / Controlled Terms Core CDISC Notes STUDYID Study Identifier Char Req Must be identical to the ADSL variable.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-bds-tte:31ccf8519c33e928",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ASEQ",
+          "STUDYID",
+          "TRTP",
+          "USUBJID"
+        ],
+        "variables": [
+          "ASEQ",
+          "STUDYID",
+          "TRTP",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "1c34a2c43195c525d00b217e4cc7f660b2b729ac615244f584ec7f3cb2d56579",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-bds-tte",
+      "standard_name": "ADaM BDS Time-to-Event Guide",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": "Table 4.2 Time-to-Event Variables Variable Name Variable Label Type Codelist / Controlled Terms Core CDISC Notes STUDYID Study Identifier Char Req Must be identical to the ADSL variable.",
+      "validation_requirements": [
+        "Table 4.2 Time-to-Event Variables Variable Name Variable Label Type Codelist / Controlled Terms Core CDISC Notes STUDYID Study Identifier Char Req Must be identical to the ADSL variable.",
+        "USUBJID Unique Subject Identifier Char Req Must be identical to the ADSL variable."
+      ],
+      "variable_scope": [
+        "ASEQ",
+        "STUDYID",
+        "TRTP",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADTTE"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 29,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "As shown above, very complex derivations may require the creation of intermediate analysis datasets. In these situations, traceability may be accomplished by retaining and including intermediate analysis datasets along with their associated metadata. Traceability would then involve several steps. The analysis results would be linked by appropriate metadata, including results metadata, to the data which directly su..."
+      },
+      "exact_source_excerpt": "As shown above, very complex derivations may require the creation of intermediate analysis datasets. In these situations, traceability may be accomplished by retaining and including intermediate analysis datasets along with their associated metadata. Traceability would then involve several steps. The analysis results would be linked by appropriate metadata, including results metadata, to the data which directly supports the analytical procedures; those data would be linked to the intermediate analysis data; the intermediate data would in turn be linked to the source SDTM data. Because ADTTE is not a required dataset name for all time-to-event analysis datasets, one can assign a logical name to identify the intermediate and final time-to-event analysis datasets for clarity.",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADTTE"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "adam_tte_final_v1.pdf",
+      "normalized_atomic_requirement": "As shown above, very complex derivations may require the creation of intermediate analysis datasets.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-basic-data-structure-bds-time-event-tte-analyses-v1-0",
+      "permitted_variations": [
+        "As shown above, very complex derivations may require the creation of intermediate analysis datasets.",
+        "In these situations, traceability may be accomplished by retaining and including intermediate analysis datasets along with their associated metadata.",
+        "Because ADTTE is not a required dataset name for all time-to-event analysis datasets, one can assign a logical name to identify the intermediate and final time-to-event analysis datasets for clarity."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "As shown above, very complex derivations may require the creation of intermediate analysis datasets.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-bds-tte:46ff262542c68c22",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "prose_requirement",
+        "dataset_scope": [
+          "ADTTE"
+        ],
+        "datasets": [
+          "ADTTE"
+        ],
+        "structure_scope": [],
+        "variable_scope": [],
+        "variables": []
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "1c34a2c43195c525d00b217e4cc7f660b2b729ac615244f584ec7f3cb2d56579",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-bds-tte",
+      "standard_name": "ADaM BDS Time-to-Event Guide",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": []
+    },
+    {
+      "applicability_conditions": [
+        "For example, an assessment of tumor progression may not occur when a subject discontinues from a study, so censoring occurs at the time when the subject was last known to have no documented"
+      ],
+      "classification": "STANDARD_GUIDED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 18,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "In this example, two different types of events occur, a documented progression event for subject 1001-0001 and a death for subject 1001-1005. Both have a CNSR value of 0. EVNTDESC is populated using sponsor-defined controlled terminology to describe the event. All other subjects are censored, but for different reasons, as indicated by the different CNSR values. The EVNTDESC column describes both the reason for cen..."
+      },
+      "exact_source_excerpt": "In this example, two different types of events occur, a documented progression event for subject 1001-0001 and a death for subject 1001-1005. Both have a CNSR value of 0. EVNTDESC is populated using sponsor-defined controlled terminology to describe the event. All other subjects are censored, but for different reasons, as indicated by the different CNSR values. The EVNTDESC column describes both the reason for censoring (if CNSR > 0) and the time at which censoring occurs (i.e., a description of what ADT represents). Since an assessment of tumor progression may not occur at the same time as an event that warrants censoring, it is important to differentiate and describe these two dates. For example, an assessment of tumor progression may not occur when a subject discontinues from a study, so censoring occurs at the time when the subject was last known to have no documented",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "adam_tte_final_v1.pdf",
+      "normalized_atomic_requirement": "Since an assessment of tumor progression may not occur at the same time as an event that warrants censoring, it is important to differentiate and describe these two dates.",
+      "normative_strength": "GUIDED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-basic-data-structure-bds-time-event-tte-analyses-v1-0",
+      "permitted_variations": [
+        "Since an assessment of tumor progression may not occur at the same time as an event that warrants censoring, it is important to differentiate and describe these two dates.",
+        "For example, an assessment of tumor progression may not occur when a subject discontinues from a study, so censoring occurs at the time when the subject was last known to have no documented"
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "Since an assessment of tumor progression may not occur at the same time as an event that warrants censoring, it is important to differentiate and describe these two dates.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-bds-tte:bce5b219dba02ce8",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADT",
+          "CNSR",
+          "EVNTDESC"
+        ],
+        "variables": [
+          "ADT",
+          "CNSR",
+          "EVNTDESC"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "1c34a2c43195c525d00b217e4cc7f660b2b729ac615244f584ec7f3cb2d56579",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-bds-tte",
+      "standard_name": "ADaM BDS Time-to-Event Guide",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADT",
+        "CNSR",
+        "EVNTDESC"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "The letter \u201cxx\u201d in the variable name refer to a specific period where \u201cxx\u201d is replaced with a zero-padded two-digit integer (i.e., 01 \u2013 99).",
+        "PARAM should be sufficient to describe clear contents of AVAL, including the unit of the measurement, if applicable.",
+        "For example, if AVAL is measured in days, AVAL would be ADT \u2013 STARTDT or ADT \u2013 STARTDT + 1."
+      ],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 7,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Variable Name Variable Label Type Codelist / Controlled Terms Core CDISC Notes TRTPN Planned Treatment (N) Num Perm The numeric code for TRTP. One-to-one map to TRTP. TRTA Actual Treatment Char Cond TRTA is a record-level identifier that represents the actual treatment attributed to a record for analysis purposes. TRTAN Actual Treatment (N) Num Perm The numeric code for TRTA. One-to-one map to TRTA. TRTxxP Planned..."
+      },
+      "exact_source_excerpt": "Variable Name Variable Label Type Codelist / Controlled Terms Core CDISC Notes TRTPN Planned Treatment (N) Num Perm The numeric code for TRTP. One-to-one map to TRTP. TRTA Actual Treatment Char Cond TRTA is a record-level identifier that represents the actual treatment attributed to a record for analysis purposes. TRTAN Actual Treatment (N) Num Perm The numeric code for TRTA. One-to-one map to TRTA. TRTxxP Planned Treatment for Period xx Char Cond Subject-level identifier that represents the planned treatment for period xx. Must be identical to the ADSL variable. The letter \u201cxx\u201d in the variable name refer to a specific period where \u201cxx\u201d is replaced with a zero-padded two-digit integer (i.e., 01 \u2013 99). TRTxxPN Planned Treatment for Period xx (N) Num Perm The numeric code variable for TRTxxP. One-to- one map to TRTxxP. If included in ADSL, must be identical to the ADSL variable. TRTxxA Actual Treatment for Period xx Char Cond Subject-level identifier that represents the actual treatment for period xx. If included in ADSL, must be identical to the ADSL variable. TRTxxAN Actual Treatment for Period xx (N) Num Perm The numeric code variable for TRTxxA. One-to- one map to TRTxxA. If included in ADSL, must be identical to the ADSL variable. PARAM Parameter Char * Req The description of the analysis parameter. Examples include: \u201cTime to Death (days)\u201d, \u201cTime to First Hospitalization Through Day 168 (days)\u201d, \u201cTime to Progression Free Survival (days)\u201d, and \u201cTime to Hepatitis B Seroconversion (days)\u201d. PARAM should be sufficient to describe clear contents of AVAL, including the unit of the measurement, if applicable. PARAM may be longer than 40 characters in length (200-character limit). PARAMCD Parameter Code Char * Req The short name of the analysis parameter in PARAM. Values of PARAMCD should follow SAS 5 variable naming conventions (8 characters or less; starts with letter; contains only letters and digits). There must be a one-to-one mapping with PARAM. Examples include DEATH, PFS, and T2SERO. AVAL Analysis Value Num Req AVAL is the elapsed time to the event of interest from the origin. For example, if AVAL is measured in days, AVAL would be ADT \u2013 STARTDT or ADT \u2013 STARTDT + 1.",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.ADT",
+        "ADSL.AVAL",
+        "ADSL.DEATH",
+        "ADSL.PARAM",
+        "ADSL.PARAMCD",
+        "ADSL.PFS",
+        "ADSL.SAS",
+        "ADSL.STARTDT",
+        "ADSL.T2SERO",
+        "ADSL.TRTA",
+        "ADSL.TRTAN",
+        "ADSL.TRTP",
+        "ADSL.TRTPN"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "adam_tte_final_v1.pdf",
+      "normalized_atomic_requirement": "If included in ADSL, must be identical to the ADSL variable.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-basic-data-structure-bds-time-event-tte-analyses-v1-0",
+      "permitted_variations": [
+        "PARAM should be sufficient to describe clear contents of AVAL, including the unit of the measurement, if applicable.",
+        "PARAM may be longer than 40 characters in length (200-character limit).",
+        "Values of PARAMCD should follow SAS 5 variable naming conventions (8 characters or less; starts with letter; contains only letters and digits)."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "If included in ADSL, must be identical to the ADSL variable.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-bds-tte:c7faac41120fcc8d",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADT",
+          "AVAL",
+          "DEATH",
+          "PARAM",
+          "PARAMCD",
+          "PFS",
+          "SAS",
+          "STARTDT",
+          "T2SERO",
+          "TRTA",
+          "TRTAN",
+          "TRTP",
+          "TRTPN"
+        ],
+        "variables": [
+          "ADT",
+          "AVAL",
+          "DEATH",
+          "PARAM",
+          "PARAMCD",
+          "PFS",
+          "SAS",
+          "STARTDT",
+          "T2SERO",
+          "TRTA",
+          "TRTAN",
+          "TRTP",
+          "TRTPN"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "1c34a2c43195c525d00b217e4cc7f660b2b729ac615244f584ec7f3cb2d56579",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-bds-tte",
+      "standard_name": "ADaM BDS Time-to-Event Guide",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": "Must be identical to the ADSL variable.",
+      "validation_requirements": [
+        "Must be identical to the ADSL variable.",
+        "If included in ADSL, must be identical to the ADSL variable.",
+        "There must be a one-to-one mapping with PARAM."
+      ],
+      "variable_scope": [
+        "ADT",
+        "AVAL",
+        "DEATH",
+        "PARAM",
+        "PARAMCD",
+        "PFS",
+        "SAS",
+        "STARTDT",
+        "T2SERO",
+        "TRTA",
+        "TRTAN",
+        "TRTP",
+        "TRTPN"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 6,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "Table 4.2 describes variables that one would commonly find in an ADaM TTE analysis dataset. The two rightmost columns (\u201cCore\u201d and \u201cCDISC Notes\u201d) provide information about the variables to assist users in preparing their datasets. These columns are not meant to be metadata included in the define.xml. The \u201cCore\u201d column describes whether a variable is required (Req), conditionally required (Cond), or permissible (Per..."
+      },
+      "exact_source_excerpt": "Table 4.2 describes variables that one would commonly find in an ADaM TTE analysis dataset. The two rightmost columns (\u201cCore\u201d and \u201cCDISC Notes\u201d) provide information about the variables to assist users in preparing their datasets. These columns are not meant to be metadata included in the define.xml. The \u201cCore\u201d column describes whether a variable is required (Req), conditionally required (Cond), or permissible (Perm). The \u201cCDISC Notes\u201d column provides more information about the variable relevant to the ADaM TTE analysis dataset. In addition, the \u201cType\u201d column is being used to define whether the variable is character (Char) or numeric value (Num). More specific information will be provided in metadata (e.g., text, integer, or float).",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "adam_tte_final_v1.pdf",
+      "normalized_atomic_requirement": "The \u201cCore\u201d column describes whether a variable is required (Req), conditionally required (Cond), or permissible (Perm).",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-basic-data-structure-bds-time-event-tte-analyses-v1-0",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": "The \u201cCore\u201d column describes whether a variable is required (Req), conditionally required (Cond), or permissible (Perm).",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-bds-tte:fc5fc7b0b7170ccf",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "variable_requirement",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "TTE"
+        ],
+        "variables": [
+          "TTE"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "1c34a2c43195c525d00b217e4cc7f660b2b729ac615244f584ec7f3cb2d56579",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-bds-tte",
+      "standard_name": "ADaM BDS Time-to-Event Guide",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "TTE"
+      ]
+    }
+  ]
+}

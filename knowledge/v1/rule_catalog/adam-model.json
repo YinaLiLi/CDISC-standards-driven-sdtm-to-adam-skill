@@ -1,0 +1,886 @@
+{
+  "rules": [
+    {
+      "applicability_conditions": [
+        "Table 5.2.2.1 Analysis Variable Metadata for the ADQSADAS Dataset3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation file name of the analysis dataset PARAMCD or *ALL* or *DEFAULT* name description type display informa- tion valid values or codes and decodes where the variable came from in the source data or how the variable was derived ADQSADAS *ALL* STUDYID Study Identifier text $12 ADSL.STUDYID ADQSADAS *ALL* SITEID Study Site Identifier text $3 ADSL.SITEID ADQSADAS *ALL* SITEGR1 Pooled Site Group 1 text $3 ADSL.SITEGR1 ADQSADAS *ALL* USUBJID Unique Subject Identifier text $11 ADSL.USUBJID ADQSADAS *ALL* AVISIT Analysis Visit text $19 Baseline, Week 8, Week 16, Week 24 If ADQSADAS.ITTRFL='Y' then AVISIT is the name of the analysis visit; if ADQSADAS.ITTRFL=blank then AVISIT=blank."
+      ],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 17,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 17 FINAL December 17, 2009 5.2.2 Illustration of Analysis Variable Metadata, Including Analysis Parameter Value-Level Metadata In this illustration, which expands upon the ADAS-Cog analysis example, the data being analyzed are the ADAS-Cog(11) total scores, an 11-item subscale of the ADAS-Cog..."
+      },
+      "exact_source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 17 FINAL December 17, 2009 5.2.2 Illustration of Analysis Variable Metadata, Including Analysis Parameter Value-Level Metadata In this illustration, which expands upon the ADAS-Cog analysis example, the data being analyzed are the ADAS-Cog(11) total scores, an 11-item subscale of the ADAS-Cog. The assessment is a questionnaire, so the QS SDTM domain contains the collected data. Table 5.2.2.1 illustrates the analysis variable metadata for the ADAS-Cog analysis dataset, ADQSADAS, described in Section 5.1.1. As with any BDS analysis dataset, analysis parameter value-level metadata are used. The dataset contains both the individual item scores as well as the total scores, so there is a need to have different metadata for certain variables, depending on the value of PARAM. In this example, last observation carried forward (LOCF) is used to impute missing values of the total score; no imputation is performed for the individual item scores. Note that all values of PARAMCD must be listed under the codelist element. Table 5.2.2.1 Analysis Variable Metadata for the ADQSADAS Dataset3 Dataset Name Parameter Identifier Variable Name Variable Label Variable Type Display Format Codelist / Controlled Terms Source / Derivation file name of the analysis dataset PARAMCD or *ALL* or *DEFAULT* name description type display informa- tion valid values or codes and decodes where the variable came from in the source data or how the variable was derived ADQSADAS *ALL* STUDYID Study Identifier text $12 ADSL.STUDYID ADQSADAS *ALL* SITEID Study Site Identifier text $3 ADSL.SITEID ADQSADAS *ALL* SITEGR1 Pooled Site Group 1 text $3 ADSL.SITEGR1 ADQSADAS *ALL* USUBJID Unique Subject Identifier text $11 ADSL.USUBJID ADQSADAS *ALL* AVISIT Analysis Visit text $19 Baseline, Week 8, Week 16, Week 24 If ADQSADAS.ITTRFL='Y' then AVISIT is the name of the analysis visit; if ADQSADAS.ITTRFL=blank then AVISIT=blank. Refer to Section 8.2 of the SAP for a detailed description of the windowing algorithm used to determine the analysis visit based on ADQSADAS.ADY ADQSADAS *ALL* VISIT Visit Name text $19 QS.VISIT",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.SITEGR1",
+        "ADSL.SITEID",
+        "ADSL.STUDYID",
+        "ADSL.USUBJID"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "PARAMCD",
+        "ALL",
+        "DEFAULT",
+        "ADQSADAS",
+        "STUDYID",
+        "ADSL"
+      ],
+      "local_relative_source_path": "analysis_data_model_v2.1.pdf",
+      "normalized_atomic_requirement": "Note that all values of PARAMCD must be listed under the codelist element.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-v2-1",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": "Note that all values of PARAMCD must be listed under the codelist element.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-model:06fc558cba0668e3",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [
+          "BASIC_DATA_STRUCTURE"
+        ],
+        "variable_scope": [
+          "SITEGR1",
+          "SITEID",
+          "STUDYID",
+          "USUBJID"
+        ],
+        "variables": [
+          "SITEGR1",
+          "SITEID",
+          "STUDYID",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "6edd1f0b5af67fd7806d646247e446c63c8e8112f6d3d70aff4270bd8969527a",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-model",
+      "standard_name": "ADaM Model",
+      "standard_version": "2.1",
+      "structure_scope": [
+        "BASIC_DATA_STRUCTURE"
+      ],
+      "validation_requirement": "Note that all values of PARAMCD must be listed under the codelist element.",
+      "validation_requirements": [
+        "Note that all values of PARAMCD must be listed under the codelist element."
+      ],
+      "variable_scope": [
+        "SITEGR1",
+        "SITEID",
+        "STUDYID",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "This form of metadata is particularly needed when the data structure allows a variable to contain multiple types of measurements or analysis endpoints, as in the ADaM Basic Data Structure."
+      ],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 9,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 9 FINAL December 17, 2009 Analysis dataset metadata describe each analysis dataset, including a brief description of the contents. (Refer to Section 5.1) This type of metadata is required for all ADaM datasets. Analysis variable metadata describe the variables within the analysis datasets, i..."
+      },
+      "exact_source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 9 FINAL December 17, 2009 Analysis dataset metadata describe each analysis dataset, including a brief description of the contents. (Refer to Section 5.1) This type of metadata is required for all ADaM datasets. Analysis variable metadata describe the variables within the analysis datasets, including information about the source and creation of the analysis variables, e.g., detailed descriptions of algorithms involved and/or references to analysis dataset creation programs. (Refer to Section 5.2) This type of metadata is required for all ADaM datasets. Analysis parameter value-level metadata describe the measurements or analysis endpoints \u201cwithin\u201d an analysis parameter (i.e., for each unique value of the analysis parameter). This form of metadata is particularly needed when the data structure allows a variable to contain multiple types of measurements or analysis endpoints, as in the ADaM Basic Data Structure. (Refer to Section 5.2.1) This type of metadata is required for all ADaM BDS datasets. Analysis results metadata describe analysis results (as specified by the sponsor), including which analysis dataset was used and information about the analyses performed. (Refer to Section 5.3) These metadata provide traceability from a result used in a statistical display to the data in the analysis datasets. Analysis results metadata are not required. However, best practice is that they be provided to assist the reviewer by identifying the critical analyses, providing links between results, documentation, and datasets, and documenting the analyses performed. The first three types of metadata describe the analysis dataset. They are developed during the analysis dataset creation process. The analysis dataset metadata describe the analysis dataset as a whole, whereas the analysis variable metadata and analysis parameter value-level metadata describe the variables and observations within the dataset. To document either the analysis data creation process or the analysis results generation process, the metadata can include pseudo code, code fragments, links to programs, and/or links to the Protocol, Statistical Analysis Plan, or other documents.",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "analysis_data_model_v2.1.pdf",
+      "normalized_atomic_requirement": "(Refer to Section 5.1) This type of metadata is required for all ADaM datasets.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-v2-1",
+      "permitted_variations": [
+        "To document either the analysis data creation process or the analysis results generation process, the metadata can include pseudo code, code fragments, links to programs, and/or links to the Protocol, Statistical Analysis Plan, or other documents."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "(Refer to Section 5.1) This type of metadata is required for all ADaM datasets.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-model:0b5c3bbbbaea247f",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "variable_requirement",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [
+          "BASIC_DATA_STRUCTURE"
+        ],
+        "variable_scope": [
+          "FINAL"
+        ],
+        "variables": [
+          "FINAL"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "6edd1f0b5af67fd7806d646247e446c63c8e8112f6d3d70aff4270bd8969527a",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-model",
+      "standard_name": "ADaM Model",
+      "standard_version": "2.1",
+      "structure_scope": [
+        "BASIC_DATA_STRUCTURE"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "FINAL"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "short summary of contents of the dataset where the dataset can be found the level of detail in the dataset variable names that parallel the structure general class of the dataset using controlled terminology links or references to documentation re how the dataset was created ADQSADAS Data for the ADAS-Cog (11) Analyses adqsadas.xpt one record per subject per parameter per analysis visit USUBJID, PARAMCD, AVISIT BDS DSADQSADAS.SAS, Section 14.11 of SAP for detailed ADAS-Cog scoring algorithm"
+      ],
+      "classification": "STANDARD_GUIDED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 14,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "5.1.1 Illustration of Analysis Dataset Metadata In this example, the data being analyzed are the total scores of the 11-item Alzheimer\u2019s Disease Assessment Scale- Cognitive Subscale (ADAS-Cog). The assessment is a questionnaire, so the Questionnaire (QS) SDTM domain is used for the collected data. Table 5.1.1.1 illustrates the analysis dataset metadata for the ADAS-Cog analysis dataset, ADQSADAS. Table 5.1.1.1 Ana..."
+      },
+      "exact_source_excerpt": "5.1.1 Illustration of Analysis Dataset Metadata In this example, the data being analyzed are the total scores of the 11-item Alzheimer\u2019s Disease Assessment Scale- Cognitive Subscale (ADAS-Cog). The assessment is a questionnaire, so the Questionnaire (QS) SDTM domain is used for the collected data. Table 5.1.1.1 illustrates the analysis dataset metadata for the ADAS-Cog analysis dataset, ADQSADAS. Table 5.1.1.1 Analysis Dataset Metadata for the ADQSADAS Analysis Dataset2 Dataset Name Dataset Description Dataset Location Dataset Structure Key Variables of Dataset Class of Dataset Documentation filename of the dataset. short summary of contents of the dataset where the dataset can be found the level of detail in the dataset variable names that parallel the structure general class of the dataset using controlled terminology links or references to documentation re how the dataset was created ADQSADAS Data for the ADAS-Cog (11) Analyses adqsadas.xpt one record per subject per parameter per analysis visit USUBJID, PARAMCD, AVISIT BDS DSADQSADAS.SAS, Section 14.11 of SAP for detailed ADAS-Cog scoring algorithm",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": "one record per subject per parameter per analysis visit USUBJID, PARAMCD, AVISIT BDS DSADQSADAS",
+      "keys": [],
+      "local_relative_source_path": "analysis_data_model_v2.1.pdf",
+      "normalized_atomic_requirement": "short summary of contents of the dataset where the dataset can be found the level of detail in the dataset variable names that parallel the structure general class of the dataset using controlled terminology links or references to documentation re how the dataset was created ADQSADAS Data for the ADAS-Cog (11) Analyses adqsadas.xpt one record per subject...",
+      "normative_strength": "GUIDED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-v2-1",
+      "permitted_variations": [
+        "short summary of contents of the dataset where the dataset can be found the level of detail in the dataset variable names that parallel the structure general class of the dataset using controlled terminology links or references to documentation re how the dataset was created ADQSADAS Data for the ADAS-Cog (11) Analyses adqsadas.xpt one record per subject per parameter per analysis visit USUBJID, PARAMCD, AVISIT BD..."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "short summary of contents of the dataset where the dataset can be found the level of detail in the dataset variable names that parallel the structure general class of the dataset using controlled terminology links or references to documentation re how the dataset was created ADQSADAS Data for the ADAS-Cog (11) Analyses adqsadas.xpt one record per subject...",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-model:10e4d1dea228a9c6",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [
+          "BASIC_DATA_STRUCTURE",
+          "SUBJECT_LEVEL_ANALYSIS_DATASET"
+        ],
+        "variable_scope": [
+          "ADAS",
+          "ADQSADAS",
+          "AVISIT",
+          "DSADQSADAS",
+          "PARAMCD",
+          "SAP",
+          "SAS",
+          "USUBJID"
+        ],
+        "variables": [
+          "ADAS",
+          "ADQSADAS",
+          "AVISIT",
+          "DSADQSADAS",
+          "PARAMCD",
+          "SAP",
+          "SAS",
+          "USUBJID"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "6edd1f0b5af67fd7806d646247e446c63c8e8112f6d3d70aff4270bd8969527a",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-model",
+      "standard_name": "ADaM Model",
+      "standard_version": "2.1",
+      "structure_scope": [
+        "BASIC_DATA_STRUCTURE",
+        "SUBJECT_LEVEL_ANALYSIS_DATASET"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ADAS",
+        "ADQSADAS",
+        "AVISIT",
+        "DSADQSADAS",
+        "PARAMCD",
+        "SAP",
+        "SAS",
+        "USUBJID"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "DA TASET DESCRIPTION A short descriptive summary of the contents of the dataset DA TASET LOCA TION The folder and filename where the dataset can be found, ideally hyperlinked to the actual dataset (i.e., XPT file) DA TASET STRUCTURE The level of detail represented by individual records in the dataset (e.g., \u201cOne record per subject,\u201d \u201cOne record per subject per visit,\u201d \u201cOne record per subject per event\u201d).",
+        "CLASS OF DA TASET Identification of the general class of the dataset using the name of the ADaM structure (i.e., \u201cADSL,\u201d \u201cBDS\u201d) or \u201cOTHER\u201d if not an ADaM-specified structure DOCUMENTA TION Description of the source data, processing steps, and analysis decisions pertaining to the creation of the dataset."
+      ],
+      "classification": "STANDARD_GUIDED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 14,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 14 FINAL December 17, 2009 Table 5.1.1 Analysis Dataset Metadata Fields Analysis Dataset Metadata Field Description DA TASET NAME The file name of the dataset, hyperlinked to the corresponding analysis dataset variable descriptions (i.e., the data definition table) within the define file. DA..."
+      },
+      "exact_source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 14 FINAL December 17, 2009 Table 5.1.1 Analysis Dataset Metadata Fields Analysis Dataset Metadata Field Description DA TASET NAME The file name of the dataset, hyperlinked to the corresponding analysis dataset variable descriptions (i.e., the data definition table) within the define file. DA TASET DESCRIPTION A short descriptive summary of the contents of the dataset DA TASET LOCA TION The folder and filename where the dataset can be found, ideally hyperlinked to the actual dataset (i.e., XPT file) DA TASET STRUCTURE The level of detail represented by individual records in the dataset (e.g., \u201cOne record per subject,\u201d \u201cOne record per subject per visit,\u201d \u201cOne record per subject per event\u201d). KEY V ARIABLES OF DA TASET A list of variable names that parallels the structure, ideally uniquely identifies and indexes each record in the dataset. CLASS OF DA TASET Identification of the general class of the dataset using the name of the ADaM structure (i.e., \u201cADSL,\u201d \u201cBDS\u201d) or \u201cOTHER\u201d if not an ADaM-specified structure DOCUMENTA TION Description of the source data, processing steps, and analysis decisions pertaining to the creation of the dataset. Software code of various levels of functionality and complexity , such as pseudo-code or actual code fragments may be provided. Links or references to external documents (e.g., protocol, statistical analysis plan, software code) may be used.",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.ARIABLES",
+        "ADSL.CLASS",
+        "ADSL.DESCRIPTION",
+        "ADSL.DOCUMENTA",
+        "ADSL.FINAL",
+        "ADSL.KEY",
+        "ADSL.LOCA",
+        "ADSL.NAME",
+        "ADSL.OTHER",
+        "ADSL.STRUCTURE",
+        "ADSL.TASET",
+        "ADSL.TION",
+        "ADSL.XPT"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": "One record per subject,\u201d \u201cOne record per subject per visit,\u201d \u201cOne record per subject per event\u201d)",
+      "keys": [
+        "KEY",
+        "ARIABLES",
+        "OF",
+        "DA",
+        "TASET"
+      ],
+      "local_relative_source_path": "analysis_data_model_v2.1.pdf",
+      "normalized_atomic_requirement": "DA TASET DESCRIPTION A short descriptive summary of the contents of the dataset DA TASET LOCA TION The folder and filename where the dataset can be found, ideally hyperlinked to the actual dataset (i.e., XPT file) DA TASET STRUCTURE The level of detail represented by individual records in the dataset (e.g., \u201cOne record per subject,\u201d \u201cOne record per subjec...",
+      "normative_strength": "GUIDED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-v2-1",
+      "permitted_variations": [
+        "DA TASET DESCRIPTION A short descriptive summary of the contents of the dataset DA TASET LOCA TION The folder and filename where the dataset can be found, ideally hyperlinked to the actual dataset (i.e., XPT file) DA TASET STRUCTURE The level of detail represented by individual records in the dataset (e.g., \u201cOne record per subject,\u201d \u201cOne record per subject per visit,\u201d \u201cOne record per subject per event\u201d).",
+        "Software code of various levels of functionality and complexity , such as pseudo-code or actual code fragments may be provided.",
+        "Links or references to external documents (e.g., protocol, statistical analysis plan, software code) may be used."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "DA TASET DESCRIPTION A short descriptive summary of the contents of the dataset DA TASET LOCA TION The folder and filename where the dataset can be found, ideally hyperlinked to the actual dataset (i.e., XPT file) DA TASET STRUCTURE The level of detail represented by individual records in the dataset (e.g., \u201cOne record per subject,\u201d \u201cOne record per subjec...",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-model:707f244ab18293fc",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "variable_requirement",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [
+          "SUBJECT_LEVEL_ANALYSIS_DATASET"
+        ],
+        "variable_scope": [
+          "ARIABLES",
+          "CLASS",
+          "DESCRIPTION",
+          "DOCUMENTA",
+          "FINAL",
+          "KEY",
+          "LOCA",
+          "NAME",
+          "OTHER",
+          "STRUCTURE",
+          "TASET",
+          "TION",
+          "XPT"
+        ],
+        "variables": [
+          "ARIABLES",
+          "CLASS",
+          "DESCRIPTION",
+          "DOCUMENTA",
+          "FINAL",
+          "KEY",
+          "LOCA",
+          "NAME",
+          "OTHER",
+          "STRUCTURE",
+          "TASET",
+          "TION",
+          "XPT"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "6edd1f0b5af67fd7806d646247e446c63c8e8112f6d3d70aff4270bd8969527a",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-model",
+      "standard_name": "ADaM Model",
+      "standard_version": "2.1",
+      "structure_scope": [
+        "SUBJECT_LEVEL_ANALYSIS_DATASET"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ARIABLES",
+        "CLASS",
+        "DESCRIPTION",
+        "DOCUMENTA",
+        "FINAL",
+        "KEY",
+        "LOCA",
+        "NAME",
+        "OTHER",
+        "STRUCTURE",
+        "TASET",
+        "TION",
+        "XPT"
+      ]
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "extraction_timestamp": "2026-08-10T05:41:45+00:00",
+        "page": 11,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 11 FINAL December 17, 2009 [6], as well as the need to conform to the SAS Transport format requirements (e.g., the total length of the name cannot exceed 8 characters). Naming conventions for variables created (not to be confused with any standard variables required by SDTM) within the analy..."
+      },
+      "exact_source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 11 FINAL December 17, 2009 [6], as well as the need to conform to the SAS Transport format requirements (e.g., the total length of the name cannot exceed 8 characters). Naming conventions for variables created (not to be confused with any standard variables required by SDTM) within the analy...",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "docs/standards/ADaM/standards/analysis_data_model_v2.1.pdf",
+      "normalized_atomic_requirement": "ADaM dataset names follow standard dataset naming requirements when the cited standard states such a naming requirement.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-v2-1",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": "ADaM dataset names follow standard dataset naming requirements when the cited standard states such a naming requirement.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-model:7c9bd5408ac727f6:split-dataset-naming",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "required_or_conditional_variables",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [
+          "dataset metadata"
+        ],
+        "variable_scope": [],
+        "variables": []
+      },
+      "semantic_reconstruction_status": "RECONSTRUCTED_FROM_BATCH_001_FINDING",
+      "source_hash": "6edd1f0b5af67fd7806d646247e446c63c8e8112f6d3d70aff4270bd8969527a",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-model",
+      "standard_name": "ADaM Model",
+      "standard_version": "2.1",
+      "structure_scope": [
+        "dataset metadata"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": []
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "extraction_timestamp": "2026-08-10T05:41:45+00:00",
+        "page": 11,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 11 FINAL December 17, 2009 [6], as well as the need to conform to the SAS Transport format requirements (e.g., the total length of the name cannot exceed 8 characters). Naming conventions for variables created (not to be confused with any standard variables required by SDTM) within the analy..."
+      },
+      "exact_source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 11 FINAL December 17, 2009 [6], as well as the need to conform to the SAS Transport format requirements (e.g., the total length of the name cannot exceed 8 characters). Naming conventions for variables created (not to be confused with any standard variables required by SDTM) within the analy...",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "docs/standards/ADaM/standards/analysis_data_model_v2.1.pdf",
+      "normalized_atomic_requirement": "ADaM variable names follow standard variable naming requirements when the cited standard states such a naming requirement.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-v2-1",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": "ADaM variable names follow standard variable naming requirements when the cited standard states such a naming requirement.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-model:7c9bd5408ac727f6:split-variable-naming",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "required_or_conditional_variables",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [
+          "variable metadata"
+        ],
+        "variable_scope": [],
+        "variables": []
+      },
+      "semantic_reconstruction_status": "RECONSTRUCTED_FROM_BATCH_001_FINDING",
+      "source_hash": "6edd1f0b5af67fd7806d646247e446c63c8e8112f6d3d70aff4270bd8969527a",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-model",
+      "standard_name": "ADaM Model",
+      "standard_version": "2.1",
+      "structure_scope": [
+        "variable metadata"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": []
+    },
+    {
+      "applicability_conditions": [],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "extraction_timestamp": "2026-08-10T05:41:45+00:00",
+        "page": 28,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 28 FINAL December 17, 2009 6 Subject-Level Analysis Dataset The structure of the Subject-Level Analysis Dataset (ADSL) is one record per subject, regardless of the type of clinical trial design. ADSL is used to provide the variables that describe attributes of a subject. This structure allow..."
+      },
+      "exact_source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 28 FINAL December 17, 2009 6 Subject-Level Analysis Dataset The structure of the Subject-Level Analysis Dataset (ADSL) is one record per subject, regardless of the type of clinical trial design. ADSL is used to provide the variables that describe attributes of a subject. This structure allow...",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": "one record per subject",
+      "keys": [
+        "USUBJID"
+      ],
+      "local_relative_source_path": "docs/standards/ADaM/standards/analysis_data_model_v2.1.pdf",
+      "normalized_atomic_requirement": "ADSL contains one record per subject and subject-level analysis attributes.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-v2-1",
+      "permitted_variations": [],
+      "prohibited_behavior": [],
+      "required_behavior": "ADSL contains one record per subject and subject-level analysis attributes.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-model:9b552da37cd3119e:reconstructed-adsl-one-record-per-subject",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "structure_grain_keys",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [
+          "SUBJECT_LEVEL_ANALYSIS_DATASET"
+        ],
+        "variable_scope": [],
+        "variables": []
+      },
+      "semantic_reconstruction_status": "RECONSTRUCTED_FROM_BATCH_001_FINDING",
+      "source_hash": "6edd1f0b5af67fd7806d646247e446c63c8e8112f6d3d70aff4270bd8969527a",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-model",
+      "standard_name": "ADaM Model",
+      "standard_version": "2.1",
+      "structure_scope": [
+        "SUBJECT_LEVEL_ANALYSIS_DATASET"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": []
+    },
+    {
+      "applicability_conditions": [
+        "The use of \u201c*DEFAULT*\u201d in the PARAMETER IDENTIFIER for a variable indicates that the specified metadata for that variable should be considered the metadata for all values of PARAM/PARAMCD in the analysis dataset unless otherwise specified.",
+        "A particular value of PARAMCD in the PARAMETER IDENTIFIER for a variable indicates that the specified metadata for that variable should be considered the metadata applicable to the particular PARAMCD, overriding the specified *DEFAULT* metadata, if any .",
+        "Analysis Variable Metadata Field Description PARAMETER IDENTIFIER Contains either 1) the value of PARAMCD that identifies the analysis parameter to which the variable metadata applies; or 2) controlled terminology to indicate groupings of analysis parameters: *ALL* - Used when the variable metadata applies to all analysis parameters in the dataset.",
+        "*DEFAULT* - Used when the variable metadata applies to all analysis parameters in the dataset except for those specifically listed within the metadata.",
+        "By referencing the codelist for PARAMCD, the user of the dataset can determine the unique analysis parameter values found in the dataset and is able to determine the analysis parameter-specific attributes and derivation algorithms for each variable when PARAMCD is a specific value."
+      ],
+      "classification": "STANDARD_GUIDED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 16,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 16 FINAL December 17, 2009 have metadata that vary depending on PARAM/PARAMCD, and links the metadata for a variable to the appropriate value of PARAM/PARAMCD. Controlled terminology reduces the need to enter the same metadata for a variable for multiple values of PARAM/PARAMCD: The use of \u201c*..."
+      },
+      "exact_source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 16 FINAL December 17, 2009 have metadata that vary depending on PARAM/PARAMCD, and links the metadata for a variable to the appropriate value of PARAM/PARAMCD. Controlled terminology reduces the need to enter the same metadata for a variable for multiple values of PARAM/PARAMCD: The use of \u201c*ALL*\u201d in the PARAMETER IDENTIFIER for a variable indicates that the metadata for that variable is the same for all values of PARAM/PARAMCD in the analysis dataset. The use of \u201c*DEFAULT*\u201d in the PARAMETER IDENTIFIER for a variable indicates that the specified metadata for that variable should be considered the metadata for all values of PARAM/PARAMCD in the analysis dataset unless otherwise specified. A particular value of PARAMCD in the PARAMETER IDENTIFIER for a variable indicates that the specified metadata for that variable should be considered the metadata applicable to the particular PARAMCD, overriding the specified *DEFAULT* metadata, if any . Refer to Section 5.2.2 for an example of analysis variable metadata for a dataset that uses the BDS, including the use of the parameter identifier metadata element. It should be noted that this metadata element facilitates the entry and tracking of the metadata content; how the metadata are displayed in the define file will be determined by the sponsor. Analysis Variable Metadata Field Description PARAMETER IDENTIFIER Contains either 1) the value of PARAMCD that identifies the analysis parameter to which the variable metadata applies; or 2) controlled terminology to indicate groupings of analysis parameters: *ALL* - Used when the variable metadata applies to all analysis parameters in the dataset. *DEFAULT* - Used when the variable metadata applies to all analysis parameters in the dataset except for those specifically listed within the metadata. By referencing the codelist for PARAMCD, the user of the dataset can determine the unique analysis parameter values found in the dataset and is able to determine the analysis parameter-specific attributes and derivation algorithms for each variable when PARAMCD is a specific value. Note that for the PARAMCD variable, the parameter identifier is \u201cPARAMCD.\u201d The list of values that exist for the variable also serves as an index of the analysis parameters and parameter identifiers included in the analysis dataset.",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "IDENTIFIER",
+        "PARAM",
+        "PARAMCD",
+        "DEFAULT"
+      ],
+      "local_relative_source_path": "analysis_data_model_v2.1.pdf",
+      "normalized_atomic_requirement": "The use of \u201c*DEFAULT*\u201d in the PARAMETER IDENTIFIER for a variable indicates that the specified metadata for that variable should be considered the metadata for all values of PARAM/PARAMCD in the analysis dataset unless otherwise specified.",
+      "normative_strength": "GUIDED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-v2-1",
+      "permitted_variations": [
+        "The use of \u201c*DEFAULT*\u201d in the PARAMETER IDENTIFIER for a variable indicates that the specified metadata for that variable should be considered the metadata for all values of PARAM/PARAMCD in the analysis dataset unless otherwise specified.",
+        "A particular value of PARAMCD in the PARAMETER IDENTIFIER for a variable indicates that the specified metadata for that variable should be considered the metadata applicable to the particular PARAMCD, overriding the specified *DEFAULT* metadata, if any .",
+        "It should be noted that this metadata element facilitates the entry and tracking of the metadata content; how the metadata are displayed in the define file will be determined by the sponsor.",
+        "By referencing the codelist for PARAMCD, the user of the dataset can determine the unique analysis parameter values found in the dataset and is able to determine the analysis parameter-specific attributes and derivation algorithms for each variable when PARAMCD is a specific value."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "The use of \u201c*DEFAULT*\u201d in the PARAMETER IDENTIFIER for a variable indicates that the specified metadata for that variable should be considered the metadata for all values of PARAM/PARAMCD in the analysis dataset unless otherwise specified.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-model:ca95f3980f63105b",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [
+          "BASIC_DATA_STRUCTURE"
+        ],
+        "variable_scope": [
+          "ALL",
+          "DEFAULT",
+          "FINAL",
+          "IDENTIFIER",
+          "PARAM",
+          "PARAMCD",
+          "PARAMETER"
+        ],
+        "variables": [
+          "ALL",
+          "DEFAULT",
+          "FINAL",
+          "IDENTIFIER",
+          "PARAM",
+          "PARAMCD",
+          "PARAMETER"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "6edd1f0b5af67fd7806d646247e446c63c8e8112f6d3d70aff4270bd8969527a",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-model",
+      "standard_name": "ADaM Model",
+      "standard_version": "2.1",
+      "structure_scope": [
+        "BASIC_DATA_STRUCTURE"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ALL",
+        "DEFAULT",
+        "FINAL",
+        "IDENTIFIER",
+        "PARAM",
+        "PARAMCD",
+        "PARAMETER"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "All rights reserved Page 22 FINAL December 17, 2009 Table 5.3.1 Analysis Results Metadata Fields Analysis Results Metadata Field Description DISPLAY IDENTIFIER A unique identifier for the specific analysis display (such as a table or figure number) DISPLAY NAME Title of display , including additional information if needed to describe and identify the display (e.g., analysis population) RESULT IDENTIFIER Identifies the specific analysis result within a display.",
+        "For example, if there are multiple p-values on a display and the analysis results metadata specifically refers to one of them, this field identifies the p-value of interest.",
+        "Does not apply if the result is not based on a BDS analysis dataset.",
+        "It indicates when the analysis was planned (e.g., \u201cPre-specified in Protocol,\u201d \u201cPre-specified in SAP ,\u201d \u201cData Driven,\u201d \u201cRequested by Regulatory Agency\u201d) and the purpose of the analysis within the body of evidence (e.g., \u201cPrimary Efficacy ,\u201d \u201cKey Secondary Efficacy ,\u201d \u201cSafety\u201d).",
+        "However, if multiple datasets are used, they are all listed here.",
+        "Though the syntax is not ADaM-specified, the expectation is that the information could easily be included in a WHERE clause or something equivalent to ensure selecting the exact set of records appropriate for an analysis.",
+        "This information is required if the analysis does not include every record in the analysis dataset."
+      ],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 22,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 22 FINAL December 17, 2009 Table 5.3.1 Analysis Results Metadata Fields Analysis Results Metadata Field Description DISPLAY IDENTIFIER A unique identifier for the specific analysis display (such as a table or figure number) DISPLAY NAME Title of display , including additional information if..."
+      },
+      "exact_source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 22 FINAL December 17, 2009 Table 5.3.1 Analysis Results Metadata Fields Analysis Results Metadata Field Description DISPLAY IDENTIFIER A unique identifier for the specific analysis display (such as a table or figure number) DISPLAY NAME Title of display , including additional information if needed to describe and identify the display (e.g., analysis population) RESULT IDENTIFIER Identifies the specific analysis result within a display. For example, if there are multiple p-values on a display and the analysis results metadata specifically refers to one of them, this field identifies the p-value of interest. When combined with the display identifier provides a unique identification of a specific analysis result. PARAM The analysis parameter in the BDS analysis dataset that is the focus of the analysis result. Does not apply if the result is not based on a BDS analysis dataset. PARAMCD Corresponds to PARAM in the BDS analysis dataset. Does not apply if the result is not based on a BDS analysis dataset. ANALYSIS V ARIABLE The analysis variable being analyzed REASON The rationale for performing this analysis. It indicates when the analysis was planned (e.g., \u201cPre-specified in Protocol,\u201d \u201cPre-specified in SAP ,\u201d \u201cData Driven,\u201d \u201cRequested by Regulatory Agency\u201d) and the purpose of the analysis within the body of evidence (e.g., \u201cPrimary Efficacy ,\u201d \u201cKey Secondary Efficacy ,\u201d \u201cSafety\u201d). The terminology used is sponsor defined. An example of a reason is \u201cPrimary Efficacy Analysis as Pre-specified in Protocol.\u201d DA TASET The name of the dataset used to generate the analysis result. In most cases, this is a single dataset. However, if multiple datasets are used, they are all listed here. SELECTION CRITERIA Specific and sufficient selection criteria for analysis subset and / or numerator \u2013 a complete list of the variables and their values used to identify the records selected for the analysis. Though the syntax is not ADaM-specified, the expectation is that the information could easily be included in a WHERE clause or something equivalent to ensure selecting the exact set of records appropriate for an analysis. This information is required if the analysis does not include every record in the analysis dataset. DOCUMENTA TION Textual description of the analysis performed. This information could be a text description, pseudo code, or a link to another document such as the protocol or statistical analysis plan, or a link to an analysis generation program (i.e., a statistical software program used to generate the analysis result). The contents of the documentation metadata element contains depends on the level of detail required to describe the analysis itself, whether or not the sponsor is providing a corresponding analysis generation program, and sponsor-specific requirements and standards. This documentation metadata element will remain free form, meaning it will not become subject to a rigid structure or controlled terminology . PROGRAMMING STA TEMENTS The software programming code used to perform the specific analysis. This includes, for example, the model statement (using the specific variable names) and all technical specifications needed for reproducing the analysis (e.g., covariance structure). The name and version of the applicable software package should be specified either as part of this metadata element or in another document, such as a Reviewer\u2019s Guide (see Appendix B for more information about a Reviewer\u2019s Guide).",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "IDENTIFIER",
+        "DISPLAY",
+        "NAME"
+      ],
+      "local_relative_source_path": "analysis_data_model_v2.1.pdf",
+      "normalized_atomic_requirement": "This information is required if the analysis does not include every record in the analysis dataset.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-v2-1",
+      "permitted_variations": [
+        "The name and version of the applicable software package should be specified either as part of this metadata element or in another document, such as a Reviewer\u2019s Guide (see Appendix B for more information about a Reviewer\u2019s Guide)."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "This information is required if the analysis does not include every record in the analysis dataset.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-model:d8d1b1be51d99355",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [
+          "BASIC_DATA_STRUCTURE"
+        ],
+        "variable_scope": [
+          "ANALYSIS",
+          "ARIABLE",
+          "CRITERIA",
+          "DISPLAY",
+          "DOCUMENTA",
+          "FINAL",
+          "IDENTIFIER",
+          "NAME",
+          "PARAM",
+          "PARAMCD",
+          "PROGRAMMING",
+          "REASON",
+          "RESULT",
+          "SAP",
+          "SELECTION",
+          "STA",
+          "TASET",
+          "TEMENTS",
+          "TION",
+          "WHERE"
+        ],
+        "variables": [
+          "ANALYSIS",
+          "ARIABLE",
+          "CRITERIA",
+          "DISPLAY",
+          "DOCUMENTA",
+          "FINAL",
+          "IDENTIFIER",
+          "NAME",
+          "PARAM",
+          "PARAMCD",
+          "PROGRAMMING",
+          "REASON",
+          "RESULT",
+          "SAP",
+          "SELECTION",
+          "STA",
+          "TASET",
+          "TEMENTS",
+          "TION",
+          "WHERE"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "6edd1f0b5af67fd7806d646247e446c63c8e8112f6d3d70aff4270bd8969527a",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-model",
+      "standard_name": "ADaM Model",
+      "standard_version": "2.1",
+      "structure_scope": [
+        "BASIC_DATA_STRUCTURE"
+      ],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": [
+        "ANALYSIS",
+        "ARIABLE",
+        "CRITERIA",
+        "DISPLAY",
+        "DOCUMENTA",
+        "FINAL",
+        "IDENTIFIER",
+        "NAME",
+        "PARAM",
+        "PARAMCD",
+        "PROGRAMMING",
+        "REASON",
+        "RESULT",
+        "SAP",
+        "SELECTION",
+        "STA",
+        "TASET",
+        "TEMENTS",
+        "TION",
+        "WHERE"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "It is suggested that the syntax be consistent with the format terminology incorporated in the software package used for analysis (e.g., $16 or 3.1 if using SAS).",
+        "SOURCE / DERIV A TION Provides details about the variable\u2019s lineage \u2013 what was the predecessor, where the variable came from in the source data (SDTM or other analysis dataset) or how the variable was derived.",
+        "It can also be a complex algorithm, where the element contains a complete description of the derivation algorithm and/or a link to a document containing it and/or a link to the analysis dataset creation program."
+      ],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADSL"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 15,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 15 FINAL December 17, 2009 5.2 Analysis Variable Metadata The analysis variable metadata describe each variable in the analysis dataset, including the variable attributes and definition. The metadata fields used to provide these descriptions are listed in Table 5.2.1. Best practices strongly..."
+      },
+      "exact_source_excerpt": "CDISC Analysis Data Model V ersion 2.1 \u00a9 2009 Clinical Data Interchange Standards Consortium, Inc . All rights reserved Page 15 FINAL December 17, 2009 5.2 Analysis Variable Metadata The analysis variable metadata describe each variable in the analysis dataset, including the variable attributes and definition. The metadata fields used to provide these descriptions are listed in Table 5.2.1. Best practices strongly recommend that every analysis variable be described using these metadata fields. ADaM-compliant analysis datasets must be described by these analysis variable metadata fields. Table 5.2.1 Analysis Variable Metadata Fields Analysis Variable Metadata Field Description DA TASET NAME The file name of the analysis dataset V ARIABLE NAME The name of the variable V ARIABLE LABEL A brief description of the variable V ARIABLE TYPE The variable type. Valid values are as defined in the Case Report Tabulation Data Definition Specification Standard (e.g., in version 1.0.0 they include \u201ctext,\u201d \u201cinteger,\u201d and \u201cfloat\u201d) DISPLAY FORMA T The variable display information (i.e., the format used for the variable in a tabular or graphical presentation of results). It is suggested that the syntax be consistent with the format terminology incorporated in the software package used for analysis (e.g., $16 or 3.1 if using SAS). CODELIST / CONTROLLED TERMS A list of valid values or allowable codes and their corresponding decodes for the variable. The field can include a reference to an external codelist (identified by name and version) or a hyperlink to a list of the values in the codelist/controlled terms section of the define file. SOURCE / DERIV A TION Provides details about the variable\u2019s lineage \u2013 what was the predecessor, where the variable came from in the source data (SDTM or other analysis dataset) or how the variable was derived. This field is used to identify the immediate predecessor source and/or a brief description of the algorithm or process applied to that source and can contain hyperlinked text that refers readers to additional information. The source / derivation can be as simple as a two level name (e.g., ADSL.AGEGR) identifying the data file and variable that is the source of the variable (i.e., a variable copied with no change). It can be a simple description of a derivation and the variable used in the derivation (e.g., \u201ccategorization of ADSL.BMI\u201d). It can also be a complex algorithm, where the element contains a complete description of the derivation algorithm and/or a link to a document containing it and/or a link to the analysis dataset creation program. Refer to Section 5.2.2 for an example of analysis variable metadata. 5.2.1 Analysis Parameter Value-Level Metadata An analysis dataset that follows the ADaM Basic Data Structure (BDS), i.e., an analysis dataset of the BDS class, can contain multiple analysis parameters. In a BDS analysis dataset, the variable PARAM contains a unique description for every analysis parameter included in that dataset. The variable PARAMCD contains the short name of the analysis parameter in PARAM, with a one-to-one mapping between the two variables. Each value of PARAM identifies a set of one or more rows in the dataset. The metadata for the columns (variables) in the dataset often depend on the values of PARAM/PARAMCD. This concept is analogous to that of value-level metadata for a single variable in SDTM, but in the BDS it is quite common that the metadata of several variables vary by PARAM/PARAMCD. To describe how variable metadata vary by PARAM/PARAMCD, the metadata element PARAMETER IDENTIFIER is required in variable-level metadata for a BDS analysis dataset. This PARAMETER IDENTIFIER metadata element identifies which variables",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADSL",
+        "ADSL.AGEGR",
+        "ADSL.BMI"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [
+        "IDENTIFIER",
+        "BDS"
+      ],
+      "local_relative_source_path": "analysis_data_model_v2.1.pdf",
+      "normalized_atomic_requirement": "ADaM-compliant analysis datasets must be described by these analysis variable metadata fields.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-v2-1",
+      "permitted_variations": [
+        "The field can include a reference to an external codelist (identified by name and version) or a hyperlink to a list of the values in the codelist/controlled terms section of the define file.",
+        "This field is used to identify the immediate predecessor source and/or a brief description of the algorithm or process applied to that source and can contain hyperlinked text that refers readers to additional information.",
+        "The source / derivation can be as simple as a two level name (e.g., ADSL.AGEGR) identifying the data file and variable that is the source of the variable (i.e., a variable copied with no change).",
+        "It can be a simple description of a derivation and the variable used in the derivation (e.g., \u201ccategorization of ADSL.BMI\u201d).",
+        "It can also be a complex algorithm, where the element contains a complete description of the derivation algorithm and/or a link to a document containing it and/or a link to the analysis dataset creation program.",
+        "5.2.1 Analysis Parameter Value-Level Metadata An analysis dataset that follows the ADaM Basic Data Structure (BDS), i.e., an analysis dataset of the BDS class, can contain multiple analysis parameters."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "ADaM-compliant analysis datasets must be described by these analysis variable metadata fields.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-model:f9f115e727ef3f1e",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADSL"
+        ],
+        "datasets": [
+          "ADSL"
+        ],
+        "structure_scope": [
+          "BASIC_DATA_STRUCTURE"
+        ],
+        "variable_scope": [
+          "AGEGR",
+          "BMI"
+        ],
+        "variables": [
+          "AGEGR",
+          "BMI"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "6edd1f0b5af67fd7806d646247e446c63c8e8112f6d3d70aff4270bd8969527a",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-model",
+      "standard_name": "ADaM Model",
+      "standard_version": "2.1",
+      "structure_scope": [
+        "BASIC_DATA_STRUCTURE"
+      ],
+      "validation_requirement": "ADaM-compliant analysis datasets must be described by these analysis variable metadata fields.",
+      "validation_requirements": [
+        "ADaM-compliant analysis datasets must be described by these analysis variable metadata fields."
+      ],
+      "variable_scope": [
+        "AGEGR",
+        "BMI"
+      ]
+    }
+  ]
+}

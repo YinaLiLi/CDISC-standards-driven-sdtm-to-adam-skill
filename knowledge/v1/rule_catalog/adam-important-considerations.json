@@ -1,0 +1,57 @@
+{
+  "rules": [
+    {
+      "applicability_conditions": [],
+      "classification": "STANDARD_GUIDED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 1,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "ADaM v2.1 was released December 2009 and, although most of the content in the document still applies today, the user should be aware of the following important subsequent developments that are not described in ADaM v2.1:"
+      },
+      "exact_source_excerpt": "ADaM v2.1 was released December 2009 and, although most of the content in the document still applies today, the user should be aware of the following important subsequent developments that are not described in ADaM v2.1:",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "Important Considerations When Using ADaM v2.1.pdf",
+      "normalized_atomic_requirement": "ADaM v2.1 was released December 2009 and, although most of the content in the document still applies today, the user should be aware of the following important subsequent developments that are not described in ADaM v2.1:",
+      "normative_strength": "GUIDED",
+      "official_url": "https://www.cdisc.org/standards/foundational/adam/adam-v2-1",
+      "permitted_variations": [
+        "ADaM v2.1 was released December 2009 and, although most of the content in the document still applies today, the user should be aware of the following important subsequent developments that are not described in ADaM v2.1:"
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "ADaM v2.1 was released December 2009 and, although most of the content in the document still applies today, the user should be aware of the following important subsequent developments that are not described in ADaM v2.1:",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-important-considerations:b9873d24572ba117",
+      "rule_type": "OPERATIVE_RULE",
+      "scope": {
+        "candidate_kind": "prose_requirement",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [],
+        "variables": []
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "62eef6898d5fffbc66a08c1043822147e63c8ee437d46c601bce18c71fa315a4",
+      "source_section_classification": "OPERATIVE_RULE",
+      "standard_id": "adam-important-considerations",
+      "standard_name": "Important Considerations When Using ADaM",
+      "standard_version": "2.1",
+      "structure_scope": [],
+      "validation_requirement": null,
+      "validation_requirements": [],
+      "variable_scope": []
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "rules": [
+    {
+      "applicability_conditions": [
+        "For example, suppose only mild adverse events have been reported for a study where the data collection instrument collected AE severity as Mild, Moderate, or Severe.",
+        "However, in the case of AVISIT where the total range of possible values is not necessarily known ahead of time, the sponsor could choose whether or not it is reasonable to include all values in the codelist.",
+        "Also included in the sample submission: \u2022 If there is a codelist for the variable coming from the SDTM dataset, then applicable values from the same codelist must be carried forward into ADaM.",
+        "Example: Variable Label/Description Type Controlled Terms Origin / Source / Method / Comment AESEV Severity/Intensity text AESEV Predecessor: AE.AESEV \u2022 If the same variable exists in multiple ADaM datasets and has an associated codelist, then the associated codelist name should be differentiated if the list of allowed values is different from one dataset to another."
+      ],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [
+        "ADLB"
+      ],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T08:11:23+00:00",
+        "page": 5,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "CDISC Analysis Data Model Metadata Submission Guidelines: Human Clinical Trials (Version 1.0 Final) \u00a9 2023 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 5 2023-04-18 2 Define-XML Document The Define-XML document (actual filename used in the Define-XML package: \"define.xml\") is the metadata intended to describe the format and content of the data for a study, including datasets, varia..."
+      },
+      "exact_source_excerpt": "CDISC Analysis Data Model Metadata Submission Guidelines: Human Clinical Trials (Version 1.0 Final) \u00a9 2023 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 5 2023-04-18 2 Define-XML Document The Define-XML document (actual filename used in the Define-XML package: \"define.xml\") is the metadata intended to describe the format and content of the data for a study, including datasets, variables, value-level metadata, and codelists. In addition, the Define-XML document contains metadata describing the analysis results. Please see the Define-XML specification (available at https://www.cdisc.org/standards/data- exchange/define-xml/) for all necessary details. This document will contain only a small subset of the necessary information to implement define.xml. General Note A Define-XML document is a machine-readable document containing only plain text. It contains no formatting for viewing or printing. Instead, formatting is handled by a stylesheet which controls how the Define-XML document is displayed and what values are displayed. Define-XML Display The stylesheet in the sample submission (define2-1.xsl) is the stylesheet included with the Define-XML v2.1 package. There are no specific requirements regarding which stylesheet should be included in a submission, but sponsors should ensure the file renders properly, including any hyperlinks. Depending on the PDF viewer and the browser and its settings, users may encounter differences in display and functionality in the rendered XML. Adjusting browser settings can rectify this, but due to so many combinations it is not possible for this document to describe them all. Codelists No definitive guidance exists as to whether codelists in Define-XML should contain all of the possible values for a given study. The ADaM MSG Team recommends that, for all Study Data Tabulation Model (SDTM) predecessor variables which are incorporated into analysis datasets, the entire range of possible values in from the corresponding SDTM codelist used in the study be included. For all other variables, the sponsor should decide whether to include all possible values or only those present in the data. For example, suppose only mild adverse events have been reported for a study where the data collection instrument collected AE severity as Mild, Moderate, or Severe. In this case, the recommendation is to include all 3 possible terms in the codelist, as shown in the example submission in this guide. However, in the case of AVISIT where the total range of possible values is not necessarily known ahead of time, the sponsor could choose whether or not it is reasonable to include all values in the codelist. Also included in the sample submission: \u2022 If there is a codelist for the variable coming from the SDTM dataset, then applicable values from the same codelist must be carried forward into ADaM. Example: Variable Label/Description Type Controlled Terms Origin / Source / Method / Comment AESEV Severity/Intensity text AESEV Predecessor: AE.AESEV \u2022 If the same variable exists in multiple ADaM datasets and has an associated codelist, then the associated codelist name should be differentiated if the list of allowed values is different from one dataset to another. Example: The codelist name for PARAMCD in ADLB could be PARAMCD_ADLB. The codelist name for PARAMCD in ADVS could be PARAMCD_ADVS. Dataset Order All analysis datasets must be included in the dataset-level metadata. A standard order of display has not been established for regulatory submissions of ADaM datasets.",
+      "excluded_reason": null,
+      "expected_outputs": [
+        "ADLB",
+        "ADLB.ADVS",
+        "ADLB.AESEV",
+        "ADLB.AVISIT",
+        "ADLB.MSG",
+        "ADLB.PARAMCD",
+        "ADLB.PARAMCD_ADLB",
+        "ADLB.PARAMCD_ADVS",
+        "ADLB.PDF",
+        "ADLB.XML"
+      ],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "ADaM-MSG_v1.0.pdf",
+      "normalized_atomic_requirement": "There are no specific requirements regarding which stylesheet should be included in a submission, but sponsors should ensure the file renders properly, including any hyperlinks.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM-MSG_v1.0.pdf",
+      "permitted_variations": [
+        "There are no specific requirements regarding which stylesheet should be included in a submission, but sponsors should ensure the file renders properly, including any hyperlinks.",
+        "Depending on the PDF viewer and the browser and its settings, users may encounter differences in display and functionality in the rendered XML.",
+        "Adjusting browser settings can rectify this, but due to so many combinations it is not possible for this document to describe them all.",
+        "Codelists No definitive guidance exists as to whether codelists in Define-XML should contain all of the possible values for a given study.",
+        "For all other variables, the sponsor should decide whether to include all possible values or only those present in the data.",
+        "Example: Variable Label/Description Type Controlled Terms Origin / Source / Method / Comment AESEV Severity/Intensity text AESEV Predecessor: AE.AESEV \u2022 If the same variable exists in multiple ADaM datasets and has an associated codelist, then the associated codelist name should be differentiated if the list of allowed values is different from one dataset to another."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "There are no specific requirements regarding which stylesheet should be included in a submission, but sponsors should ensure the file renders properly, including any hyperlinks.",
+      "required_inputs": [
+        "AE.AESEV"
+      ],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-msg:97ec72720421b075",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [
+          "ADLB"
+        ],
+        "datasets": [
+          "ADLB"
+        ],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADVS",
+          "AESEV",
+          "AVISIT",
+          "MSG",
+          "PARAMCD",
+          "PARAMCD_ADLB",
+          "PARAMCD_ADVS",
+          "PDF",
+          "XML"
+        ],
+        "variables": [
+          "ADVS",
+          "AESEV",
+          "AVISIT",
+          "MSG",
+          "PARAMCD",
+          "PARAMCD_ADLB",
+          "PARAMCD_ADVS",
+          "PDF",
+          "XML"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "dbcaa21e459f034d7ed9413ff2e3f9c2d3de49ea4c83e259c937b6fa77fd7e19",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-msg",
+      "standard_name": "ADaM Metadata Submission Guidelines",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": "Also included in the sample submission: \u2022 If there is a codelist for the variable coming from the SDTM dataset, then applicable values from the same codelist must be carried forward into ADaM.",
+      "validation_requirements": [
+        "Also included in the sample submission: \u2022 If there is a codelist for the variable coming from the SDTM dataset, then applicable values from the same codelist must be carried forward into ADaM.",
+        "Dataset Order All analysis datasets must be included in the dataset-level metadata."
+      ],
+      "variable_scope": [
+        "ADVS",
+        "AESEV",
+        "AVISIT",
+        "MSG",
+        "PARAMCD",
+        "PARAMCD_ADLB",
+        "PARAMCD_ADVS",
+        "PDF",
+        "XML"
+      ]
+    },
+    {
+      "applicability_conditions": [
+        "Conformance checks are discussed here in the context of the reviewer's guide, as that is where conformance issues should be explained in the submission study data package.",
+        "\u2022 When the ADaM data and the Define-XML document are reviewed for conformance to standards, any findings must be evaluated.",
+        "o Sponsors should be careful to avoid generic explanations, or explanations which simply repeat the wording of the conformance check, when providing explanations for the conformance check finding."
+      ],
+      "classification": "STANDARD_REQUIRED",
+      "classification_status": "RESOLVED",
+      "conformance_metadata": null,
+      "dataset_scope": [],
+      "evidence_locator": {
+        "duplicate_locators": [],
+        "extraction_timestamp": "2026-08-10T22:44:22+00:00",
+        "page": 7,
+        "parser_compiler_version": "m3r-1",
+        "section": null,
+        "source_binding_status": "SOURCE_BOUND",
+        "source_excerpt": "CDISC Analysis Data Model Metadata Submission Guidelines: Human Clinical Trials (Version 1.0 Final) \u00a9 2023 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 7 2023-04-18 3 Analysis Data Reviewer's Guide The ADRG provides additional information and clarification for reviewers about the submitted data that is not present in the Define-XML document and/or the SAP. The US FDA Study Data Tec..."
+      },
+      "exact_source_excerpt": "CDISC Analysis Data Model Metadata Submission Guidelines: Human Clinical Trials (Version 1.0 Final) \u00a9 2023 Clinical Data Interchange Standards Consortium, Inc. All rights reserved Page 7 2023-04-18 3 Analysis Data Reviewer's Guide The ADRG provides additional information and clarification for reviewers about the submitted data that is not present in the Define-XML document and/or the SAP. The US FDA Study Data Technical Conformance Guide[1] recommends the inclusion of the ADRG, whereas the PMDA Technical Conformance Guide on Electronic Study Data Submissions[2] requires it. The ADRG should help to facilitate the review process by describing any special considerations, such as derivations that are used across several datasets (e.g., visit windowing, date imputation), dataset dependencies, and complex algorithms that are incompatible with the Define-XML from a presentation point of view. Although the specific format of the reviewer's guide is not explicitly addressed by regulatory health authorities (e.g., the FDA or the PMDA), there may be references to the PHUSE template. See the PHUSE website for the latest ADRG version (https://phuse.global/Deliverables/1). General Note At the time of publication of ADaM-MSG v1.0, the US FDA specifies that the ADRG should be named \"adrg.pdf.\" The PMDA prefers it be named \"analysis-data-reviewers-guide.pdf\", \"adrg.pdf\", or something similar, so that the contents are identifiable. The ADaM MSG Team named the reviewer's guide in the sample submission \"adrg.pdf\", but sponsors should check for the latest recommendation from their regulatory health authority. 3.1 Conformance, Validation, and Tools It is expected that sponsors will perform conformance checks on the study data package throughout the submission development life cycle in order to identify issues related to data and programming as early as possible. Conformance checks are discussed here in the context of the reviewer's guide, as that is where conformance issues should be explained in the submission study data package. \u2022 The ADaM data should be checked for conformance to ADaM and the ADaMIG (available at https://www.cdisc.org/standards/foundational/adam/). \u2022 The ADaM data should be checked for consistency with SDTM datasets. \u2022 The Define-XML document should be checked against the Define-XML conformance rules (available at https://www.cdisc.org/standards/foundational/define-xml/). \u2022 The ADaM data should be checked for consistency with Define-XML. \u2022 When the ADaM data and the Define-XML document are reviewed for conformance to standards, any findings must be evaluated. o All conformance findings that are generally within the sponsor's control should be corrected. However, the goal is not to get a \"clean\" report. Tools sometimes flag content that is allowable (e.g., controlled terminology that is extensible can be extended). There are also often data issues resulting in conformance findings that should not be corrected just to avoid the findings. o Any conformance findings that cannot be resolved should be explained in the ADRG. o Regulatory health authorities may have their own sets of business requirements for evaluating conformance and validation, as well as the scope of findings to be documented in the ADRG. \u25aa Third-party tools may be used to evaluate ADaM data for conformance. These tools may have their own interpretation of the requirements for properly formed ADaM datasets. Sponsors should understand and evaluate these interpretations. \u25aa Validation issues related to an interpretation of a requirement should be noted in the ADRG. \u2022 Sponsors should explain their conformance-check findings. o Sponsors should be careful to avoid generic explanations, or explanations which simply repeat the wording of the conformance check, when providing explanations for the conformance check finding. For example, in response to a conformance check finding indicating \"BASE or BASEC is populated for a unique USUBJID, PARAMCD but no baseline record exists,\" simply explaining that baseline values were not collected with the data is not sufficient. Instead, a response such as \"Baseline values",
+      "excluded_reason": null,
+      "expected_outputs": [],
+      "extraction_status": "CANDIDATE_RULE",
+      "grain": null,
+      "keys": [],
+      "local_relative_source_path": "docs/standards/ADaM/standards/ADaM-MSG_v1.0.pdf",
+      "normalized_atomic_requirement": "The ADRG should help to facilitate the review process by describing any special considerations, such as derivations that are used across several datasets (e.g., visit windowing, date imputation), dataset dependencies, and complex algorithms that are incompatible with the Define-XML from a presentation point of view.",
+      "normative_strength": "REQUIRED",
+      "official_url": "https://www.cdisc.org/system/files/members/standard/foundational/ADaM-MSG_v1.0.pdf",
+      "permitted_variations": [
+        "The ADRG should help to facilitate the review process by describing any special considerations, such as derivations that are used across several datasets (e.g., visit windowing, date imputation), dataset dependencies, and complex algorithms that are incompatible with the Define-XML from a presentation point of view.",
+        "Although the specific format of the reviewer's guide is not explicitly addressed by regulatory health authorities (e.g., the FDA or the PMDA), there may be references to the PHUSE template.",
+        "General Note At the time of publication of ADaM-MSG v1.0, the US FDA specifies that the ADRG should be named \"adrg.pdf.\" The PMDA prefers it be named \"analysis-data-reviewers-guide.pdf\", \"adrg.pdf\", or something similar, so that the contents are identifiable.",
+        "The ADaM MSG Team named the reviewer's guide in the sample submission \"adrg.pdf\", but sponsors should check for the latest recommendation from their regulatory health authority.",
+        "Conformance checks are discussed here in the context of the reviewer's guide, as that is where conformance issues should be explained in the submission study data package.",
+        "\u2022 The ADaM data should be checked for conformance to ADaM and the ADaMIG (available at https://www.cdisc.org/standards/foundational/adam/).",
+        "\u2022 The ADaM data should be checked for consistency with SDTM datasets.",
+        "\u2022 The Define-XML document should be checked against the Define-XML conformance rules (available at https://www.cdisc.org/standards/foundational/define-xml/).",
+        "\u2022 The ADaM data should be checked for consistency with Define-XML.",
+        "o All conformance findings that are generally within the sponsor's control should be corrected.",
+        "Tools sometimes flag content that is allowable (e.g., controlled terminology that is extensible can be extended).",
+        "There are also often data issues resulting in conformance findings that should not be corrected just to avoid the findings.",
+        "o Any conformance findings that cannot be resolved should be explained in the ADRG.",
+        "o Regulatory health authorities may have their own sets of business requirements for evaluating conformance and validation, as well as the scope of findings to be documented in the ADRG.",
+        "\u25aa Third-party tools may be used to evaluate ADaM data for conformance.",
+        "These tools may have their own interpretation of the requirements for properly formed ADaM datasets.",
+        "Sponsors should understand and evaluate these interpretations.",
+        "\u25aa Validation issues related to an interpretation of a requirement should be noted in the ADRG.",
+        "\u2022 Sponsors should explain their conformance-check findings.",
+        "o Sponsors should be careful to avoid generic explanations, or explanations which simply repeat the wording of the conformance check, when providing explanations for the conformance check finding."
+      ],
+      "prohibited_behavior": [],
+      "required_behavior": "The ADRG should help to facilitate the review process by describing any special considerations, such as derivations that are used across several datasets (e.g., visit windowing, date imputation), dataset dependencies, and complex algorithms that are incompatible with the Define-XML from a presentation point of view.",
+      "required_inputs": [],
+      "review_status": "CANDIDATE",
+      "rule_id": "adam-msg:b7c1b55344ea28f4",
+      "rule_type": "CONTROLLED_TERMINOLOGY",
+      "scope": {
+        "candidate_kind": "controlled_terminology",
+        "dataset_scope": [],
+        "datasets": [],
+        "structure_scope": [],
+        "variable_scope": [
+          "ADRG",
+          "BASE",
+          "BASEC",
+          "FDA",
+          "MSG",
+          "PARAMCD",
+          "PHUSE",
+          "PMDA",
+          "SAP",
+          "USUBJID",
+          "XML"
+        ],
+        "variables": [
+          "ADRG",
+          "BASE",
+          "BASEC",
+          "FDA",
+          "MSG",
+          "PARAMCD",
+          "PHUSE",
+          "PMDA",
+          "SAP",
+          "USUBJID",
+          "XML"
+        ]
+      },
+      "semantic_reconstruction_status": "CANDIDATE_RECONSTRUCTED",
+      "source_hash": "dbcaa21e459f034d7ed9413ff2e3f9c2d3de49ea4c83e259c937b6fa77fd7e19",
+      "source_section_classification": "CONTROLLED_TERMINOLOGY",
+      "standard_id": "adam-msg",
+      "standard_name": "ADaM Metadata Submission Guidelines",
+      "standard_version": "1.0",
+      "structure_scope": [],
+      "validation_requirement": "The US FDA Study Data Technical Conformance Guide[1] recommends the inclusion of the ADRG, whereas the PMDA Technical Conformance Guide on Electronic Study Data Submissions[2] requires it.",
+      "validation_requirements": [
+        "The US FDA Study Data Technical Conformance Guide[1] recommends the inclusion of the ADRG, whereas the PMDA Technical Conformance Guide on Electronic Study Data Submissions[2] requires it.",
+        "3.1 Conformance, Validation, and Tools It is expected that sponsors will perform conformance checks on the study data package throughout the submission development life cycle in order to identify issues related to data and programming as early as possible.",
+        "Conformance checks are discussed here in the context of the reviewer's guide, as that is where conformance issues should be explained in the submission study data package.",
+        "\u2022 The ADaM data should be checked for conformance to ADaM and the ADaMIG (available at https://www.cdisc.org/standards/foundational/adam/).",
+        "\u2022 The Define-XML document should be checked against the Define-XML conformance rules (available at https://www.cdisc.org/standards/foundational/define-xml/).",
+        "\u2022 When the ADaM data and the Define-XML document are reviewed for conformance to standards, any findings must be evaluated.",
+        "o All conformance findings that are generally within the sponsor's control should be corrected.",
+        "There are also often data issues resulting in conformance findings that should not be corrected just to avoid the findings.",
+        "o Any conformance findings that cannot be resolved should be explained in the ADRG.",
+        "o Regulatory health authorities may have their own sets of business requirements for evaluating conformance and validation, as well as the scope of findings to be documented in the ADRG.",
+        "\u25aa Third-party tools may be used to evaluate ADaM data for conformance.",
+        "\u25aa Validation issues related to an interpretation of a requirement should be noted in the ADRG.",
+        "\u2022 Sponsors should explain their conformance-check findings.",
+        "o Sponsors should be careful to avoid generic explanations, or explanations which simply repeat the wording of the conformance check, when providing explanations for the conformance check finding.",
+        "For example, in response to a conformance check finding indicating \"BASE or BASEC is populated for a unique USUBJID, PARAMCD but no baseline record exists,\" simply explaining that baseline values were not collected with the data is not sufficient."
+      ],
+      "variable_scope": [
+        "ADRG",
+        "BASE",
+        "BASEC",
+        "FDA",
+        "MSG",
+        "PARAMCD",
+        "PHUSE",
+        "PMDA",
+        "SAP",
+        "USUBJID",
+        "XML"
+      ]
+    }
+  ]
+}
