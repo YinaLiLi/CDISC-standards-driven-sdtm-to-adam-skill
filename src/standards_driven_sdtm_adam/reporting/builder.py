@@ -34,8 +34,12 @@ class ReportBuilder:
 
         validation = _validation_summary(validation_result)
         traceability = _traceability_summary(evidence_resolution_result)
-        preprocessing = _preprocessing_summary(preprocessing_specification)
-        adam = _adam_summary(adam_derivation_specification)
+        traceability_by_item = _traceability_by_item(traceability)
+        preprocessing = _preprocessing_summary(
+            preprocessing_specification,
+            traceability_by_item,
+        )
+        adam = _adam_summary(adam_derivation_specification, traceability_by_item)
         status = _overall_status(validation)
         evidence = {
             "resolved_item_count": traceability["resolved_item_count"],
@@ -68,24 +72,25 @@ class ReportBuilder:
 
 def _preprocessing_summary(
     specification: PreprocessingSpecification | None,
+    traceability_by_item: dict[str, dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
+    traceability_by_item = traceability_by_item or {}
     operations = [] if specification is None else list(specification.operations)
     sorted_operations = sorted(operations, key=lambda item: item.operation_id)
     return {
         "operation_count": len(sorted_operations),
         "operations": [
             {
-                "operation_id": item.operation_id,
+                "target": _target(item.dataset, item.variable),
                 "dataset": item.dataset,
                 "variable": item.variable,
-                "operation": item.operation,
-                "classification": item.classification,
-                "implementation_allowed": item.implementation_allowed,
-                "source_preserving": item.source_preserving,
-                "clinical_meaning_changed": item.clinical_meaning_changed,
-                "evidence_references": list(item.evidence_references),
-                "validation_plan": list(item.validation_plan),
-                "notes": list(item.notes),
+                "operation": item.purpose,
+                "basis": _basis_for(
+                    item.operation_id,
+                    item.classification,
+                    traceability_by_item,
+                    source_context="preprocessing",
+                ),
             }
             for item in sorted_operations
         ],
@@ -94,7 +99,9 @@ def _preprocessing_summary(
 
 def _adam_summary(
     specification: AdamDerivationSpecification | None,
+    traceability_by_item: dict[str, dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
+    traceability_by_item = traceability_by_item or {}
     dataset_specs = [] if specification is None else list(specification.dataset_specs)
     variable_specs = [] if specification is None else list(specification.variable_specs)
 
@@ -105,24 +112,21 @@ def _adam_summary(
             "structure": item.structure,
             "source_domains": sorted(item.source_domains),
             "supported_variables": sorted(item.supported_variables),
-            "evidence_references": list(item.evidence_references),
-            "implementation_allowed": item.implementation_allowed,
-            "unresolved_decisions": list(item.unresolved_decisions),
         }
         for item in sorted(dataset_specs, key=lambda item: item.dataset)
     ]
     variables = [
         {
-            "specification_id": item.specification_id,
+            "target": _target(item.dataset, item.variable),
             "dataset": item.dataset,
             "variable": item.variable,
-            "classification": item.classification,
-            "source_domains": sorted(item.source_domains),
-            "source_variables": sorted(item.source_variables),
-            "dependencies": list(item.dependencies),
-            "evidence_references": list(item.evidence_references),
-            "implementation_allowed": item.implementation_allowed,
-            "unresolved_issues": list(item.unresolved_issues),
+            "operation": item.derivation_logic,
+            "basis": _basis_for(
+                item.specification_id,
+                item.classification,
+                traceability_by_item,
+                source_context="derivation",
+            ),
         }
         for item in sorted(variable_specs, key=lambda item: item.specification_id)
     ]
@@ -135,6 +139,80 @@ def _adam_summary(
         if specification is None
         else len(specification.unresolved_decisions),
     }
+
+
+def _target(dataset: str, variable: str | None) -> str:
+    if variable:
+        return f"{dataset}.{variable}"
+    return dataset
+
+
+def _traceability_by_item(traceability: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    return {
+        item["rule_specification_id"]: item
+        for item in traceability["items"]
+    }
+
+
+def _basis_from_traceability_item(
+    item: dict[str, Any],
+    *,
+    source_context: str,
+) -> str:
+    if item["citations"]:
+        return "; ".join(_citation_basis(citation) for citation in item["citations"])
+    if item["resolution_status"] == "NO_VALID_STANDARD_EVIDENCE":
+        return "No valid standard evidence resolved"
+    if item["unresolved_evidence_references"]:
+        return "No valid standard evidence resolved"
+    return _classification_basis(item["decision_classification"], source_context)
+
+
+def _basis_for(
+    item_id: str,
+    classification: str,
+    traceability_by_item: dict[str, dict[str, Any]],
+    *,
+    source_context: str,
+) -> str:
+    item = traceability_by_item.get(item_id)
+    if item is not None:
+        return _basis_from_traceability_item(item, source_context=source_context)
+    return _classification_basis(classification, source_context)
+
+
+def _classification_basis(classification: str, source_context: str) -> str:
+    if classification in {"STUDY_SPECIFIC", "USER_DEFINED"}:
+        return "Study decision"
+    if classification == "DATA_ENGINEERING":
+        if source_context == "preprocessing":
+            return "Technical source-preserving operation"
+        return "Technical derivation from source data"
+    if classification == "UNSUPPORTED":
+        return "Not implemented; supporting evidence or study decision missing"
+    if classification == "EXAMPLE_ADAPTED":
+        return "Example-adapted standard support"
+    return "No valid standard evidence resolved"
+
+
+def _citation_basis(citation: dict[str, Any]) -> str:
+    locator = _citation_locator(citation)
+    if locator:
+        return f"{citation['document_title']} {locator}"
+    return citation["document_title"]
+
+
+def _citation_locator(citation: dict[str, Any]) -> str:
+    parts: list[str] = []
+    if citation["page"] is not None:
+        parts.append(f"page {citation['page']}")
+    if citation["section"]:
+        parts.append(f"section {citation['section']}")
+    if citation["table"]:
+        parts.append(f"table {citation['table']}")
+    if citation["row"]:
+        parts.append(f"row {citation['row']}")
+    return ", ".join(parts)
 
 
 def _validation_summary(result: AdamValidationResult | None) -> dict[str, Any]:

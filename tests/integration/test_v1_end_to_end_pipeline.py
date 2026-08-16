@@ -250,7 +250,9 @@ def test_v1_pipeline_happy_path_flows_through_all_runtime_boundaries(tmp_path):
     assert result.validation.status == "PASS"
     assert result.evidence_resolution.items
     assert result.report.overall_status == "PASS"
-    assert "Traceability and Evidence Summary" in result.markdown_report
+    assert "## Preprocessing Operations" in result.markdown_report
+    assert "## ADaM Derivation Operations" in result.markdown_report
+    assert "## Traceability and Evidence Summary" not in result.markdown_report
     assert json.loads(result.json_report)["overall_status"] == "PASS"
 
 
@@ -284,7 +286,7 @@ def test_v1_pipeline_preserves_traceability_from_evidence_to_report(tmp_path):
     assert resolved.citations
     assert resolved.citations[0].evidence_reference in usubjid.evidence_references
     assert resolved.citations[0].source_role == "primary_standard"
-    assert usubjid.specification_id in result.markdown_report
+    assert "ADSL.USUBJID" in result.markdown_report
 
 
 def test_v1_pipeline_outputs_are_deterministic_for_identical_inputs(tmp_path):
@@ -364,7 +366,7 @@ def test_missing_required_source_propagates_to_validation_and_report_failure(tmp
     assert aval_execution.status == "BLOCKED"
     assert result.validation.status == "FAIL"
     assert result.report.overall_status == "FAIL"
-    assert "Validation Failures" in result.markdown_report
+    assert "Validation Failures" not in result.markdown_report
 
 
 def test_unsupported_derivation_requirement_is_specified_but_not_executed(tmp_path):
@@ -406,7 +408,7 @@ def test_unresolved_required_evidence_is_reported_without_fabricated_citation(tm
     assert missing.resolution_status == "NO_VALID_STANDARD_EVIDENCE"
     assert missing.citations == ()
     assert missing.unresolved_evidence_references == ("adamig:missing",)
-    assert "adamig:missing" in result.markdown_report
+    assert "No valid standard evidence resolved" in result.markdown_report
 
 
 def test_v1_pipeline_proceeds_after_successful_standards_acquisition(tmp_path):

@@ -1,0 +1,71 @@
+{
+  "adam_datasets": {
+    "ADAE": 3,
+    "ADLB": 3,
+    "ADSL": 3,
+    "ADTTE": 3
+  },
+  "adam_execution_status": "COMPLETED_WITH_BLOCKED_VARIABLES",
+  "evidence_records": 12,
+  "files": {
+    "adam_outputs": "C:\\Projects\\Skills\\standards-driven-sdtm-to-adam-pipeline\\artifacts\\filter_001_example_run\\adam_outputs.json",
+    "json_report": "C:\\Projects\\Skills\\standards-driven-sdtm-to-adam-pipeline\\artifacts\\filter_001_example_run\\report.json",
+    "markdown_report": "C:\\Projects\\Skills\\standards-driven-sdtm-to-adam-pipeline\\artifacts\\filter_001_example_run\\report.md",
+    "run_summary": "C:\\Projects\\Skills\\standards-driven-sdtm-to-adam-pipeline\\artifacts\\filter_001_example_run\\run_summary.json"
+  },
+  "markdown_has_traceability_summary": false,
+  "markdown_has_validation_summary": false,
+  "objective": "Which subjects experienced treatment-emergent adverse events, and how severe were they?",
+  "pdf_extraction_used": false,
+  "preprocessing_operations": 18,
+  "report_overall_status": "PASS",
+  "rules_loaded_from_filtered_catalog": 1463,
+  "rules_selected_for_example_run": 12,
+  "selected_rule_groups": {
+    "adae": [
+      "adam-common-statistical-analysis-examples:eb386e22530dfa30",
+      "adam-common-statistical-analysis-examples:f619f99942d2f0bf",
+      "adam-conformance-rules:sheet-Rules Catalogue_row-1386",
+      "adam-conformance-rules:sheet-Rules Catalogue_row-1597",
+      "adam-conformance-rules:sheet-Rules Catalogue_row-1601"
+    ],
+    "adlb": [
+      "adam-bds-tte:1b973c727f08289c",
+      "adam-bds-tte:c7faac41120fcc8d",
+      "adam-common-statistical-analysis-examples:158f3c0169150d9c"
+    ],
+    "adsl": [
+      "adam-bds-tte:31ccf8519c33e928",
+      "adam-bds-tte:c7faac41120fcc8d",
+      "adam-common-statistical-analysis-examples:12ba230bb1837a7a",
+      "adam-common-statistical-analysis-examples:158f3c0169150d9c"
+    ],
+    "adtte": [
+      "adam-bds-tte:1b973c727f08289c",
+      "adam-bds-tte:28f8423c4257c2d6",
+      "adam-bds-tte:31ccf8519c33e928"
+    ],
+    "date": [
+      "adam-bds-tte:1b973c727f08289c",
+      "adam-bds-tte:28f8423c4257c2d6",
+      "adam-bds-tte:31ccf8519c33e928"
+    ],
+    "example_standard": [
+      "adam-common-statistical-analysis-examples:12ba230bb1837a7a"
+    ],
+    "traceability": [
+      "adam-bds-tte:1b973c727f08289c",
+      "adam-bds-tte:28f8423c4257c2d6",
+      "adam-bds-tte:46ff262542c68c22"
+    ]
+  },
+  "stakeholder_json_keys": [
+    "adam",
+    "metadata",
+    "overall_status",
+    "preprocessing",
+    "title"
+  ],
+  "standards_source": "knowledge/v1/rule_catalog filtered retained rules",
+  "validation_status": "PASS"
+}

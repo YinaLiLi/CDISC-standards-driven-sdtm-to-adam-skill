@@ -23,7 +23,7 @@ class PipelineReport:
     evidence_summary: dict[str, Any]
 
     def to_dict(self) -> dict[str, Any]:
-        """Return deterministic machine-readable report content."""
+        """Return deterministic stakeholder report content."""
 
         return {
             "title": self.title,
@@ -31,7 +31,4 @@ class PipelineReport:
             "metadata": self.metadata,
             "preprocessing": self.preprocessing_summary,
             "adam": self.adam_summary,
-            "validation": self.validation_summary,
-            "traceability": self.traceability_summary,
-            "evidence": self.evidence_summary,
         }

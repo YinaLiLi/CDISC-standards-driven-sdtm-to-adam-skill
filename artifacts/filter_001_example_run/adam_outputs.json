@@ -1,0 +1,64 @@
+{
+  "ADAE": [
+    {
+      "ASTDT": "2024-01-05",
+      "TRTEMFL": "Y"
+    },
+    {
+      "ASTDT": "2024-02-20",
+      "TRTEMFL": "N"
+    },
+    {
+      "ASTDT": "2024-01-07",
+      "TRTEMFL": "Y"
+    }
+  ],
+  "ADLB": [
+    {
+      "AVAL": 35.0,
+      "PARAMCD": "ALT"
+    },
+    {
+      "AVAL": 42.0,
+      "PARAMCD": "ALT"
+    },
+    {
+      "AVAL": 80.0,
+      "PARAMCD": "ALT"
+    }
+  ],
+  "ADSL": [
+    {
+      "SAFFL": "Y",
+      "TRTEDT": "2024-01-14",
+      "TRTSDT": "2024-01-01",
+      "USUBJID": "01-001"
+    },
+    {
+      "SAFFL": "Y",
+      "TRTEDT": "2024-01-14",
+      "TRTSDT": "2024-01-01",
+      "USUBJID": "01-002"
+    },
+    {
+      "SAFFL": "Y",
+      "TRTEDT": "2024-01-12",
+      "TRTSDT": "2024-01-02",
+      "USUBJID": "01-003"
+    }
+  ],
+  "ADTTE": [
+    {
+      "ADT": "2024-03-01",
+      "CNSR": 1
+    },
+    {
+      "ADT": "2024-03-01",
+      "CNSR": 1
+    },
+    {
+      "ADT": "2024-01-20",
+      "CNSR": 0
+    }
+  ]
+}

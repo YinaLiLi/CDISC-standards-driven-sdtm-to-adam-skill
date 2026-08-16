@@ -162,8 +162,10 @@ class V1Pipeline:
             study_decisions=study_decisions,
         )
 
-        evidence_items = tuple(adam_specification.variable_specs) + tuple(
-            evidence_resolution_requests
+        evidence_items = (
+            tuple(preprocessing_specification.operations)
+            + tuple(adam_specification.variable_specs)
+            + tuple(evidence_resolution_requests)
         )
         evidence_resolution = EvidenceResolver(registry).resolve(
             evidence_items,

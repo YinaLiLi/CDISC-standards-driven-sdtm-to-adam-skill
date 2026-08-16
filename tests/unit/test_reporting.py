@@ -159,10 +159,11 @@ def _citation(
     source_role: str,
     purpose: str,
     evidence_reference: str,
+    rule_specification_id: str = "ADSL.USUBJID",
 ) -> CitationRecord:
     return CitationRecord(
         citation_id=citation_id,
-        rule_specification_id="ADSL.USUBJID",
+        rule_specification_id=rule_specification_id,
         decision_classification="STANDARD_REQUIRED",
         citation_purpose=purpose,
         evidence_reference=evidence_reference,
@@ -188,6 +189,23 @@ def _citation(
 def _evidence_resolution() -> EvidenceResolutionResult:
     return EvidenceResolutionResult(
         items=(
+            ResolvedEvidenceItem(
+                rule_specification_id="PREP-AE-DATE",
+                decision_classification="STANDARD_GUIDED",
+                evidence_use="decision_support",
+                resolution_status="RESOLVED",
+                citations=(
+                    _citation(
+                        citation_id="CIT-PREP",
+                        source_role="primary_standard",
+                        purpose="normative",
+                        evidence_reference="adamig:2",
+                        rule_specification_id="PREP-AE-DATE",
+                    ),
+                ),
+                unresolved_evidence_references=(),
+                excluded_evidence_references=(),
+            ),
             ResolvedEvidenceItem(
                 rule_specification_id="ADSL.USUBJID",
                 decision_classification="STANDARD_REQUIRED",
@@ -239,13 +257,26 @@ def test_builds_basic_report_from_existing_outputs():
     assert report.overall_status == "FAIL"
     assert report.preprocessing_summary["operation_count"] == 2
     assert report.adam_summary["dataset_count"] == 4
-    assert report.validation_summary["counts_by_status"] == {"FAIL": 1, "PASS": 1}
-    assert report.evidence_summary["resolved_item_count"] == 1
+    assert report.preprocessing_summary["operations"][0]["basis"] == (
+        "ADaM Implementation Guide page 12, section ADSL"
+    )
+    assert report.preprocessing_summary["operations"][1]["basis"] == (
+        "Technical source-preserving operation"
+    )
+    assert report.adam_summary["variables"][0]["basis"] == (
+        "No valid standard evidence resolved"
+    )
 
 
 def test_machine_readable_output_is_json_serializable_and_stable():
     payload = _report().to_dict()
 
+    assert "validation" not in payload
+    assert "traceability" not in payload
+    assert "evidence" not in payload
+    assert "operation_id" not in json.dumps(payload, sort_keys=True)
+    assert "specification_id" not in json.dumps(payload, sort_keys=True)
+    assert "evidence_references" not in json.dumps(payload, sort_keys=True)
     assert payload["metadata"]["supported_adam_datasets"] == [
         "ADAE",
         "ADLB",
@@ -253,7 +284,8 @@ def test_machine_readable_output_is_json_serializable_and_stable():
         "ADTTE",
     ]
     assert payload["adam"]["datasets"][0]["dataset"] == "ADAE"
-    assert payload["traceability"]["items"][0]["rule_specification_id"] == "ADAE.TRTEMFL"
+    assert payload["preprocessing"]["operations"][0]["basis"]
+    assert payload["adam"]["variables"][0]["basis"]
     encoded = json.dumps(payload, sort_keys=True)
     assert json.loads(encoded) == payload
 
@@ -263,10 +295,15 @@ def test_markdown_rendering_is_human_readable_and_deterministic():
 
     assert markdown == render_markdown(_report())
     assert markdown.startswith("# Standards-Driven SDTM-to-ADaM Pipeline Report")
-    assert "## Validation Summary" in markdown
-    assert "| Status | Count |" in markdown
+    assert "## Preprocessing Operations" in markdown
+    assert "## ADaM Derivation Operations" in markdown
+    assert "| Target | Operation | Basis |" in markdown
+    assert "## Validation Summary" not in markdown
+    assert "## Traceability and Evidence Summary" not in markdown
+    assert "VAL-002" not in markdown
     assert "ADAE.TRTEMFL" in markdown
-    assert "adamig:missing" in markdown
+    assert "No valid standard evidence resolved" in markdown
+    assert "ADaM Implementation Guide page 12, section ADSL" in markdown
 
 
 def test_deterministic_ordering_for_datasets_variables_and_traceability():
@@ -278,21 +315,19 @@ def test_deterministic_ordering_for_datasets_variables_and_traceability():
         "ADSL",
         "ADTTE",
     ]
-    assert [item["specification_id"] for item in payload["adam"]["variables"]] == [
+    assert [item["target"] for item in payload["adam"]["variables"]] == [
         "ADAE.TRTEMFL",
         "ADLB.AVAL",
         "ADSL.USUBJID",
         "ADTTE.AVAL",
     ]
-    assert [
-        item["rule_specification_id"] for item in payload["traceability"]["items"]
-    ] == ["ADAE.TRTEMFL", "ADSL.USUBJID"]
+    assert payload["adam"]["variables"][1]["basis"] == "No valid standard evidence resolved"
 
 
 def test_separates_normative_and_validation_supporting_evidence():
-    traceability = _report().to_dict()["traceability"]
+    traceability = _report().traceability_summary
 
-    assert traceability["normative_citation_count"] == 1
+    assert traceability["normative_citation_count"] == 2
     assert traceability["validation_support_citation_count"] == 1
     citations = traceability["items"][1]["citations"]
     assert citations[0]["citation_purpose"] == "normative"
@@ -300,17 +335,17 @@ def test_separates_normative_and_validation_supporting_evidence():
 
 
 def test_displays_unresolved_and_excluded_evidence_references():
-    item = _report().to_dict()["traceability"]["items"][0]
+    item = _report().traceability_summary["items"][0]
 
     assert item["unresolved_evidence_references"] == ["adamig:missing"]
     assert item["excluded_evidence_references"] == ["adam-example:2"]
     markdown = render_markdown(_report())
-    assert "Unresolved: adamig:missing" in markdown
-    assert "Excluded: adam-example:2" in markdown
+    assert "Unresolved: adamig:missing" not in markdown
+    assert "Excluded: adam-example:2" not in markdown
 
 
 def test_validation_summary_includes_counts_and_failure_details():
-    validation = _report().to_dict()["validation"]
+    validation = _report().validation_summary
 
     assert validation["status"] == "FAIL"
     assert validation["counts_by_severity"] == {"ERROR": 1, "INFO": 1}
@@ -327,8 +362,8 @@ def test_reporting_consumes_m11_result_without_evidence_resolution_inputs():
     )
 
     assert report.overall_status == "NOT_EVALUATED"
-    assert report.traceability_summary["item_count"] == 2
-    assert report.to_dict()["traceability"]["items"][1]["citations"][0][
+    assert report.traceability_summary["item_count"] == 3
+    assert report.traceability_summary["items"][1]["citations"][0][
         "evidence_reference"
     ] == "adamig:1"
 

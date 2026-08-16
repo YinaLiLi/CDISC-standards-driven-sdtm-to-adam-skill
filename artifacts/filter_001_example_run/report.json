@@ -1,0 +1,309 @@
+{
+  "adam": {
+    "dataset_count": 4,
+    "datasets": [
+      {
+        "dataset": "ADAE",
+        "purpose": "Adverse event analysis dataset for occurrence analysis and supported treatment-emergent concepts.",
+        "source_domains": [
+          "AE",
+          "EX"
+        ],
+        "structure": "One record per adverse event occurrence or analysis occurrence.",
+        "supported_variables": [
+          "ASTDT",
+          "TRTEMFL"
+        ]
+      },
+      {
+        "dataset": "ADLB",
+        "purpose": "Laboratory analysis dataset for source laboratory measurements and analysis variables.",
+        "source_domains": [
+          "LB"
+        ],
+        "structure": "One record per subject per laboratory parameter per analysis timepoint.",
+        "supported_variables": [
+          "AVAL",
+          "AVISIT",
+          "PARAMCD"
+        ]
+      },
+      {
+        "dataset": "ADSL",
+        "purpose": "Subject-level analysis dataset for core subject, population, and treatment context.",
+        "source_domains": [
+          "DM",
+          "EX"
+        ],
+        "structure": "One record per subject.",
+        "supported_variables": [
+          "SAFFL",
+          "TRTEDT",
+          "TRTSDT",
+          "USUBJID"
+        ]
+      },
+      {
+        "dataset": "ADTTE",
+        "purpose": "Time-to-event analysis dataset for supported objectives with explicit event and censoring definitions.",
+        "source_domains": [
+          "DS",
+          "EX"
+        ],
+        "structure": "One record per subject per time-to-event parameter.",
+        "supported_variables": [
+          "ADT",
+          "AVAL",
+          "CNSR",
+          "STARTDT"
+        ]
+      }
+    ],
+    "unresolved_decision_count": 0,
+    "variable_count": 13,
+    "variables": [
+      {
+        "basis": "Technical derivation from source data",
+        "dataset": "ADAE",
+        "operation": "Specify deterministic date parsing from AE.AESTDTC; do not impute partial or missing dates.",
+        "target": "ADAE.ASTDT",
+        "variable": "ASTDT"
+      },
+      {
+        "basis": "Study decision",
+        "dataset": "ADAE",
+        "operation": "Treatment-emergent AEs start on or after first exposure through 30 days after last exposure.",
+        "target": "ADAE.TRTEMFL",
+        "variable": "TRTEMFL"
+      },
+      {
+        "basis": "No valid standard evidence resolved",
+        "dataset": "ADLB",
+        "operation": "Use LB.LBSTRESN when available, with LB.LBORRES retained as source traceability.",
+        "target": "ADLB.AVAL",
+        "variable": "AVAL"
+      },
+      {
+        "basis": "Study decision",
+        "dataset": "ADLB",
+        "operation": "Adapt example visit timing logic only as a documented specification; do not treat example text as a CDISC requirement.",
+        "target": "ADLB.AVISIT",
+        "variable": "AVISIT"
+      },
+      {
+        "basis": "No valid standard evidence resolved",
+        "dataset": "ADLB",
+        "operation": "Specify parameter code from LB.LBTESTCD where supported by the source laboratory record.",
+        "target": "ADLB.PARAMCD",
+        "variable": "PARAMCD"
+      },
+      {
+        "basis": "Study decision",
+        "dataset": "ADSL",
+        "operation": "Safety Population includes subjects with at least one EX record.",
+        "target": "ADSL.SAFFL",
+        "variable": "SAFFL"
+      },
+      {
+        "basis": "No valid standard evidence resolved",
+        "dataset": "ADSL",
+        "operation": "Specify last treatment exposure date from EX.EXENDTC; do not execute derivation here.",
+        "target": "ADSL.TRTEDT",
+        "variable": "TRTEDT"
+      },
+      {
+        "basis": "No valid standard evidence resolved",
+        "dataset": "ADSL",
+        "operation": "Specify first treatment exposure date from EX.EXSTDTC; do not execute derivation here.",
+        "target": "ADSL.TRTSDT",
+        "variable": "TRTSDT"
+      },
+      {
+        "basis": "ADaM Basic Data Structure for Time-to-Event Analyses page 6; ADaM Basic Data Structure for Time-to-Event Analyses page 7",
+        "dataset": "ADSL",
+        "operation": "Carry DM.USUBJID into ADSL as the subject identifier.",
+        "target": "ADSL.USUBJID",
+        "variable": "USUBJID"
+      },
+      {
+        "basis": "Study decision",
+        "dataset": "ADTTE",
+        "operation": "Specify event or censoring date from source events according to documented study rules.",
+        "target": "ADTTE.ADT",
+        "variable": "ADT"
+      },
+      {
+        "basis": "Study decision",
+        "dataset": "ADTTE",
+        "operation": "Calculate duration only after STARTDT, ADT, event rules, censoring rules, and time scale are specified.",
+        "target": "ADTTE.AVAL",
+        "variable": "AVAL"
+      },
+      {
+        "basis": "Study decision",
+        "dataset": "ADTTE",
+        "operation": "Classify event versus censoring using the documented study-specific event and censoring rules.",
+        "target": "ADTTE.CNSR",
+        "variable": "CNSR"
+      },
+      {
+        "basis": "Study decision",
+        "dataset": "ADTTE",
+        "operation": "Specify time-to-event origin from treatment start date or another explicitly documented study origin.",
+        "target": "ADTTE.STARTDT",
+        "variable": "STARTDT"
+      }
+    ]
+  },
+  "metadata": {
+    "report_version": "1",
+    "scope": "v1",
+    "supported_adam_datasets": [
+      "ADAE",
+      "ADLB",
+      "ADSL",
+      "ADTTE"
+    ],
+    "supported_source_domains": [
+      "AE",
+      "DM",
+      "DS",
+      "EX",
+      "LB",
+      "SV"
+    ]
+  },
+  "overall_status": "PASS",
+  "preprocessing": {
+    "operation_count": 18,
+    "operations": [
+      {
+        "basis": "ADaM Basic Data Structure for Time-to-Event Analyses page 8; ADaM Basic Data Structure for Time-to-Event Analyses page 10; ADaM Basic Data Structure for Time-to-Event Analyses page 6; ADaM Basic Data Structure for Time-to-Event Analyses page 29",
+        "dataset": "AE",
+        "operation": "Parse source date text into a machine-readable representation while preserving the original SDTM value.",
+        "target": "AE.AESTDTC",
+        "variable": "AESTDTC"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "AE",
+        "operation": "Normalize leading, trailing, or repeated technical whitespace for stable joins and checks while preserving clinical meaning.",
+        "target": "AE.AETERM",
+        "variable": "AETERM"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "AE",
+        "operation": "Normalize leading, trailing, or repeated technical whitespace for stable joins and checks while preserving clinical meaning.",
+        "target": "AE.USUBJID",
+        "variable": "USUBJID"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "DM",
+        "operation": "Normalize leading, trailing, or repeated technical whitespace for stable joins and checks while preserving clinical meaning.",
+        "target": "DM.USUBJID",
+        "variable": "USUBJID"
+      },
+      {
+        "basis": "ADaM Basic Data Structure for Time-to-Event Analyses page 8; ADaM Basic Data Structure for Time-to-Event Analyses page 10; ADaM Basic Data Structure for Time-to-Event Analyses page 6; ADaM Basic Data Structure for Time-to-Event Analyses page 29",
+        "dataset": "DS",
+        "operation": "Parse source date text into a machine-readable representation while preserving the original SDTM value.",
+        "target": "DS.DSSTDTC",
+        "variable": "DSSTDTC"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "DS",
+        "operation": "Normalize leading, trailing, or repeated technical whitespace for stable joins and checks while preserving clinical meaning.",
+        "target": "DS.DSDECOD",
+        "variable": "DSDECOD"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "DS",
+        "operation": "Normalize leading, trailing, or repeated technical whitespace for stable joins and checks while preserving clinical meaning.",
+        "target": "DS.USUBJID",
+        "variable": "USUBJID"
+      },
+      {
+        "basis": "ADaM Basic Data Structure for Time-to-Event Analyses page 8; ADaM Basic Data Structure for Time-to-Event Analyses page 10; ADaM Basic Data Structure for Time-to-Event Analyses page 6; ADaM Basic Data Structure for Time-to-Event Analyses page 29",
+        "dataset": "EX",
+        "operation": "Parse source date text into a machine-readable representation while preserving the original SDTM value.",
+        "target": "EX.EXSTDTC",
+        "variable": "EXSTDTC"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "EX",
+        "operation": "Normalize leading, trailing, or repeated technical whitespace for stable joins and checks while preserving clinical meaning.",
+        "target": "EX.EXTRT",
+        "variable": "EXTRT"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "EX",
+        "operation": "Normalize leading, trailing, or repeated technical whitespace for stable joins and checks while preserving clinical meaning.",
+        "target": "EX.USUBJID",
+        "variable": "USUBJID"
+      },
+      {
+        "basis": "ADaM Basic Data Structure for Time-to-Event Analyses page 8; ADaM Basic Data Structure for Time-to-Event Analyses page 10; ADaM Basic Data Structure for Time-to-Event Analyses page 6; ADaM Basic Data Structure for Time-to-Event Analyses page 29",
+        "dataset": "LB",
+        "operation": "Parse source date text into a machine-readable representation while preserving the original SDTM value.",
+        "target": "LB.LBDTC",
+        "variable": "LBDTC"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "LB",
+        "operation": "Parse numeric-looking source values into technical numeric form for downstream checks without changing the source value.",
+        "target": "LB.LBORRES",
+        "variable": "LBORRES"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "LB",
+        "operation": "Parse numeric-looking source values into technical numeric form for downstream checks without changing the source value.",
+        "target": "LB.LBSTRESN",
+        "variable": "LBSTRESN"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "LB",
+        "operation": "Normalize leading, trailing, or repeated technical whitespace for stable joins and checks while preserving clinical meaning.",
+        "target": "LB.LBORRES",
+        "variable": "LBORRES"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "LB",
+        "operation": "Normalize leading, trailing, or repeated technical whitespace for stable joins and checks while preserving clinical meaning.",
+        "target": "LB.LBTESTCD",
+        "variable": "LBTESTCD"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "LB",
+        "operation": "Normalize leading, trailing, or repeated technical whitespace for stable joins and checks while preserving clinical meaning.",
+        "target": "LB.USUBJID",
+        "variable": "USUBJID"
+      },
+      {
+        "basis": "ADaM Basic Data Structure for Time-to-Event Analyses page 8; ADaM Basic Data Structure for Time-to-Event Analyses page 10; ADaM Basic Data Structure for Time-to-Event Analyses page 6; ADaM Basic Data Structure for Time-to-Event Analyses page 29",
+        "dataset": "SV",
+        "operation": "Parse source date text into a machine-readable representation while preserving the original SDTM value.",
+        "target": "SV.SVSTDTC",
+        "variable": "SVSTDTC"
+      },
+      {
+        "basis": "Technical source-preserving operation",
+        "dataset": "SV",
+        "operation": "Normalize leading, trailing, or repeated technical whitespace for stable joins and checks while preserving clinical meaning.",
+        "target": "SV.USUBJID",
+        "variable": "USUBJID"
+      }
+    ]
+  },
+  "title": "Standards-Driven SDTM-to-ADaM Pipeline Report"
+}
